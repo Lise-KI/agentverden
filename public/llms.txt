@@ -1,0 +1,45 @@
+# Agentverden
+
+> Norsk katalog over hva folk faktisk gjør med AI-agenter, skrevet for privatpersoner. Eksemplene er omskrevet på norsk, med kildehenvisning der det er tilgjengelig. Innholdet er ikke juridisk, økonomisk, skatte-, forsikrings- eller helserådgivning.
+
+Språk: norsk (bokmål). Nettsted: https://agentverden.no
+
+## Hoveddeler
+- [Alle emner](https://agentverden.no/emner/): oversikt over emnekategorier
+- [Alle AI-agenter og verktøy](https://agentverden.no/agenter/): eksempler sortert etter verktøy
+- [Nytt](https://agentverden.no/nytt/): nyeste eksempler
+- [Om Agentverden](https://agentverden.no/om/)
+- [RSS](https://agentverden.no/rss.xml)
+- [Sitemap](https://agentverden.no/sitemap.xml)
+
+## Emner
+- [Penger, regninger & støtte](https://agentverden.no/emner/penger-regninger/)
+- [Hus & hverdagsliv](https://agentverden.no/emner/hus-hverdag/)
+- [Shopping & ærend](https://agentverden.no/emner/shopping-errend/)
+- [Reise & bestillinger](https://agentverden.no/emner/reise-bestilling/)
+- [Jobb & drift](https://agentverden.no/emner/jobb-drift/)
+- [Salg, markedsføring & support](https://agentverden.no/emner/salg-markedsforing/)
+- [Forskning & kunnskap](https://agentverden.no/emner/forskning-kunnskap/)
+- [Innhold & kreativt](https://agentverden.no/emner/innhold-kreativt/)
+- [Programvare & DevOps](https://agentverden.no/emner/programvare-devops/)
+- [Spill & simulering](https://agentverden.no/emner/spill-simulering/)
+- [Sikkerhet, vitenskap & maskinvare](https://agentverden.no/emner/sikkerhet-vitenskap/)
+
+## AI-agenter og verktøy
+- [Grok Bot](https://agentverden.no/agenter/grok-bot/)
+- [Claude Code](https://agentverden.no/agenter/claude-code/)
+- [Claude](https://agentverden.no/agenter/claude/)
+- [n8n](https://agentverden.no/agenter/n8n/)
+- [OpenClaw](https://agentverden.no/agenter/openclaw/)
+- [ChatGPT Agent](https://agentverden.no/agenter/chatgpt-agent/)
+- [Claude Cowork](https://agentverden.no/agenter/claude-cowork/)
+- [Codex](https://agentverden.no/agenter/codex/)
+- [Meta Muse](https://agentverden.no/agenter/meta-muse/)
+- [Gemini](https://agentverden.no/agenter/gemini/)
+- [ChatGPT](https://agentverden.no/agenter/chatgpt/)
+- [Manus](https://agentverden.no/agenter/manus/)
+- [Egen agent](https://agentverden.no/agenter/egen-agent/)
+
+## Juridisk
+- [Personvern](https://agentverden.no/personvern/)
+- [Ansvarsfraskrivelse](https://agentverden.no/ansvarsfraskrivelse/)
