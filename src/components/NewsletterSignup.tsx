@@ -25,7 +25,7 @@ const copy: Record<
   },
   ebook: {
     heading: "Få e-boken gratis",
-    what: "Du får e-boken tilsendt på e-post, og melder deg samtidig på nyhetsbrevet fra Agentverden.",
+    what: "Du får e-boken tilsendt på e-post. Nyhetsbrev får du bare hvis du krysser av for det i skjemaet.",
     formUrl: BREVO_EBOOK_FORM_URL,
     title: "Last ned e-boken fra Agentverden",
     button: "Få e-boken i innboksen",
