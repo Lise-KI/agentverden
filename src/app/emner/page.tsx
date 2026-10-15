@@ -1,7 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import { categories } from "@/data/categories";
 import { useCases } from "@/data/useCases";
+
+export const metadata: Metadata = {
+  title: "Alle emner",
+  description: "Alle emnekategorier for AI-agent-use cases på Agentbruk.",
+  alternates: { canonical: "/emner/" },
+};
 
 export default function EmnerPage() {
   return (

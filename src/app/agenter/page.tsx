@@ -1,7 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import { agents } from "@/data/agents";
 import { useCases } from "@/data/useCases";
+
+export const metadata: Metadata = {
+  title: "Alle agenter",
+  description: "Alle AI-agenter vi dekker på Agentbruk.",
+  alternates: { canonical: "/agenter/" },
+};
 
 export default function AgenterPage() {
   return (

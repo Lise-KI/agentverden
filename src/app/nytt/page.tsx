@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import UseCaseCard from "@/components/UseCaseCard";
 import { useCases } from "@/data/useCases";
+
+export const metadata: Metadata = {
+  title: "Nytt",
+  description: "De nyeste use casene lagt til på Agentbruk.",
+  alternates: { canonical: "/nytt/" },
+};
 
 export default function NyttPage() {
   const sorted = [...useCases].sort(

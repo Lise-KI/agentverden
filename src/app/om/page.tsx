@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+
+export const metadata: Metadata = {
+  title: "Om",
+  description: "Hva Agentbruk er, og hvorfor det finnes.",
+  alternates: { canonical: "/om/" },
+};
 
 export default function OmPage() {
   return (

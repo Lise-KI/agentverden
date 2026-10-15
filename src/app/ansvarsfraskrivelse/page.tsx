@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+
+export const metadata: Metadata = {
+  title: "Ansvarsfraskrivelse",
+  description: "Ansvarsfraskrivelse for innhold på Agentbruk.",
+  alternates: { canonical: "/ansvarsfraskrivelse/" },
+};
 
 export default function AnsvarsfraskrivelsePage() {
   return (

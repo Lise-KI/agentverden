@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+
+export const metadata: Metadata = {
+  title: "Personvern",
+  description: "Personvernerklæring for Agentbruk.",
+  alternates: { canonical: "/personvern/" },
+};
 
 export default function PersonvernPage() {
   return (

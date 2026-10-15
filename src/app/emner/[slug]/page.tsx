@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import UseCaseCard from "@/components/UseCaseCard";
 import { categories } from "@/data/categories";
@@ -6,6 +7,22 @@ import { useCases } from "@/data/useCases";
 
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const category = categories.find((c) => c.slug === slug);
+  if (!category) return {};
+
+  return {
+    title: category.name,
+    description: category.description,
+    alternates: { canonical: `/emner/${slug}/` },
+  };
 }
 
 export default async function CategoryPage({

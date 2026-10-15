@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import { sponsors } from "@/data/sponsors";
+
+export const metadata: Metadata = {
+  title: "Bli sponsor",
+  description: "Sponsing av Agentbruk — reklame merket tydelig.",
+  alternates: { canonical: "/sponsor/" },
+};
 
 export default function SponsorPage() {
   return (
