@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# DNS-øyeblikksbilder (ikke i git)
+/dns-før.txt
+/dns-*.txt
