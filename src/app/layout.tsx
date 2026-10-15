@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://agentverden.no"),
   alternates: {
     types: {
-      "application/rss+xml": "https://agentverden.no/rss",
+      "application/rss+xml": "https://agentverden.no/rss.xml",
     },
   },
 };

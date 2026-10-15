@@ -18,7 +18,7 @@ export default function SiteFooter() {
           >
             Sponsor
           </Link>
-          <Link href="/rss" className="hover:text-neutral-200 transition-colors">
+          <Link href="/rss.xml" className="hover:text-neutral-200 transition-colors">
             RSS
           </Link>
           <Link
