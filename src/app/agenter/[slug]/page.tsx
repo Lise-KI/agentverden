@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import UseCaseCard from "@/components/UseCaseCard";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import JsonLd from "@/components/JsonLd";
 import { agents } from "@/data/agents";
 import { useCases } from "@/data/useCases";
 
@@ -41,10 +43,29 @@ export default async function AgentPage({
 
   const items = useCases.filter((u) => u.agents.includes(slug));
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${agent.name}: eksempler på bruk av AI-agenter`,
+    url: `https://agentverden.no/agenter/${slug}/`,
+    inLanguage: "nb-NO",
+    isPartOf: { "@type": "WebSite", name: "Agentverden", url: "https://agentverden.no/" },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: items.length,
+      itemListElement: items.map((u, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: u.title,
+      })),
+    },
+  };
+
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
+        <JsonLd data={jsonLd} />
         <h1 className="text-lg font-semibold mb-1 text-neutral-50">
           {agent.name}
         </h1>
@@ -61,6 +82,7 @@ export default async function AgentPage({
             </p>
           )}
         </div>
+        <NewsletterSignup />
       </main>
     </div>
   );

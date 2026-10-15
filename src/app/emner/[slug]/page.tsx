@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import UseCaseCard from "@/components/UseCaseCard";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import JsonLd from "@/components/JsonLd";
 import { categories } from "@/data/categories";
 import { useCases } from "@/data/useCases";
 
@@ -36,10 +38,30 @@ export default async function CategoryPage({
 
   const items = useCases.filter((u) => u.category === slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${category.name}: eksempler på bruk av AI-agenter`,
+    description: category.description,
+    url: `https://agentverden.no/emner/${slug}/`,
+    inLanguage: "nb-NO",
+    isPartOf: { "@type": "WebSite", name: "Agentverden", url: "https://agentverden.no/" },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: items.length,
+      itemListElement: items.map((u, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: u.title,
+      })),
+    },
+  };
+
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
+        <JsonLd data={jsonLd} />
         <h1 className="text-lg font-semibold mb-1 text-neutral-50">
           {category.name}
         </h1>
@@ -54,6 +76,7 @@ export default async function CategoryPage({
             </p>
           )}
         </div>
+        <NewsletterSignup />
       </main>
     </div>
   );
