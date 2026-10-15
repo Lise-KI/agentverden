@@ -12,6 +12,9 @@ export default function SiteFooter() {
           <Link href="/om" className="hover:text-neutral-200 transition-colors">
             Om
           </Link>
+          <Link href="/ebok" className="hover:text-neutral-200 transition-colors">
+            E-bok
+          </Link>
           <Link href="/rss.xml" className="hover:text-neutral-200 transition-colors">
             RSS
           </Link>

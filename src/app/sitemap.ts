@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/emner",
     "/nytt",
     "/om",
+    "/ebok",
     "/personvern",
     "/ansvarsfraskrivelse",
   ].map((path) => ({
