@@ -5,7 +5,7 @@ export default function SiteFooter() {
     <footer className="border-t border-white/10 bg-white/[0.02] backdrop-blur-xl relative z-10">
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-2 text-xs text-neutral-500">
         <span>
-          © 2026 Agentbruk. Alle use cases er omskrevet i egne ord med lenke
+          © 2026 Agentverden. Alle use cases er omskrevet i egne ord med lenke
           til kilden der det er tilgjengelig.
         </span>
         <nav className="flex gap-4">

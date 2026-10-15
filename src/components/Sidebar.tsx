@@ -7,10 +7,10 @@ export default function Sidebar() {
     <aside className="w-full lg:w-72 shrink-0 border-r border-white/10 bg-white/[0.02] backdrop-blur-xl px-4 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
       <Link href="/" className="flex items-center gap-2 mb-3">
         <span className="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-teal-400 text-white flex items-center justify-center font-bold text-sm shadow-[0_0_18px_rgba(139,123,255,0.55)]">
-          AB
+          AV
         </span>
         <span className="font-semibold text-lg tracking-tight text-neutral-50">
-          Agentbruk
+          Agentverden
         </span>
       </Link>
       <p className="text-sm text-neutral-400 mb-4">

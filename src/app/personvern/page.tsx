@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Personvern",
-  description: "Personvernerklæring for Agentbruk.",
+  description: "Personvernerklæring for Agentverden.",
   alternates: { canonical: "/personvern/" },
 };
 

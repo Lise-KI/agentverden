@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Om",
-  description: "Hva Agentbruk er, og hvorfor det finnes.",
+  description: "Hva Agentverden er, og hvorfor det finnes.",
   alternates: { canonical: "/om/" },
 };
 
@@ -13,10 +13,10 @@ export default function OmPage() {
       <Sidebar />
       <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl space-y-4 text-neutral-300">
         <h1 className="heading-stripe text-3xl mb-4 text-neutral-50">
-          Om Agentbruk
+          Om Agentverden
         </h1>
         <p>
-          Agentbruk er en kuratert katalog over ekte ting folk gjør med
+          Agentverden er en kuratert katalog over ekte ting folk gjør med
           AI-agenter — samlet fra X, Reddit, Hacker News og resten av det
           åpne nettet hver eneste dag. Målet er enkelt: vise konkrete,
           etterprøvbare eksempler du kan stjele en idé fra, i stedet for enda

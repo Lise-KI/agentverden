@@ -27,7 +27,7 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Agentbruk</title>
+    <title>Agentverden</title>
     <link>https://agentverden.no</link>
     <description>Ekte ting folk gjør med AI-agenter, samlet fra hele nettet hver dag.</description>
     <language>nb-NO</language>

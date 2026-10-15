@@ -6,7 +6,7 @@ import { useCases } from "@/data/useCases";
 
 export const metadata: Metadata = {
   title: "Alle emner",
-  description: "Alle emnekategorier for AI-agent-use cases på Agentbruk.",
+  description: "Alle emnekategorier for AI-agent-use cases på Agentverden.",
   alternates: { canonical: "/emner/" },
 };
 

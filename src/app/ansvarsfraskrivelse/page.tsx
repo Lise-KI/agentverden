@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Ansvarsfraskrivelse",
-  description: "Ansvarsfraskrivelse for innhold på Agentbruk.",
+  description: "Ansvarsfraskrivelse for innhold på Agentverden.",
   alternates: { canonical: "/ansvarsfraskrivelse/" },
 };
 

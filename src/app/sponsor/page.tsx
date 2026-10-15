@@ -4,7 +4,7 @@ import { sponsors } from "@/data/sponsors";
 
 export const metadata: Metadata = {
   title: "Bli sponsor",
-  description: "Sponsing av Agentbruk — reklame merket tydelig.",
+  description: "Sponsing av Agentverden — reklame merket tydelig.",
   alternates: { canonical: "/sponsor/" },
 };
 
@@ -18,7 +18,7 @@ export default function SponsorPage() {
         </h1>
         <p className="text-neutral-300 mb-4">
           Logoen og en kort tekst vises i sponsorfeltet nederst på hver side,
-          synlig på alle visninger av Agentbruk.
+          synlig på alle visninger av Agentverden.
         </p>
         <p className="text-neutral-300 mb-6">
           Priser og betalingsløsning kommer når siden er live og i drift —

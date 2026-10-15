@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Agentbruk — hva folk faktisk gjør med AI-agenter",
-    template: "%s · Agentbruk",
+    default: "Agentverden — hva folk faktisk gjør med AI-agenter",
+    template: "%s · Agentverden",
   },
   description:
     "Ekte ting folk gjør med AI-agenter, samlet fra hele nettet hver dag. Stjel en idé.",

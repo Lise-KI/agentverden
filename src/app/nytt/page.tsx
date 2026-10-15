@@ -5,7 +5,7 @@ import { useCases } from "@/data/useCases";
 
 export const metadata: Metadata = {
   title: "Nytt",
-  description: "De nyeste use casene lagt til på Agentbruk.",
+  description: "De nyeste use casene lagt til på Agentverden.",
   alternates: { canonical: "/nytt/" },
 };
 
