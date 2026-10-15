@@ -57,6 +57,7 @@ export default async function AgentPage({
         "@type": "ListItem",
         position: i + 1,
         name: u.title,
+        ...(u.sourceUrl ? { url: u.sourceUrl } : {}),
       })),
     },
   };

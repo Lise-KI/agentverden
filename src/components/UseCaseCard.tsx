@@ -10,7 +10,20 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
     <article className="glass glass-hover rounded-xl p-4">
       <div className="flex items-start justify-between gap-3 mb-1">
         <h3 className="font-semibold text-base leading-snug text-neutral-50">
-          {item.title}
+          {item.sourceUrl ? (
+            <a
+              href={item.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-200 hover:underline"
+            >
+              {item.title}
+              <span aria-hidden="true"> ↗</span>
+              <span className="sr-only"> (åpner kilden i ny fane)</span>
+            </a>
+          ) : (
+            item.title
+          )}
         </h3>
         {item.isNew && (
           <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-emerald-400/15 text-emerald-300 border border-emerald-400/30 rounded px-1.5 py-0.5">
@@ -29,12 +42,15 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
           </span>
         ))}
         <span>
-          {item.source} · {item.sourceDate}
+          {item.source}
+          {item.sourceDate ? ` · ${item.sourceDate}` : ""}
         </span>
         {item.accounts && <span>· {item.accounts}</span>}
-        <span className="ml-auto flex items-center gap-1 font-semibold text-violet-300">
-          ▲ {item.votes}
-        </span>
+        {item.votes > 0 && (
+          <span className="ml-auto flex items-center gap-1 font-semibold text-violet-300">
+            ▲ {item.votes}
+          </span>
+        )}
       </div>
     </article>
   );
