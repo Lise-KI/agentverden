@@ -9,6 +9,9 @@ export default function SponsorBar() {
         <span className="font-semibold uppercase tracking-wide text-neutral-500">
           Sponsorer
         </span>
+        <span className="text-[10px] uppercase tracking-wide text-amber-300/70 border border-amber-400/20 rounded px-1">
+          Reklame
+        </span>
         {row.map((s, i) => (
           <Link
             key={i}

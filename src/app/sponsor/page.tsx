@@ -18,6 +18,18 @@ export default function SponsorPage() {
           ingen betalte avtaler inngås før da, i tråd med planen om å bygge
           lokalt og kostnadsfritt først.
         </p>
+        <p className="text-neutral-300 mb-6">
+          Alle sponsorplasseringer merkes tydelig med «Reklame» der de vises
+          på siden, og er uavhengige av det redaksjonelle use case-innholdet.
+          Se{" "}
+          <a
+            href="/ansvarsfraskrivelse"
+            className="underline text-violet-300 hover:text-violet-200"
+          >
+            ansvarsfraskrivelsen
+          </a>{" "}
+          for detaljer.
+        </p>
         <div className="glass rounded-xl p-4">
           <h2 className="font-semibold mb-2 text-neutral-100">
             Nåværende sponsorplasser

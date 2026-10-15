@@ -27,6 +27,12 @@ export default function SiteFooter() {
           >
             Personvern
           </Link>
+          <Link
+            href="/ansvarsfraskrivelse"
+            className="hover:text-neutral-200 transition-colors"
+          >
+            Ansvarsfraskrivelse
+          </Link>
         </nav>
       </div>
     </footer>

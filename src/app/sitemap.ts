@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/nytt",
     "/om",
     "/personvern",
+    "/ansvarsfraskrivelse",
     "/sponsor",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
