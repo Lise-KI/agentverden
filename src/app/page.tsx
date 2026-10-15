@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
 import UseCaseCard from "@/components/UseCaseCard";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { useCases } from "@/data/useCases";
 
 export default function Home() {
@@ -30,6 +31,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        <NewsletterSignup />
 
         {trending.length > 0 && (
           <section className="mb-10">
