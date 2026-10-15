@@ -8,19 +8,27 @@ type Variant = "newsletter" | "ebook";
 
 const copy: Record<
   Variant,
-  { heading: string; what: string; formUrl: string; title: string }
+  {
+    heading: string;
+    what: string;
+    formUrl: string;
+    title: string;
+    button: string;
+  }
 > = {
   newsletter: {
     heading: "Få nye eksempler på e-post",
     what: "Du melder deg på nyhetsbrevet fra Agentverden: norske eksempler på hva folk gjør med AI-agenter, rett i innboksen.",
     formUrl: BREVO_NEWSLETTER_FORM_URL,
     title: "Påmelding til nyhetsbrev fra Agentverden",
+    button: "Meld meg på",
   },
   ebook: {
     heading: "Få e-boken gratis",
-    what: "Du får e-boken «10 ting nordmenn kan gjøre med AI i hverdagen» tilsendt på e-post.",
+    what: "Du får e-boken tilsendt på e-post, og melder deg samtidig på nyhetsbrevet fra Agentverden.",
     formUrl: BREVO_EBOOK_FORM_URL,
     title: "Last ned e-boken fra Agentverden",
+    button: "Få e-boken i innboksen",
   },
 };
 
@@ -52,12 +60,26 @@ export default function NewsletterSignup({
           className="w-full min-h-[320px] border-0"
         />
       ) : (
-        <p
-          role="status"
-          className="text-sm text-neutral-400 border border-dashed border-white/15 rounded-lg p-3"
-        >
-          Påmeldingen er ikke åpnet ennå.
-        </p>
+        <div className="border border-dashed border-white/15 rounded-lg p-3 space-y-2">
+          <div className="flex gap-2">
+            <input
+              type="email"
+              disabled
+              aria-label="E-postadresse"
+              placeholder="din@epost.no"
+              className="flex-1 min-w-0 rounded border border-white/10 bg-white/[0.03] px-2 py-1.5 text-sm text-neutral-300 placeholder:text-neutral-500"
+            />
+            <button
+              disabled
+              className="btn-stripe-primary opacity-40 text-sm px-3 py-1.5"
+            >
+              {c.button}
+            </button>
+          </div>
+          <p role="status" className="text-xs text-neutral-500">
+            Påmeldingen er ikke åpnet ennå.
+          </p>
+        </div>
       )}
 
       <p className="text-xs text-neutral-500 mt-3">
