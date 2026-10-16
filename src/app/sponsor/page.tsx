@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Bli sponsor",
   description: "Sponsing av Agentverden — reklame merket tydelig.",
   alternates: { canonical: "/sponsor/" },
+  robots: { index: false, follow: false },
 };
 
 export default function SponsorPage() {

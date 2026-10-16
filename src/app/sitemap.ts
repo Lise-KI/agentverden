@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { agents } from "@/data/agents";
 import { categories } from "@/data/categories";
+import { BREVO_EBOOK_FORM_URL } from "@/config/brevo";
 
 export const dynamic = "force-static";
 
@@ -15,7 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/om",
     "/personvern",
     "/ansvarsfraskrivelse",
-    "/sponsor",
+    // /ebok tas med først når Brevo-skjemaet er på plass.
+    ...(BREVO_EBOOK_FORM_URL ? ["/ebok"] : []),
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

@@ -47,17 +47,17 @@ export default function Sidebar() {
       </div>
 
       <Link
-        href="/om"
+        href="/ebok"
         className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-3 text-neutral-200"
       >
-        Send inn en use case
+        Gratis e-bok
       </Link>
 
       <Link
-        href="/sponsor"
-        className="glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-amber-200 border border-amber-400/25 bg-gradient-to-r from-amber-500/15 to-amber-400/5 shadow-[0_0_20px_rgba(251,191,36,0.12)]"
+        href="/om"
+        className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-200"
       >
-        Bli sponsor her
+        Send inn en use case
       </Link>
 
       <div className="mb-6">
