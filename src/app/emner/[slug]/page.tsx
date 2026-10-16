@@ -6,6 +6,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
 import { categories } from "@/data/categories";
 import { useCases } from "@/data/useCases";
+import { articles } from "@/data/articles";
 
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
@@ -53,7 +54,7 @@ export default async function CategoryPage({
         "@type": "ListItem",
         position: i + 1,
         name: u.title,
-        ...(u.sourceUrl ? { url: u.sourceUrl } : {}),
+        ...(articles[u.id] ? { url: `https://agentverden.no/bruk/${u.id}/` } : {}),
       })),
     },
   };

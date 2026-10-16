@@ -1,4 +1,5 @@
 import { useCases } from "@/data/useCases";
+import { articles } from "@/data/articles";
 
 export const dynamic = "force-static";
 
@@ -18,8 +19,8 @@ export async function GET() {
     <item>
       <title>${escapeXml(u.title)}</title>
       <description>${escapeXml(u.description)}</description>
-      <link>https://agentverden.no/#${u.id}</link>
-      <guid>https://agentverden.no/#${u.id}</guid>
+      <link>${articles[u.id] ? `https://agentverden.no/bruk/${u.id}/` : `https://agentverden.no/#${u.id}`}</link>
+      <guid>${articles[u.id] ? `https://agentverden.no/bruk/${u.id}/` : `https://agentverden.no/#${u.id}`}</guid>
     </item>`
     )
     .join("");

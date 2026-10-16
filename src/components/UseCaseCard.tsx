@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { UseCase } from "@/data/useCases";
+import { articles } from "@/data/articles";
 import { agents } from "@/data/agents";
 
 function agentName(slug: string) {
@@ -10,17 +12,13 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
     <article className="glass glass-hover rounded-xl p-4">
       <div className="flex items-start justify-between gap-3 mb-1">
         <h3 className="font-semibold text-base leading-snug text-neutral-50">
-          {item.sourceUrl ? (
-            <a
-              href={item.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+          {articles[item.id] ? (
+            <Link
+              href={`/bruk/${item.id}`}
               className="hover:text-violet-200 hover:underline"
             >
               {item.title}
-              <span aria-hidden="true"> ↗</span>
-              <span className="sr-only"> (åpner kilden i ny fane)</span>
-            </a>
+            </Link>
           ) : (
             item.title
           )}
@@ -32,6 +30,14 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
         )}
       </div>
       <p className="text-sm text-neutral-400 mb-3">{item.description}</p>
+      {articles[item.id] && (
+        <Link
+          href={`/bruk/${item.id}`}
+          className="inline-block text-sm font-medium text-violet-300 hover:text-violet-200 mb-3"
+        >
+          Les artikkelen →
+        </Link>
+      )}
       <div className="flex flex-wrap items-center gap-2 text-xs text-neutral-500">
         {item.agents.map((a) => (
           <span

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { agents } from "@/data/agents";
 import { categories } from "@/data/categories";
+import { articles } from "@/data/articles";
+import { useCases } from "@/data/useCases";
 import { BREVO_EBOOK_FORM_URL } from "@/config/brevo";
 
 export const dynamic = "force-static";
@@ -33,5 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...agentRoutes, ...categoryRoutes];
+  const articleRoutes = useCases
+    .filter((u) => articles[u.id])
+    .map((u) => ({
+      url: `${baseUrl}/bruk/${u.id}`,
+      lastModified: new Date(),
+    }));
+
+  return [...staticRoutes, ...agentRoutes, ...categoryRoutes, ...articleRoutes];
 }

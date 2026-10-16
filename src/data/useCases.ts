@@ -6,7 +6,7 @@ export type UseCase = {
   category: string; // category slug
   source: string; // plattform
   sourceDate?: string;
-  sourceUrl?: string; // lenke til den faktiske kilden (åpnes i ny fane)
+  sourceUrl?: string; // intern kildenotat for redaksjonen, vises ikke på nettsiden
   sourceChecked?: boolean; // true = siden er åpnet og lest direkte; false = funnet via søk
   accounts?: string;
   isNew?: boolean;

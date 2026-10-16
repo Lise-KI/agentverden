@@ -6,6 +6,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
 import { agents } from "@/data/agents";
 import { useCases } from "@/data/useCases";
+import { articles } from "@/data/articles";
 
 export function generateStaticParams() {
   return agents.map((a) => ({ slug: a.slug }));
@@ -57,7 +58,7 @@ export default async function AgentPage({
         "@type": "ListItem",
         position: i + 1,
         name: u.title,
-        ...(u.sourceUrl ? { url: u.sourceUrl } : {}),
+        ...(articles[u.id] ? { url: `https://agentverden.no/bruk/${u.id}/` } : {}),
       })),
     },
   };
