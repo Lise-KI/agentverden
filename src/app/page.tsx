@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
-import UseCaseCard from "@/components/UseCaseCard";
+import UseCaseGrid from "@/components/UseCaseGrid";
 import { useCases } from "@/data/useCases";
 
 export default function Home() {
@@ -33,32 +33,22 @@ export default function Home() {
 
         {trending.length > 0 && (
           <section className="mb-10">
-            <h2 className="text-lg font-semibold mb-3 text-neutral-50">Trender i dag</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {trending.map((u) => (
-                <UseCaseCard key={u.id} item={u} />
-              ))}
-            </div>
+            <h2 className="text-lg font-semibold mb-3 text-neutral-50">
+              Trender i dag
+            </h2>
+            <UseCaseGrid items={trending} listClassName="grid sm:grid-cols-2 gap-4" />
           </section>
         )}
 
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-3 text-neutral-50">Siste funn</h2>
-          <div className="space-y-4">
-            {sortedByVotes.map((u) => (
-              <UseCaseCard key={u.id} item={u} />
-            ))}
-          </div>
+          <UseCaseGrid items={sortedByVotes} />
         </section>
 
         {newest.length > 0 && (
           <section>
             <h2 className="text-lg font-semibold mb-3 text-neutral-50">Nyeste</h2>
-            <div className="space-y-4">
-              {newest.map((u) => (
-                <UseCaseCard key={`new-${u.id}`} item={u} />
-              ))}
-            </div>
+            <UseCaseGrid items={newest} />
           </section>
         )}
       </main>

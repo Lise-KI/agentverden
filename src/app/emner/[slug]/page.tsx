@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
-import UseCaseCard from "@/components/UseCaseCard";
+import UseCaseGrid from "@/components/UseCaseGrid";
 import { categories } from "@/data/categories";
 import { useCases } from "@/data/useCases";
 
@@ -44,16 +44,13 @@ export default async function CategoryPage({
           {category.name}
         </h1>
         <p className="text-sm text-neutral-500 mb-4">{category.description}</p>
-        <div className="space-y-4">
-          {items.map((u) => (
-            <UseCaseCard key={u.id} item={u} />
-          ))}
-          {items.length === 0 && (
-            <p className="text-sm text-neutral-500">
-              Ingen use cases registrert i dette emnet ennå.
-            </p>
-          )}
-        </div>
+        {items.length > 0 ? (
+          <UseCaseGrid items={items} />
+        ) : (
+          <p className="text-sm text-neutral-500">
+            Ingen use cases registrert i dette emnet ennå.
+          </p>
+        )}
       </main>
     </div>
   );

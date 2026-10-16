@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
-import UseCaseCard from "@/components/UseCaseCard";
+import UseCaseGrid from "@/components/UseCaseGrid";
 import { useCases } from "@/data/useCases";
 
 export const metadata: Metadata = {
@@ -18,11 +18,7 @@ export default function NyttPage() {
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
         <h1 className="text-lg font-semibold mb-3">Nyeste use cases</h1>
-        <div className="space-y-4">
-          {sorted.map((u) => (
-            <UseCaseCard key={u.id} item={u} />
-          ))}
-        </div>
+        <UseCaseGrid items={sorted} />
       </main>
     </div>
   );

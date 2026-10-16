@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
-import UseCaseCard from "@/components/UseCaseCard";
+import UseCaseGrid from "@/components/UseCaseGrid";
 import { agents } from "@/data/agents";
 import { useCases } from "@/data/useCases";
 
@@ -51,16 +51,13 @@ export default async function AgentPage({
         <p className="text-sm text-neutral-500 mb-4">
           {items.length} use case{items.length === 1 ? "" : "s"}
         </p>
-        <div className="space-y-4">
-          {items.map((u) => (
-            <UseCaseCard key={u.id} item={u} />
-          ))}
-          {items.length === 0 && (
-            <p className="text-sm text-neutral-500">
-              Ingen use cases registrert for denne agenten ennå.
-            </p>
-          )}
-        </div>
+        {items.length > 0 ? (
+          <UseCaseGrid items={items} />
+        ) : (
+          <p className="text-sm text-neutral-500">
+            Ingen use cases registrert for denne agenten ennå.
+          </p>
+        )}
       </main>
     </div>
   );
