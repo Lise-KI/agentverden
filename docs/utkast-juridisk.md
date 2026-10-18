@@ -32,8 +32,8 @@ Vi bruker Brevo (Sendinblue SAS, Frankrike) til påmeldingsskjema, lagring av ad
 
 Skjemaet er innebygd på våre sider og lastes fra Brevos servere. Når en side med skjema vises, kan Brevo dermed motta teknisk informasjon fra nettleseren din (som IP-adresse), og Brevo kan sette egne informasjonskapsler. [Må kontrolleres mot det faktiske embed-skjemaet: setter det cookies eller laster det script/fonter fra tredjeparter? I så fall må vi enten gi informasjon/innhente samtykke etter ekomloven § 2-7b (cookies), eller bytte løsning. Sjekkes når embed-koden foreligger.]
 
-### Innsending av use cases
-[Gjelder bare hvis/når et innsendingsskjema tas i bruk. Beskriv hva som lagres, hvor, hvor lenge. Ta bort avsnittet hvis det ikke er i bruk.]
+### Innsending av eksempler (/send-inn)
+Hvis du sender oss et eksempel på e-post (kontakt@agentverden.no), behandler vi e-postadressen din, navnet ditt hvis det står i e-posten, og innholdet du sender. Formålet er å vurdere innsendingen, svare deg og eventuelt skrive en artikkel. Rettslig grunnlag er berettiget interesse, jf. GDPR art. 6 nr. 1 bokstav f (å kunne svare på henvendelser). E-posten lagres i e-postkontoen vår hos Webhuset [kontroller: databehandleravtale med Webhuset, lagring i Norge/EØS]. Vi sletter e-posten [innen 12 måneder etter siste kontakt – avklar], med mindre du har bedt om noe annet. Publiserte artikler inneholder ikke e-postadressen din.
 
 ### Dine rettigheter
 Du har rett til innsyn, retting, sletting, begrensning av behandlingen, dataportabilitet og å trekke tilbake samtykke. Send forespørsel til support@agentverden.no. Vi svarer innen 30 dager. Du kan klage til Datatilsynet (datatilsynet.no) hvis du mener vi behandler opplysninger i strid med regelverket.

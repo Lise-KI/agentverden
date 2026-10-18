@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/emner",
     "/nytt",
     "/om",
+    "/send-inn",
     "/personvern",
     "/ansvarsfraskrivelse",
     // /ebok tas med først når Brevo-skjemaet er på plass.

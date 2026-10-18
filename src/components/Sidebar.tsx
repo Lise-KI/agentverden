@@ -54,10 +54,10 @@ export default function Sidebar() {
       </Link>
 
       <Link
-        href="/om"
+        href="/send-inn"
         className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-200"
       >
-        Send inn en use case
+        Send inn et eksempel
       </Link>
 
       <div className="mb-6">
