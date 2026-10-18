@@ -10,12 +10,12 @@ type Variant = "newsletter" | "ebook";
 
 const headings: Record<Variant, { heading: string; what: string }> = {
   newsletter: {
-    heading: "Få nye eksempler og en gratis e-bok",
-    what: "Meld deg på nyhetsbrevet fra Agentverden, med norske eksempler på hva folk gjør med AI-agenter. Som takk får du e-boken «10 ting nordmenn kan gjøre med AI i hverdagen».",
+    heading: "Få 5 use cases i uken",
+    what: "Gratis nyhetsbrev fra Agentverden med fem nye, norske eksempler på hva folk gjør med AI-agenter, én gang i uken. Som takk får du e-boken «10 ting nordmenn kan gjøre med AI i hverdagen».",
   },
   ebook: {
     heading: "Meld deg på nyhetsbrevet og få e-boken gratis",
-    what: "Du melder deg på nyhetsbrevet fra Agentverden, med norske eksempler på hva folk gjør med AI-agenter. Som takk får du e-boken. Du kan melde deg av når som helst, og e-boken beholder du.",
+    what: "Du melder deg på nyhetsbrevet fra Agentverden: fem nye, norske eksempler på hva folk gjør med AI-agenter, én gang i uken. Som takk får du e-boken. Du kan melde deg av når som helst, og e-boken beholder du.",
   },
 };
 
@@ -43,8 +43,9 @@ export default function NewsletterSignup({
 
   return (
     <section
+      id="nyhetsbrev"
       aria-labelledby="signup-heading"
-      className="glass rounded-xl p-4 sm:p-5 mt-10"
+      className="glass rounded-xl p-4 sm:p-5 mt-10 scroll-mt-6"
     >
       <h2
         id="signup-heading"
@@ -122,7 +123,8 @@ export default function NewsletterSignup({
                         required
                       />
                       <span>
-                        Ja, jeg vil ha e-boken og nyhetsbrevet fra Agentverden.
+                        Ja, jeg vil ha e-boken og nyhetsbrevet fra Agentverden
+                        (5 use cases i uken).
                         Jeg har lest{" "}
                         <Link
                           href="/personvern"

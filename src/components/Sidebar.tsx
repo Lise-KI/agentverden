@@ -82,41 +82,22 @@ export default function Sidebar() {
         </p>
 
         <div className="glass rounded-lg p-3 mb-4 space-y-2">
-          <label className="block text-xs font-semibold uppercase tracking-wide text-neutral-600">
-            Få 5 use cases hver morgen
-          </label>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              disabled
-              placeholder="din@epost.no"
-              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-400"
-            />
-            <button
-              disabled
-              title="Kommer når nyhetsbrevet er satt opp"
-              className="btn-stripe-primary opacity-40 text-sm px-3 py-1.5"
-            >
-              Meld meg på
-            </button>
-          </div>
-          <p className="text-[11px] text-neutral-500">
-            Nyhetsbrev kommer etter lansering — se{" "}
-            <Link href="/om" className="underline hover:text-neutral-900">
-              planen
-            </Link>
-            .
+          <p className="text-xs font-semibold uppercase tracking-wide text-neutral-600">
+            Få 5 use cases i uken
           </p>
+          <p className="text-sm text-neutral-700">
+            Gratis nyhetsbrev med fem nye eksempler hver uke. Du får e-boken
+            «10 ting nordmenn kan gjøre med AI i hverdagen» som takk.
+          </p>
+          <Link
+            href="/ebok/#nyhetsbrev"
+            className="btn-stripe-primary block text-center text-sm px-3 py-2"
+          >
+            Meld meg på
+          </Link>
         </div>
 
-        <Link
-          href="/ebok"
-          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-3 text-neutral-800"
-        >
-          Gratis e-bok
-        </Link>
-
-        <Link
+                <Link
           href="/send-inn"
           className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-800"
         >

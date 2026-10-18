@@ -54,8 +54,8 @@ export default function PersonvernPage() {
         <p>
           <strong className="text-neutral-900">Hva du melder deg på.</strong>{" "}
           Når du fyller ut skjemaet og krysser av, melder du deg på
-          nyhetsbrevet fra Agentverden, med norske eksempler på hva folk gjør
-          med AI-agenter. Som takk får du e-boken «10 ting nordmenn kan gjøre
+          nyhetsbrevet fra Agentverden, som kommer én gang i uken med fem
+          norske eksempler på hva folk gjør med AI-agenter. Som takk får du e-boken «10 ting nordmenn kan gjøre
           med AI i hverdagen». Dette står i skjemaet før du sender det. Melder
           du deg av, beholder du e-boken.
         </p>

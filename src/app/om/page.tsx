@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 
@@ -39,17 +40,27 @@ export default function OmPage() {
           Send inn en use case
         </h2>
         <p>
-          Innsendingsskjema kommer når siden er live. Inntil videre: skriv til
-          oss, så legger vi det inn manuelt etter gjennomgang — akkurat som
-          originalen gjør det.
+          Har du brukt AI til noe nyttig i hverdagen?{" "}
+          <Link
+            href="/send-inn"
+            className="underline text-brand hover:text-brand-dark"
+          >
+            Send oss eksempelet ditt
+          </Link>
+          .
         </p>
         <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-900">
           Nyhetsbrev og drift
         </h2>
         <p>
-          Nyhetsbrev («5 use cases hver morgen»), SEO/chatbot-optimalisering,
-          overvåking av tilbakemeldinger og sponsorpleie settes opp som egne
-          driftsrutiner etter at siden er lansert — i tråd med planen.
+          Nyhetsbrevet kommer én gang i uken med fem nye eksempler.{" "}
+          <Link
+            href="/ebok/#nyhetsbrev"
+            className="underline text-brand hover:text-brand-dark"
+          >
+            Meld deg på her
+          </Link>
+          , så får du også e-boken gratis.
         </p>
       </main>
     </div>
