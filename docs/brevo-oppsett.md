@@ -19,9 +19,11 @@ Den som ber om e-boken, melder seg samtidig på nyhetsbrevet. E-boken er en velk
 6. Lenke til https://agentverden.no/personvern/ under skjemaet.
 
 ## Levering av e-boken
-- PDF: `docs/10-ting-nordmenn-kan-gjore-med-ai.pdf`. Last den opp i Brevo (filbehandler) og legg lenken i den endelige bekreftelses-/velkomstmeldingen som sendes etter at adressen er bekreftet.
-- PDF-en ligger bevisst **ikke** i `public/`. Alt i `public/` kan lastes ned av hvem som helst som kjenner URL-en.
-- Velkomstmeldingen skal minne om at man er påmeldt nyhetsbrevet og ha avmeldingslenke.
+- Brevos mediebibliotek tar ikke imot PDF. E-boken ligger derfor på en ulenket adresse på siden:
+  https://agentverden.no/f/02dc103e1448/10-ting-nordmenn-kan-gjore-med-ai.pdf
+- Den er ikke lenket fra nettstedet, står ikke i sitemap, og `public/_headers` sender `X-Robots-Tag: noindex`.
+- Lenken legges i bekreftelses-/velkomst-e-posten som sendes etter dobbel bekreftelse.
+- Ved ny utgave: bytt filen i `public/f/02dc103e1448/` (samme navn), eller lag ny mappe og oppdater lenken i Brevo.
 
 ## Skjema for nyhetsbrev (`BREVO_NEWSLETTER_FORM_URL`)
 - Samme liste (Nyhetsbrev), dobbel bekreftelse, lenke til personvern.
