@@ -7,10 +7,11 @@ import JsonLd from "@/components/JsonLd";
 import { agents } from "@/data/agents";
 import { articles } from "@/data/articles";
 import { categories } from "@/data/categories";
-import { useCases } from "@/data/useCases";
+import { useCases, hasPage, isReviewed } from "@/data/useCases";
+import CopyButton from "@/components/CopyButton";
 
 export function generateStaticParams() {
-  return useCases.filter((u) => articles[u.id]).map((u) => ({ slug: u.id }));
+  return useCases.filter(hasPage).map((u) => ({ slug: u.id }));
 }
 
 export async function generateMetadata({
@@ -20,12 +21,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const item = useCases.find((u) => u.id === slug);
-  const article = articles[slug];
-  if (!item || !article) return {};
+  if (!item || !hasPage(item)) return {};
   return {
     title: item.title,
-    description: article.lead,
+    description: articles[slug]?.lead ?? item.description,
     alternates: { canonical: `/bruk/${slug}/` },
+    // Ikke gjennomgått av eier ennå: holdes utenfor søkemotorer.
+    ...(isReviewed(item) ? {} : { robots: { index: false, follow: false } }),
   };
 }
 
@@ -36,8 +38,17 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
   const item = useCases.find((u) => u.id === slug);
-  const article = articles[slug];
-  if (!item || !article) notFound();
+  if (!item || !hasPage(item)) notFound();
+  const article = articles[slug] ?? {
+    lead: item.description,
+    sections: [
+      { heading: "Hva de gjorde", paragraphs: [item.whatTheyDid] },
+      { heading: "Hvordan det gikk", paragraphs: [item.howItWent] },
+      { heading: "Verdt å vite", paragraphs: [item.worthKnowing] },
+    ]
+      .filter((s) => s.paragraphs[0])
+      .map((s) => ({ heading: s.heading, paragraphs: s.paragraphs as string[] })),
+  };
 
   const category = categories.find((c) => c.slug === item.category);
   const itemAgents = item.agents
@@ -104,6 +115,20 @@ export default async function ArticlePage({
               ))}
             </section>
           ))}
+
+          {item.promptTemplate && (
+            <section className="mb-6">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-lg font-semibold text-neutral-50">
+                  Prøv selv: prompt-mal
+                </h2>
+                <CopyButton text={item.promptTemplate} />
+              </div>
+              <pre className="glass rounded-lg p-3 text-sm whitespace-pre-wrap text-neutral-300">
+                {item.promptTemplate}
+              </pre>
+            </section>
+          )}
 
           <p className="text-sm text-neutral-500 border-t border-white/10 pt-4 mt-8">
             Artikkelen er skrevet av Agentverden med egne ord, basert på

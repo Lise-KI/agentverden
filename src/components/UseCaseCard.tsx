@@ -1,21 +1,45 @@
 import Link from "next/link";
-import { UseCase } from "@/data/useCases";
-import { articles } from "@/data/articles";
+import { UseCase, hasPage } from "@/data/useCases";
 import { agents } from "@/data/agents";
+import { categories } from "@/data/categories";
 
 function agentName(slug: string) {
   return agents.find((a) => a.slug === slug)?.name ?? slug;
 }
 
+function categoryName(slug: string) {
+  return categories.find((c) => c.slug === slug)?.name ?? slug;
+}
+
 export default function UseCaseCard({ item }: { item: UseCase }) {
+  const href = hasPage(item) ? `/bruk/${item.id}` : null;
+
   return (
-    <article className="glass glass-hover rounded-xl p-4">
-      <div className="flex items-start justify-between gap-3 mb-1">
-        <h3 className="font-semibold text-base leading-snug text-neutral-50">
-          {articles[item.id] ? (
+    <article className="relative glass glass-hover rounded-xl p-4 flex gap-3">
+      <div className="flex flex-col items-center shrink-0 w-10 pt-0.5 text-violet-300">
+        <span className="text-sm leading-none">▲</span>
+        <span className="text-sm font-semibold text-neutral-200 mt-0.5">
+          {item.votes}
+        </span>
+      </div>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-[10px] font-semibold uppercase tracking-wide text-neutral-500">
+            {categoryName(item.category)}
+          </span>
+          {item.isNew && (
+            <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-emerald-400/15 text-emerald-300 border border-emerald-400/30 rounded px-1.5 py-0.5">
+              Ny
+            </span>
+          )}
+        </div>
+        <h3 className="font-semibold text-base leading-snug text-neutral-50 mb-1">
+          {href ? (
+            // Lenken dekker hele kortet (after:inset-0), så hele kortet er klikkbart.
             <Link
-              href={`/bruk/${item.id}`}
-              className="hover:text-violet-200 hover:underline"
+              href={href}
+              className="hover:text-violet-200 after:absolute after:inset-0 after:content-['']"
             >
               {item.title}
             </Link>
@@ -23,40 +47,27 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
             item.title
           )}
         </h3>
-        {item.isNew && (
-          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-emerald-400/15 text-emerald-300 border border-emerald-400/30 rounded px-1.5 py-0.5">
-            Ny
+        <p className="text-sm text-neutral-400 mb-3">{item.description}</p>
+        <div className="flex flex-wrap items-center gap-2 text-xs text-neutral-500">
+          {item.agents.map((a) => (
+            <span
+              key={a}
+              className="bg-white/[0.06] border border-white/10 rounded px-1.5 py-0.5 font-medium text-neutral-300"
+            >
+              {agentName(a)}
+            </span>
+          ))}
+          <span>
+            {item.source}
+            {item.sourceDate ? ` · ${item.sourceDate}` : ""}
           </span>
-        )}
-      </div>
-      <p className="text-sm text-neutral-400 mb-3">{item.description}</p>
-      {articles[item.id] && (
-        <Link
-          href={`/bruk/${item.id}`}
-          className="inline-block text-sm font-medium text-violet-300 hover:text-violet-200 mb-3"
-        >
-          Les artikkelen →
-        </Link>
-      )}
-      <div className="flex flex-wrap items-center gap-2 text-xs text-neutral-500">
-        {item.agents.map((a) => (
-          <span
-            key={a}
-            className="bg-white/[0.06] border border-white/10 rounded px-1.5 py-0.5 font-medium text-neutral-300"
-          >
-            {agentName(a)}
-          </span>
-        ))}
-        <span>
-          {item.source}
-          {item.sourceDate ? ` · ${item.sourceDate}` : ""}
-        </span>
-        {item.accounts && <span>· {item.accounts}</span>}
-        {item.votes > 0 && (
-          <span className="ml-auto flex items-center gap-1 font-semibold text-violet-300">
-            ▲ {item.votes}
-          </span>
-        )}
+          {item.accounts && <span>· {item.accounts}</span>}
+          {href && (
+            <span className="ml-auto text-xs font-semibold text-violet-300">
+              Les mer →
+            </span>
+          )}
+        </div>
       </div>
     </article>
   );
