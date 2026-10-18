@@ -131,3 +131,32 @@ body {
 body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+/* Brevo-skjema: tilstander som Brevos main.js styrer med klassenavn
+   (erstatter Brevos egen sib-styles.css, som ikke lastes). */
+.sib-form-message-panel {
+  display: none;
+}
+.sib-form-message-panel--active {
+  display: block;
+}
+.sib-hide-loader-icon,
+.input--hidden {
+  display: none !important;
+}
+.sib-form-block__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.progress-indicator__icon {
+  animation: sib-spin 1s linear infinite;
+}
+@keyframes sib-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.entry__error:empty {
+  display: none;
+}

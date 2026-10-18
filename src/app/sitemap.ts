@@ -3,7 +3,6 @@ import { agents } from "@/data/agents";
 import { categories } from "@/data/categories";
 import { articles } from "@/data/articles";
 import { useCases } from "@/data/useCases";
-import { BREVO_EBOOK_FORM_URL } from "@/config/brevo";
 
 export const dynamic = "force-static";
 
@@ -19,8 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/send-inn",
     "/personvern",
     "/ansvarsfraskrivelse",
-    // /ebok tas med først når Brevo-skjemaet er på plass.
-    ...(BREVO_EBOOK_FORM_URL ? ["/ebok"] : []),
+    "/ebok",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import { BREVO_EBOOK_FORM_URL } from "@/config/brevo";
 import { loadEbok } from "@/lib/ebok";
 
 export const metadata: Metadata = {
@@ -9,8 +8,6 @@ export const metadata: Metadata = {
   description:
     "10 ting nordmenn kan gjøre med AI i hverdagen. Gratis e-bok fra Agentverden, tilsendt på e-post.",
   alternates: { canonical: "/ebok/" },
-  // Skjules fra søkemotorer til Brevo-skjemaet er på plass.
-  ...(BREVO_EBOOK_FORM_URL ? {} : { robots: { index: false, follow: false } }),
 };
 
 // Innholdet i e-boken vises ikke på siden: den leveres bare via e-post.
