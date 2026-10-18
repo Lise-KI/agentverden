@@ -28,11 +28,8 @@ export default function PersonvernPage() {
           Personvern
         </h1>
 
-        <H2>Hvem er ansvarlig</H2>
         <p>
-          Agentverden drives av Fairnie Bil (enkeltpersonforetak), som er
-          behandlingsansvarlig for personopplysningene som beskrives her.
-          Spørsmål om personvern sender du til{" "}
+          Har du spørsmål om personvern, skriv til{" "}
           <a href="mailto:support@agentverden.no" className={linkCls}>
             support@agentverden.no
           </a>
@@ -135,6 +132,15 @@ export default function PersonvernPage() {
             rel="noopener noreferrer"
           >
             Datatilsynet
+          </a>
+          .
+        </p>
+
+        <H2>Behandlingsansvarlig</H2>
+        <p>
+          Fairnie Bil (enkeltpersonforetak). Kontakt:{" "}
+          <a href="mailto:support@agentverden.no" className={linkCls}>
+            support@agentverden.no
           </a>
           .
         </p>
