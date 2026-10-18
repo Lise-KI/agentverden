@@ -138,7 +138,7 @@ export default function PersonvernPage() {
 
         <H2>Behandlingsansvarlig</H2>
         <p>
-          Fairnie Bil (enkeltpersonforetak). Kontakt:{" "}
+          Fairnie Bil (enkeltpersonforetak), org.nr. 930 081 035. Kontakt:{" "}
           <a href="mailto:support@agentverden.no" className={linkCls}>
             support@agentverden.no
           </a>
