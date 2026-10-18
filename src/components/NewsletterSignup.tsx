@@ -83,8 +83,8 @@ export default function NewsletterSignup({
       )}
 
       <p className="text-xs text-neutral-500 mt-3">
-        Etter påmelding får du en e-post der du må bekrefte adressen din
-        (dobbel bekreftelse). Du kan melde deg av når som helst. Les{" "}
+        Du melder deg på ved å krysse av og sende skjemaet. Du kan melde deg
+        av når som helst via lenken i hver e-post. Les{" "}
         <Link
           href="/personvern"
           className="underline text-brand hover:text-brand-dark"

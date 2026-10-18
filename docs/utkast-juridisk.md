@@ -19,7 +19,7 @@ Agentverden bruker ingen analyseverktøy, ingen annonsenettverk og ingen sporing
 
 **Rettslig grunnlag.** Samtykke, jf. personvernforordningen (GDPR) art. 6 nr. 1 bokstav a. Samtykket gis ved at du fyller ut skjemaet og bekrefter adressen din.
 
-**Dobbel bekreftelse.** Etter at du har meldt deg på, sender vi en e-post med en bekreftelseslenke. Du blir ikke lagt til i nyhetsbrevlisten før du har klikket på lenken. Hvis du ikke bekrefter, [slettes adressen etter X dager – avklar innstilling i Brevo].
+**Slik melder du deg på.** Du krysser av i en boks som ikke er forhåndsavkrysset, og sender skjemaet. Vi lagrer tidspunkt og hvilket skjema du brukte, som dokumentasjon på samtykket. E-boken sendes til e-postadressen du oppgir. [Eierens valg okt. 2026: enkel bekreftelse, ikke dobbel.]
 
 **Avmelding og tilbaketrekking.** Du kan når som helst melde deg av via avmeldingslenken nederst i hver e-post, eller ved å skrive til support@agentverden.no. Å trekke samtykket tilbake påvirker ikke lovligheten av behandlingen før tilbaketrekkingen.
 
