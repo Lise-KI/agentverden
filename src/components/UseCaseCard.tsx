@@ -2,6 +2,7 @@ import Link from "next/link";
 import { UseCase, hasPage } from "@/data/useCases";
 import { agents } from "@/data/agents";
 import { categories } from "@/data/categories";
+import AgentIcon from "@/components/AgentIcon";
 
 function agentName(slug: string) {
   return agents.find((a) => a.slug === slug)?.name ?? slug;
@@ -52,8 +53,9 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
           {item.agents.map((a) => (
             <span
               key={a}
-              className="bg-neutral-100 border border-neutral-200 rounded px-1.5 py-0.5 font-medium text-neutral-700"
+              className="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-200 rounded px-1.5 py-0.5 font-medium text-neutral-700"
             >
+              <AgentIcon slug={a} size={14} />
               {agentName(a)}
             </span>
           ))}

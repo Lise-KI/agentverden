@@ -17,7 +17,7 @@ export default function Home() {
           <input
             type="search"
             placeholder="Søk i use cases…"
-            className="glass flex-1 rounded-lg px-3 py-2 text-sm text-neutral-800 placeholder:text-neutral-600 outline-none focus:border-brand"
+            className="glass flex-1 rounded-lg px-3 py-2 text-sm text-neutral-800 placeholder:text-neutral-400 outline-none focus:border-brand"
           />
           <div className="glass flex gap-1 rounded-lg p-1 text-sm">
             <button className="btn-stripe-primary rounded px-3 py-1">

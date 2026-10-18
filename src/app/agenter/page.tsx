@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+import AgentIcon from "@/components/AgentIcon";
 import { agents } from "@/data/agents";
 import { useCases } from "@/data/useCases";
 
@@ -25,7 +26,10 @@ export default function AgenterPage() {
                 href={`/agenter/${a.slug}`}
                 className="glass glass-hover rounded-xl p-4 flex items-center justify-between"
               >
-                <span className="font-medium text-neutral-900">{a.name}</span>
+                <span className="flex items-center gap-3 font-medium text-neutral-900">
+                  <AgentIcon slug={a.slug} size={32} />
+                  {a.name}
+                </span>
                 <span className="text-sm text-neutral-500">
                   {n} use case{n === 1 ? "" : "s"}
                 </span>

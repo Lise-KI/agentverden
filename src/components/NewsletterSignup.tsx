@@ -67,7 +67,7 @@ export default function NewsletterSignup({
               disabled
               aria-label="E-postadresse"
               placeholder="din@epost.no"
-              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-600"
+              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-400"
             />
             <button
               disabled

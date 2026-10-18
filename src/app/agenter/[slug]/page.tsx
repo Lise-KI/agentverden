@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+import AgentIcon from "@/components/AgentIcon";
 import UseCaseGrid from "@/components/UseCaseGrid";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
@@ -68,7 +69,8 @@ export default async function AgentPage({
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
         <JsonLd data={jsonLd} />
-        <h1 className="text-lg font-semibold mb-1 text-neutral-900">
+        <h1 className="flex items-center gap-3 text-lg font-semibold mb-1 text-neutral-900">
+          <AgentIcon slug={agent.slug} size={32} />
           {agent.name}
         </h1>
         <p className="text-sm text-neutral-500 mb-4">

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { categories } from "@/data/categories";
 import { agents } from "@/data/agents";
+import AgentIcon from "@/components/AgentIcon";
 
 function ChipRow({
   label,
   items,
 }: {
   label: string;
-  items: { href: string; name: string }[];
+  items: { href: string; name: string; icon?: string }[];
 }) {
   return (
     <div className="flex items-center gap-2 overflow-x-auto pb-1 -mx-4 px-4 [scrollbar-width:none]">
@@ -18,8 +19,9 @@ function ChipRow({
         <Link
           key={i.href}
           href={i.href}
-          className="shrink-0 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-700 hover:text-neutral-950"
+          className="shrink-0 inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-700 hover:text-neutral-950"
         >
+          {i.icon && <AgentIcon slug={i.icon} size={16} />}
           {i.name}
         </Link>
       ))}
@@ -35,7 +37,7 @@ export default function Sidebar() {
       <div className="lg:hidden border-b border-neutral-200 bg-white px-4 pt-3 pb-2 space-y-2">
         <div className="flex items-center justify-between gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <span className="h-7 w-7 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-xs">
+            <span className="h-7 w-7 rounded-lg bg-brand text-[#fff] flex items-center justify-center font-bold text-xs">
               AV
             </span>
             <span className="font-semibold tracking-tight text-neutral-900">
@@ -56,6 +58,7 @@ export default function Sidebar() {
           items={agents.map((a) => ({
             href: `/agenter/${a.slug}`,
             name: a.name,
+            icon: a.slug,
           }))}
         />
         <ChipRow
@@ -69,7 +72,7 @@ export default function Sidebar() {
 
       <aside className="hidden lg:block lg:w-72 shrink-0 border-r border-neutral-200 bg-white px-4 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
         <Link href="/" className="flex items-center gap-2 mb-3">
-          <span className="h-8 w-8 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-sm">
+          <span className="h-8 w-8 rounded-lg bg-brand text-[#fff] flex items-center justify-center font-bold text-sm">
             AV
           </span>
           <span className="font-semibold text-lg tracking-tight text-neutral-900">
@@ -90,7 +93,7 @@ export default function Sidebar() {
               type="email"
               disabled
               placeholder="din@epost.no"
-              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-600"
+              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-400"
             />
             <button
               disabled
@@ -132,8 +135,9 @@ export default function Sidebar() {
               <li key={a.slug}>
                 <Link
                   href={`/agenter/${a.slug}`}
-                  className="flex justify-between text-neutral-700 hover:text-neutral-950 transition-colors"
+                  className="flex items-center gap-2.5 py-0.5 text-neutral-700 hover:text-neutral-950 transition-colors"
                 >
+                  <AgentIcon slug={a.slug} />
                   <span>{a.name}</span>
                 </Link>
               </li>
