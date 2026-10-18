@@ -29,8 +29,10 @@ export default function PersonvernPage() {
         </h2>
         <p>
           Når påmelding til nyhetsbrevet («5 use cases hver morgen») blir
-          tilgjengelig, vil vi be om e-postadressen din. Den brukes
-          utelukkende til å sende deg nyhetsbrevet, lagres hos vår
+          tilgjengelig, vil vi be om e-postadressen din. Ber du om e-boken,
+          melder du deg samtidig på nyhetsbrevet, og det står tydelig i
+          skjemaet. Adressen brukes utelukkende til å sende deg e-boken og
+          nyhetsbrevet, lagres hos vår
           e-postleverandør, og du kan melde deg av når du vil via lenke i
           hver utsendelse. Vi selger eller deler aldri e-postadresser med
           tredjepart.

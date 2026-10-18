@@ -13,7 +13,7 @@
 Agentverden bruker ingen analyseverktøy, ingen annonsenettverk og ingen sporingspiksler. [Må bekreftes før publisering, se avsnittet «Brevo» under: innebygde skjemaer laster innhold fra en tredjepart.]
 
 ### Nyhetsbrev og e-bok
-**Hva du melder deg på.** Hvis du fyller ut påmeldingsskjemaet for nyhetsbrevet, sender vi deg [frekvens, f.eks. «ukentlig»] e-post med eksempler på hva folk gjør med AI-agenter. Hvis du ber om e-boken «10 ting nordmenn kan gjøre med AI i hverdagen», sender vi deg den på e-post. [Avklar: skal e-bok-bestilling også gi nyhetsbrev? I så fall må det være et eget, ikke forhåndsavkrysset valg i skjemaet. Dette utkastet forutsetter at e-bok og nyhetsbrev er to separate samtykker.]
+**Hva du melder deg på.** Hvis du fyller ut påmeldingsskjemaet for nyhetsbrevet, sender vi deg [frekvens, f.eks. «ukentlig»] e-post med eksempler på hva folk gjør med AI-agenter. Hvis du ber om e-boken «10 ting nordmenn kan gjøre med AI i hverdagen», melder du deg samtidig på nyhetsbrevet, og vi sender deg e-boken som takk. Det står tydelig i skjemaet og på knappen før du sender. Melder du deg av, beholder du e-boken. [Eierens valg okt. 2026: e-bok gir automatisk påmelding. Restrisiko: GDPR art. 7 nr. 4 (samtykke som vilkår for en ytelse). Må vurderes av eier før publisering.]
 
 **Hvilke opplysninger.** E-postadressen din, [evt. fornavn hvis skjemaet ber om det], tidspunkt for påmelding og bekreftelse, og teknisk bekreftelsesinformasjon (IP-adresse ved påmelding/bekreftelse) som e-posttjenesten registrerer som dokumentasjon på samtykket.
 
@@ -75,13 +75,13 @@ Utkastet nedenfor er skrevet for at merkingen skal være på plass **før** noen
 4. Sponsor-plasser: «Reklame»-merke (finnes i dag på SponsorBar).
 5. Redaksjonelt innhold og betalt innhold holdes adskilt.
 
-**Nyhetsbrev som markedsføring:** Utsending av markedsføring på e-post krever forhåndssamtykke [ekomloven § 2-7b – kontroller]. Dobbel bekreftelse + samtykketekst over dekker dette bare hvis teksten i skjemaet faktisk beskriver hva du melder deg på. Hvis nyhetsbrevet inneholder affiliate-lenker eller sponsorer, må de merkes som reklame også i e-posten.
+**Nyhetsbrev som markedsføring:** Utsending av markedsføring på e-post krever forhåndssamtykke [markedsføringsloven § 15 – kontroller. Ekomloven gjelder cookies, ikke e-postmarkedsføring]. Dobbel bekreftelse + samtykketekst over dekker dette bare hvis teksten i skjemaet faktisk beskriver hva du melder deg på. Hvis nyhetsbrevet inneholder affiliate-lenker eller sponsorer, må de merkes som reklame også i e-posten.
 
 ---
 
 ## Åpne spørsmål til eier
 1. Behandlingsansvarlig: privatperson, enkeltpersonforetak eller selskap? Hvilken kontakt-e-post skal oppgis (må ikke være Webhuset-e-posten som ikke er i bruk ennå, med mindre du bestemmer det)?
 2. Frekvens og innhold i nyhetsbrevet.
-3. E-bok: eget samtykke, eller også påmelding til nyhetsbrev?
+3. ~~E-bok: eget samtykke, eller også påmelding til nyhetsbrev?~~ Besluttet: automatisk påmelding, tydelig opplyst i skjemaet. Restrisiko må godtas av eier.
 4. Hvor lenge beholdes ubekreftede adresser?
 5. Skal siden fortsatt hevde «ingen cookies/sporing» når Brevo-embed er på plass? Må sjekkes mot faktisk embed.

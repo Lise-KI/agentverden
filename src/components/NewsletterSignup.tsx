@@ -24,11 +24,11 @@ const copy: Record<
     button: "Meld meg på",
   },
   ebook: {
-    heading: "Få e-boken gratis",
-    what: "Du får e-boken tilsendt på e-post. Nyhetsbrev får du bare hvis du krysser av for det i skjemaet.",
+    heading: "Meld deg på nyhetsbrevet og få e-boken gratis",
+    what: "Du melder deg på nyhetsbrevet fra Agentverden, med norske eksempler på hva folk gjør med AI-agenter. Som takk får du e-boken tilsendt på e-post. Du kan melde deg av når som helst, og e-boken beholder du.",
     formUrl: BREVO_EBOOK_FORM_URL,
-    title: "Last ned e-boken fra Agentverden",
-    button: "Få e-boken i innboksen",
+    title: "Påmelding til nyhetsbrev og e-bok fra Agentverden",
+    button: "Meld meg på og send e-boken",
   },
 };
 
