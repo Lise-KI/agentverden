@@ -29,8 +29,8 @@ export default function SendInnPage() {
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
       <Sidebar />
-      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl text-neutral-300 space-y-4">
-        <h1 className="heading-stripe text-3xl mb-4 text-neutral-50">
+      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl text-neutral-700 space-y-4">
+        <h1 className="heading-stripe text-3xl mb-4 text-neutral-900">
           Send inn et eksempel
         </h1>
         <p>
@@ -39,7 +39,7 @@ export default function SendInnPage() {
           Agentverden, skrevet med våre egne ord.
         </p>
 
-        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-900">
           Slik sender du inn
         </h2>
         <p>
@@ -54,14 +54,14 @@ export default function SendInnPage() {
         </a>
         <p className="text-sm text-neutral-500">
           Åpnes ikke e-postprogrammet? Send en e-post til{" "}
-          <span className="text-neutral-300">{EMAIL}</span> og kopier spørsmålene
+          <span className="text-neutral-700">{EMAIL}</span> og kopier spørsmålene
           under.
         </p>
-        <pre className="glass rounded-lg p-3 text-sm whitespace-pre-wrap text-neutral-300">
+        <pre className="glass rounded-lg p-3 text-sm whitespace-pre-wrap text-neutral-700">
           {TEMPLATE}
         </pre>
 
-        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-900">
           Ikke send dette
         </h2>
         <ul className="list-disc pl-5 space-y-1">
@@ -75,7 +75,7 @@ export default function SendInnPage() {
           <li>Tekst eller bilder som noen andre har laget.</li>
         </ul>
 
-        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-900">
           Hva skjer med eksempelet ditt
         </h2>
         <p>
@@ -85,7 +85,7 @@ export default function SendInnPage() {
           deg først. Du blir kreditert med fornavn bare hvis du ønsker det.
         </p>
 
-        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-900">
           Rettigheter
         </h2>
         <p>
@@ -96,7 +96,7 @@ export default function SendInnPage() {
           sender.
         </p>
 
-        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-900">
           Personvern
         </h2>
         <p>
@@ -104,7 +104,7 @@ export default function SendInnPage() {
           innsendingen. Les mer i{" "}
           <Link
             href="/personvern"
-            className="underline text-violet-300 hover:text-violet-200"
+            className="underline text-brand hover:text-brand-dark"
           >
             personvernerklæringen
           </Link>

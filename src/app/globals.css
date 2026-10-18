@@ -1,24 +1,22 @@
 @import "tailwindcss";
 
+/* Lyst, luftig tema inspirert av make.as: lys grå bakgrunn, hvite kort med
+   tynn kant og myk skygge, én dyp lilla aksentfarge og pilleformede knapper. */
 :root {
-  --background: #07070b;
-  --foreground: #f4f4f6;
-  --accent: #8b7bff;
-  --accent-2: #2dd9c4;
-  --glass-bg: rgba(255, 255, 255, 0.045);
-  --glass-bg-hover: rgba(255, 255, 255, 0.09);
-  --glass-border: rgba(255, 255, 255, 0.09);
-  --glass-border-hover: rgba(255, 255, 255, 0.2);
-
-  /* Stripe-inspired accents, tuned for the dark glass shell */
-  --stripe-purple: #635bff;
-  --stripe-purple-hover: #524ae0;
-  --stripe-shadow-tint: 139, 123, 255; /* RGB of --accent, used in tinted shadows */
+  --background: #f4f4f5;
+  --foreground: #1c1c1f;
+  --surface: #ffffff;
+  --border: #e6e6e9;
+  --border-strong: #d4d4d8;
+  --brand: #5a3fc0;
+  --brand-dark: #45309a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -34,98 +32,48 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Ambient colored glow behind the glass UI, fixed to the viewport */
-.bg-aurora {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.bg-aurora::before,
-.bg-aurora::after {
-  content: "";
-  position: absolute;
-  width: 55vw;
-  height: 55vw;
-  max-width: 820px;
-  max-height: 820px;
-  border-radius: 50%;
-  filter: blur(120px);
-}
-
-.bg-aurora::before {
-  top: -12%;
-  left: -10%;
-  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-  opacity: 0.4;
-}
-
-.bg-aurora::after {
-  bottom: -18%;
-  right: -12%;
-  background: radial-gradient(circle, var(--accent-2) 0%, transparent 70%);
-  opacity: 0.28;
-}
-
-/* Liquid glass surface: translucent, blurred, with a soft top highlight */
+/* Kort/flate: hvit, tynn kant, myk skygge. (Klassenavnet «glass» er beholdt
+   fra det mørke temaet slik at komponentene ikke må endres.) */
 .glass {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.07),
-    0 8px 30px rgba(0, 0, 0, 0.4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(16, 16, 24, 0.04);
 }
 
 .glass-hover {
   transition:
-    background-color 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
 }
 
 .glass-hover:hover {
-  background: var(--glass-bg-hover);
-  border-color: var(--glass-border-hover);
-  /* Stripe's signature dual-layer elevation: a brand-tinted far shadow
-     plus a neutral near shadow, adapted from navy to our violet accent. */
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 30px 45px -28px rgba(var(--stripe-shadow-tint), 0.35),
-    0 14px 28px -14px rgba(0, 0, 0, 0.55);
+  border-color: var(--border-strong);
+  box-shadow: 0 12px 28px -12px rgba(16, 16, 24, 0.18);
   transform: translateY(-2px);
 }
 
-/* Stripe typographic voice: light weight, tight tracking, for hero/H1 copy.
-   Kept to display-sized headings only — card/list text stays medium-weight
-   for scanability, which is the deliberate "blend" with the existing site. */
+/* Store overskrifter: normal vekt og tett bokstavavstand. */
 .heading-stripe {
-  font-weight: 300;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
-/* Stripe-style primary button: flat, conservative radius, no pill shapes,
-   restrained glow instead of the heavier gradient glow used elsewhere. */
+/* Hovedknapp: pilleform i aksentfargen. */
 .btn-stripe-primary {
-  background: var(--stripe-purple);
+  background: var(--brand);
   color: #ffffff;
-  border-radius: 6px;
+  border-radius: 9999px;
   font-weight: 500;
   transition:
     background-color 0.15s ease,
-    box-shadow 0.15s ease,
-    transform 0.15s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow 0.15s ease;
+  box-shadow: 0 6px 16px -8px rgba(90, 63, 192, 0.6);
 }
 
 .btn-stripe-primary:hover:not(:disabled) {
-  background: var(--stripe-purple-hover);
-  box-shadow: 0 8px 20px -8px rgba(var(--stripe-shadow-tint), 0.55);
-  transform: translateY(-1px);
+  background: var(--brand-dark);
 }
 
 .btn-stripe-primary:disabled {

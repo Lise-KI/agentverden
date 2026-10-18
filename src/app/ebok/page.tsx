@@ -21,8 +21,8 @@ export default function EbokPage() {
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
       <Sidebar />
-      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl text-neutral-300">
-        <h1 className="heading-stripe text-3xl mb-4 text-neutral-50">
+      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl text-neutral-700">
+        <h1 className="heading-stripe text-3xl mb-4 text-neutral-900">
           {title}
         </h1>
         <p className="mb-4">

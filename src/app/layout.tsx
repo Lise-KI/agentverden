@@ -35,8 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="no"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-neutral-100">
-        <div className="bg-aurora" aria-hidden="true" />
+      <body className="min-h-full flex flex-col text-neutral-900">
         <div className="flex-1 relative z-10">{children}</div>
         <SponsorBar />
         <SiteFooter />

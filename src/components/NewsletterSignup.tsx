@@ -46,11 +46,11 @@ export default function NewsletterSignup({
     >
       <h2
         id={`signup-${variant}`}
-        className="text-lg font-semibold mb-1 text-neutral-50"
+        className="text-lg font-semibold mb-1 text-neutral-900"
       >
         {c.heading}
       </h2>
-      <p className="text-sm text-neutral-300 mb-3">{c.what}</p>
+      <p className="text-sm text-neutral-700 mb-3">{c.what}</p>
 
       {c.formUrl ? (
         <iframe
@@ -60,14 +60,14 @@ export default function NewsletterSignup({
           className="w-full min-h-[320px] border-0"
         />
       ) : (
-        <div className="border border-dashed border-white/15 rounded-lg p-3 space-y-2">
+        <div className="border border-dashed border-neutral-300 rounded-lg p-3 space-y-2">
           <div className="flex gap-2">
             <input
               type="email"
               disabled
               aria-label="E-postadresse"
               placeholder="din@epost.no"
-              className="flex-1 min-w-0 rounded border border-white/10 bg-white/[0.03] px-2 py-1.5 text-sm text-neutral-300 placeholder:text-neutral-500"
+              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-600"
             />
             <button
               disabled
@@ -87,7 +87,7 @@ export default function NewsletterSignup({
         (dobbel bekreftelse). Du kan melde deg av når som helst. Les{" "}
         <Link
           href="/personvern"
-          className="underline text-violet-300 hover:text-violet-200"
+          className="underline text-brand hover:text-brand-dark"
         >
           personvernerklæringen
         </Link>

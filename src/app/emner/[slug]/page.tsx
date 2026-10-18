@@ -64,7 +64,7 @@ export default async function CategoryPage({
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
         <JsonLd data={jsonLd} />
-        <h1 className="text-lg font-semibold mb-1 text-neutral-50">
+        <h1 className="text-lg font-semibold mb-1 text-neutral-900">
           {category.name}
         </h1>
         <p className="text-sm text-neutral-500 mb-4">{category.description}</p>

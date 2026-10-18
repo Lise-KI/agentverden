@@ -11,8 +11,8 @@ export default function PersonvernPage() {
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
       <Sidebar />
-      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl space-y-4 text-neutral-300">
-        <h1 className="heading-stripe text-3xl mb-4 text-neutral-50">
+      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl space-y-4 text-neutral-700">
+        <h1 className="heading-stripe text-3xl mb-4 text-neutral-900">
           Personvern
         </h1>
 
@@ -24,7 +24,7 @@ export default function PersonvernPage() {
           statiske filer, uten database og uten innlogging.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Nyhetsbrev (når det aktiveres)
         </h2>
         <p>
@@ -38,7 +38,7 @@ export default function PersonvernPage() {
           tredjepart.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Innsending av use cases
         </h2>
         <p>
@@ -48,7 +48,7 @@ export default function PersonvernPage() {
           er nødvendig for den vurderingen.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Dine rettigheter
         </h2>
         <p>
@@ -56,13 +56,13 @@ export default function PersonvernPage() {
           e-postadressen din i nyhetsbrevlisten), har du rett til å få vite
           hva vi har lagret, få det korrigert, eller be om at det slettes.
           Ta kontakt via kontaktinformasjonen på{" "}
-          <a href="/om" className="underline text-violet-300 hover:text-violet-200">
+          <a href="/om" className="underline text-brand hover:text-brand-dark">
             Om-siden
           </a>{" "}
           for slike forespørsler.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Endringer
         </h2>
         <p>

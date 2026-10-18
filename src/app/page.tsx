@@ -17,7 +17,7 @@ export default function Home() {
           <input
             type="search"
             placeholder="Søk i use cases…"
-            className="glass flex-1 rounded-lg px-3 py-2 text-sm text-neutral-200 placeholder:text-neutral-500 outline-none focus:border-violet-400/50"
+            className="glass flex-1 rounded-lg px-3 py-2 text-sm text-neutral-800 placeholder:text-neutral-600 outline-none focus:border-brand"
           />
           <div className="glass flex gap-1 rounded-lg p-1 text-sm">
             <button className="btn-stripe-primary rounded px-3 py-1">
@@ -25,7 +25,7 @@ export default function Home() {
             </button>
             <Link
               href="/nytt"
-              className="rounded px-3 py-1 text-neutral-400 hover:bg-white/5 hover:text-neutral-100 transition-colors"
+              className="rounded px-3 py-1 text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 transition-colors"
             >
               Nytt
             </Link>
@@ -34,7 +34,7 @@ export default function Home() {
 
         {trending.length > 0 && (
           <section className="mb-10">
-            <h2 className="text-lg font-semibold mb-3 text-neutral-50">
+            <h2 className="text-lg font-semibold mb-3 text-neutral-900">
               Trender i dag
             </h2>
             <UseCaseGrid items={trending} listClassName="grid sm:grid-cols-2 gap-4" />
@@ -46,13 +46,13 @@ export default function Home() {
         </div>
 
         <section className="mb-10">
-          <h2 className="text-lg font-semibold mb-3 text-neutral-50">Siste funn</h2>
+          <h2 className="text-lg font-semibold mb-3 text-neutral-900">Siste funn</h2>
           <UseCaseGrid items={sortedByVotes} />
         </section>
 
         {newest.length > 0 && (
           <section>
-            <h2 className="text-lg font-semibold mb-3 text-neutral-50">Nyeste</h2>
+            <h2 className="text-lg font-semibold mb-3 text-neutral-900">Nyeste</h2>
             <UseCaseGrid items={newest} />
           </section>
         )}

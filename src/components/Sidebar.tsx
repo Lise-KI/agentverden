@@ -18,7 +18,7 @@ function ChipRow({
         <Link
           key={i.href}
           href={i.href}
-          className="shrink-0 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-neutral-300 hover:text-white"
+          className="shrink-0 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-700 hover:text-neutral-950"
         >
           {i.name}
         </Link>
@@ -32,21 +32,21 @@ export default function Sidebar() {
     <>
       {/* Mobil: kompakt topp, så innholdet kommer rett etter. Agenter og emner
         ligger som sveipbare rader i stedet for lange lister. */}
-      <div className="lg:hidden border-b border-white/10 bg-white/[0.02] backdrop-blur-xl px-4 pt-3 pb-2 space-y-2">
+      <div className="lg:hidden border-b border-neutral-200 bg-white px-4 pt-3 pb-2 space-y-2">
         <div className="flex items-center justify-between gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-violet-500 to-teal-400 text-white flex items-center justify-center font-bold text-xs">
+            <span className="h-7 w-7 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-xs">
               AV
             </span>
-            <span className="font-semibold tracking-tight text-neutral-50">
+            <span className="font-semibold tracking-tight text-neutral-900">
               Agentverden
             </span>
           </Link>
-          <nav className="flex gap-3 text-xs font-medium text-neutral-300">
-            <Link href="/ebok" className="hover:text-white">
+          <nav className="flex gap-3 text-xs font-medium text-neutral-700">
+            <Link href="/ebok" className="hover:text-neutral-950">
               Gratis e-bok
             </Link>
-            <Link href="/send-inn" className="hover:text-white">
+            <Link href="/send-inn" className="hover:text-neutral-950">
               Send inn
             </Link>
           </nav>
@@ -67,22 +67,22 @@ export default function Sidebar() {
         />
       </div>
 
-      <aside className="hidden lg:block lg:w-72 shrink-0 border-r border-white/10 bg-white/[0.02] backdrop-blur-xl px-4 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
+      <aside className="hidden lg:block lg:w-72 shrink-0 border-r border-neutral-200 bg-white px-4 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
         <Link href="/" className="flex items-center gap-2 mb-3">
-          <span className="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-teal-400 text-white flex items-center justify-center font-bold text-sm shadow-[0_0_18px_rgba(139,123,255,0.55)]">
+          <span className="h-8 w-8 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-sm">
             AV
           </span>
-          <span className="font-semibold text-lg tracking-tight text-neutral-50">
+          <span className="font-semibold text-lg tracking-tight text-neutral-900">
             Agentverden
           </span>
         </Link>
-        <p className="text-sm text-neutral-400 mb-4">
+        <p className="text-sm text-neutral-600 mb-4">
           Ekte ting folk gjør med AI-agenter, samlet fra hele nettet hver dag.
           Stjel en idé.
         </p>
 
         <div className="glass rounded-lg p-3 mb-4 space-y-2">
-          <label className="block text-xs font-semibold uppercase tracking-wide text-neutral-400">
+          <label className="block text-xs font-semibold uppercase tracking-wide text-neutral-600">
             Få 5 use cases hver morgen
           </label>
           <div className="flex gap-2">
@@ -90,7 +90,7 @@ export default function Sidebar() {
               type="email"
               disabled
               placeholder="din@epost.no"
-              className="flex-1 min-w-0 rounded border border-white/10 bg-white/[0.03] px-2 py-1.5 text-sm text-neutral-300 placeholder:text-neutral-500"
+              className="flex-1 min-w-0 rounded border border-neutral-200 bg-white px-2 py-1.5 text-sm text-neutral-700 placeholder:text-neutral-600"
             />
             <button
               disabled
@@ -102,7 +102,7 @@ export default function Sidebar() {
           </div>
           <p className="text-[11px] text-neutral-500">
             Nyhetsbrev kommer etter lansering — se{" "}
-            <Link href="/om" className="underline hover:text-neutral-300">
+            <Link href="/om" className="underline hover:text-neutral-900">
               planen
             </Link>
             .
@@ -111,14 +111,14 @@ export default function Sidebar() {
 
         <Link
           href="/ebok"
-          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-3 text-neutral-200"
+          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-3 text-neutral-800"
         >
           Gratis e-bok
         </Link>
 
         <Link
           href="/send-inn"
-          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-200"
+          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-800"
         >
           Send inn et eksempel
         </Link>
@@ -132,7 +132,7 @@ export default function Sidebar() {
               <li key={a.slug}>
                 <Link
                   href={`/agenter/${a.slug}`}
-                  className="flex justify-between text-neutral-300 hover:text-white transition-colors"
+                  className="flex justify-between text-neutral-700 hover:text-neutral-950 transition-colors"
                 >
                   <span>{a.name}</span>
                 </Link>
@@ -150,7 +150,7 @@ export default function Sidebar() {
               <li key={c.slug}>
                 <Link
                   href={`/emner/${c.slug}`}
-                  className="text-neutral-300 hover:text-white transition-colors"
+                  className="text-neutral-700 hover:text-neutral-950 transition-colors"
                 >
                   {c.name}
                 </Link>
