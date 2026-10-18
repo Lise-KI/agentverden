@@ -3,6 +3,7 @@ import { UseCase, hasPage } from "@/data/useCases";
 import { agents } from "@/data/agents";
 import { categories } from "@/data/categories";
 import AgentIcon from "@/components/AgentIcon";
+import VoteButton from "@/components/VoteButton";
 
 function agentName(slug: string) {
   return agents.find((a) => a.slug === slug)?.name ?? slug;
@@ -17,11 +18,8 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
 
   return (
     <article className="relative glass glass-hover rounded-xl p-4 flex gap-3">
-      <div className="flex flex-col items-center shrink-0 w-10 pt-0.5 text-brand">
-        <span className="text-sm leading-none">▲</span>
-        <span className="text-sm font-semibold text-neutral-800 mt-0.5">
-          {item.votes}
-        </span>
+      <div className="shrink-0">
+        {href ? <VoteButton id={item.id} /> : null}
       </div>
 
       <div className="flex-1 min-w-0">

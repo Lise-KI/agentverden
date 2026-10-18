@@ -45,6 +45,12 @@ export default function PersonvernPage() {
           posisjonen din.
         </p>
         <p>
+          Når du stemmer opp en artikkel, telles stemmen uten at vi lagrer noe
+          om deg. Nettleseren din husker selv at du har stemt (lokal lagring på
+          din enhet), slik at du kan trekke stemmen tilbake. Dette sendes ikke
+          til oss.
+        </p>
+        <p>
           Sider med påmeldingsskjema laster et skript fra e-posttjenesten
           Brevo. Da mottar Brevo teknisk informasjon fra nettleseren din, som
           IP-adresse, slik alle nettsteder gjør når de leverer en fil.
