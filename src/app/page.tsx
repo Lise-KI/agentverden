@@ -32,8 +32,6 @@ export default function Home() {
           </div>
         </div>
 
-        <NewsletterSignup />
-
         {trending.length > 0 && (
           <section className="mb-10">
             <h2 className="text-lg font-semibold mb-3 text-neutral-50">
@@ -42,6 +40,10 @@ export default function Home() {
             <UseCaseGrid items={trending} listClassName="grid sm:grid-cols-2 gap-4" />
           </section>
         )}
+
+        <div className="mb-10">
+          <NewsletterSignup />
+        </div>
 
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-3 text-neutral-50">Siste funn</h2>
