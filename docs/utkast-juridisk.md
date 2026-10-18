@@ -7,7 +7,7 @@
 ## A. Personvernerklæring (erstatter /personvern)
 
 ### Hvem er ansvarlig
-[Navn / enkeltpersonforetak / selskap og organisasjonsnummer] er behandlingsansvarlig for personopplysningene som beskrives her. Kontakt: [e-postadresse for personvernhenvendelser].
+[PÅKREVD: navn på person, enkeltpersonforetak eller selskap, og organisasjonsnummer hvis det finnes. Kan ikke erstattes av en e-postadresse, jf. GDPR art. 13 nr. 1 bokstav a og ehandelsloven § 8.] er behandlingsansvarlig for personopplysningene som beskrives her. Kontakt om personvern: support@agentverden.no.
 
 ### Det vi ikke gjør
 Agentverden bruker ingen analyseverktøy, ingen annonsenettverk og ingen sporingspiksler. [Må bekreftes før publisering, se avsnittet «Brevo» under: innebygde skjemaer laster innhold fra en tredjepart.]
@@ -21,7 +21,7 @@ Agentverden bruker ingen analyseverktøy, ingen annonsenettverk og ingen sporing
 
 **Dobbel bekreftelse.** Etter at du har meldt deg på, sender vi en e-post med en bekreftelseslenke. Du blir ikke lagt til i nyhetsbrevlisten før du har klikket på lenken. Hvis du ikke bekrefter, [slettes adressen etter X dager – avklar innstilling i Brevo].
 
-**Avmelding og tilbaketrekking.** Du kan når som helst melde deg av via avmeldingslenken nederst i hver e-post, eller ved å skrive til [e-postadresse]. Å trekke samtykket tilbake påvirker ikke lovligheten av behandlingen før tilbaketrekkingen.
+**Avmelding og tilbaketrekking.** Du kan når som helst melde deg av via avmeldingslenken nederst i hver e-post, eller ved å skrive til support@agentverden.no. Å trekke samtykket tilbake påvirker ikke lovligheten av behandlingen før tilbaketrekkingen.
 
 **Sletting og lagringstid.** Når du melder deg av, fjerner vi e-postadressen din fra utsendingslisten [og sletter den fullstendig innen X dager – avklar; Brevo kan beholde «blokkert»-status for å hindre at du får e-post igjen ved en feil, avklar hvordan dette skal beskrives]. Du kan også be om sletting når som helst.
 
@@ -36,7 +36,7 @@ Skjemaet er innebygd på våre sider og lastes fra Brevos servere. Når en side 
 [Gjelder bare hvis/når et innsendingsskjema tas i bruk. Beskriv hva som lagres, hvor, hvor lenge. Ta bort avsnittet hvis det ikke er i bruk.]
 
 ### Dine rettigheter
-Du har rett til innsyn, retting, sletting, begrensning av behandlingen, dataportabilitet og å trekke tilbake samtykke. Send forespørsel til [e-postadresse]. Vi svarer innen 30 dager. Du kan klage til Datatilsynet (datatilsynet.no) hvis du mener vi behandler opplysninger i strid med regelverket.
+Du har rett til innsyn, retting, sletting, begrensning av behandlingen, dataportabilitet og å trekke tilbake samtykke. Send forespørsel til support@agentverden.no. Vi svarer innen 30 dager. Du kan klage til Datatilsynet (datatilsynet.no) hvis du mener vi behandler opplysninger i strid med regelverket.
 
 ### Endringer
 Sist oppdatert: [dato]. Vesentlige endringer varsles på denne siden [og til nyhetsbrevlisten].
@@ -57,7 +57,7 @@ Sist oppdatert: [dato]. Vesentlige endringer varsles på denne siden [og til nyh
 
 **Eksterne lenker.** Vi er ikke ansvarlige for innholdet på eller personvernet hos andre nettsteder vi lenker til.
 
-**Feil i innholdet.** Oppdaget du en feil? Gi beskjed til [e-postadresse], så retter vi.
+**Feil i innholdet.** Oppdaget du en feil? Gi beskjed til kontakt@agentverden.no, så retter vi.
 
 ---
 
@@ -80,7 +80,7 @@ Utkastet nedenfor er skrevet for at merkingen skal være på plass **før** noen
 ---
 
 ## Åpne spørsmål til eier
-1. Behandlingsansvarlig: privatperson, enkeltpersonforetak eller selskap? Hvilken kontakt-e-post skal oppgis (må ikke være Webhuset-e-posten som ikke er i bruk ennå, med mindre du bestemmer det)?
+1. Behandlingsansvarlig: privatperson, enkeltpersonforetak eller selskap? **Navn må oppgis** (e-post alene er ikke nok). E-post: besluttet support@ (personvern, avmelding, rettigheter) og kontakt@ (generelt, feil i innhold).
 2. Frekvens og innhold i nyhetsbrevet.
 3. ~~E-bok: eget samtykke, eller også påmelding til nyhetsbrev?~~ Besluttet: automatisk påmelding, tydelig opplyst i skjemaet. Restrisiko må godtas av eier.
 4. Hvor lenge beholdes ubekreftede adresser?
