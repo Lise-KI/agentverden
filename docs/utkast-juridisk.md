@@ -7,7 +7,7 @@
 ## A. Personvernerklæring (erstatter /personvern)
 
 ### Hvem er ansvarlig
-[PÅKREVD: navn på person, enkeltpersonforetak eller selskap, og organisasjonsnummer hvis det finnes. Kan ikke erstattes av en e-postadresse, jf. GDPR art. 13 nr. 1 bokstav a og ehandelsloven § 8.] er behandlingsansvarlig for personopplysningene som beskrives her. Kontakt om personvern: support@agentverden.no.
+Agentverden drives av Fairnie Bil (enkeltpersonforetak), org.nr. [MANGLER], [forretningsadresse fra Brønnøysundregistrene – MANGLER, jf. ehandelsloven § 8]. Fairnie Bil er behandlingsansvarlig for personopplysningene som beskrives her. Kontakt om personvern: support@agentverden.no.
 
 ### Det vi ikke gjør
 Agentverden bruker ingen analyseverktøy, ingen annonsenettverk og ingen sporingspiksler. [Må bekreftes før publisering, se avsnittet «Brevo» under: innebygde skjemaer laster innhold fra en tredjepart.]
