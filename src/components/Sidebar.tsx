@@ -36,7 +36,7 @@ export default function Sidebar() {
         ligger som sveipbare rader i stedet for lange lister. */}
       <div className="lg:hidden border-b border-neutral-200 bg-white px-4 pt-3 pb-2 space-y-2">
         <div className="flex items-center justify-between gap-2">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" aria-label="Agentverden – til forsiden" className="flex items-center gap-2 rounded-lg transition-opacity hover:opacity-80 active:opacity-60">
             <span className="h-7 w-7 rounded-lg bg-brand text-[#fff] flex items-center justify-center font-bold text-xs">
               AV
             </span>
@@ -71,7 +71,7 @@ export default function Sidebar() {
       </div>
 
       <aside className="hidden lg:block lg:w-72 shrink-0 border-r border-neutral-200 bg-white px-4 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
-        <Link href="/" className="flex items-center gap-2 mb-3">
+        <Link href="/" aria-label="Agentverden – til forsiden" className="flex items-center gap-2 mb-3 rounded-lg transition-opacity hover:opacity-80 active:opacity-60">
           <span className="h-8 w-8 rounded-lg bg-brand text-[#fff] flex items-center justify-center font-bold text-sm">
             AV
           </span>

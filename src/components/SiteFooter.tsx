@@ -5,8 +5,11 @@ export default function SiteFooter() {
     <footer className="border-t border-neutral-200 bg-white relative z-10">
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-2 text-xs text-neutral-500">
         <span>
-          © 2026 Agentverden. Alle use cases er omskrevet i egne ord med lenke
-          til kilden der det er tilgjengelig.
+          © 2026{" "}
+          <Link href="/" className="hover:text-neutral-900 transition-colors">
+            Agentverden
+          </Link>
+          . Alle artikler er skrevet med egne ord.
         </span>
         <nav className="flex gap-4">
           <Link href="/om" className="hover:text-neutral-900 transition-colors">
