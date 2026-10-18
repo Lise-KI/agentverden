@@ -10,6 +10,7 @@
   --border-strong: #d4d4d8;
   --brand: #5a3fc0;
   --brand-dark: #45309a;
+  --on-brand: #ffffff;
 }
 
 @theme inline {
@@ -92,6 +93,7 @@ body {
   --border-strong: #3d3d44;
   --brand: #9a85f5;
   --brand-dark: #b4a4fa;
+  --on-brand: #0e0e11;
 
   --color-white: #18181c;
   --color-neutral-50: #121214;
