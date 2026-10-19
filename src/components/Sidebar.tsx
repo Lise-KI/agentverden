@@ -55,9 +55,16 @@ export default function Sidebar() {
 
       <Link
         href="/om"
-        className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-200"
+        className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-3 text-neutral-200"
       >
         Send inn en use case
+      </Link>
+
+      <Link
+        href="/verktoy"
+        className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-200"
+      >
+        Verktøy vi anbefaler
       </Link>
 
       <div className="mb-6">
