@@ -4,12 +4,17 @@ import { useEffect, useState } from "react";
 
 // Ekte stemmer lagret hos Cloudflare (se worker/index.ts). Hver nettleser kan
 // stemme én gang per oppføring; trykker du igjen, trekkes stemmen tilbake.
-let allVotes: Promise<Record<string, number>> | null = null;
+// Svarer ikke API-et (f.eks. før databasen er koblet til), vises ingen knapp.
+let allVotes: Promise<Record<string, number> | null> | null = null;
 function loadVotes() {
   if (!allVotes) {
     allVotes = fetch("/api/votes", { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : {}))
-      .catch(() => ({}));
+      .then((r) =>
+        r.ok && (r.headers.get("content-type") ?? "").includes("json")
+          ? r.json()
+          : null,
+      )
+      .catch(() => null);
   }
   return allVotes;
 }
@@ -32,7 +37,7 @@ export default function VoteButton({ id }: { id: string }) {
   useEffect(() => {
     let alive = true;
     loadVotes().then((v) => {
-      if (!alive) return;
+      if (!alive || !v) return;
       setCount(v[id] ?? 0);
       setVoted(readVoted(id));
     });
@@ -70,6 +75,8 @@ export default function VoteButton({ id }: { id: string }) {
     }
   }
 
+  if (count === null) return <div className="w-10" aria-hidden="true" />;
+
   return (
     <button
       type="button"
@@ -88,7 +95,7 @@ export default function VoteButton({ id }: { id: string }) {
       <span
         className={`text-sm font-semibold mt-0.5 ${voted ? "" : "text-neutral-800"}`}
       >
-        {count ?? "·"}
+        {count}
       </span>
     </button>
   );

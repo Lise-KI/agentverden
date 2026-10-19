@@ -30,7 +30,7 @@ export async function GET() {
   <channel>
     <title>Agentverden</title>
     <link>https://agentverden.no</link>
-    <description>Ekte ting folk gjør med AI-agenter, samlet fra hele nettet hver dag.</description>
+    <description>Lær å bruke AI-agenter i hverdagen, med konkrete eksempler forklart på norsk.</description>
     <language>nb-NO</language>
     ${items}
   </channel>

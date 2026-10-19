@@ -77,8 +77,8 @@ export default function Sidebar() {
           </span>
         </Link>
         <p className="text-sm text-neutral-600 mb-4">
-          Ekte ting folk gjør med AI-agenter, samlet fra hele nettet hver dag.
-          Stjel en idé.
+          Lær å bruke AI-agenter i hverdagen, med konkrete eksempler forklart
+          på norsk.
         </p>
 
         <div className="glass rounded-lg p-3 mb-4 space-y-2">
