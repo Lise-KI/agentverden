@@ -2,3 +2,6 @@
 # E-boken ligger på en ulenket adresse under /f/ og skal ikke indekseres.
 /f/*
   X-Robots-Tag: noindex, nofollow
+
+/ebok.pdf
+  X-Robots-Tag: noindex, nofollow

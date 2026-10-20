@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const PDF = "/f/02dc103e1448/10-ting-nordmenn-kan-gjore-med-ai.pdf";
+const PDF = "/ebok.pdf";
 
 export default function TakkPage() {
   return (
