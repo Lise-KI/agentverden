@@ -1,0 +1,29 @@
+{
+  "_comment": "Append-only logg over automatiserte daglige oppdateringer av agentverden.no. Brukes til duplikatsjekk (sjekk id/titler/kilde-URL mot denne filen før noe nytt legges til) og til å vite hvilke oppføringer som er friske nok til å holde isNew:true. Ikke slett gamle rader manuelt uten grunn.",
+  "runs": [
+    {
+      "date": "2026-10-20",
+      "addedUseCases": [
+        {
+          "id": "fjern-telefonnummer-spam",
+          "title": "Få en agent til å fjerne telefonnummeret ditt fra spam-lister",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://www.teslarati.com/grok-bot-spam-call-text-scrubber-elon-musk/",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam"
+        },
+        {
+          "id": "ai-nyhetsbrev-podkast",
+          "title": "Bygg en daglig podkast av egne AI-nyhetsbrev til morgenturen",
+          "category": "innhold-kreativt",
+          "sourcePrimaryUrl": "https://bronsonelliott.substack.com/p/i-built-a-daily-ai-podcast-that-runs",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/turn-ai-newsletters-into-a-daily-podcast"
+        }
+      ],
+      "changesOther": [
+        "Ingen flytting av eksisterende innhold denne runden — hele siden ble publisert på nytt for 1-2 dager siden, så alt var allerede friskt. Fra og med neste kjøring: fjern isNew fra oppføringer som har stått i 'Nyeste' i mer enn ca. 5 dager, for å holde seksjonen reell."
+      ],
+      "gitCommit": "PENDING_FILLED_IN_AFTER_PUSH",
+      "emailedReportTo": "andreassf1@gmail.com"
+    }
+  ]
+}

@@ -28,6 +28,50 @@ export type UseCase = {
 // direkte kildesporet innhold (egne X/Reddit/HN-søk + lenke til original).
 export const useCases: UseCase[] = [
   {
+    id: "fjern-telefonnummer-spam",
+    title: "Få en agent til å fjerne telefonnummeret ditt fra spam-lister",
+    description:
+      "Etter at en bruker bygde en gratis Grok Bot-ferdighet som fjerner telefonnummer fra datameglere, anbefalte Elon Musk selv metoden offentlig på X.",
+    agents: ["grok-bot"],
+    category: "hus-hverdag",
+    source: "X",
+    sourceDate: "oktober 2026",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "En X-bruker lot en Grok Bot-ferdighet søke gjennom nettsteder som samler og selger telefonnumre (\"people search\"-sider og datameglere), fylle ut skjemaene for å be om at nummeret fjernes, og bekrefte fjerningen når selskapene svarte med e-post. Ferdigheten, kalt Spam-Call Scrubber, ble delt fritt slik at andre kunne bruke samme oppskrift, og kan settes til å sjekke på nytt med jevne mellomrom.",
+    howItWent:
+      "Elon Musk svarte brukeren direkte på X og oppfordret alle som er slitne av spam-telefoner og -meldinger til å be sin egen Grok Bot gjøre det samme. Musk sa samtidig at Grok Bot nå gir hver bot sin egen e-postadresse og kan oppdage forsøk på svindel-e-post — men selve oppryddingsferdigheten er laget av brukeren, ikke av xAI.",
+    worthKnowing:
+      "Dette krever Grok Bot-appen, og at du er komfortabel med at en agent fyller ut skjemaer med navn/adresse på vegne av deg hos en rekke ukjente nettsteder. Skjemaene varierer fra selskap til selskap, så det er verdt å sjekke manuelt et par av dem etterpå for å se at fjerningen faktisk er gjennomført.",
+    promptTemplate:
+      "Søk opp telefonnummeret mitt [ditt nummer] på de vanligste \"people search\"-sidene og datameglerne du finner. For hver side du finner nummeret på: fyll ut opt-out/fjern-meg-skjemaet med [navn/e-post], bekreft eventuelle e-poster som kommer tilbake, og før en liste over hvilke sider du har sendt krav til. Vis meg listen før du bekrefter noe permanent, og sjekk på nytt om [antall] uker om nummeret har dukket opp igjen.",
+  },
+  {
+    id: "ai-nyhetsbrev-podkast",
+    title: "Bygg en daglig podkast av egne AI-nyhetsbrev til morgenturen",
+    description:
+      "En bruker var sliten av å lese over 30 AI-nyhetsbrev hver dag, og fikk Claude Cowork til å lage et nattlig opplegg som sammenfatter alt til en kort, lyttbar podkast-episode klar før morgenturen.",
+    agents: ["claude-cowork"],
+    category: "innhold-kreativt",
+    source: "Substack",
+    sourceDate: "april 2026",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "Brukeren abonnerte på over 30 AI-nyhetsbrev og brukte mer tid på å sortere e-postene enn å faktisk lære noe av dem. Han satte opp Claude Cowork til å hente nyhetsbrevene fra en egen Gmail-merkelapp hver natt, filtrere bort rene reklame-/støy-brev, og sette sammen det som var igjen til én sammenhengende lydbrief i stedet for en tekstoppsummering.",
+    howItWent:
+      "Etter å ha testet flere tale-løsninger landet oppsettet på en lokal, gratis talemodell som kjører på egen Mac uten nettavhengighet. Lydbriefen blir rundt 8–10 minutter, legges ut som en podkast-episode klokken 05 hver morgen, og brukeren lytter til den på morgenturen. Selve byggingen tok rundt to timer i én arbeidssesjon.",
+    worthKnowing:
+      "Oppsettet krever en datamaskin som faktisk er på 24/7 for å kjøre den nattlige jobben, og en del prøving og feiling med valg av taleløsning før resultatet ble naturlig å høre på — brukeren beskriver det første forsøket med macOS' innebygde opplesning som \"helt robotaktig og ulyttbart\". Verdt å vite før man forventer et perfekt resultat på første forsøk.",
+    promptTemplate:
+      "Hver natt klokken [tidspunkt]: hent nye e-poster merket [navn på merkelapp/mappe for nyhetsbrev] fra innboksen min siden forrige kjøring. Filtrer bort rene reklame-/kampanjebrev. Lag en sammenhengende, samtaleaktig lydoppsummering (ikke en punktliste) av det som faktisk er nytt eller endret siden i går, maks [lengde] minutter. Spill den inn med en norsk tale-stemme, og legg den et sted jeg kan høre på uten å måtte åpne en app for å lese.",
+  },
+  {
     id: "handel-fire-modeller",
     title: "La fire KI-modeller handle aksjer autonomt for 1000 kr hver",
     description:
