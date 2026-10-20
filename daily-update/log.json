@@ -22,6 +22,45 @@
       "changesOther": [
         "Ingen flytting av eksisterende innhold denne runden — hele siden ble publisert på nytt for 1-2 dager siden, så alt var allerede friskt. Fra og med neste kjøring: fjern isNew fra oppføringer som har stått i 'Nyeste' i mer enn ca. 5 dager, for å holde seksjonen reell."
       ],
+      "gitCommit": "2494cb3",
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-20b",
+      "_comment_for_this_run": "Ekstra manuell verifiseringsrunde kjørt samme dag på brukers forespørsel, etter at selvgodkjennings-regelen (3 vilkår) ble satt i kraft. Dette er andre kjøring denne dagen, derfor suffiks 'b' på datoen for å skille fra morgenens run.",
+      "addedUseCases": [
+        {
+          "id": "sjekk-motorlampe-obd2",
+          "title": "La en agent bestille en OBD2-skanner og diagnostisere motorlampen",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://x.com/bsniz/status/2108712125912814057",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/diagnose-a-check-engine-light-by-ordering-an-obd2-scanner"
+        },
+        {
+          "id": "padel-booking-agent",
+          "title": "La en KI-agent snakke med kundene, men ikke bestemme bookingen",
+          "category": "reise-bestilling",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/n8n/comments/1ukil5g/i_added_an_ai_agent_to_my_n8n_booking_workflow/",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/handle-padel-club-bookings-through-a-conversational-ai-agent"
+        }
+      ],
+      "changesOther": [
+        "Ingen oppføringer eldre enn 5 dager å rydde opp i ennå — forrige kjøring var samme dag."
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "sjekk-motorlampe-obd2",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (funnet og rettet manglende 'om å' samt en ubekreftet kjønnsantakelse 'hun' -> endret til 'vedkommende' før publisering)",
+          "norwegianCheck": "pass"
+        },
+        {
+          "id": "padel-booking-agent",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (tittel omformulert fra klønete konstruksjon; fjernet en ubekreftet påstand om kommentarinnhold før publisering)",
+          "norwegianCheck": "pass"
+        }
+      ],
       "gitCommit": "PENDING_FILLED_IN_AFTER_PUSH",
       "emailedReportTo": "andreassf1@gmail.com"
     }

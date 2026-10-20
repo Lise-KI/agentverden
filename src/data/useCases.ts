@@ -28,6 +28,50 @@ export type UseCase = {
 // direkte kildesporet innhold (egne X/Reddit/HN-søk + lenke til original).
 export const useCases: UseCase[] = [
   {
+    id: "sjekk-motorlampe-obd2",
+    title: "La en agent bestille en OBD2-skanner og diagnostisere motorlampen",
+    description:
+      "Da motorlampen i bilen lyste, ba en bruker sin OpenClaw-agent om å løse det. Agenten bestilte en OBD2-skanner fra Amazon, leste av feilkoden og fant ut at det var en sensorfeil.",
+    agents: ["openclaw"],
+    category: "hus-hverdag",
+    source: "X",
+    sourceDate: "oktober 2026",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "En bruker kjørte og la merke til at motorlampen i bilen tente. I stedet for å kjøre rett til et verksted, ba vedkommende sin OpenClaw-agent («claw») om å ta seg av problemet. Agenten bestilte en OBD2-skanner (et lite apparat som kobles til bilens diagnoseport og leser ut feilkoder) fra Amazon.",
+    howItWent:
+      "Da skanneren kom, leste agenten av resultatene og fant at det var en sensorfeil — ikke noe alvorlig. Lampen ble nullstilt, og brukeren beskrev det selv som et problem løst uten verkstedbesøk, som sparte både tid og penger.",
+    worthKnowing:
+      "En OBD2-skanner kan bare lese av koden, ikke fysisk fikse en feil — hvis sensoren faktisk er defekt og ikke bare løst kontakt, kommer lampen gjerne tilbake. Dette er likevel en god første sjekk før man bruker tid og penger på et verkstedbesøk for noe som kan være en enkel nullstilling.",
+    promptTemplate:
+      "Motorlampen i bilen min lyser. Hjelp meg å bestille en OBD2-skanner som er kompatibel med [bilmerke/modell/årsmodell] fra en nettbutikk. Når den kommer, forklar meg hvordan jeg kobler den til og leser av feilkoden, og si hva koden faktisk betyr og om jeg bør kjøre til verksted eller om det er trygt å nullstille selv.",
+  },
+  {
+    id: "padel-booking-agent",
+    title: "La en KI-agent snakke med kundene, men ikke bestemme bookingen",
+    description:
+      "En padelklubb tok bookinger manuelt over WhatsApp. Klubben bygde i stedet en n8n-basert KI-agent som fører selve samtalen med kunden, mens en egen, fast arbeidsflyt tar seg av den faktiske bestillingslogikken og konfliktkontrollen mellom to baner.",
+    agents: ["n8n"],
+    category: "reise-bestilling",
+    source: "Reddit",
+    sourceDate: "juli 2026",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "En bruker som driver en padelklubb med to baner, bygde først en n8n-arbeidsflyt som håndterte selve bestillingene og sjekket for dobbeltbookinger mellom banekalenderne. I neste runde la de til en KI-agent som samtalepartner: i stedet for at kunden fylte ut et bookingskjema, kunne kunden nå chatte naturlig med agenten, som samlet inn navn, ønsket bane og tidspunkt gjennom en vanlig samtale.",
+    howItWent:
+      "Det avgjørende skillet brukeren selv trakk opp var å holde «samtalen» og «logikken» separate: KI-agenten har bare ansvar for å forstå kunden og samle inn riktige detaljer, mens den ferdige, deterministiske n8n-arbeidsflyten (som allerede fungerte før agenten kom inn) fortsatt gjør selve bookingen og konfliktsjekken. Innlegget om dette fikk 34 poeng og 15 kommentarer på r/n8n.",
+    worthKnowing:
+      "Forfatteren påpeker selv at dette var vanskeligere enn det hørtes ut som: å få en KI-agent til å samle inn strukturerte data presist gjennom fri samtale krever mer finjustering enn et vanlig skjema. Ifølge forfatteren ble en tidlig, mer KI-tung versjon droppet fordi den hallusinerte, og den endelige løsningen brukte GPT-4o mini og kostet rundt 1 dollar for omtrent 150 vellykkede testsamtaler. Rådet til andre som bygger lignende ting er å ikke la agenten ta beslutninger den ikke trenger å ta — la den faste logikken (kalender, konflikter, bekreftelser) forbli en vanlig, forutsigbar arbeidsflyt.",
+    promptTemplate:
+      "Bygg en n8n-arbeidsflyt der en KI-agent fører en naturlig samtale med kunden for å samle inn [hva som skal bestilles, f.eks. bane/bord/time], og sender de innsamlede detaljene videre til en egen, fast arbeidsflyt som gjør selve bookingen og sjekker om [kalenderressurs] allerede er tatt. Agenten skal aldri bekrefte en bestilling selv — det skal kun den faste logikken gjøre.",
+  },
+  {
     id: "fjern-telefonnummer-spam",
     title: "Få en agent til å fjerne telefonnummeret ditt fra spam-lister",
     description:
