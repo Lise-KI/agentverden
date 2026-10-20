@@ -43,3 +43,5 @@ next-env.d.ts
 # DNS-øyeblikksbilder (ikke i git)
 /dns-før.txt
 /dns-*.txt
+daily-update/newsletter-latest.json
+daily-update/newsletter-latest.html

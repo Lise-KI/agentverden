@@ -1,0 +1,76 @@
+{
+  "_comment": "Append-only logg over automatiserte daglige oppdateringer av agentverden.no. Brukes til duplikatsjekk (sjekk id/titler/kilde-URL mot denne filen før noe nytt legges til) og til å vite hvilke oppføringer som er friske nok til å holde isNew:true. Ikke slett gamle rader manuelt uten grunn.",
+  "runs": [
+    {
+      "date": "2026-10-20",
+      "addedUseCases": [
+        {
+          "id": "fjern-telefonnummer-spam",
+          "title": "Få en agent til å fjerne telefonnummeret ditt fra spam-lister",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://www.teslarati.com/grok-bot-spam-call-text-scrubber-elon-musk/",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam"
+        },
+        {
+          "id": "ai-nyhetsbrev-podkast",
+          "title": "Bygg en daglig podkast av egne AI-nyhetsbrev til morgenturen",
+          "category": "innhold-kreativt",
+          "sourcePrimaryUrl": "https://bronsonelliott.substack.com/p/i-built-a-daily-ai-podcast-that-runs",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/turn-ai-newsletters-into-a-daily-podcast"
+        }
+      ],
+      "changesOther": [
+        "Ingen flytting av eksisterende innhold denne runden — hele siden ble publisert på nytt for 1-2 dager siden, så alt var allerede friskt. Fra og med neste kjøring: fjern isNew fra oppføringer som har stått i 'Nyeste' i mer enn ca. 5 dager, for å holde seksjonen reell."
+      ],
+      "gitCommit": "2494cb3",
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-20b",
+      "_comment_for_this_run": "Ekstra manuell verifiseringsrunde kjørt samme dag på brukers forespørsel, etter at selvgodkjennings-regelen (3 vilkår) ble satt i kraft. Dette er andre kjøring denne dagen, derfor suffiks 'b' på datoen for å skille fra morgenens run.",
+      "addedUseCases": [
+        {
+          "id": "sjekk-motorlampe-obd2",
+          "title": "La en agent bestille en OBD2-skanner og diagnostisere motorlampen",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://x.com/bsniz/status/2108712125912814057",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/diagnose-a-check-engine-light-by-ordering-an-obd2-scanner"
+        },
+        {
+          "id": "padel-booking-agent",
+          "title": "La en KI-agent snakke med kundene, men ikke bestemme bookingen",
+          "category": "reise-bestilling",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/n8n/comments/1ukil5g/i_added_an_ai_agent_to_my_n8n_booking_workflow/",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/handle-padel-club-bookings-through-a-conversational-ai-agent"
+        }
+      ],
+      "changesOther": [
+        "Ingen oppføringer eldre enn 5 dager å rydde opp i ennå — forrige kjøring var samme dag."
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "sjekk-motorlampe-obd2",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (funnet og rettet manglende 'om å' samt en ubekreftet kjønnsantakelse 'hun' -> endret til 'vedkommende' før publisering)",
+          "norwegianCheck": "pass"
+        },
+        {
+          "id": "padel-booking-agent",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (tittel omformulert fra klønete konstruksjon; fjernet en ubekreftet påstand om kommentarinnhold før publisering)",
+          "norwegianCheck": "pass"
+        }
+      ],
+      "gitCommit": "66f9bfd",
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-20c",
+      "_comment_for_this_run": "Kodefunksjon lagt til samme dag, på eksplisitt brukerønske: (1) 'Siste funn' sorteres nå etter dateAdded (nyeste øverst) i stedet for stemmer, (2) 'Trender i dag' er ikke lenger en fast, manuelt satt liste — den roteres nå daglig med et tilfeldig utvalg, og et element kan ikke velges igjen før minst 5 kalenderdager har gått. Alle 36 eksisterende saker fikk et dateAdded-felt (de 4 nyeste: 2026-10-20, resten: 2026-10-15 basert på filens opprinnelige seed-kommentar). Fremtidige kjøringer MÅ sette dateAdded på alt nytt som legges til, og MÅ oppdatere trendingSelected nedenfor hver gang Trender i dag roteres, slik at 5-dagers-regelen kan sjekkes.",
+      "trendingSelected": ["gemini-agent-hverdag", "meta-ai-dagsbrief"],
+      "trendingReplaced": ["handel-fire-modeller", "elleve-agenter-trading"],
+      "gitCommit": "8391a14",
+      "emailedReportTo": "andreassf1@gmail.com (varsel om kodeendring, ikke en vanlig innholdsrapport)"
+    }
+  ]
+}

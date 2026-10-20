@@ -5,7 +5,14 @@ import { useCases } from "@/data/useCases";
 
 export default function Home() {
   const trending = useCases.filter((u) => u.trending);
-  const sortedByVotes = [...useCases].sort((a, b) => b.votes - a.votes);
+  // "Siste funn" skal vise dagens nye saker øverst, så gårsdagens, osv.
+  // dateAdded mangler ikke på noen saker (backfilt 2026-10-20), men faller
+  // tilbake til en gammel dato defensivt hvis et felt skulle mangle i fremtiden.
+  const sortedByDate = [...useCases].sort(
+    (a, b) =>
+      new Date(b.dateAdded ?? "2000-01-01").getTime() -
+      new Date(a.dateAdded ?? "2000-01-01").getTime()
+  );
   const newest = useCases.filter((u) => u.isNew);
 
   return (
@@ -71,7 +78,7 @@ export default function Home() {
 
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-3 text-neutral-900">Siste funn</h2>
-          <UseCaseGrid items={sortedByVotes} />
+          <UseCaseGrid items={sortedByDate} />
         </section>
 
         {newest.length > 0 && (
