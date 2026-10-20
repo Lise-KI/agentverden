@@ -64,7 +64,11 @@ function SponsorSet({
               key={`${blockIndex}-${s.name}-${i}`}
               href={s.href}
               tabIndex={clone ? -1 : undefined}
-              className="group flex h-full shrink-0 items-center gap-2 px-4 text-[13px] font-medium whitespace-nowrap text-neutral-700 transition-colors hover:text-neutral-900 sm:px-5 sm:text-[15px]"
+              className={`group flex h-full shrink-0 items-center gap-2 px-4 text-[13px] font-medium whitespace-nowrap transition-colors sm:px-5 sm:text-[15px] ${
+                s.accent
+                  ? "font-semibold text-brand hover:underline"
+                  : "text-neutral-700 hover:text-neutral-900"
+              }`}
             >
               {s.initials && (
                 <span className="inline-flex size-6 shrink-0 items-center justify-center rounded-[5px] border border-neutral-200 bg-neutral-50 font-mono text-[10px] text-neutral-700 sm:size-7 sm:text-[11px]">
@@ -72,7 +76,7 @@ function SponsorSet({
                 </span>
               )}
               <span className="inline-flex items-baseline">
-                <span className="group-hover:text-brand">{s.name}</span>
+                <span className={s.accent ? "" : "group-hover:text-brand"}>{s.name}</span>
                 {s.pitch && (
                   <span className="font-normal text-neutral-500">: {s.pitch}</span>
                 )}
