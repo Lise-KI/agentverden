@@ -63,6 +63,14 @@
       ],
       "gitCommit": "66f9bfd",
       "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-20c",
+      "_comment_for_this_run": "Kodefunksjon lagt til samme dag, på eksplisitt brukerønske: (1) 'Siste funn' sorteres nå etter dateAdded (nyeste øverst) i stedet for stemmer, (2) 'Trender i dag' er ikke lenger en fast, manuelt satt liste — den roteres nå daglig med et tilfeldig utvalg, og et element kan ikke velges igjen før minst 5 kalenderdager har gått. Alle 36 eksisterende saker fikk et dateAdded-felt (de 4 nyeste: 2026-10-20, resten: 2026-10-15 basert på filens opprinnelige seed-kommentar). Fremtidige kjøringer MÅ sette dateAdded på alt nytt som legges til, og MÅ oppdatere trendingSelected nedenfor hver gang Trender i dag roteres, slik at 5-dagers-regelen kan sjekkes.",
+      "trendingSelected": ["gemini-agent-hverdag", "meta-ai-dagsbrief"],
+      "trendingReplaced": ["handel-fire-modeller", "elleve-agenter-trading"],
+      "gitCommit": "8391a14",
+      "emailedReportTo": "andreassf1@gmail.com (varsel om kodeendring, ikke en vanlig innholdsrapport)"
     }
   ]
 }
