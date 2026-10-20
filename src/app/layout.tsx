@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     "Lær å bruke AI-agenter i hverdagen, med konkrete eksempler forklart på norsk.",
   metadataBase: new URL("https://agentverden.no"),
   alternates: {
+    canonical: "/",
     types: {
       "application/rss+xml": "https://agentverden.no/rss.xml",
     },
