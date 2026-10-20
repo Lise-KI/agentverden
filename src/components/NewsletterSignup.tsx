@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
-import {
-  BREVO_FORM_ACTION,
-  BREVO_SCRIPT,
-  EBOOK_THANKS_PATH,
-} from "@/config/brevo";
+import { BREVO_FORM_ACTION, BREVO_SCRIPT } from "@/config/brevo";
 
 type Variant = "newsletter" | "ebook";
 
@@ -70,11 +66,8 @@ export default function NewsletterSignup({
             className="sib-form-message-panel rounded-lg border border-emerald-200 bg-emerald-50 text-emerald-700 p-3 text-sm mb-3"
           >
             <span className="sib-form-message-panel__inner-text">
-              Takk, du er påmeldt!{" "}
-              <a href={EBOOK_THANKS_PATH} className="underline font-semibold">
-                Last ned e-boken her
-              </a>
-              .
+              Takk, du er påmeldt! Sjekk innboksen din, e-boken er på vei. Fant
+              du den ikke, se i søppelpost.
             </span>
           </div>
 

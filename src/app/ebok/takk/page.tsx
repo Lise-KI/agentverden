@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
 
-// Takkeside etter påmelding i Brevo-skjemaet (midlertidig leveringsmåte til
-// Brevo har aktivert bekreftelses-e-post). Ikke lenket fra siden, ikke i sitemap.
+// Takkeside etter påmelding i Brevo-skjemaet. E-boken sendes på e-post, så
+// siden har ingen nedlastingslenke. Ikke lenket fra siden, ikke i sitemap.
 export const metadata: Metadata = {
   title: "Takk for påmeldingen",
-  description: "Last ned e-boken fra Agentverden.",
+  description: "Sjekk innboksen din for e-boken fra Agentverden.",
   robots: { index: false, follow: false },
 };
-
-const PDF = "/ebok.pdf";
 
 export default function TakkPage() {
   return (
@@ -21,19 +19,29 @@ export default function TakkPage() {
           Påmelding mottatt
         </p>
         <h1 className="heading-stripe text-3xl mb-4 text-neutral-900">
-          Takk! Her er e-boken din
+          Takk! Sjekk innboksen din
         </h1>
-        <p className="mb-6">
-          Du er nå med på nyhetsbrevet fra Agentverden. Last ned e-boken «10
-          ting nordmenn kan gjøre med AI i hverdagen» her:
+        <p className="mb-4">
+          Du er nå med på nyhetsbrevet fra Agentverden. Vi har sendt deg en
+          e-post med lenke til e-boken «10 ting nordmenn kan gjøre med AI i
+          hverdagen».
         </p>
-        <a
-          href={PDF}
-          download
-          className="btn-stripe-primary inline-block px-6 py-3 text-base"
-        >
-          Last ned e-boken (PDF)
-        </a>
+        <div className="glass rounded-xl p-4 mb-6">
+          <p className="font-semibold text-neutral-900 mb-1">
+            Har du ikke fått e-posten?
+          </p>
+          <ul className="list-disc pl-5 text-sm space-y-1">
+            <li>Vent et par minutter og sjekk innboksen på nytt.</li>
+            <li>
+              Se i <strong>søppelpost</strong> (spam), og i fanen{" "}
+              <strong>Kampanjer</strong> hvis du bruker Gmail.
+            </li>
+            <li>
+              Fant du den i søppelposten? Merk den som «ikke søppel», så får
+              du fremtidige e-poster i innboksen.
+            </li>
+          </ul>
+        </div>
         <p className="text-sm text-neutral-500 mt-6">
           Du kan melde deg av nyhetsbrevet når som helst via lenken nederst i
           hver e-post. Les mer i{" "}
