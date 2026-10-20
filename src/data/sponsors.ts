@@ -1,11 +1,13 @@
 export type Sponsor = {
-  initials: string;
+  initials?: string;
   name: string;
-  pitch: string;
+  pitch?: string;
   href: string;
 };
 
-// Plassholder-sponsorer for lokal prototype — ingen reelle avtaler ennå.
+// Foreløpig ingen sponsorer: baren viser bare nettstedets eget navn.
+// Når en ekte sponsor kommer på plass, legges den til her (med initials og
+// pitch), og «Sponsorer / Reklame»-merket må settes tilbake i SponsorBar.tsx.
 export const sponsors: Sponsor[] = [
-  { initials: "DL", name: "Din Logo her", pitch: "bli sponsor hos oss", href: "/sponsor" },
+  { name: "agentverden.no", href: "/" },
 ];
