@@ -42,10 +42,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: sunThemeScript }} />
       </head>
-      <body className="min-h-full flex flex-col text-neutral-900">
+      <body className="flex min-h-full flex-col pb-[var(--sponsor-bar-height)] text-neutral-900">
         <div className="flex-1 relative z-10">{children}</div>
-        <SponsorBar />
         <SiteFooter />
+        <SponsorBar />
       </body>
     </html>
   );
