@@ -6,8 +6,17 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 0,
       "seoTaskToday": "f-google-search-console-setup",
-      "seoTaskResult": "Satt opp og bekreftet Google Search Console for https://agentverden.no/ under assistent.liseai@gmail.com (meta-tag-metode, commit e06262a). Sendte inn sitemap.xml via GSC UI samme dag, status Fullf\u00f8rt, 50 sider oppdaget. Ogs\u00e5 fullf\u00f8rt samme dag: canonical-fix for forsiden (d5c22f1), interne krysslenker mellom relaterte use cases (71f4fcb), IndexNow-ping av alle 50 sitemap-URL-er (202 Accepted).",
-      "notes": "F\u00f8rste kj\u00f8ring. 0 abonnenter er forventet \u2014 domenet er helt nytt og ren organisk SEO tar typisk flere m\u00e5neder. Search Console kan n\u00e5 brukes av fremtidige kj\u00f8ringer av denne jobben for \u00e5 hente faktisk indekserings- og s\u00f8keordsdata, i stedet for \u00e5 hoppe over oppgave (f)."
+      "seoTaskResult": "Satt opp og bekreftet Google Search Console for https://agentverden.no/ under assistent.liseai@gmail.com (meta-tag-metode, commit e06262a). Sendte inn sitemap.xml via GSC UI samme dag, status Fullført, 50 sider oppdaget. Også fullført samme dag: canonical-fix for forsiden (d5c22f1), interne krysslenker mellom relaterte use cases (71f4fcb), IndexNow-ping av alle 50 sitemap-URL-er (202 Accepted).",
+      "notes": "Første kjøring. 0 abonnenter er forventet — domenet er helt nytt og ren organisk SEO tar typisk flere måneder. Search Console kan nå brukes av fremtidige kjøringer av denne jobben for å hente faktisk indekserings- og søkeordsdata, i stedet for å hoppe over oppgave (f)."
+    },
+    {
+      "date": "2026-10-20",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "a-indexnow-ping",
+      "seoTaskResult": "Hentet sitemap.xml live (50 URL-er). daily-update/indexnow-submitted.json fantes ikke fra før (manglet fra forrige kjøring selv om alle 50 URL-er faktisk ble sendt den dagen) — opprettet filen nå og behandlet alle 50 som nye siden ingen loggført liste fantes. Sendte alle 50 til IndexNow API, respons status 200. Filen daily-update/indexnow-submitted.json er nå opprettet og populert med disse 50 URL-ene, slik at fremtidige kjøringer kan diffe korrekt mot nye sider.",
+      "notes": "Dette er andre kjøring samme kalenderdag som oppsettet (09:00-jobben kjørte tydeligvis etter at ettermiddagsarbeidet med GSC/canonical/krysslenker allerede var gjort og loggført). Ingen endring i abonnenttall siden forrige rad (samme dag). Brevo-liste id 3 \"Nyhetsbrev\" bekreftet fortsatt riktig (totalSubscribers=0)."
     }
   ]
 }
