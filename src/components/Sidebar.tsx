@@ -38,8 +38,8 @@ export default function Sidebar() {
       <div className="lg:hidden border-b border-neutral-200 bg-white px-4 pt-3 pb-2 space-y-2">
         <div className="flex items-center justify-between gap-2">
           <Link href="/" aria-label="Agentverden – til forsiden" className="flex items-center gap-2 rounded-lg transition-opacity hover:opacity-80 active:opacity-60">
-            <Logo size={28} />
-            <span className="font-semibold tracking-tight text-neutral-900">
+            <Logo size={34} />
+            <span className="font-semibold text-lg tracking-tight text-neutral-900">
               Agentverden
             </span>
           </Link>
@@ -47,11 +47,17 @@ export default function Sidebar() {
             <Link href="/ebok" className="hover:text-neutral-950">
               Gratis e-bok
             </Link>
-            <Link href="/send-inn" className="hover:text-neutral-950">
-              Send inn
-            </Link>
           </nav>
         </div>
+        <p className="text-xs text-neutral-600">
+          Har du en erfaring du ønsker å dele?{" "}
+          <Link
+            href="/send-inn"
+            className="font-medium text-violet-700 underline hover:text-violet-900"
+          >
+            Send inn til oss her
+          </Link>
+        </p>
         <ChipRow
           label="Agenter"
           items={agents.map((a) => ({
@@ -70,9 +76,9 @@ export default function Sidebar() {
       </div>
 
       <aside className="hidden lg:block lg:w-72 shrink-0 border-r border-neutral-200 bg-white px-4 py-6 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
-        <Link href="/" aria-label="Agentverden – til forsiden" className="flex items-center gap-2 mb-3 rounded-lg transition-opacity hover:opacity-80 active:opacity-60">
-          <Logo size={34} />
-          <span className="font-semibold text-lg tracking-tight text-neutral-900">
+        <Link href="/" aria-label="Agentverden – til forsiden" className="flex items-center gap-3 mb-3 rounded-lg transition-opacity hover:opacity-80 active:opacity-60">
+          <Logo size={44} />
+          <span className="font-semibold text-2xl tracking-tight text-neutral-900">
             Agentverden
           </span>
         </Link>
@@ -97,12 +103,17 @@ export default function Sidebar() {
           </Link>
         </div>
 
-                <Link
-          href="/send-inn"
-          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-6 text-neutral-800"
-        >
-          Send inn et eksempel
-        </Link>
+        <div className="mb-6">
+          <p className="text-xs text-neutral-500 mb-1.5 px-1 leading-snug">
+            Har du en erfaring du ønsker å dele?
+          </p>
+          <Link
+            href="/send-inn"
+            className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium text-neutral-800"
+          >
+            Send inn til oss her
+          </Link>
+        </div>
 
         <div className="mb-6">
           <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500 mb-2">
