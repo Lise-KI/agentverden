@@ -48,15 +48,13 @@
           </tr>
         </table>
 
-        <!-- Bunntekst. Avmelding via e-post virker alltid, også i bekreftelses-e-poster.
-             I selve nyhetsbrevet (kampanje) bruker vi Brevos {{ unsubscribe }}. -->
+        <!-- Bunntekst. {{ unsubscribe }} er Brevos avmeldingslenke (ett klikk, fjerner mottakeren fra listen). -->
         <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;">
           <tr>
             <td align="center" style="padding:16px 12px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#8e8e95;">
               Du får denne e-posten fordi du meldte deg på nyhetsbrevet fra Agentverden.<br>
-              Vil du ikke ha flere e-poster? Send en e-post til
-              <a href="mailto:support@agentverden.no?subject=Avmelding&amp;body=Jeg%20vil%20melde%20meg%20av%20nyhetsbrevet." style="color:#8e8e95;text-decoration:underline;">support@agentverden.no</a>,
-              så fjerner vi deg.<br>
+              <a href="{{ unsubscribe }}" style="color:#8e8e95;text-decoration:underline;">Meld deg av</a>
+              &nbsp;·&nbsp;
               <a href="https://agentverden.no/personvern/" style="color:#8e8e95;text-decoration:underline;">Personvern</a>
             </td>
           </tr>
