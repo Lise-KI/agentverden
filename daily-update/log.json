@@ -72,5 +72,23 @@
       "gitCommit": "8391a14",
       "emailedReportTo": "andreassf1@gmail.com (varsel om kodeendring, ikke en vanlig innholdsrapport)"
     }
+  ],
+  "newsletterRuns": [
+    {
+      "date": "2026-10-20",
+      "sentUseCaseIds": [
+        "sjekk-motorlampe-obd2",
+        "padel-booking-agent",
+        "fjern-telefonnummer-spam",
+        "ai-nyhetsbrev-podkast",
+        "handel-fire-modeller"
+      ],
+      "listId": 3,
+      "listName": "Nyhetsbrev",
+      "campaignId": 5,
+      "senderUsed": "ebok@agentverden.no (Agentverden.no) - avvik fra jobbens default sender assistent.liseai@gmail.com, som Brevo avviste som 'invalid/inactive'; brukte i stedet den eneste aktive verifiserte senderen i kontoen",
+      "status": "sent",
+      "reason": null
+    }
   ]
 }
