@@ -684,3 +684,18 @@ export function isReviewed(u: UseCase): boolean {
   return Boolean(articles[u.id]);
 }
 
+
+// Saker om penger, investering, forsikring, skatt, juss og helse skal ha en
+// tydelig merknad om at de ikke er rådgivning (regel 9 i CLAUDE.md). Gjelder
+// automatisk også for nye oppføringer.
+const RISK_WORDS =
+  /aksje|krypto|coin|invest|trading|handel|børs|forsikring|skatt|avgift|lege|helse|medisin|juridisk|advokat|ukrevd/i;
+
+export function riskNotice(u: UseCase): string | null {
+  const risky =
+    u.category === "penger-regninger" ||
+    RISK_WORDS.test(`${u.title} ${u.description}`);
+  return risky
+    ? "Dette er ikke investeringsråd, økonomisk, juridisk, skattemessig eller medisinsk rådgivning. Det beskriver hva en annen person har gjort, og kan gå galt. Snakk med en kvalifisert fagperson før du handler, og ikke gi en AI-agent tilgang til bankkonto eller betalingsmidler."
+    : null;
+}

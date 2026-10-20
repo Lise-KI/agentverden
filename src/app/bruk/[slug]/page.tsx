@@ -7,7 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import { agents } from "@/data/agents";
 import { articles } from "@/data/articles";
 import { categories } from "@/data/categories";
-import { useCases, hasPage, isReviewed } from "@/data/useCases";
+import { useCases, hasPage, isReviewed, riskNotice } from "@/data/useCases";
 import CopyButton from "@/components/CopyButton";
 
 export function generateStaticParams() {
@@ -103,6 +103,15 @@ export default async function ArticlePage({
 
           <p className="text-lg text-neutral-800 mb-6">{article.lead}</p>
 
+          {riskNotice(item) && (
+            <p
+              role="note"
+              className="glass rounded-lg border-l-4 border-brand p-3 mb-6 text-sm text-neutral-800"
+            >
+              <strong>Viktig:</strong> {riskNotice(item)}
+            </p>
+          )}
+
           {article.sections.map((s) => (
             <section key={s.heading} className="mb-6">
               <h2 className="text-lg font-semibold mb-2 text-neutral-900">
@@ -133,7 +142,8 @@ export default async function ArticlePage({
           <p className="text-sm text-neutral-500 border-t border-neutral-200 pt-4 mt-8">
             Artikkelen er skrevet av Agentverden med egne ord, basert på
             offentlig informasjon fra {item.source}
-            {item.sourceDate ? ` (${item.sourceDate})` : ""}. Funksjoner og
+            {item.sourceDate ? ` (${item.sourceDate})` : ""}
+            {item.curatedFrom ? `. Saken ble funnet via ${item.curatedFrom}` : ""}. Funksjoner og
             tilgjengelighet endrer seg raskt, så sjekk hva som gjelder nå.
             Innholdet er generell informasjon og ikke rådgivning. Les{" "}
             <Link
