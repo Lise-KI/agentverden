@@ -76,7 +76,7 @@ function SponsorSet({
         <span className="inline-flex size-4 shrink-0 items-center justify-center rounded-[5px] border border-dashed border-neutral-300 text-[8px] text-neutral-400">
           +
         </span>
-        <span>Din logo her: bli sponsor</span>
+        <span>Din Logo her: bli sponsor</span>
       </Link>
     </div>
   );

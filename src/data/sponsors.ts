@@ -7,5 +7,5 @@ export type Sponsor = {
 
 // Plassholder-sponsorer for lokal prototype — ingen reelle avtaler ennå.
 export const sponsors: Sponsor[] = [
-  { initials: "DL", name: "Ditt logo her", pitch: "bli sponsor hos oss", href: "/sponsor" },
+  { initials: "DL", name: "Din Logo her", pitch: "bli sponsor hos oss", href: "/sponsor" },
 ];
