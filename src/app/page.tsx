@@ -1,7 +1,8 @@
 import Sidebar from "@/components/Sidebar";
 import UseCaseGrid from "@/components/UseCaseGrid";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import { useCases } from "@/data/useCases";
+import TrendingGrid from "@/components/TrendingGrid";
+import { useCases, hasPage } from "@/data/useCases";
 
 export default function Home() {
   const trending = useCases.filter((u) => u.trending);
@@ -68,7 +69,11 @@ export default function Home() {
             <h2 className="text-lg font-semibold mb-3 text-neutral-900">
               Trender i dag
             </h2>
-            <UseCaseGrid items={trending} listClassName="grid sm:grid-cols-2 gap-4" />
+            <TrendingGrid
+              candidates={useCases.filter(hasPage)}
+              fallbackIds={trending.map((u) => u.id)}
+              listClassName="grid sm:grid-cols-2 gap-4"
+            />
           </section>
         )}
 

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 // stemme én gang per oppføring; trykker du igjen, trekkes stemmen tilbake.
 // Svarer ikke API-et (f.eks. før databasen er koblet til), vises ingen knapp.
 let allVotes: Promise<Record<string, number> | null> | null = null;
-function loadVotes() {
+export function loadVotes() {
   if (!allVotes) {
     allVotes = fetch("/api/votes", { cache: "no-store" })
       .then((r) =>
