@@ -55,6 +55,21 @@ export default async function ArticlePage({
     .map((a) => agents.find((x) => x.slug === a))
     .filter((a): a is (typeof agents)[number] => Boolean(a));
 
+  // Relaterte use cases: samme kategori eller delt agent, kun sider som
+  // faktisk eksisterer (hasPage), aldri saken selv. Gir interne lenker som
+  // hjelper Google å finne/crawle flere sider, og holder leseren på siden.
+  const related = useCases
+    .filter((u) => u.id !== item.id && hasPage(u))
+    .map((u) => {
+      const sameCategory = u.category === item.category;
+      const sharedAgents = u.agents.filter((a) => item.agents.includes(a)).length;
+      return { u, score: (sameCategory ? 2 : 0) + sharedAgents };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4)
+    .map((x) => x.u);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -155,6 +170,34 @@ export default async function ArticlePage({
             .
           </p>
         </article>
+
+        {related.length > 0 && (
+          <section aria-labelledby="related-heading" className="mt-10">
+            <h2
+              id="related-heading"
+              className="text-lg font-semibold mb-3 text-neutral-900"
+            >
+              Flere lignende use cases
+            </h2>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {related.map((r) => (
+                <li key={r.id}>
+                  <Link
+                    href={`/bruk/${r.id}/`}
+                    className="glass block rounded-lg p-3 text-sm hover:text-brand"
+                  >
+                    <span className="font-medium text-neutral-900 block mb-1">
+                      {r.title}
+                    </span>
+                    <span className="text-neutral-600 line-clamp-2">
+                      {r.description}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <NewsletterSignup />
       </main>
