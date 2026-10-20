@@ -36,8 +36,21 @@ export default function OmPage() {
           logoene er egne.
         </p>
         <h2 className="text-lg font-semibold mt-8 mb-2 text-neutral-50">
-          Send inn en use case
+          Del din egen erfaring
         </h2>
+        <p>
+          Har du funnet en god måte å bruke en AI-agent på — i jobben, på
+          skolen, i husholdningen eller noe helt annet? Vi vil gjerne høre om
+          det. Det trenger ikke være avansert eller perfekt; det viktigste er
+          at det er noe du faktisk har gjort selv, og at andre kan lære noe av
+          fremgangsmåten din.
+        </p>
+        <p>
+          Beskriv gjerne kort hva du ville løse, hvilken agent eller verktøy
+          du brukte, og hva resultatet ble. Vi leser gjennom alt som sendes
+          inn, og legger de beste bidragene inn på siden — med kreditering til
+          deg hvis du ønsker det.
+        </p>
         <p>
           Innsendingsskjema kommer når siden er live. Inntil videre: skriv til
           oss, så legger vi det inn manuelt etter gjennomgang — akkurat som

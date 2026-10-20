@@ -53,12 +53,18 @@ export default function Sidebar() {
         Gratis e-bok
       </Link>
 
-      <Link
-        href="/om"
-        className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium mb-3 text-neutral-200"
-      >
-        Send inn en use case
-      </Link>
+      <div className="mb-3">
+        <p className="text-xs text-neutral-400 mb-1.5 px-1 leading-snug">
+          Bruker du en agent på en lur måte selv? Vi vil gjerne høre
+          historien din.
+        </p>
+        <Link
+          href="/om"
+          className="glass glass-hover block w-full text-center rounded-lg px-3 py-2 text-sm font-medium text-neutral-200"
+        >
+          Del din erfaring
+        </Link>
+      </div>
 
       <Link
         href="/verktoy"
