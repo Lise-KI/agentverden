@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "application/rss+xml": "https://agentverden.no/rss.xml",
     },
   },
+  verification: {
+    google: "fRYdDeg-9MRkadrToEAWbAUGz1N8z6DHv24I_GN15r4",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
