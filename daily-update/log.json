@@ -71,6 +71,49 @@
       "trendingReplaced": ["handel-fire-modeller", "elleve-agenter-trading"],
       "gitCommit": "8391a14",
       "emailedReportTo": "andreassf1@gmail.com (varsel om kodeendring, ikke en vanlig innholdsrapport)"
+    },
+    {
+      "date": "2026-10-21",
+      "_comment_for_this_run": "Primærkilde steg 2: e-post fra agentusecases.ai-nyhetsbrevet (daily@mail.agentusecases.ai) datert 2026-10-20 15:32 ble funnet i innboksen og brukt for sak 1 (viste til samme dev.to-artikkel som allerede var under verifisering). Sak 2 (Nokia) kom fra fallback-skraping av https://agentusecases.ai/new + Hacker News Algolia API + GitHub README, siden den ikke var i nyhetsbrevet. Nyhetsbrevet listet også 3 andre kandidater (kontraktør-backoffice, kjæledyrforsikring, familielogistikk) som ikke ble brukt denne runden: kjæledyrforsikring er forsikringsrelatert (regel 5) og ble derfor ikke en gang vurdert for automatisk publisering, de to andre ble nedprioritert av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum.",
+      "addedUseCases": [
+        {
+          "id": "epostrydding-med-openclaw",
+          "title": "En uke med OpenClaw: slik ryddet agenten en innboks med 2000 e-poster",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files"
+        },
+        {
+          "id": "ki-agent-gammel-nokia-telefon",
+          "title": "Utvikler bygde en KI-agent inn i en gammel Nokia-knappetelefon",
+          "category": "sikkerhet-vitenskap",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50006114",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-an-ai-agent-on-a-nokia-110-feature-phone"
+        }
+      ],
+      "changesOther": [
+        "isNew satt til false på 24 eldre oppføringer (dateAdded 2026-10-15, eldre enn 5 dager) for å holde 'Nyeste'-seksjonen reell. De 4 oppføringene med dateAdded 2026-10-20 fikk stå med isNew: true (under 5 dager gamle)."
+      ],
+      "trendingSelected": ["fjern-telefonnummer-spam", "openclaw-hverdag"],
+      "trendingReplaced": ["gemini-agent-hverdag", "meta-ai-dagsbrief"],
+      "selfApprovalChecks": [
+        {
+          "id": "epostrydding-med-openclaw",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (rettet manglende 'om å' etter 'be agenten', byttet ut klønete 'stikk-kontrollerte' med 'tok en stikkprøve av')",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass (dev.to, lest i fulltekst via web_extract/curl)"
+        },
+        {
+          "id": "ki-agent-gammel-nokia-telefon",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (fjernet ubekreftet superlativ-påstand om telefonmodellen, fjernet gjentakelse av 'prosjektet')",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass (Hacker News-innlegg bekreftet via Algolia API, GitHub README lest i fulltekst)"
+        }
+      ],
+      "gitCommit": "PENDING",
+      "emailedReportTo": "andreassf1@gmail.com"
     }
   ],
   "newsletterRuns": [

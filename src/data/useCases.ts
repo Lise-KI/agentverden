@@ -29,6 +29,53 @@ export type UseCase = {
 // direkte kildesporet innhold (egne X/Reddit/HN-søk + lenke til original).
 export const useCases: UseCase[] = [
   {
+    id: "epostrydding-med-openclaw",
+    title: "En uke med OpenClaw: slik ryddet agenten en innboks med 2000 e-poster",
+    description:
+      "En utvikler testet KI-agent-plattformen OpenClaw i en uke på egen bekostning, og lot agenten rydde en gammel innboks med rundt 2000 e-poster — med 847 nyhetsbrev å sortere gjennom.",
+    agents: ["openclaw"],
+    category: "hus-hverdag",
+    dateAdded: "2026-10-21",
+    source: "DEV Community (dev.to)",
+    sourceDate: "februar 2026",
+    sourceUrl:
+      "https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "En utvikler testet agent-plattformen OpenClaw i en uke, med egne penger, og delte resultatene åpent i en artikkel. Én av testene gikk ut på å koble OpenClaw til en engangs-Gmail-konto med rundt 2000 e-poster samlet opp over et halvt år, og be agenten om å melde seg av alle nyhetsbrev og reklame-e-poster, men la transaksjonsmeldinger og personlig korrespondanse være urørt.",
+    howItWent:
+      "Agenten gikk gjennom hele innboksen i løpet av rundt 20 minutter. Av 847 nyhetsbrev-e-poster meldte den seg av 203 lister og sorterte resten i riktige kategorier. Utvikleren tok en stikkprøve av rundt 50 av e-postene etterpå og fant en treffsikkerhet på omtrent 90 prosent. Noen få legitime e-poster fra en kunde som bruker et markedsføringsverktøy, ble feilaktig behandlet som reklame, men utvikleren beskrev resultatet samlet som imponerende. Selve jobben kostet rundt 8 dollar i API-bruk, med Claude Sonnet 3.5 som underliggende modell.",
+    worthKnowing:
+      "Testen ble kjørt med en engangs-Gmail-konto, ikke en ekte, personlig konto — utvikleren brukte et eget, isolert testoppsett uten tilgang til ekte kontoer eller sitt vanlige nettverk, nettopp for å prøve ut agenten trygt. Prisen varierer mye med hvilken modell man velger: enkle oppgaver som e-postsortering går fint med billigere modeller, mens tyngre research-oppgaver med skjermbilder og nettlesing (en annen oppgave i samme test kostet rundt 22 dollar) blir dyrere, fordi hvert skjermbilde agenten tar utløser et eget API-kall til en synsmodell.",
+    promptTemplate:
+      "Koble [KI-agent-plattform] til en test-e-postkonto og be den: «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte.",
+  },
+  {
+    id: "ki-agent-gammel-nokia-telefon",
+    title: "Utvikler bygde en KI-agent inn i en gammel Nokia-knappetelefon",
+    description:
+      "En utvikler reverse-engineerte fastvaren i en Nokia 110 4G-knappetelefon og bygde om kalkulator-appen til en KI-chat som styres fra talltastaturet — og som kan svare på SIM-spørsmål, sjekke batteriet, slå på lommelykten og mer.",
+    agents: ["codex", "egen-agent"],
+    category: "sikkerhet-vitenskap",
+    dateAdded: "2026-10-21",
+    source: "Hacker News",
+    sourceDate: "oktober 2026",
+    sourceUrl: "https://news.ycombinator.com/item?id=50006114",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "Utvikleren tok en enkel Nokia 110 4G-knappetelefon og reverse-engineerte fastvaren for å få inn egen programvare. Den innebygde kalkulator-appen ble bygget om til en chat-app som styres fra talltastaturet. Appen sender meldingene videre til DeepSeeks chat-API, som kan kalle verktøy på selve telefonen: svare på spørsmål basert på informasjon lagret på SIM-kortet, vise batteriprosent, slå lommelykten av og på, starte et telefonanrop og sette en alarm. Deler av koden ble skrevet med hjelp fra kodeassistenten Codex, og alt ble testet direkte på selve telefonen.",
+    howItWent:
+      "Den største utfordringen var at telefonen bare har 48 MB minne, langt mindre enn det en vanlig KI-agent krever. Løsningen ble en forenklet, skreddersydd agent med mindre kodestørrelse, komprimerte data og gjenbrukte minnebuffere for å få alt til å passe. I dag er det en fungerende prototype: koden lastes inn i telefonens minne fra en datamaskin, og etter det kan telefonen kjøre fritt på mobildata uten kabel. Prosjektet ble lagt ut som et «Show HN»-innlegg på Hacker News og fikk positive tilbakemeldinger, blant annet på videodemonstrasjonen.",
+    worthKnowing:
+      "Dette er fortsatt et prototype-prosjekt, ikke et ferdig produkt: koden må lastes inn på nytt fra datamaskinen hver gang telefonen starter på nytt eller mister strøm, siden det ikke finnes noen permanent installasjon ennå. Utvikleren har heller ikke publisert all kildekoden offentlig, siden deler av prosjektet inneholder informasjon vedkommende ikke vil dele.",
+  },
+  {
     id: "sjekk-motorlampe-obd2",
     title: "La en agent bestille en OBD2-skanner og diagnostisere motorlampen",
     description:
@@ -81,6 +128,7 @@ export const useCases: UseCase[] = [
       "Etter at en bruker bygde en gratis Grok Bot-ferdighet som fjerner telefonnummer fra datameglere, anbefalte Elon Musk selv metoden offentlig på X.",
     agents: ["grok-bot"],
     category: "hus-hverdag",
+    trending: true,
     dateAdded: "2026-10-20",
     source: "X",
     sourceDate: "oktober 2026",
@@ -292,7 +340,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "X",
     sourceDate: "oktober 2026",
-    isNew: true,
+    isNew: false,
     accounts: "4 kontoer",
     votes: 1,
     curatedFrom: "agentusecases.ai",
@@ -313,7 +361,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "X",
     sourceDate: "oktober 2026",
-    isNew: true,
+    isNew: false,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid:
@@ -333,7 +381,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "Reddit",
     sourceDate: "september 2026",
-    isNew: true,
+    isNew: false,
     accounts: "2 kontoer",
     votes: 0,
     curatedFrom: "agentusecases.ai",
@@ -354,7 +402,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "Reddit",
     sourceDate: "januar 2025",
-    isNew: true,
+    isNew: false,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid:
@@ -374,7 +422,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "Reddit",
     sourceDate: "mars 2026",
-    isNew: true,
+    isNew: false,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid:
@@ -394,7 +442,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "Reddit",
     sourceDate: "november 2025",
-    isNew: true,
+    isNew: false,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid:
@@ -414,7 +462,7 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-15",
     source: "Reddit",
     sourceDate: "september 2026",
-    isNew: true,
+    isNew: false,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid:
@@ -436,7 +484,7 @@ export const useCases: UseCase[] = [
     sourceDate: "juli 2026",
     sourceUrl: "https://claude.com/blog/how-people-are-using-claude-cowork",
     sourceChecked: true,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -451,7 +499,7 @@ export const useCases: UseCase[] = [
     sourceDate: "juli 2025",
     sourceUrl: "https://claude.com/blog/how-anthropic-teams-use-claude-code",
     sourceChecked: true,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -466,7 +514,7 @@ export const useCases: UseCase[] = [
     sourceDate: "juli 2025",
     sourceUrl: "https://claude.com/blog/how-anthropic-teams-use-claude-code",
     sourceChecked: true,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -480,7 +528,7 @@ export const useCases: UseCase[] = [
     source: "OpenAI (hjelpesenter)",
     sourceUrl: "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -494,7 +542,7 @@ export const useCases: UseCase[] = [
     source: "OpenAI (forskning)",
     sourceUrl: "https://openai.com/index/how-people-are-using-chatgpt/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -509,7 +557,7 @@ export const useCases: UseCase[] = [
     sourceDate: "2025",
     sourceUrl: "https://openai.com/index/introducing-chatgpt-agent/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -523,7 +571,7 @@ export const useCases: UseCase[] = [
     source: "OpenAI (Codex-dokumentasjon)",
     sourceUrl: "https://developers.openai.com/codex/use-cases/browser-games/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -537,7 +585,7 @@ export const useCases: UseCase[] = [
     source: "Google (offisiell blogg)",
     sourceUrl: "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -547,12 +595,11 @@ export const useCases: UseCase[] = [
       "Gemini Agent og Gemini Spark kan sortere e-post og skrive svarutkast, sende en oppsummering av dagen foran deg og reservere restaurantbord. Handlinger som sender meldinger, kjøper noe eller sender inn skjemaer krever at du bekrefter først. Spark krever abonnement og aldersgrense 18 år.",
     agents: ["gemini"],
     category: "hus-hverdag",
-    trending: true,
     dateAdded: "2026-10-15",
     source: "Google (hjelpesenter)",
     sourceUrl: "https://support.google.com/gemini/answer/16596215",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -566,7 +613,7 @@ export const useCases: UseCase[] = [
     source: "Manus (egen nettside)",
     sourceUrl: "https://manus.im/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -580,7 +627,7 @@ export const useCases: UseCase[] = [
     source: "Manus (brukereksempel)",
     sourceUrl: "https://manus.im/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -590,13 +637,12 @@ export const useCases: UseCase[] = [
       "Med Muse Spark 1.1 kan Meta AI legge planer, koble seg til e-post- og kalenderapper, lage presentasjoner og ta seg av oppgaver for deg. Meta nevner blant annet en daglig oppsummering som eksempel.",
     agents: ["meta-muse"],
     category: "hus-hverdag",
-    trending: true,
     dateAdded: "2026-10-15",
     source: "Meta (nyhetssak)",
     sourceDate: "juli 2026",
     sourceUrl: "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -611,7 +657,7 @@ export const useCases: UseCase[] = [
     sourceDate: "oktober 2026",
     sourceUrl: "https://x.ai/news/grok-voice-3",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -625,7 +671,7 @@ export const useCases: UseCase[] = [
     source: "n8n (fellesskapsmal)",
     sourceUrl: "https://n8n.io/workflows/6026-automate-email-responses-with-openai-and-telegram-approval-for-gmail/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -639,7 +685,7 @@ export const useCases: UseCase[] = [
     source: "n8n (fellesskapsmal)",
     sourceUrl: "https://n8n.io/workflows/8237-personal-life-manager-with-telegram-google-services-and-voice-enabled-ai/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -649,11 +695,12 @@ export const useCases: UseCase[] = [
       "I OpenClaws egen dokumentasjon nevnes personlige oppsummeringer, research og utkast, påminnelser og automatisering av nettleseren. En oppgave du sender fra mobilen kjører på en server, og svaret kommer tilbake i chatten.",
     agents: ["openclaw"],
     category: "hus-hverdag",
+    trending: true,
     dateAdded: "2026-10-15",
     source: "OpenClaw (dokumentasjon)",
     sourceUrl: "https://docs.openclaw.ai/help/faq/what-is-openclaw",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
   {
@@ -667,7 +714,7 @@ export const useCases: UseCase[] = [
     source: "n8n (fellesskapsmal)",
     sourceUrl: "https://n8n.io/workflows/14008-openclaw-clone-expandable-personal-telegram-ai-agent-template/",
     sourceChecked: false,
-    isNew: true,
+    isNew: false,
     votes: 0,
   },
 ];
