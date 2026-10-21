@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { categories } from "@/data/categories";
 import { agents } from "@/data/agents";
+import { useCases, hasPage } from "@/data/useCases";
 import AgentIcon from "@/components/AgentIcon";
 import Logo from "@/components/Logo";
 
@@ -9,7 +10,7 @@ function ChipRow({
   items,
 }: {
   label: string;
-  items: { href: string; name: string; icon?: string }[];
+  items: { href: string; name: string; icon?: string; count?: number }[];
 }) {
   return (
     <div className="flex items-center gap-2 overflow-x-auto pb-1 -mx-4 px-4 [scrollbar-width:none]">
@@ -24,6 +25,11 @@ function ChipRow({
         >
           {i.icon && <AgentIcon slug={i.icon} size={16} />}
           {i.name}
+          {typeof i.count === "number" && (
+            <span className="inline-flex items-center justify-center min-w-[1.1rem] h-[1.1rem] px-1 rounded-full bg-neutral-100 text-[10px] font-semibold text-neutral-500">
+              {i.count}
+            </span>
+          )}
         </Link>
       ))}
     </div>
@@ -31,6 +37,16 @@ function ChipRow({
 }
 
 export default function Sidebar() {
+  // Antall artikler (sider som faktisk finnes) per agent — samme telling
+  // som på /agenter-siden, vist her slik at tallene synes overalt, ikke
+  // bare når man har klikket inn på én agent.
+  const agentCounts: Record<string, number> = {};
+  for (const a of agents) {
+    agentCounts[a.slug] = useCases.filter(
+      (u) => hasPage(u) && u.agents.includes(a.slug)
+    ).length;
+  }
+
   return (
     <>
       {/* Mobil: kompakt topp, så innholdet kommer rett etter. Agenter og emner
@@ -64,6 +80,7 @@ export default function Sidebar() {
             href: `/agenter/${a.slug}`,
             name: a.name,
             icon: a.slug,
+            count: agentCounts[a.slug],
           }))}
         />
         <ChipRow
@@ -124,10 +141,15 @@ export default function Sidebar() {
               <li key={a.slug}>
                 <Link
                   href={`/agenter/${a.slug}`}
-                  className="flex items-center gap-2.5 py-0.5 text-neutral-700 hover:text-neutral-950 transition-colors"
+                  className="flex items-center justify-between gap-2.5 py-0.5 text-neutral-700 hover:text-neutral-950 transition-colors"
                 >
-                  <AgentIcon slug={a.slug} />
-                  <span>{a.name}</span>
+                  <span className="flex items-center gap-2.5 min-w-0">
+                    <AgentIcon slug={a.slug} />
+                    <span className="truncate">{a.name}</span>
+                  </span>
+                  <span className="shrink-0 text-xs font-medium text-neutral-400">
+                    {agentCounts[a.slug]}
+                  </span>
                 </Link>
               </li>
             ))}
