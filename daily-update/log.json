@@ -112,7 +112,7 @@
           "sourceUrlCheck": "pass (Hacker News-innlegg bekreftet via Algolia API, GitHub README lest i fulltekst)"
         }
       ],
-      "gitCommit": "PENDING",
+      "gitCommit": "46c2c02",
       "emailedReportTo": "andreassf1@gmail.com"
     }
   ],
