@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SponsorBar from "@/components/SponsorBar";
 import SiteFooter from "@/components/SiteFooter";
+import SiteSearch from "@/components/SiteSearch";
 import { sunThemeScript } from "@/lib/sunTheme";
 
 const geistSans = Geist({
@@ -47,6 +48,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: sunThemeScript }} />
       </head>
       <body className="flex min-h-full flex-col pb-[var(--sponsor-bar-height)] text-neutral-900">
+        <div className="w-full border-b border-neutral-200 bg-white px-4 py-3 flex justify-center relative z-20">
+          <SiteSearch />
+        </div>
         <div className="flex-1 relative z-10">{children}</div>
         <SiteFooter />
         <SponsorBar />

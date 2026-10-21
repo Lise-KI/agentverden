@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import AgentIcon from "@/components/AgentIcon";
 import { agents } from "@/data/agents";
-import { useCases } from "@/data/useCases";
+import { useCases, hasPage } from "@/data/useCases";
 
 export const metadata: Metadata = {
   title: "Alle agenter",
@@ -19,7 +19,9 @@ export default function AgenterPage() {
         <h1 className="text-lg font-semibold mb-4 text-neutral-900">Agenter</h1>
         <div className="grid sm:grid-cols-2 gap-3">
           {agents.map((a) => {
-            const n = useCases.filter((u) => u.agents.includes(a.slug)).length;
+            const n = useCases.filter(
+              (u) => hasPage(u) && u.agents.includes(a.slug)
+            ).length;
             return (
               <Link
                 key={a.slug}
@@ -30,8 +32,11 @@ export default function AgenterPage() {
                   <AgentIcon slug={a.slug} size={32} />
                   {a.name}
                 </span>
-                <span className="text-sm text-neutral-500">
-                  {n} use case{n === 1 ? "" : "s"}
+                <span
+                  aria-label={`${n} artikler`}
+                  className="inline-flex items-center justify-center min-w-[1.75rem] h-7 px-2 rounded-full bg-neutral-100 text-sm font-semibold text-neutral-700"
+                >
+                  {n}
                 </span>
               </Link>
             );
