@@ -17,6 +17,15 @@
       "seoTaskToday": "a-indexnow-ping",
       "seoTaskResult": "Hentet sitemap.xml live (50 URL-er). daily-update/indexnow-submitted.json fantes ikke fra før (manglet fra forrige kjøring selv om alle 50 URL-er faktisk ble sendt den dagen) — opprettet filen nå og behandlet alle 50 som nye siden ingen loggført liste fantes. Sendte alle 50 til IndexNow API, respons status 200. Filen daily-update/indexnow-submitted.json er nå opprettet og populert med disse 50 URL-ene, slik at fremtidige kjøringer kan diffe korrekt mot nye sider.",
       "notes": "Dette er andre kjøring samme kalenderdag som oppsettet (09:00-jobben kjørte tydeligvis etter at ettermiddagsarbeidet med GSC/canonical/krysslenker allerede var gjort og loggført). Ingen endring i abonnenttall siden forrige rad (samme dag). Brevo-liste id 3 \"Nyhetsbrev\" bekreftet fortsatt riktig (totalSubscribers=0)."
+    },
+    {
+      "date": "2026-10-21",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "b-canonical-meta-spotsjekk",
+      "seoTaskResult": "Trakk 5 tilfeldige sider fra sitemap.xml (50 URL-er totalt) og curlet dem live: /emner/penger-regninger, /bruk/codex-nettleserspill, /agenter/grok-bot, /bruk/n8n-epost-godkjenning, /bruk/n8n-personlig-assistent. Alle 5 hadde nøyaktig én <link rel=canonical> som pekte selvreferensielt (med trailing slash), nøyaktig én <title> (ikke tom), og nøyaktig én <meta name=description> med innhold (49-170 tegn). Ingen avvik funnet. (a-indexnow-ping ble ikke valgt i dag: alle 50 sitemap-URL-er var allerede i indexnow-submitted.json fra forrige kjøring, ingen nye sider å sende.)",
+      "notes": "Brevo-liste id 3 \"Nyhetsbrev\" bekreftet fortsatt riktig, totalSubscribers=0. Ingen endring siden forrige rad eller siden start (2026-10-20). 0 abonnenter etter 1-2 dager er forventet for et helt nytt domene."
     }
   ]
 }
