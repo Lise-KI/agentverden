@@ -17,7 +17,7 @@ export default function UseCaseCard({ item }: { item: UseCase }) {
   const href = hasPage(item) ? `/bruk/${item.id}` : null;
 
   return (
-    <article className="relative glass glass-hover rounded-xl p-4 flex gap-3">
+    <article className="relative glass-article glass-article-hover rounded-xl p-4 flex gap-3">
       <div className="shrink-0">
         {href ? <VoteButton id={item.id} /> : null}
       </div>

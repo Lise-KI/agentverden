@@ -48,6 +48,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: sunThemeScript }} />
       </head>
       <body className="flex min-h-full flex-col pb-[var(--sponsor-bar-height)] text-neutral-900">
+        <div className="bg-blobs" aria-hidden="true">
+          <span />
+        </div>
         <div className="w-full border-b border-neutral-200 bg-white px-4 py-3 flex justify-center relative z-20">
           <SiteSearch />
         </div>
