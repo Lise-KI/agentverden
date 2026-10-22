@@ -1,27 +1,28 @@
-export const agents: Agent[] = [];
+import { articles } from "@/data/articles";
 
-export const categories: Category[] = [];
+export type UseCase = {
+  id: string;
+  title: string;
+  description: string;
+  agents: string[]; // agent slugs — første i lista regnes som hovedagenten
+  category: string; // category slug
+  source: string; // plattform
+  sourceDate?: string;
+  sourceUrl?: string; // intern kildenotat for redaksjonen, vises ikke på nettsiden
+  sourceChecked?: boolean; // true = siden er åpnet og lest direkte; false = funnet via søk
+  accounts?: string;
+  isNew?: boolean;
+  trending?: boolean;
+  dateAdded?: string; // YYYY-MM-DD — dato saken ble lagt til; styrer sortering i "Siste funn"
+  votes: number;
+  curatedFrom?: string; // ærlig attribusjon til hvor vi fant saken
+  whatTheyDid?: string; // "Hva de gjorde"
+  howItWent?: string; // "Hvordan det gikk"
+  worthKnowing?: string; // "Verdt å vite"
+  promptTemplate?: string; // kopierbar prompt-mal, egen formulering
+};
 
 export const useCases: UseCase[] = [
-  {
-    id: "slack-doozy-support-agent",
-    title: "Doozy: En KI-kollega i Slack som håndterer supportspørsmål",
-    description: "Et selskap bygde Doozy, en Slack-bot som automatiserer supportoppgaver. Ved å tagge boten i en tråd, kan den sjekke databaser, Stripe, GitHub og Linear for å gi svar direkte i Slack.",
-    agents: ["egen-agent"],
-    category: "salg-markedsforing",
-    source: "Hacker News",
-    sourceDate: "oktober 2026",
-    sourceUrl: "https://news.ycombinator.com/item?id=50166597",
-    sourceChecked: true,
-    isNew: true,
-    dateAdded: "2026-10-22",
-    votes: 0,
-    curatedFrom: "agentusecases.ai",
-    whatTheyDid: "Teamet ved Spur bygde en Slack-bot kalt Doozy for å avlastet support-teamet. Boten kan kjøre verktøy i et isolert miljø (sandbox) for å hente data fra interne systemer uten å eksponere sensitive påloggingsdetaljer.",
-    howItWent: "Doozy brukes nå daglig av 13 personer og har blitt en kritisk del av arbeidsflyten deres. Den har gått fra å være en 'hacky' prototype til en robust, flerbruker-løsning.",
-    worthKnowing: "Sikkerheten er ivaretatt ved at alle verktøykall skjer i en isolert sandbox (E2B), og sensitive hemmeligheter håndteres via en sikker gateway.",
-    promptTemplate: "Sett opp en hjelper jeg kan gi supportoppgaver til. Når jeg beskriver et problem, som [en feil betaling eller en mistenkt bug], slå det opp ved å bruke skrivebeskyttet tilgang til [din database, Stripe, GitHub og Linear] og skriv ned hva du fant med lenker til postene. Du er ferdig når du har gitt meg et kort sammendrag jeg kan poste i en Slack-tråd. Endre eller slett aldri data, og vis meg alt du ville skrevet eller sendt før du gjør det.",
-  },
   {
     id: "claude-code-chrome-extension-ceo",
     title: "La Claude Code fungere som 'administrerende direktør' for en Chrome-utvidelse",
@@ -188,10 +189,10 @@ export const useCases: UseCase[] = [
     dateAdded: "2026-10-20",
     votes: 0,
     curatedFrom: "agentusecases.ai",
-    whatTheyDid: "En X-bruker lot en Grok Bot-ferdighet søke gjennom nettsteder som samler og selger telefonnumre (\",
+    whatTheyDid: "En X-bruker lot en Grok Bot-ferdighet søke gjennom nettsteder som samler og selger telefonnumre (\"people search\"-sider og datameglere), fylle ut skjemaene for å be om at nummeret fjernes, og bekrefte fjerningen når selskapene svarte med e-post. Ferdigheten, kalt Spam-Call Scrubber, ble delt fritt slik at andre kunne bruke samme oppskrift, og kan settes til å sjekke på nytt med jevne mellomrom.",
     howItWent: "Elon Musk svarte brukeren direkte på X og oppfordret alle som er slitne av spam-telefoner og -meldinger til å be sin egen Grok Bot gjøre det samme. Musk sa samtidig at Grok Bot nå gir hver bot sin egen e-postadresse og kan oppdage forsøk på svindel-e-post — men selve oppryddingsferdigheten er laget av brukeren, ikke av xAI.",
     worthKnowing: "Dette krever Grok Bot-appen, og at du er komfortabel med at en agent fyller ut skjemaer med navn/adresse på vegne av deg hos en rekke ukjente nettsteder. Skjemaene varierer fra selskap til selskap, så det er verdt å sjekke manuelt et par av dem etterpå for å se at fjerningen faktisk er gjennomført.",
-    promptTemplate: "Søk opp telefonnummeret mitt [ditt nummer] på de vanligste \",
+    promptTemplate: "Søk opp telefonnummeret mitt [ditt nummer] på de vanligste \"people search\"-sidene og datameglerne du finner. For hver side du finner nummeret på: fyll ut opt-out/fjern-meg-skjemaet med [navn/e-post], bekreft eventuelle e-poster som kommer tilbake, og før en liste over hvilke sider du har sendt krav til. Vis meg listen før du bekrefter noe permanent, og sjekk på nytt om [antall] uker om nummeret har dukket opp igjen.",
   },
   {
     id: "ai-nyhetsbrev-podkast",
@@ -209,7 +210,7 @@ export const useCases: UseCase[] = [
     curatedFrom: "agentusecases.ai",
     whatTheyDid: "Brukeren abonnerte på over 30 AI-nyhetsbrev og brukte mer tid på å sortere e-postene enn å faktisk lære noe av dem. Han satte opp Claude Cowork til å hente nyhetsbrevene fra en egen Gmail-merkelapp hver natt, filtrere bort rene reklame-/støy-brev, og sette sammen det som var igjen til én sammenhengende lydbrief i stedet for en tekstoppsummering.",
     howItWent: "Etter å ha testet flere tale-løsninger landet oppsettet på en lokal, gratis talemodell som kjører på egen Mac uten nettavhengighet. Lydbriefen blir rundt 8–10 minutter, legges ut som en podkast-episode klokken 05 hver morgen, og brukeren lytter til den på morgenturen. Selve byggingen tok rundt to timer i én arbeidssesjon.",
-    worthKnowing: "Oppsettet krever en datamaskin som faktisk er på 24/7 for å kjøre den nattlige jobben, og en del prøving og feiling med valg av taleløsning før resultatet ble naturlig å høre på — brukeren beskriver det første forsøket med macOS' innebygde opplesning som \",
+    worthKnowing: "Oppsettet krever en datamaskin som faktisk er på 24/7 for å kjøre den nattlige jobben, og en del prøving og feiling med valg av taleløsning før resultatet ble naturlig å høre på — brukeren beskriver det første forsøket med macOS' innebygde opplesning som \"helt robotaktig og ulyttbart\". Verdt å vite før man forventer et perfekt resultat på første forsøk.",
     promptTemplate: "Hver natt klokken [tidspunkt]: hent nye e-poster merket [navn på merkelapp/mappe for nyhetsbrev] fra innboksen min siden forrige kjøring. Filtrer bort rene reklame-/kampanjebrev. Lag en sammenhengende, samtaleaktig lydoppsummering (ikke en punktliste) av det som faktisk er nytt eller endret siden i går, maks [lengde] minutter. Spill den inn med en norsk tale-stemme, og legg den et sted jeg kan høre på uten å måtte åpne en app for å lese.",
   },
   {
@@ -793,3 +794,31 @@ export const useCases: UseCase[] = [
     worthKnowing: "",
   },
 ];
+
+// Oppføringer med egen side under /bruk: enten en artikkel i articles.ts,
+// eller utvidet innhold (whatTheyDid m.fl.) direkte i oppføringen.
+export function hasPage(u: UseCase): boolean {
+  return Boolean(articles[u.id] || u.whatTheyDid);
+}
+
+// Oppføringer uten verifisert kilde (de opprinnelige 15) skal ikke indekseres
+// før eier har gjennomgått dem (regel 9 i CLAUDE.md).
+export function isReviewed(u: UseCase): boolean {
+  return Boolean(articles[u.id]);
+}
+
+
+// Saker om penger, investering, forsikring, skatt, juss og helse skal ha en
+// tydelig merknad om at de ikke er rådgivning (regel 9 i CLAUDE.md). Gjelder
+// automatisk også for nye oppføringer.
+const RISK_WORDS =
+  /aksje|krypto|coin|invest|trading|handel|børs|forsikring|skatt|avgift|lege|helse|medisin|juridisk|advokat|ukrevd/i;
+
+export function riskNotice(u: UseCase): string | null {
+  const risky =
+    u.category === "penger-regninger" ||
+    RISK_WORDS.test(`${u.title} ${u.description}`);
+  return risky
+    ? "Dette er ikke investeringsråd, økonomisk, juridisk, skattemessig eller medisinsk rådgivning. Det beskriver hva en annen person har gjort, og kan gå galt. Snakk med en kvalifisert fagperson før du handler, og ikke gi en AI-agent tilgang til bankkonto eller betalingsmidler."
+    : null;
+}
