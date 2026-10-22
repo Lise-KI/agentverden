@@ -19,17 +19,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // /ebok tas med først når Brevo-skjemaet er på plass.
     ...(BREVO_EBOOK_FORM_URL ? ["/ebok"] : []),
   ].map((path) => ({
-    url: `${baseUrl}${path}`,
+    url: `${baseUrl}${path}/`,
     lastModified: new Date(),
   }));
 
   const agentRoutes = agents.map((a) => ({
-    url: `${baseUrl}/agenter/${a.slug}`,
+    url: `${baseUrl}/agenter/${a.slug}/`,
     lastModified: new Date(),
   }));
 
   const categoryRoutes = categories.map((c) => ({
-    url: `${baseUrl}/emner/${c.slug}`,
+    url: `${baseUrl}/emner/${c.slug}/`,
     lastModified: new Date(),
   }));
 
