@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articleRoutes = useCases
     .filter((u) => articles[u.id])
     .map((u) => ({
-      url: `${baseUrl}/bruk/${u.id}`,
+      url: `${baseUrl}/bruk/${u.id}/`,
       lastModified: new Date(),
     }));
 
