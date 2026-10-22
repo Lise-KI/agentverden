@@ -20,17 +20,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ansvarsfraskrivelse",
     "/ebok",
   ].map((path) => ({
-    url: `${baseUrl}${path}`,
+    url: `${baseUrl}${path}/`,
     lastModified: new Date(),
   }));
 
   const agentRoutes = agents.map((a) => ({
-    url: `${baseUrl}/agenter/${a.slug}`,
+    url: `${baseUrl}/agenter/${a.slug}/`,
     lastModified: new Date(),
   }));
 
   const categoryRoutes = categories.map((c) => ({
-    url: `${baseUrl}/emner/${c.slug}`,
+    url: `${baseUrl}/emner/${c.slug}/`,
     lastModified: new Date(),
   }));
 
