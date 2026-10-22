@@ -133,5 +133,50 @@
       "status": "sent",
       "reason": null
     }
+    ,
+    {
+      "date": "2026-10-22",
+      "_comment_for_this_run": "Verifisert LIVE via 'hermes cron list' før denne kjøringen (ikke antatt): lise-profilens jobb 4d91e799a622 ('Agentverden.no daglig oppdatering') står fortsatt som [active], selv om SKILL.md sier den skulle vært satt på pause 2026-10-21 da ansvaret ble flyttet til Nettmannen-profilens jobb ec330bdec6b3. Nettmannens jobb kjørte i dag 2026-10-22T08:57 og feilet med 'RuntimeError: Model output entered a repetition loop and the stream was cut mid-loop; discarding the degenerate response' (bekreftet fra live cron-output, ikke fra antakelse). Siste commit på origin/main var fra en separat vekst-sporingsjobb (d72aacd/8ab5039/ab74b08), ikke fra en daglig-innholds-oppdatering i dag — altså publiserte ikke Nettmannen noe innhold i dag, så ingen duplisering skjedde. Denne kjøringen (lise sin 4d91e799a622) gikk videre som planlagt siden den fortsatt er aktiv og mottok oppgaven. Rørte IKKE cron-innstillinger selv (pause/resume) per regelen om ikke å endre cron-jobber i denne runden — flagget i stedet til eier for manuell avklaring.",
+      "addedUseCases": [
+        {
+          "id": "slack-support-agent-doozy",
+          "title": "Doozy: Slack-agenten som tar supportspørsmål av hendene til utviklerne",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50166597",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads"
+        },
+        {
+          "id": "digital-tvilling-whatsapp-openclaw",
+          "title": "Digital tvilling på WhatsApp: slik droppet en utvikler tre andre abonnementer med OpenClaw",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://medium.com/@srechakra/sda-f079871369ae",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp"
+        }
+      ],
+      "changesOther": [
+        "Ingen isNew-opprydding denne runden — ingen eksisterende isNew:true-oppføringer har krysset 5-dagersgrensen ennå (eldste aktive isNew-dato er 2026-10-20, kun 2 dager gammel per i dag).",
+        "Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og websøk fant ikke den eksakte posten/datoen, så den ble droppet av forsiktighet — ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (primærkilden viste seg å være en Substack-artikkel fra juli 2025 — over et år gammel, altså ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum)."
+      ],
+      "trendingSelected": ["claude-code-visualisering", "codex-nettleserspill"],
+      "trendingReplaced": ["fjern-telefonnummer-spam", "openclaw-hverdag"],
+      "selfApprovalChecks": [
+        {
+          "id": "slack-support-agent-doozy",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (lest ord for ord, ingen stavefeil eller rare oversettelser funnet)",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass (Hacker News-innlegget åpnet direkte med curl og lest i fulltekst, HTTP 200, sourceChecked: true)"
+        },
+        {
+          "id": "digital-tvilling-whatsapp-openclaw",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass (lest ord for ord, ingen stavefeil eller rare oversettelser funnet)",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass, men ærlig merket sourceChecked: false — Medium-siden ga HTTP 403 ved direkte henting, så teksten er skrevet fra et substansielt websøk-utdrag (nær hele artikkelen) i stedet for en direkte åpnet side"
+        }
+      ],
+      "gitCommit": "PENDING_FYLLES_INN_ETTER_COMMIT",
+      "emailedReportTo": "andreassf1@gmail.com"
+    }
   ]
 }

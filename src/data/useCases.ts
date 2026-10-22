@@ -29,6 +29,54 @@ export type UseCase = {
 // direkte kildesporet innhold (egne X/Reddit/HN-søk + lenke til original).
 export const useCases: UseCase[] = [
   {
+    id: "slack-support-agent-doozy",
+    title: "Doozy: Slack-agenten som tar supportspørsmål av hendene til utviklerne",
+    description:
+      "Et selskap bygde sin egen Slack-agent, Doozy, som support-ansatte kan tagge i en tråd når de trenger svar fra databasen eller betalingsløsningen — i stedet for å vente på en utvikler. 13 ansatte bruker den hver dag.",
+    agents: ["egen-agent"],
+    category: "salg-markedsforing",
+    dateAdded: "2026-10-22",
+    source: "Hacker News",
+    sourceDate: "oktober 2026",
+    sourceUrl: "https://news.ycombinator.com/item?id=50166597",
+    sourceChecked: true,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "Hos selskapet Spur var support-teamet underbemannet og måtte stadig vente på at en utvikler tok seg tid til å kjøre et databasesøk eller avgjøre om noe faktisk var en feil. Løsningen ble en egen agent, Doozy: man tagger den i en Slack-tråd med en oppgave, og den henter svar fra database, betalingsløsningen Stripe, GitHub, Linear, analyseverktøyet PostHog eller andre tilkoblede systemer, før den legger resultatet og eventuelle filer rett inn i tråden.",
+    howItWent:
+      "Doozy brukes nå av 13 personer hver dag hos Spur, og det er i hovedsak support- og kundeansvarlige som bruker den mest — ikke utviklerne den egentlig var tenkt for. Hver oppgave kjøres isolert i en fersk sandkasse der agenten selv ikke har tilgang til noen innloggingsdetaljer; alle kall til database og eksterne tjenester går via en egen sluse utenfor sandkassen, som legger på riktige nøkler kun for den konkrete forespørselen.",
+    worthKnowing:
+      "Sikkerhetsmodellen gjør at agenten ikke kan lekke en nøkkel den aldri har hatt tilgang til — skulle noen lure den med en skjult instruks i en tråd eller fil, kan den i verste fall misbruke verktøyene sine, men ikke stjele tilgang til systemene. Verktøy som kan slette eller endre data er avskrudd som standard og må aktiveres manuelt av en systemeier, og hver handling agenten gjør utenfor sandkassen logges i et revisjonsspor som ikke kan endres etterpå.",
+    promptTemplate:
+      "Sett opp en egen agent som støtteteamet kan tagge i en Slack-tråd med en kundesak. Gi agenten skrivebeskyttet tilgang til database, betalingsløsning og saksverktøy, og be den slå opp det den finner og skrive et kort svar med lenker til kildene — uten selv å endre eller slette noe. Krev at destruktive handlinger står avskrudd til en systemeier aktiverer dem manuelt, og at alt agenten gjør utenfor egen sandkasse logges i et revisjonsspor.",
+  },
+  {
+    id: "digital-tvilling-whatsapp-openclaw",
+    title: "Digital tvilling på WhatsApp: slik droppet en utvikler tre andre abonnementer med OpenClaw",
+    description:
+      "En utvikler satte opp agent-plattformen OpenClaw på en server til rundt 5 dollar måneden og styrer nå kalender, e-post, vanesporing og lydnotater via WhatsApp — og kuttet dermed Notion, Todoist og en egen vaneapp.",
+    agents: ["openclaw"],
+    category: "hus-hverdag",
+    dateAdded: "2026-10-22",
+    source: "Medium",
+    sourceDate: "februar 2026",
+    sourceUrl: "https://medium.com/@srechakra/sda-f079871369ae",
+    sourceChecked: false,
+    isNew: true,
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid:
+      "Forfatteren satte opp agent-plattformen OpenClaw på en liten VPS-server til rundt 5 dollar i måneden, med en Docker-container og tilgang kun via en lukket SSH-tunnel i stedet for å eksponere agentens styringsgrensesnitt mot åpent internett. Gjennom WhatsApp, appen vedkommende uansett brukte mest, styres nå Google-kalenderen og Gmail, mens lydnotater tas opp på farten og fylles automatisk inn som gjøremål, og egne notater synkroniseres hver natt til et privat GitHub-repo.",
+    howItWent:
+      "Tre betalte tjenester — Notion, Todoist og en egen vaneapp — ble sagt opp og erstattet med vanlige markdown-filer som agenten selv leser og skriver i. Forfatteren fikk også sitt eget telefonnummer til agenten via et billig eSIM-abonnement, slik at den kan ringe og booke ting på egne vegne, blant annet avtaler og reservasjoner, helt uten at forfatteren selv måtte løfte en finger.",
+    worthKnowing:
+      "Et par praktiske fallgruver trakk ned inntrykket: agenten nullstilte sine egne WhatsApp-innstillinger ved omstart, så forfatteren måtte bygge en egen overvåkingsfunksjon som fanger opp og retter dette automatisk. Forfatteren er også tydelig på sikkerheten rundt oppsettet — styringsgrensesnittet må aldri eksponeres åpent mot internett, og tilgangsnøkkelen bør roteres regelmessig i stedet for å ligge fast lagret i konfigurasjonen.",
+    promptTemplate:
+      "Sett opp en agent-plattform som OpenClaw på en liten VPS, bundet til localhost med en SSH-tunnel inn, og koble den til WhatsApp eller Telegram som ditt faste meldingspunkt. Gi den tilgang til kalender og e-post, be den loggføre faste vaner i en tekstfil i et eget Git-repo, og la den transkribere lydnotater til gjøremål. Be om en enkel vaktfunksjon som fanger opp om kanal-innstillingene nullstilles ved omstart, og krev at agenten alltid spør før den sender noe til andre enn deg selv.",
+  },
+  {
     id: "epostrydding-med-openclaw",
     title: "En uke med OpenClaw: slik ryddet agenten en innboks med 2000 e-poster",
     description:
@@ -128,7 +176,6 @@ export const useCases: UseCase[] = [
       "Etter at en bruker bygde en gratis Grok Bot-ferdighet som fjerner telefonnummer fra datameglere, anbefalte Elon Musk selv metoden offentlig på X.",
     agents: ["grok-bot"],
     category: "hus-hverdag",
-    trending: true,
     dateAdded: "2026-10-20",
     source: "X",
     sourceDate: "oktober 2026",
@@ -494,6 +541,7 @@ export const useCases: UseCase[] = [
       "Dataforskere hos Anthropic bygde interaktive visualiseringer av resultater fra en KI-modell ved å beskrive det de ville ha i én enkelt instruks. De hadde ikke selv kunnskap om TypeScript, som verktøyet skrev koden i.",
     agents: ["claude-code"],
     category: "programvare-devops",
+    trending: true,
     dateAdded: "2026-10-15",
     source: "Anthropic (offisiell blogg)",
     sourceDate: "juli 2025",
@@ -567,6 +615,7 @@ export const useCases: UseCase[] = [
       "Codex kan ta et kort spillkonsept, lage en plan og bygge et nettleserspill, og deretter teste det i en ekte nettleser. OpenAI beskriver dette som et eksempel på bruk utenfor vanlig programvareutvikling.",
     agents: ["codex"],
     category: "spill-simulering",
+    trending: true,
     dateAdded: "2026-10-15",
     source: "OpenAI (Codex-dokumentasjon)",
     sourceUrl: "https://developers.openai.com/codex/use-cases/browser-games/",
@@ -695,7 +744,6 @@ export const useCases: UseCase[] = [
       "I OpenClaws egen dokumentasjon nevnes personlige oppsummeringer, research og utkast, påminnelser og automatisering av nettleseren. En oppgave du sender fra mobilen kjører på en server, og svaret kommer tilbake i chatten.",
     agents: ["openclaw"],
     category: "hus-hverdag",
-    trending: true,
     dateAdded: "2026-10-15",
     source: "OpenClaw (dokumentasjon)",
     sourceUrl: "https://docs.openclaw.ai/help/faq/what-is-openclaw",
