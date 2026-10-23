@@ -26,6 +26,15 @@
       "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
       "seoTaskResult": "5/5 sider feilet p\u00e5 canonical (peker til URL med skr\u00e5strek til slutt)",
       "notes": "Canonical-lenker i metadata har skr\u00e5strek (trailing slash), mens sitemap/URL-er ikke har det."
+    },
+    {
+      "date": "2026-10-23",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "SITEMAP-KONSISTENS",
+      "seoTaskResult": "Sjekket 5 tilfeldige sider og sitemap. Ingen noindex eller manglende reviewed sider funnet.",
+      "notes": ""
     }
   ]
 }
