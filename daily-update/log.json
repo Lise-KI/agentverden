@@ -232,6 +232,397 @@
         }
       },
       "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "ingen",
+      "trendingSelected": [],
+      "trendingReplaced": [],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "ingen",
+      "trendingSelected": [],
+      "trendingReplaced": [],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "ingen",
+      "trendingSelected": [
+        "auto-handle-dealership-customer-sms-support",
+        "corgi-terminal-multiplexer-for-agenter"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "isNew-opprydding utf\u00f8rt",
+      "trendingSelected": [
+        "selg-brukte-ting",
+        "avbestill-abonnement"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "isNew-opprydding utf\u00f8rt",
+      "trendingSelected": [
+        "refusjon-fly",
+        "overvak-bord-priser"
+      ],
+      "trendingReplaced": [
+        "avbestill-abonnement",
+        "selg-brukte-ting"
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "isNew-opprydding utf\u00f8rt",
+      "trendingSelected": [
+        "codex-nettleserspill",
+        "chatgpt-restaurantbord"
+      ],
+      "trendingReplaced": [
+        "perplexity-comet-browser-agent",
+        "ukrevde-penger",
+        "chatgpt-agent-reise",
+        "gemini-husarbeid"
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "isNew-opprydding utf\u00f8rt",
+      "trendingSelected": [
+        "grok-bot-booking",
+        "flytt-ferdigheter"
+      ],
+      "trendingReplaced": [
+        "chatgpt-restaurantbord",
+        "codex-nettleserspill"
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "isNew-opprydding utf\u00f8rt",
+      "trendingSelected": [
+        "handel-fire-modeller",
+        "n8n-personlig-assistent"
+      ],
+      "trendingReplaced": [
+        "flytt-ferdigheter",
+        "grok-bot-booking"
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-24",
+      "addedUseCases": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://corgi.computer/",
+          "curatedFromListingUrl": "https://agentusecases.ai/new"
+        }
+      ],
+      "changesOther": "isNew-opprydding utf\u00f8rt",
+      "trendingSelected": [
+        "ai-nyhetsbrev-podkast",
+        "cowork-hva-folk-bruker"
+      ],
+      "trendingReplaced": [
+        "perplexity-comet-browser-agent",
+        "ukrevde-penger",
+        "chatgpt-agent-reise",
+        "gemini-husarbeid"
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "auto-handle-dealership-customer-sms-support",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "corgi-terminal-multiplexer-for-agenter",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "emailedReportTo": "andreassf1@gmail.com"
     }
   ],
   "newsletterRuns": [
