@@ -745,7 +745,7 @@
           "sourceUrlCheck": "pass, men ærlig merket sourceChecked: false — Medium-siden ga HTTP 403 ved direkte henting, så teksten er skrevet fra et substansielt websøk-utdrag (nær hele artikkelen) i stedet for en direkte åpnet side"
         }
       ],
-      "gitCommit": "203e7b22ae098cc349b305cda73f1abc30ee8a8c",
+      "gitCommit": "3097148",
       "emailedReportTo": "andreassf1@gmail.com"
     }
   ]
