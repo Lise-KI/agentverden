@@ -44,6 +44,15 @@
       "seoTaskToday": "INTERNLENKE-DEKNING",
       "seoTaskResult": "Sjekket 3 tilfeldige sider. Alle hadde 'Flere lignende use cases'.",
       "notes": ""
+    },
+    {
+      "date": "2026-10-25",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "ROBOTS/STRUKTURERT DATA",
+      "seoTaskResult": "ROBOTS/STRUKTURERT DATA: robots.txt og JSON-LD er korrekte.",
+      "notes": ""
     }
   ]
 }
