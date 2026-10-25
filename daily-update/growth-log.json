@@ -7,7 +7,7 @@
       "deltaSinceStart": 0,
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
       "seoTaskResult": "Sendte 50 nye URLer (Status 200)",
-      "notes": "F\u00f8rste kj\u00f8ring"
+      "notes": "Første kjøring"
     },
     {
       "date": "2026-10-22",
@@ -24,8 +24,8 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 0,
       "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
-      "seoTaskResult": "5/5 sider feilet p\u00e5 canonical (peker til URL med skr\u00e5strek til slutt)",
-      "notes": "Canonical-lenker i metadata har skr\u00e5strek (trailing slash), mens sitemap/URL-er ikke har det."
+      "seoTaskResult": "5/5 sider feilet på canonical (peker til URL med skråstrek til slutt)",
+      "notes": "Canonical-lenker i metadata har skråstrek (trailing slash), mens sitemap/URL-er ikke har det."
     },
     {
       "date": "2026-10-23",
@@ -52,6 +52,15 @@
       "deltaSinceStart": 0,
       "seoTaskToday": "ROBOTS/STRUKTURERT DATA",
       "seoTaskResult": "ROBOTS/STRUKTURERT DATA: robots.txt og JSON-LD er korrekte.",
+      "notes": ""
+    },
+    {
+      "date": "2026-10-25",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "GOOGLE SEARCH CONSOLE",
+      "seoTaskResult": "Search Console ikke satt opp ennå (krever at brukeren lukker Chrome lokalt én gang slik at nettleserautomatisering kan logge inn) — hopp over",
       "notes": ""
     }
   ]
