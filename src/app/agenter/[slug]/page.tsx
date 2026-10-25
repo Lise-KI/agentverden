@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+import AgentIcon from "@/components/AgentIcon";
 import UseCaseGrid from "@/components/UseCaseGrid";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
 import { agents } from "@/data/agents";
 import { useCases } from "@/data/useCases";
+import { articles } from "@/data/articles";
 
 export function generateStaticParams() {
   return agents.map((a) => ({ slug: a.slug }));
@@ -57,6 +59,7 @@ export default async function AgentPage({
         "@type": "ListItem",
         position: i + 1,
         name: u.title,
+        ...(articles[u.id] ? { url: `https://agentverden.no/bruk/${u.id}/` } : {}),
       })),
     },
   };
@@ -66,7 +69,8 @@ export default async function AgentPage({
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
         <JsonLd data={jsonLd} />
-        <h1 className="text-lg font-semibold mb-1 text-neutral-50">
+        <h1 className="flex items-center gap-3 text-lg font-semibold mb-1 text-neutral-900">
+          <AgentIcon slug={agent.slug} size={32} />
           {agent.name}
         </h1>
         <p className="text-sm text-neutral-500 mb-4">

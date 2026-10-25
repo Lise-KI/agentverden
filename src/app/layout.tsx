@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SponsorBar from "@/components/SponsorBar";
 import SiteFooter from "@/components/SiteFooter";
+import SiteSearch from "@/components/SiteSearch";
+import { sunThemeScript } from "@/lib/sunTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,16 +18,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Agentverden — hva folk faktisk gjør med AI-agenter",
+    default: "Agentverden – lær å bruke AI-agenter i hverdagen",
     template: "%s · Agentverden",
   },
   description:
-    "Ekte ting folk gjør med AI-agenter, samlet fra hele nettet hver dag. Stjel en idé.",
+    "Lær å bruke AI-agenter i hverdagen, med konkrete eksempler forklart på norsk.",
   metadataBase: new URL("https://agentverden.no"),
   alternates: {
+    canonical: "/",
     types: {
       "application/rss+xml": "https://agentverden.no/rss.xml",
     },
+  },
+  verification: {
+    google: "fRYdDeg-9MRkadrToEAWbAUGz1N8z6DHv24I_GN15r4",
   },
 };
 
@@ -34,12 +40,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="no"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      data-theme="light"
+      // Skriptet under setter data-theme før React tar over.
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col text-neutral-100">
-        <div className="bg-aurora" aria-hidden="true" />
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: sunThemeScript }} />
+      </head>
+      <body className="flex min-h-full flex-col pb-[var(--sponsor-bar-height)] text-neutral-900">
+        <div className="bg-blobs" aria-hidden="true">
+          <span />
+        </div>
+        <div className="w-full border-b border-neutral-200 bg-white px-4 py-3 flex justify-center relative z-20">
+          <SiteSearch />
+        </div>
         <div className="flex-1 relative z-10">{children}</div>
-        <SponsorBar />
         <SiteFooter />
+        <SponsorBar />
       </body>
     </html>
   );

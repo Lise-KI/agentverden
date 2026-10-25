@@ -11,8 +11,8 @@ export default function AnsvarsfraskrivelsePage() {
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
       <Sidebar />
-      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl space-y-4 text-neutral-300">
-        <h1 className="heading-stripe text-3xl mb-4 text-neutral-50">
+      <main className="flex-1 px-4 py-10 lg:px-8 max-w-2xl space-y-4 text-neutral-700">
+        <h1 className="heading-stripe text-3xl mb-4 text-neutral-900">
           Ansvarsfraskrivelse
         </h1>
 
@@ -24,7 +24,7 @@ export default function AnsvarsfraskrivelsePage() {
           fungere for deg.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Ingen finansiell, juridisk eller helsefaglig rådgivning
         </h2>
         <p>
@@ -40,7 +40,7 @@ export default function AnsvarsfraskrivelsePage() {
           og ingen garanti for samme utfall for deg.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Nøyaktighet av innhold
         </h2>
         <p>
@@ -52,7 +52,7 @@ export default function AnsvarsfraskrivelsePage() {
           tidspunktet det ble observert.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Sponsorer og reklame
         </h2>
         <p>
@@ -63,7 +63,7 @@ export default function AnsvarsfraskrivelsePage() {
           ikke hvilke use cases som publiseres.
         </p>
 
-        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-50">
+        <h2 className="text-lg font-semibold mt-6 mb-2 text-neutral-900">
           Eksterne lenker
         </h2>
         <p>

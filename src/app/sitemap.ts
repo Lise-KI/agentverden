@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { agents } from "@/data/agents";
 import { categories } from "@/data/categories";
-import { BREVO_EBOOK_FORM_URL } from "@/config/brevo";
+import { articles } from "@/data/articles";
+import { useCases } from "@/data/useCases";
 
 export const dynamic = "force-static";
 
@@ -14,10 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/emner",
     "/nytt",
     "/om",
+    "/send-inn",
     "/personvern",
     "/ansvarsfraskrivelse",
-    // /ebok tas med først når Brevo-skjemaet er på plass.
-    ...(BREVO_EBOOK_FORM_URL ? ["/ebok"] : []),
+    "/ebok",
   ].map((path) => ({
     url: `${baseUrl}${path}/`,
     lastModified: new Date(),
@@ -33,5 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...agentRoutes, ...categoryRoutes];
+  const articleRoutes = useCases
+    .filter((u) => articles[u.id])
+    .map((u) => ({
+      url: `${baseUrl}/bruk/${u.id}/`,
+      lastModified: new Date(),
+    }));
+
+  return [...staticRoutes, ...agentRoutes, ...categoryRoutes, ...articleRoutes];
 }

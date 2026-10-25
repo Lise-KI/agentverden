@@ -6,6 +6,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
 import { categories } from "@/data/categories";
 import { useCases } from "@/data/useCases";
+import { articles } from "@/data/articles";
 
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
@@ -53,6 +54,7 @@ export default async function CategoryPage({
         "@type": "ListItem",
         position: i + 1,
         name: u.title,
+        ...(articles[u.id] ? { url: `https://agentverden.no/bruk/${u.id}/` } : {}),
       })),
     },
   };
@@ -62,7 +64,7 @@ export default async function CategoryPage({
       <Sidebar />
       <main className="flex-1 px-4 py-6 lg:px-8">
         <JsonLd data={jsonLd} />
-        <h1 className="text-lg font-semibold mb-1 text-neutral-50">
+        <h1 className="text-lg font-semibold mb-1 text-neutral-900">
           {category.name}
         </h1>
         <p className="text-sm text-neutral-500 mb-4">{category.description}</p>

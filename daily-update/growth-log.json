@@ -1,1 +1,58 @@
-{"runs": []}
+{
+  "runs": [
+    {
+      "date": "2026-10-21",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
+      "seoTaskResult": "Sendte 50 nye URLer (Status 200)",
+      "notes": "F\u00f8rste kj\u00f8ring"
+    },
+    {
+      "date": "2026-10-22",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
+      "seoTaskResult": "PENDING",
+      "notes": ""
+    },
+    {
+      "date": "2026-10-22",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
+      "seoTaskResult": "5/5 sider feilet p\u00e5 canonical (peker til URL med skr\u00e5strek til slutt)",
+      "notes": "Canonical-lenker i metadata har skr\u00e5strek (trailing slash), mens sitemap/URL-er ikke har det."
+    },
+    {
+      "date": "2026-10-23",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "SITEMAP-KONSISTENS",
+      "seoTaskResult": "Sjekket 5 tilfeldige sider og sitemap. Ingen noindex eller manglende reviewed sider funnet.",
+      "notes": ""
+    },
+    {
+      "date": "2026-10-24",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "INTERNLENKE-DEKNING",
+      "seoTaskResult": "Sjekket 3 tilfeldige sider. Alle hadde 'Flere lignende use cases'.",
+      "notes": ""
+    },
+    {
+      "date": "2026-10-25",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "ROBOTS/STRUKTURERT DATA",
+      "seoTaskResult": "ROBOTS/STRUKTURERT DATA: robots.txt og JSON-LD er korrekte.",
+      "notes": ""
+    }
+  ]
+}

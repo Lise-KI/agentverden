@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <style>
+    .fg{stroke:#1c1c1f}.b{fill:#5a3fc0}.c{stroke:#ffffff}
+    @media (prefers-color-scheme: dark){.fg{stroke:#ececef}.b{fill:#9a85f5}.c{stroke:#0e0e11}}
+  </style>
+  <path class="fg" d="M14 26.2C17 19.5 22 25 27.6 14" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="0.1 5.2"/>
+  <circle class="fg" cx="8.5" cy="31.5" r="3.5" fill="none" stroke-width="2.7"/>
+  <circle class="b" cx="29.5" cy="11" r="8.5"/>
+  <path class="c" d="M25.8 11.2l2.5 2.5 4.8-5" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

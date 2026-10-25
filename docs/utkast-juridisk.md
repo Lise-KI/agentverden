@@ -7,21 +7,21 @@
 ## A. Personvernerklæring (erstatter /personvern)
 
 ### Hvem er ansvarlig
-[Navn / enkeltpersonforetak / selskap og organisasjonsnummer] er behandlingsansvarlig for personopplysningene som beskrives her. Kontakt: [e-postadresse for personvernhenvendelser].
+Agentverden drives av Fairnie Bil (enkeltpersonforetak), org.nr. 930 081 035, [forretningsadresse fra Brønnøysundregistrene – MANGLER, jf. ehandelsloven § 8]. Fairnie Bil er behandlingsansvarlig for personopplysningene som beskrives her. Kontakt om personvern: support@agentverden.no.
 
 ### Det vi ikke gjør
 Agentverden bruker ingen analyseverktøy, ingen annonsenettverk og ingen sporingspiksler. [Må bekreftes før publisering, se avsnittet «Brevo» under: innebygde skjemaer laster innhold fra en tredjepart.]
 
 ### Nyhetsbrev og e-bok
-**Hva du melder deg på.** Hvis du fyller ut påmeldingsskjemaet for nyhetsbrevet, sender vi deg [frekvens, f.eks. «ukentlig»] e-post med eksempler på hva folk gjør med AI-agenter. Hvis du ber om e-boken «10 ting nordmenn kan gjøre med AI i hverdagen», sender vi deg den på e-post. [Avklar: skal e-bok-bestilling også gi nyhetsbrev? I så fall må det være et eget, ikke forhåndsavkrysset valg i skjemaet. Dette utkastet forutsetter at e-bok og nyhetsbrev er to separate samtykker.]
+**Hva du melder deg på.** Hvis du fyller ut påmeldingsskjemaet for nyhetsbrevet, sender vi deg [frekvens, f.eks. «ukentlig»] e-post med eksempler på hva folk gjør med AI-agenter. Hvis du ber om e-boken «10 ting nordmenn kan gjøre med AI i hverdagen», melder du deg samtidig på nyhetsbrevet, og vi sender deg e-boken som takk. Det står tydelig i skjemaet og på knappen før du sender. Melder du deg av, beholder du e-boken. [Eierens valg okt. 2026: e-bok gir automatisk påmelding. Restrisiko: GDPR art. 7 nr. 4 (samtykke som vilkår for en ytelse). Må vurderes av eier før publisering.]
 
 **Hvilke opplysninger.** E-postadressen din, [evt. fornavn hvis skjemaet ber om det], tidspunkt for påmelding og bekreftelse, og teknisk bekreftelsesinformasjon (IP-adresse ved påmelding/bekreftelse) som e-posttjenesten registrerer som dokumentasjon på samtykket.
 
 **Rettslig grunnlag.** Samtykke, jf. personvernforordningen (GDPR) art. 6 nr. 1 bokstav a. Samtykket gis ved at du fyller ut skjemaet og bekrefter adressen din.
 
-**Dobbel bekreftelse.** Etter at du har meldt deg på, sender vi en e-post med en bekreftelseslenke. Du blir ikke lagt til i nyhetsbrevlisten før du har klikket på lenken. Hvis du ikke bekrefter, [slettes adressen etter X dager – avklar innstilling i Brevo].
+**Slik melder du deg på.** Du krysser av i en boks som ikke er forhåndsavkrysset, og sender skjemaet. Vi lagrer tidspunkt og hvilket skjema du brukte, som dokumentasjon på samtykket. E-boken sendes til e-postadressen du oppgir. [Eierens valg okt. 2026: enkel bekreftelse, ikke dobbel.]
 
-**Avmelding og tilbaketrekking.** Du kan når som helst melde deg av via avmeldingslenken nederst i hver e-post, eller ved å skrive til [e-postadresse]. Å trekke samtykket tilbake påvirker ikke lovligheten av behandlingen før tilbaketrekkingen.
+**Avmelding og tilbaketrekking.** Du kan når som helst melde deg av via avmeldingslenken nederst i hver e-post, eller ved å skrive til support@agentverden.no. Å trekke samtykket tilbake påvirker ikke lovligheten av behandlingen før tilbaketrekkingen.
 
 **Sletting og lagringstid.** Når du melder deg av, fjerner vi e-postadressen din fra utsendingslisten [og sletter den fullstendig innen X dager – avklar; Brevo kan beholde «blokkert»-status for å hindre at du får e-post igjen ved en feil, avklar hvordan dette skal beskrives]. Du kan også be om sletting når som helst.
 
@@ -32,11 +32,11 @@ Vi bruker Brevo (Sendinblue SAS, Frankrike) til påmeldingsskjema, lagring av ad
 
 Skjemaet er innebygd på våre sider og lastes fra Brevos servere. Når en side med skjema vises, kan Brevo dermed motta teknisk informasjon fra nettleseren din (som IP-adresse), og Brevo kan sette egne informasjonskapsler. [Må kontrolleres mot det faktiske embed-skjemaet: setter det cookies eller laster det script/fonter fra tredjeparter? I så fall må vi enten gi informasjon/innhente samtykke etter ekomloven § 2-7b (cookies), eller bytte løsning. Sjekkes når embed-koden foreligger.]
 
-### Innsending av use cases
-[Gjelder bare hvis/når et innsendingsskjema tas i bruk. Beskriv hva som lagres, hvor, hvor lenge. Ta bort avsnittet hvis det ikke er i bruk.]
+### Innsending av eksempler (/send-inn)
+Hvis du sender oss et eksempel på e-post (kontakt@agentverden.no), behandler vi e-postadressen din, navnet ditt hvis det står i e-posten, og innholdet du sender. Formålet er å vurdere innsendingen, svare deg og eventuelt skrive en artikkel. Rettslig grunnlag er berettiget interesse, jf. GDPR art. 6 nr. 1 bokstav f (å kunne svare på henvendelser). E-posten lagres i e-postkontoen vår hos Webhuset [kontroller: databehandleravtale med Webhuset, lagring i Norge/EØS]. Vi sletter e-posten [innen 12 måneder etter siste kontakt – avklar], med mindre du har bedt om noe annet. Publiserte artikler inneholder ikke e-postadressen din.
 
 ### Dine rettigheter
-Du har rett til innsyn, retting, sletting, begrensning av behandlingen, dataportabilitet og å trekke tilbake samtykke. Send forespørsel til [e-postadresse]. Vi svarer innen 30 dager. Du kan klage til Datatilsynet (datatilsynet.no) hvis du mener vi behandler opplysninger i strid med regelverket.
+Du har rett til innsyn, retting, sletting, begrensning av behandlingen, dataportabilitet og å trekke tilbake samtykke. Send forespørsel til support@agentverden.no. Vi svarer innen 30 dager. Du kan klage til Datatilsynet (datatilsynet.no) hvis du mener vi behandler opplysninger i strid med regelverket.
 
 ### Endringer
 Sist oppdatert: [dato]. Vesentlige endringer varsles på denne siden [og til nyhetsbrevlisten].
@@ -57,7 +57,7 @@ Sist oppdatert: [dato]. Vesentlige endringer varsles på denne siden [og til nyh
 
 **Eksterne lenker.** Vi er ikke ansvarlige for innholdet på eller personvernet hos andre nettsteder vi lenker til.
 
-**Feil i innholdet.** Oppdaget du en feil? Gi beskjed til [e-postadresse], så retter vi.
+**Feil i innholdet.** Oppdaget du en feil? Gi beskjed til kontakt@agentverden.no, så retter vi.
 
 ---
 
@@ -75,13 +75,13 @@ Utkastet nedenfor er skrevet for at merkingen skal være på plass **før** noen
 4. Sponsor-plasser: «Reklame»-merke (finnes i dag på SponsorBar).
 5. Redaksjonelt innhold og betalt innhold holdes adskilt.
 
-**Nyhetsbrev som markedsføring:** Utsending av markedsføring på e-post krever forhåndssamtykke [ekomloven § 2-7b – kontroller]. Dobbel bekreftelse + samtykketekst over dekker dette bare hvis teksten i skjemaet faktisk beskriver hva du melder deg på. Hvis nyhetsbrevet inneholder affiliate-lenker eller sponsorer, må de merkes som reklame også i e-posten.
+**Nyhetsbrev som markedsføring:** Utsending av markedsføring på e-post krever forhåndssamtykke [markedsføringsloven § 15 – kontroller. Ekomloven gjelder cookies, ikke e-postmarkedsføring]. Dobbel bekreftelse + samtykketekst over dekker dette bare hvis teksten i skjemaet faktisk beskriver hva du melder deg på. Hvis nyhetsbrevet inneholder affiliate-lenker eller sponsorer, må de merkes som reklame også i e-posten.
 
 ---
 
 ## Åpne spørsmål til eier
-1. Behandlingsansvarlig: privatperson, enkeltpersonforetak eller selskap? Hvilken kontakt-e-post skal oppgis (må ikke være Webhuset-e-posten som ikke er i bruk ennå, med mindre du bestemmer det)?
+1. Behandlingsansvarlig: privatperson, enkeltpersonforetak eller selskap? **Navn må oppgis** (e-post alene er ikke nok). E-post: besluttet support@ (personvern, avmelding, rettigheter) og kontakt@ (generelt, feil i innhold).
 2. Frekvens og innhold i nyhetsbrevet.
-3. E-bok: eget samtykke, eller også påmelding til nyhetsbrev?
+3. ~~E-bok: eget samtykke, eller også påmelding til nyhetsbrev?~~ Besluttet: automatisk påmelding, tydelig opplyst i skjemaet. Restrisiko må godtas av eier.
 4. Hvor lenge beholdes ubekreftede adresser?
 5. Skal siden fortsatt hevde «ingen cookies/sporing» når Brevo-embed er på plass? Må sjekkes mot faktisk embed.
