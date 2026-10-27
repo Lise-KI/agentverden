@@ -793,6 +793,21 @@
       ],
       "gitCommit": "3097148",
       "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-27",
+      "sentUseCaseIds": [
+        "turn-a-website-into-a-mobile-app",
+        "investigate-and-unblock-stuck-task-cards",
+        "elleve-agenter-trading",
+        "investeringsanalyse",
+        "memecoin-kontroll"
+      ],
+      "listId": 3,
+      "campaignId": 7,
+      "senderEmailUsed": "nyhetsbrev@agentverden.no",
+      "status": "sent",
+      "reason": null
     }
   ]
 }
