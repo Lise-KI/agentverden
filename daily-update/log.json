@@ -1,12 +1,12 @@
 {
-  "_comment": "Append-only logg over automatiserte daglige oppdateringer av agentverden.no. Brukes til duplikatsjekk (sjekk id/titler/kilde-URL mot denne filen før noe nytt legges til) og til å vite hvilke oppføringer som er friske nok til å holde isNew:true. Ikke slett gamle rader manuelt uten grunn.",
+  "_comment": "Append-only logg over automatiserte daglige oppdateringer av agentverden.no. Brukes til duplikatsjekk (sjekk id/titler/kilde-URL mot denne filen f\u00f8r noe nytt legges til) og til \u00e5 vite hvilke oppf\u00f8ringer som er friske nok til \u00e5 holde isNew:true. Ikke slett gamle rader manuelt uten grunn.",
   "runs": [
     {
       "date": "2026-10-20",
       "addedUseCases": [
         {
           "id": "fjern-telefonnummer-spam",
-          "title": "Få en agent til å fjerne telefonnummeret ditt fra spam-lister",
+          "title": "F\u00e5 en agent til \u00e5 fjerne telefonnummeret ditt fra spam-lister",
           "category": "hus-hverdag",
           "sourcePrimaryUrl": "https://www.teslarati.com/grok-bot-spam-call-text-scrubber-elon-musk/",
           "curatedFromListingUrl": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam"
@@ -20,14 +20,14 @@
         }
       ],
       "changesOther": [
-        "Ingen flytting av eksisterende innhold denne runden — hele siden ble publisert på nytt for 1-2 dager siden, så alt var allerede friskt. Fra og med neste kjøring: fjern isNew fra oppføringer som har stått i 'Nyeste' i mer enn ca. 5 dager, for å holde seksjonen reell."
+        "Ingen flytting av eksisterende innhold denne runden \u2014 hele siden ble publisert p\u00e5 nytt for 1-2 dager siden, s\u00e5 alt var allerede friskt. Fra og med neste kj\u00f8ring: fjern isNew fra oppf\u00f8ringer som har st\u00e5tt i 'Nyeste' i mer enn ca. 5 dager, for \u00e5 holde seksjonen reell."
       ],
       "gitCommit": "2494cb3",
       "emailedReportTo": "andreassf1@gmail.com"
     },
     {
       "date": "2026-10-20b",
-      "_comment_for_this_run": "Ekstra manuell verifiseringsrunde kjørt samme dag på brukers forespørsel, etter at selvgodkjennings-regelen (3 vilkår) ble satt i kraft. Dette er andre kjøring denne dagen, derfor suffiks 'b' på datoen for å skille fra morgenens run.",
+      "_comment_for_this_run": "Ekstra manuell verifiseringsrunde kj\u00f8rt samme dag p\u00e5 brukers foresp\u00f8rsel, etter at selvgodkjennings-regelen (3 vilk\u00e5r) ble satt i kraft. Dette er andre kj\u00f8ring denne dagen, derfor suffiks 'b' p\u00e5 datoen for \u00e5 skille fra morgenens run.",
       "addedUseCases": [
         {
           "id": "sjekk-motorlampe-obd2",
@@ -45,19 +45,19 @@
         }
       ],
       "changesOther": [
-        "Ingen oppføringer eldre enn 5 dager å rydde opp i ennå — forrige kjøring var samme dag."
+        "Ingen oppf\u00f8ringer eldre enn 5 dager \u00e5 rydde opp i enn\u00e5 \u2014 forrige kj\u00f8ring var samme dag."
       ],
       "selfApprovalChecks": [
         {
           "id": "sjekk-motorlampe-obd2",
           "duplicateCheck": "pass",
-          "spellingCheck": "pass (funnet og rettet manglende 'om å' etter 'ba [noen]' samt en ubekreftet kjønnsantakelse 'hun' -> endret til 'vedkommende' før publisering)",
+          "spellingCheck": "pass (funnet og rettet manglende 'om \u00e5' etter 'ba [noen]' samt en ubekreftet kj\u00f8nnsantakelse 'hun' -> endret til 'vedkommende' f\u00f8r publisering)",
           "norwegianCheck": "pass"
         },
         {
           "id": "padel-booking-agent",
           "duplicateCheck": "pass",
-          "spellingCheck": "pass (tittel omformulert fra klønete konstruksjon; fjernet en ubekreftet påstand om kommentarinnhold før publisering)",
+          "spellingCheck": "pass (tittel omformulert fra kl\u00f8nete konstruksjon; fjernet en ubekreftet p\u00e5stand om kommentarinnhold f\u00f8r publisering)",
           "norwegianCheck": "pass"
         }
       ],
@@ -66,7 +66,7 @@
     },
     {
       "date": "2026-10-20c",
-      "_comment_for_this_run": "Kodefunksjon lagt til samme dag, på eksplisitt brukerønske: (1) 'Siste funn' sorteres nå etter dateAdded (nyeste øverst) i stedet for stemmer, (2) 'Trender i dag' er ikke lenger en fast, manuelt satt liste — den roteres nå daglig med et tilfeldig utvalg, og et element kan ikke velges igjen før minst 5 kalenderdager har gått. Alle 36 eksisterende saker fikk et dateAdded-felt (de 4 nyeste: 2026-10-20, resten: 2026-10-15 basert på filens opprinnelige seed-kommentar). Fremtidige kjøringer MÅ sette dateAdded på alt nytt som legges til, og MÅ oppdatere trendingSelected nedenfor hver gang Trender i dag roteres, slik at 5-dagers-regelen kan sjekkes.",
+      "_comment_for_this_run": "Kodefunksjon lagt til samme dag, p\u00e5 eksplisitt bruker\u00f8nske: (1) 'Siste funn' sorteres n\u00e5 etter dateAdded (nyeste \u00f8verst) i stedet for stemmer, (2) 'Trender i dag' er ikke lenger en fast, manuelt satt liste \u2014 den roteres n\u00e5 daglig med et tilfeldig utvalg, og et element kan ikke velges igjen f\u00f8r minst 5 kalenderdager har g\u00e5tt. Alle 36 eksisterende saker fikk et dateAdded-felt (de 4 nyeste: 2026-10-20, resten: 2026-10-15 basert p\u00e5 filens opprinnelige seed-kommentar). Fremtidige kj\u00f8ringer M\u00c5 sette dateAdded p\u00e5 alt nytt som legges til, og M\u00c5 oppdatere trendingSelected nedenfor hver gang Trender i dag roteres, slik at 5-dagers-regelen kan sjekkes.",
       "trendingSelected": [
         "gemini-agent-hverdag",
         "meta-ai-dagsbrief"
@@ -80,7 +80,7 @@
     },
     {
       "date": "2026-10-21",
-      "_comment_for_this_run": "Primærkilde steg 2: e-post fra agentusecases.ai-nyhetsbrevet (daily@mail.agentusecases.ai) datert 2026-10-20 15:32 ble funnet i innboksen og brukt for sak 1 (viste til samme dev.to-artikkel som allerede var under verifisering). Sak 2 (Nokia) kom fra fallback-skraping av https://agentusecases.ai/new + Hacker News Algolia API + GitHub README, siden den ikke var i nyhetsbrevet. Nyhetsbrevet listet også 3 andre kandidater (kontraktør-backoffice, kjæledyrforsikring, familielogistikk) som ikke ble brukt denne runden: kjæledyrforsikring er forsikringsrelatert (regel 5) og ble derfor ikke en gang vurdert for automatisk publisering, de to andre ble nedprioritert av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum.",
+      "_comment_for_this_run": "Prim\u00e6rkilde steg 2: e-post fra agentusecases.ai-nyhetsbrevet (daily@mail.agentusecases.ai) datert 2026-10-20 15:32 ble funnet i innboksen og brukt for sak 1 (viste til samme dev.to-artikkel som allerede var under verifisering). Sak 2 (Nokia) kom fra fallback-skraping av https://agentusecases.ai/new + Hacker News Algolia API + GitHub README, siden den ikke var i nyhetsbrevet. Nyhetsbrevet listet ogs\u00e5 3 andre kandidater (kontrakt\u00f8r-backoffice, kj\u00e6ledyrforsikring, familielogistikk) som ikke ble brukt denne runden: kj\u00e6ledyrforsikring er forsikringsrelatert (regel 5) og ble derfor ikke en gang vurdert for automatisk publisering, de to andre ble nedprioritert av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum.",
       "addedUseCases": [
         {
           "id": "epostrydding-med-openclaw",
@@ -98,8 +98,8 @@
         }
       ],
       "changesOther": [
-        "isNew satt til false på 24 eldre oppføringer (dateAdded 2026-10-15, eldre enn 5 dager) for å holde 'Nyeste'-seksjonen reell. De 4 oppføringene med dateAdded 2026-10-20 fikk stå med isNew: true (under 5 dager gamle).",
-        "Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og websøk fant ikke den eksakte posten/datoen, så den ble droppet av forsiktighet — ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (primærkilden viste seg å være en Substack-artikkel fra juli 2025 — over et år gammel, altså ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum). Kilde for de nye sakene ble verifisert ved direkte åpning av primærkilder (Hacker News, Reddit, Substack)."
+        "isNew satt til false p\u00e5 24 eldre oppf\u00f8ringer (dateAdded 2026-10-15, eldre enn 5 dager) for \u00e5 holde 'Nyeste'-seksjonen reell. De 4 oppf\u00f8ringene med dateAdded 2026-10-20 fikk st\u00e5 med isNew: true (under 5 dager gamle).",
+        "Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og webs\u00f8k fant ikke den eksakte posten/datoen, s\u00e5 den ble droppet av forsiktighet \u2014 ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (prim\u00e6rkilden viste seg \u00e5 v\u00e6re en Substack-artikkel fra juli 2025 \u2014 over et \u00e5r gammel, alts\u00e5 ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum). Kilde for de nye sakene ble verifisert ved direkte \u00e5pning av prim\u00e6rkilder (Hacker News, Reddit, Substack)."
       ],
       "trendingSelected": [
         "fjern-telefonnummer-spam",
@@ -113,14 +113,14 @@
         {
           "id": "epostrydding-med-openclaw",
           "duplicateCheck": "pass",
-          "spellingCheck": "pass (rettet manglende 'om å' etter 'be agenten', byttet ut klønete 'stikk-kontrollerte' med 'tok en stikkprøve av' før publisering)",
+          "spellingCheck": "pass (rettet manglende 'om \u00e5' etter 'be agenten', byttet ut kl\u00f8nete 'stikk-kontrollerte' med 'tok en stikkpr\u00f8ve av' f\u00f8r publisering)",
           "norwegianCheck": "pass",
           "sourceUrlCheck": "pass (dev.to, lest i fulltekst via web_extract/curl)"
         },
         {
           "id": "ki-agent-gammel-nokia-telefon",
           "duplicateCheck": "pass",
-          "spellingCheck": "pass (fjernet ubekreftet superlativ-påstand om telefonmodellen, fjernet gjentakelse av 'prosjektet')",
+          "spellingCheck": "pass (fjernet ubekreftet superlativ-p\u00e5stand om telefonmodellen, fjernet gjentakelse av 'prosjektet')",
           "norwegianCheck": "pass",
           "sourceUrlCheck": "pass (Hacker News-innlegg bekreftet via Algolia API, GitHub README lest i fulltekst)"
         }
@@ -133,28 +133,28 @@
       "addedUseCases": [
         {
           "id": "slack-doozy-support-agent",
-          "title": "Doozy: En KI-kollega i Slack som håndterer supportspørsmål",
+          "title": "Doozy: En KI-kollega i Slack som h\u00e5ndterer supportsp\u00f8rsm\u00e5l",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50166597",
           "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads"
         },
         {
           "id": "claude-code-chrome-extension-ceo",
-          "title": "La Claude Code fungere som 'administrerende direktør' for en Chrome-utvidelse",
+          "title": "La Claude Code fungere som 'administrerende direkt\u00f8r' for en Chrome-utvidelse",
           "category": "programvare-devops",
           "sourcePrimaryUrl": "https://www.reddit.com/r/ClaudeAI/comments/1wvh6iy/i_gave_claude_code_the_ceo_job_for_my_free_chrome",
           "curatedFromListingUrl": "https://agentusecases.ai/use-case/claude-code-chrome-extension-ceo"
         },
         {
           "id": "perplexity-comet-browser-agent",
-          "title": "Perplexity Comet: En nettleser som aktivt utfører oppgaver for deg",
+          "title": "Perplexity Comet: En nettleser som aktivt utf\u00f8rer oppgaver for deg",
           "category": "programvare-devops",
           "sourcePrimaryUrl": "https://fullstackeducator.substack.com/p/canvas-meet-comet-the-browser-that",
           "curatedFromListingUrl": "https://agentusecases.ai/use-case/perplexity-comet-browser-agent"
         }
       ],
       "changesOther": [
-        "Ingen isNew-opprydding denne runden — ingen eksisterende isNew:true-oppføringer har krysset 5-dagersgrensen ennå (eldste aktive isNew-dato er 2026-10-20, kun 2 dager gammel per i dag). Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og websøk fant ikke den eksakte posten/datoen, så den ble droppet av forsiktighet — ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (primærkilden viste seg å være en Substack-artikkel fra juli 2025 — over et år gammel, altså ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum). Kilde for de nye sakene ble verifisert ved direkte åpning av primærkilder (Hacker News, Reddit, Substack)."
+        "Ingen isNew-opprydding denne runden \u2014 ingen eksisterende isNew:true-oppf\u00f8ringer har krysset 5-dagersgrensen enn\u00e5 (eldste aktive isNew-dato er 2026-10-20, kun 2 dager gammel per i dag). Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og webs\u00f8k fant ikke den eksakte posten/datoen, s\u00e5 den ble droppet av forsiktighet \u2014 ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (prim\u00e6rkilden viste seg \u00e5 v\u00e6re en Substack-artikkel fra juli 2025 \u2014 over et \u00e5r gammel, alts\u00e5 ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum). Kilde for de nye sakene ble verifisert ved direkte \u00e5pning av prim\u00e6rkilder (Hacker News, Reddit, Substack)."
       ],
       "trendingSelected": [
         "ukrevde-penger",
@@ -202,13 +202,13 @@
         },
         {
           "id": "sett-opp-nattlig-github-sikkerhetskopiering",
-          "title": "Sett opp nattlige GitHub-sikkerhetskopier med bare én setning",
+          "title": "Sett opp nattlige GitHub-sikkerhetskopier med bare \u00e9n setning",
           "category": "programvare-devops",
           "sourcePrimaryUrl": "https://www.mindstudio.ai/blog/hermes-agent-cron-jobs-plain-english-github-backup",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført (ingen gamle saker funnet)",
+      "changesOther": "isNew-opprydding utf\u00f8rt (ingen gamle saker funnet)",
       "trendingSelected": [
         "chatgpt-agent-reise",
         "gemini-husarbeid"
@@ -238,7 +238,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -277,7 +277,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -316,7 +316,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -358,7 +358,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -371,7 +371,7 @@
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført",
+      "changesOther": "isNew-opprydding utf\u00f8rt",
       "trendingSelected": [
         "selg-brukte-ting",
         "avbestill-abonnement"
@@ -400,7 +400,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -413,7 +413,7 @@
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført",
+      "changesOther": "isNew-opprydding utf\u00f8rt",
       "trendingSelected": [
         "refusjon-fly",
         "overvak-bord-priser"
@@ -445,7 +445,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -458,7 +458,7 @@
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført",
+      "changesOther": "isNew-opprydding utf\u00f8rt",
       "trendingSelected": [
         "codex-nettleserspill",
         "chatgpt-restaurantbord"
@@ -492,7 +492,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -505,7 +505,7 @@
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført",
+      "changesOther": "isNew-opprydding utf\u00f8rt",
       "trendingSelected": [
         "grok-bot-booking",
         "flytt-ferdigheter"
@@ -537,7 +537,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -550,7 +550,7 @@
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført",
+      "changesOther": "isNew-opprydding utf\u00f8rt",
       "trendingSelected": [
         "handel-fire-modeller",
         "n8n-personlig-assistent"
@@ -582,7 +582,7 @@
       "addedUseCases": [
         {
           "id": "auto-handle-dealership-customer-sms-support",
-          "title": "Auto-håndtering av SMS-support for bilforhandlere",
+          "title": "Auto-h\u00e5ndtering av SMS-support for bilforhandlere",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
           "curatedFromListingUrl": "https://agentusecases.ai/new"
@@ -595,7 +595,7 @@
           "curatedFromListingUrl": "https://agentusecases.ai/new"
         }
       ],
-      "changesOther": "isNew-opprydding utført",
+      "changesOther": "isNew-opprydding utf\u00f8rt",
       "trendingSelected": [
         "ai-nyhetsbrev-podkast",
         "cowork-hva-folk-bruker"
@@ -643,13 +643,13 @@
         },
         {
           "id": "publiser-innhold-pa-18-plattformer-med-ai-agenter",
-          "title": "Publiser innhold på 18 plattformer med AI-agenter",
+          "title": "Publiser innhold p\u00e5 18 plattformer med AI-agenter",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://www.reddit.com/r/EntrepreneurRideAlong/comments/1sc6itg/day_40_our_ai_agents_posted_220_times_across_18",
           "curatedFromListingUrl": "https://agentusecases.ai"
         }
       ],
-      "changesOther": "isNew-opprydding utført. Trending rotert.",
+      "changesOther": "isNew-opprydding utf\u00f8rt. Trending rotert.",
       "trendingSelected": [
         "investeringsanalyse",
         "lag-en-animert-musikal-med-claude-code"
@@ -680,6 +680,52 @@
       ],
       "gitCommit": "600f755ce7743dfe43ca30d75ab7c53e41b92086",
       "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-27 00:00:00",
+      "addedUseCases": [
+        {
+          "id": "turn-a-website-into-a-mobile-app",
+          "title": "Gj\u00f8r nettsiden din om til en mobilapp",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/replit/comments/1s5wf1u/replit_agent",
+          "curatedFromListingUrl": "https://agentusecases.ai"
+        },
+        {
+          "id": "investigate-and-unblock-stuck-task-cards",
+          "title": "Unders\u00f8k og l\u00f8s opp fastl\u00e5ste oppgaver",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/hermesagent/comments/1w0mblq/what_have_you_done_with_hermes_agent_this_week",
+          "curatedFromListingUrl": "https://agentusecases.ai"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated.",
+      "trendingSelected": [
+        "memecoin-kontroll",
+        "elleve-agenter-trading"
+      ],
+      "trendingReplaced": [
+        "extract-rfq-boq-requirements-into-excel",
+        "build-nes-harness-agent-play-games"
+      ],
+      "selfApprovalChecks": [
+        {
+          "id": "turn-a-website-into-a-mobile-app",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        },
+        {
+          "id": "investigate-and-unblock-stuck-task-cards",
+          "duplicateCheck": "pass",
+          "spellingCheck": "pass",
+          "norwegianCheck": "pass",
+          "sourceUrlCheck": "pass"
+        }
+      ],
+      "gitCommit": "pending",
+      "emailedReportTo": "andreassf1@gmail.com"
     }
   ],
   "newsletterRuns": [
@@ -701,25 +747,25 @@
     },
     {
       "date": "2026-10-22",
-      "_comment_for_this_run": "Verifisert LIVE via 'hermes cron list' før denne kjøringen (ikke antatt): lise-profilens jobb 4d91e799a622 ('Agentverden.no daglig oppdatering') står fortsatt som [active], selv om SKILL.md sier den skulle vært satt på pause 2026-10-21 da ansvaret ble flyttet til Nettmannen-profilens jobb ec330bdec6b3. Nettmannens jobb kjørte i dag 2026-10-22T08:57 og feilet med 'RuntimeError: Model output entered a repetition loop and the stream was cut mid-loop; discarding the degenerate response' (bekreftet fra live cron-output, ikke fra antakelse). Siste commit på origin/main var fra en separat vekst-sporingsjobb (d72aacd/8ab5039/ab74b08), ikke fra en daglig-innholds-oppdatering i dag — altså publiserte ikke Nettmannen noe innhold i dag, så ingen duplisering skjedde. Denne kjøringen (lise sin 4d91e799a622) gikk videre som planlagt siden den fortsatt er aktiv og mottok oppgaven. Rørte IKKE cron-innstillinger selv (pause/resume) per regelen om ikke å endre cron-jobber i denne runden — flagget i stedet til eier for manuell avklaring.",
+      "_comment_for_this_run": "Verifisert LIVE via 'hermes cron list' f\u00f8r denne kj\u00f8ringen (ikke antatt): lise-profilens jobb 4d91e799a622 ('Agentverden.no daglig oppdatering') st\u00e5r fortsatt som [active], selv om SKILL.md sier den skulle v\u00e6rt satt p\u00e5 pause 2026-10-21 da ansvaret ble flyttet til Nettmannen-profilens jobb ec330bdec6b3. Nettmannens jobb kj\u00f8rte i dag 2026-10-22T08:57 og feilet med 'RuntimeError: Model output entered a repetition loop and the stream was cut mid-loop; discarding the degenerate response' (bekreftet fra live cron-output, ikke fra antakelse). Siste commit p\u00e5 origin/main var fra en separat vekst-sporingsjobb (d72aacd/8ab5039/ab74b08), ikke fra en daglig-innholds-oppdatering i dag \u2014 alts\u00e5 publiserte ikke Nettmannen noe innhold i dag, s\u00e5 ingen duplisering skjedde. Denne kj\u00f8ringen (lise sin 4d91e799a622) gikk videre som planlagt siden den fortsatt er aktiv og mottok oppgaven. R\u00f8rte IKKE cron-innstillinger selv (pause/resume) per regelen om ikke \u00e5 endre cron-jobber i denne runden \u2014 flagget i stedet til eier for manuell avklaring.",
       "addedUseCases": [
         {
           "id": "slack-support-agent-doozy",
-          "title": "Doozy: Slack-agenten som tar supportspørsmål av hendene til utviklerne",
+          "title": "Doozy: Slack-agenten som tar supportsp\u00f8rsm\u00e5l av hendene til utviklerne",
           "category": "salg-markedsforing",
           "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50166597",
           "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads"
         },
         {
           "id": "digital-tvilling-whatsapp-openclaw",
-          "title": "Digital tvilling på WhatsApp: slik droppet en utvikler tre andre abonnementer med OpenClaw",
+          "title": "Digital tvilling p\u00e5 WhatsApp: slik droppet en utvikler tre andre abonnementer med OpenClaw",
           "category": "hus-hverdag",
           "sourcePrimaryUrl": "https://medium.com/@srechakra/sda-f079871369ae",
           "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp"
         }
       ],
       "changesOther": [
-        "Ingen isNew-opprydding denne runden — ingen eksisterende isNew:true-oppføringer har krysset 5-dagersgrensen ennå (eldste aktive isNew-dato er 2026-10-20, kun 2 dager gammel per i dag). Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og websøk fant ikke den eksakte posten/datoen, så den ble droppet av forsiktighet — ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (primærkilden viste seg å være en Substack-artikkel fra juli 2025 — over et år gammel, altså ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum). Kilde for de nye sakene ble verifisert ved direkte åpning av primærkilder (Hacker News, Reddit, Substack)."
+        "Ingen isNew-opprydding denne runden \u2014 ingen eksisterende isNew:true-oppf\u00f8ringer har krysset 5-dagersgrensen enn\u00e5 (eldste aktive isNew-dato er 2026-10-20, kun 2 dager gammel per i dag). Kilde brukt for STEG 2: nyhetsbrevet fra agentusecases.ai (e-post funnet i innboksen, datert 2026-10-21 15:33, 5 kandidater). 3 av de 5 kandidatene ble IKKE brukt: 'Let Claude Code run a Chrome extension project' (Reddit-kilde ga HTTP 403 og webs\u00f8k fant ikke den eksakte posten/datoen, s\u00e5 den ble droppet av forsiktighet \u2014 ikke en reell kildelenke jeg selv har lest), 'Take Canvas quizzes and play Wordle with a browser agent' (prim\u00e6rkilden viste seg \u00e5 v\u00e6re en Substack-artikkel fra juli 2025 \u2014 over et \u00e5r gammel, alts\u00e5 ikke en fersk use case, droppet av den grunn), og 'Handle a client project across Gmail, Calendar and Notion' (god kandidat, men droppet av tidshensyn siden 2 godkjente saker allerede dekket dagens minimum). Kilde for de nye sakene ble verifisert ved direkte \u00e5pning av prim\u00e6rkilder (Hacker News, Reddit, Substack)."
       ],
       "trendingSelected": [
         "claude-code-visualisering",
@@ -742,7 +788,7 @@
           "duplicateCheck": "pass",
           "spellingCheck": "pass (lest gjennom, ingen feil funnet)",
           "norwegianCheck": "pass",
-          "sourceUrlCheck": "pass, men ærlig merket sourceChecked: false — Medium-siden ga HTTP 403 ved direkte henting, så teksten er skrevet fra et substansielt websøk-utdrag (nær hele artikkelen) i stedet for en direkte åpnet side"
+          "sourceUrlCheck": "pass, men \u00e6rlig merket sourceChecked: false \u2014 Medium-siden ga HTTP 403 ved direkte henting, s\u00e5 teksten er skrevet fra et substansielt webs\u00f8k-utdrag (n\u00e6r hele artikkelen) i stedet for en direkte \u00e5pnet side"
         }
       ],
       "gitCommit": "3097148",
