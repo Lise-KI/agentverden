@@ -71,6 +71,15 @@
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
       "seoTaskResult": "Ingen nye sider \u00e5 sende",
       "notes": ""
+    },
+    {
+      "date": "2026-10-27",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
+      "seoTaskResult": "OK: 5/5 sider sjekket. Alle hadde korrekt canonical, title og meta description.",
+      "notes": ""
     }
   ]
 }
