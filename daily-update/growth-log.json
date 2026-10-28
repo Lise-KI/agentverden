@@ -80,6 +80,15 @@
       "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
       "seoTaskResult": "OK: 5/5 sider sjekket. Alle hadde korrekt canonical, title og meta description.",
       "notes": ""
+    },
+    {
+      "date": "2026-10-28",
+      "subscriberCount": 0,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 0,
+      "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
+      "seoTaskResult": "5/5 sider sjekket: Alle hadde korrekt canonical, title og meta-beskrivelse.",
+      "notes": ""
     }
   ]
 }
