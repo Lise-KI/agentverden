@@ -1,30 +1,1098 @@
+import { articles } from "@/data/articles";
+
 export type UseCase = {
   id: string;
   title: string;
   description: string;
-  agents: string[];
-  category: string;
-  source: string;
-  sourceDate: string;
+  agents: string[]; // agent slugs — første i lista regnes som hovedagenten
+  category: string; // category slug
+  source: string; // plattform
+  sourceDate?: string;
+  sourceUrl?: string; // intern kildenotat for redaksjonen, vises ikke på nettsiden
+  sourceChecked?: boolean; // true = siden er åpnet og lest direkte; false = funnet via søk
   accounts?: string;
   isNew?: boolean;
   trending?: boolean;
+  dateAdded?: string; // YYYY-MM-DD — dato saken ble lagt til; styrer sortering i "Siste funn"
   votes: number;
-  curatedFrom?: string;
-  whatTheyDid?: string;
-  howItWent?: string;
-  worthKnowing?: string;
-  promptTemplate?: string;
-  isReviewed?: boolean;
-  riskNotice?: string;
-  sourceUrl: string;
-  sourceChecked: boolean;
-  dateAdded: string;
+  curatedFrom?: string; // ærlig attribusjon til hvor vi fant saken
+  whatTheyDid?: string; // "Hva de gjorde"
+  howItWent?: string; // "Hvordan det gikk"
+  worthKnowing?: string; // "Verdt å vite"
+  promptTemplate?: string; // kopierbar prompt-mal, egen formulering
 };
 
-
 export const useCases: UseCase[] = [
-{
+  {
+  "id": "auto-handle-dealership-customer-sms-support",
+  "title": "Auto-håndtering av SMS-support for bilforhandlere",
+  "description": "En bilforhandler i Storbritannia brukte Make for å analysere følelser (sentiment) i kunde-SMS, automatisk lukke over 18 000 meldinger som ikke krevde handling, og varsle Aftersales-teamet ved misnøye.",
+  "agents": [
+    "egen-agent"
+  ],
+  "category": "salg-markedsforing",
+  "source": "Make",
+  "sourceDate": "mai 2025",
+  "sourceUrl": "https://www.make.com/en/success-stories/stellantis-make-ai-customer-support-automation",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-24",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Stellantis&You UK, en stor britisk bilforhandlergruppe, bygde en toveis SMS-støtteflyt ved hjelp av Make. De koblet sammen Knack (no-code app-bygger), ClickSend (SMS-tjeneste) og OpenAI for sentimentanalyse. Flyten leste hver kunde-SMS og avgjorde om den trengte oppfølging eller kunne lukkes automatisk.",
+  "howItWent": "Over 12 måneder ble mer enn 47 000 meldinger analysert, og over 18 000 meldinger ble automatisk lukket uten behov for manuell oppfølging. Dette sparte anslagsvis 151 timer med manuelt arbeid. Samtidig ble kundetilfredsheten (NPS) forbedret, da kommunikasjon ble en av de viktigste grunnene til høye skårer.",
+  "worthKnowing": "Systemet er spesielt flink til å gjenkjenne subtil misnøye, selv når den ikke er uttrykt direkte, og varsler teamet med en gang slik at de kan gripe inn proaktivt."
+},
+  {
+  "id": "corgi-terminal-multiplexer-for-agenter",
+  "title": "Corgi: Terminal-multiplexer spesielt for AI-agenter",
+  "description": "Corgi er en terminal-multiplexer som lar deg kjøre og overvåke flere AI-agenter (som Claude Code og Codex) samtidig i ulike vinduer, med visuelle indikatorer for agentenes status.",
+  "agents": [
+    "claude-code",
+    "codex"
+  ],
+  "category": "programvare-devops",
+  "source": "GitHub",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "https://corgi.computer/",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-24",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Corgi fungerer som en \"agent-bevisst\" terminal-multiplexer, inspirert av Herdr. Den lar brukeren starte flere agenter (som Claude Code, Codex, Pi eller OpenCode) i ulike ruter/paneler. Den bruker visuelle markører (fargede prikker/ikoner) for å vise om en agent jobber, venter på input, eller har ulesne meldinger.",
+  "howItWent": "Ved å gi en enhetlig oversikt over en hel \"flåte\" av agenter, gjør Corgi det mye enklere å håndtere komplekse arbeidsflyter der flere agenter jobber i parallell. Den støtter også sesjoner som kan kobles fra (detach) og kobles til igjen (reconnect), slik at agentene kan fortsette arbeidet i bakgrunnen.",
+  "worthKnowing": "Corgi er bygget på Ghostty og er svært ergonomisk, med støtte for worktrees og rask navigering mellom ulike agent-sesjoner."
+},
+  {
+  "id": "lag-en-animert-musikal-med-claude-code",
+  "title": "Lag en animert musikal helt automatisk med Claude Code",
+  "description": "En utvikler bruker Claude Code til å skape en helt kode-generert animert musikal med over 500 000 linjer kode. Prosessen er nesten fullstendig autonom, der KI-en selv står for rendering og kontinuerlig forbedring døgnet rundt.",
+  "agents": [
+    "claude-code"
+  ],
+  "category": "innhold-kreativt",
+  "source": "Hacker News",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "'https'://news.ycombinator.com/item?id=50187357",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-22",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Utvikleren ga Claude Code full tilgang til datamaskinen for å generere en hel animert musikal.",
+  "howItWent": "Resultatet ble en musikal på over 500 000 linjer med kode som forbedrer seg selv gjennom kontinuerlig rendering og koding.",
+  "worthKnowing": "Selv om det er en enorm praktisk fordel, advarer utvikleren om den betydelige sikkerhetsrisikoen ved å gi en agent slik omfattende tilgang til hele systemet.",
+  "promptTemplate": "Bygg en animert kort musikal om [tema], med musikk, karakterer og animasjon generert av kode. Start med en fungerende første versjon av [én sang og én scene], og fortsett å forbedre den i runder ved å skrive bedre visualiseringer, flere sanger og renere kode. Lagre til git etter hver runde."
+},
+  {
+  "id": "sett-opp-nattlig-github-sikkerhetskopiering",
+  "title": "Sett opp nattlige GitHub-sikkerhetskopier med bare én setning",
+  "description": "Bruk Hermes Agent til å automatisk ta sikkerhetskopi av hele prosjektmappen din til et privat GitHub-repositorium ved hjelp av en enkel kommando i naturlig språk.",
+  "agents": [
+    "egen-agent"
+  ],
+  "category": "programvare-devops",
+  "source": "MindStudio",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "'https'://www.mindstudio.ai/blog/hermes-agent-cron-jobs-plain-english-github-backup",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-22",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Brukeren ga en enkel instruksjon til Hermes via Telegram om å utføre nattlige oppdateringer til GitHub.",
+  "howItWent": "Hermes identifiserte de nødvendige ferdighetene (skills), opprettet en planlagt jobb (cron job) og utførte sikkerhetskopieringen hver natt uten ytterligere inngripen.",
+  "worthKnowing": "Dette er en enkel måte å sikre at alt arbeid (minne, ferdigheter og konfigurasjon) blir tatt vare på, selv om man skulle miste tilgangen til den opprinnelige serveren.",
+  "promptTemplate": "Hver natt klokken '00':00 sentral tid, push endringer til dette GitHub-'repositoriet': [repo URL]."
+},
+  {
+  "id": "claude-code-chrome-extension-ceo",
+  "title": "La Claude Code fungere som 'administrerende direktør' for en Chrome-utvidelse",
+  "description": "En utvikler har satt Claude Code til å styre et prosjekt for en Chrome-utvidelse. Hver natt sjekker agenten dashboardet, kommentarfelt og Reddit, jobber med produktet, og skriver en rapport som utvikleren må godkjenne før publisering.",
+  "agents": [
+    "claude-code"
+  ],
+  "category": "programvare-devops",
+  "source": "Reddit",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "'https'://www.reddit.com/r/ClaudeAI/comments/1wvh6iy/i_gave_claude_code_the_ceo_job_for_my_free_chrome",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-22",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Ved å gi Claude Code rollen som 'CEO' for en Chrome-utvidelse, automatiserte utvikleren markedsundersøkelser og produktutvikling. Agenten overvåker Reddit og Chrome Web Store-dashboardet for tilbakemeldinger.",
+  "howItWent": "I løpet av den første uken klarte agenten å gjennomføre en omdøping og rulle ut en ny versjon som besto 122 automatiserte tester. Resultatene er fortsatt små (14 installasjoner), men konseptet fungerer.",
+  "worthKnowing": "Dette viser hvordan man kan bruke agentiske arbeidsflyter til å sirkle rundt hele livssyklusen til et produkt, fra markedsanalyse til deploy, med menneskelig godkjenning som siste steg.",
+  "promptTemplate": "Opptre som CEO for mitt prosjekt [prosjektnavn], en gratis [type verktøy], i den kommende uken. Se på nåværende status i [mappe eller repo] og foreslå tre prioriteringer for uken med begrunnelser. Deretter bygger du den første av disse i koden og skriver en kort oppdatering på hva som ble endret. Alt som er offentlig, som et innlegg, en utgivelse eller en omdøping, krever min godkjenning først, så vis meg utkastet og vent."
+},
+  {
+  "id": "perplexity-comet-browser-agent",
+  "title": "Perplexity 'Comet': En nettleser som aktivt utfører oppgaver for deg",
+  "description": "Perplexity har lansert Comet, en AI-drevet nettleser som ikke bare foreslår ting, men aktivt kan ta over skjermen, bevege musen, skrive og klikke for å løse oppgaver direkte i nettleseren.",
+  "agents": [
+    "egen-agent"
+  ],
+  "category": "programvare-devops",
+  "source": "Substack",
+  "sourceDate": "juli 2025",
+  "sourceUrl": "'https'://fullstackeducator.substack.com/p/canvas-meet-comet-the-browser-that",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-22",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En utdanningsforsker testet Perplexity Comet, en nettleser som integrerer en AI-assistent direkte i selve nettleseropplevelsen. Assistenten kan interagere med nettsider på samme måte som et menneske.",
+  "howItWent": "Comet klarte å løse Wordle på fire forsøk og kunne skrive algebra-oppgaver i Canvas. Den slet imidlertid med mer komplekse oppgaver som Connections og produserte visuelt rotete lysbilder i Canva.",
+  "worthKnowing": "Comet representerer et skifte fra chatbot-basert AI til en 'agentisk nettleser' som kan operere i det faktiske brukergrensesnittet til nettsider.",
+  "promptTemplate": "Åpne [Wordle eller en annen puslespill-URL] og løs dagens oppgave. Fortell meg hvert forsøk og hvorfor du valgte det. Stopp når oppgaven er løst eller du går tom for forsøk, og oppsummer hvordan det gikk. Ikke logg inn, send inn noe eller endre noen kontoinnstillinger uten å vise meg det først og vente på min tillatelse.",
+  "trending": false
+},
+  {
+  "id": "slack-support-agent-doozy",
+  "title": "'Doozy': Slack-agenten som tar supportspørsmål av hendene til utviklerne",
+  "description": "Et selskap bygde sin egen Slack-agent, Doozy, som support-ansatte kan tagge i en tråd når de trenger svar fra databasen eller betalingsløsningen — i stedet for å vente på en utvikler. 13 ansatte bruker den hver dag.",
+  "agents": [
+    "egen-agent"
+  ],
+  "category": "salg-markedsforing",
+  "source": "Hacker News",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "'https'://news.ycombinator.com/item?id=50166597",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-22",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Hos selskapet Spur var support-teamet underbemannet og måtte stadig vente på at en utvikler tok seg tid til å kjøre et databasesøk eller avgjøre om noe faktisk var en feil. Løsningen ble en egen agent, 'Doozy': man tagger den i en Slack-tråd med en oppgave, og den henter svar fra database, betalingsløsningen Stripe, GitHub, Linear, analyseverktøyet PostHog eller andre tilkoblede systemer, før den legger resultatet og eventuelle filer rett inn i tråden.",
+  "howItWent": "Doozy brukes nå av 13 personer hver dag hos Spur, og det er i hovedsak support- og kundeansvarlige som bruker den mest — ikke utviklerne den egentlig var tenkt for. Hver oppgave kjøres isolert i en fersk sandkasse der agenten selv ikke har tilgang til noen innloggingsdetaljer; alle kall til database og eksterne tjenester går via en egen sluse utenfor sandkassen, som legger på riktige nøkler kun for den konkrete forespørselen.",
+  "worthKnowing": "Sikkerhetsmodellen gjør at agenten ikke kan lekke en nøkkel den aldri har hatt tilgang til — skulle noen lure den med en skjult instruks i en tråd eller fil, kan den i verste fall misbruke verktøyene sine, men ikke stjele tilgang til systemene. Verktøy som kan slette eller endre data er avskrudd som standard og må aktiveres manuelt av en systemeier, og hver handling agenten gjør utenfor sandkassen logges i et revisjonsspor som ikke kan endres etterpå.",
+  "promptTemplate": "Sett opp en egen agent som støtteteamet kan tagge i en Slack-tråd med en kundesak. Gi agenten skrivebeskyttet tilgang til database, betalingsløsning og saksverktøy, og be den slå opp det den finner og skrive et kort svar med lenker til kildene — uten selv å endre eller slette noe. Krev at destruktive handlinger står avskrudd til en systemeier aktiverer dem manuelt, og at alt agenten gjør utenfor egen sandkasse logges i et revisjonsspor."
+},
+  {
+  "id": "digital-tvilling-whatsapp-openclaw",
+  "title": "Digital tvilling på 'WhatsApp': slik droppet en utvikler tre andre abonnementer med OpenClaw",
+  "description": "En utvikler satte opp agent-plattformen OpenClaw på en server til rundt 5 dollar måneden og styrer nå kalender, e-post, vanesporing og lydnotater via WhatsApp — og kuttet dermed Notion, Todoist og en egen vaneapp.",
+  "agents": [
+    "openclaw"
+  ],
+  "category": "hus-hverdag",
+  "source": "Medium",
+  "sourceDate": "februar 2026",
+  "sourceUrl": "'https'://medium.com/@srechakra/sda-f079871369ae",
+  "sourceChecked": false,
+  "isNew": true,
+  "dateAdded": "2026-10-22",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Forfatteren satte opp agent-plattformen OpenClaw på en liten VPS-server til rundt 5 dollar i måneden, med en Docker-container og tilgang kun via en lukket SSH-tunnel i stedet for å eksponere agentens styringsgrensesnitt mot åpent internett. Gjennom WhatsApp, appen vedkommende uansett brukte mest, styres nå Google-kalenderen og Gmail, mens lydnotater tas opp på farten og fylles automatisk inn som gjøremål, og egne notater synkroniseres hver natt til et privat GitHub-repo.",
+  "howItWent": "Tre betalte tjenester — Notion, Todoist og en egen vaneapp — ble sagt opp og erstattet med vanlige markdown-filer som agenten selv leser og skriver i. Forfatteren fikk også sitt eget telefonnummer til agenten via et billig eSIM-abonnement, slik at den kan ringe og booke ting på egne vegne, blant annet avtaler og reservasjoner, helt uten at forfatteren selv måtte løfte en finger.",
+  "worthKnowing": "Et par praktiske fallgruver trakk ned 'inntrykket': agenten undefinedstilte sine egne WhatsApp-innstillinger ved omstart, så forfatteren måtte bygge en egen overvåkingsfunksjon som fanger opp og retter dette automatisk. Forfatteren er også tydelig på sikkerheten rundt oppsettet — styringsgrensesnittet må aldri eksponeres åpent mot internett, og tilgangsnøkkelen bør roteres regelmessig i stedet for å ligge fast lagret i konfigurasjonen.",
+  "promptTemplate": "Sett opp en agent-plattform som OpenClaw på en liten VPS, bundet til localhost med en SSH-tunnel inn, og koble den til WhatsApp eller Telegram som ditt faste meldingspunkt. Gi den tilgang til kalender og e-post, be den loggføre faste vaner i en tekstfil i et eget Git-repo, og la den transkribere lydnotater til gjøremål. Be om en enkel vaktfunksjon som fanger opp om kanal-innstillingene undefinedstilles ved omstart, og krev at agenten alltid spør før den sender noe til andre enn deg selv."
+},
+  {
+  "id": "epostrydding-med-openclaw",
+  "title": "En uke med 'OpenClaw': slik ryddet agenten en innboks med 2000 e-poster",
+  "description": "En utvikler testet KI-agent-plattformen OpenClaw i en uke på egen bekostning, og lot agenten rydde en gammel innboks med rundt 2000 e-poster — med 847 nyhetsbrev å sortere gjennom.",
+  "agents": [
+    "openclaw"
+  ],
+  "category": "hus-hverdag",
+  "source": "DEV Community (dev.to)",
+  "sourceDate": "februar 2026",
+  "sourceUrl": "'https'://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-21",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En utvikler testet agent-plattformen OpenClaw i en uke, med egne penger, og delte resultatene åpent i en artikkel. Én av testene gikk ut på å koble OpenClaw til en engangs-Gmail-konto med rundt 2000 e-poster samlet opp over et halvt år, og be agenten om å melde seg av alle nyhetsbrev og reklame-e-poster, men la transaksjonsmeldinger og personlig korrespondanse være urørt.",
+  "howItWent": "Agenten gikk gjennom hele innboksen i løpet av rundt 20 minutter. Av 847 nyhetsbrev-e-poster meldte den seg av 203 lister og sorterte resten i riktige kategorier. Utvikleren tok en stikkprøve av rundt 50 av e-postene etterpå og fant en treffsikkerhet på omtrent 90 prosent. Noen få legitime e-poster fra en kunde som bruker et markedsføringsverktøy, ble feilaktig behandlet som reklame, men utvikleren beskrev resultatet samlet som imponerende. Selve jobben kostet rundt 8 dollar i API-bruk, med Claude Sonnet 3.5 som underliggende modell.",
+  "worthKnowing": "Testen ble kjørt med en engangs-Gmail-konto, ikke en ekte, personlig konto — utvikleren brukte et eget, isolert testoppsett uten tilgang til ekte kontoer eller sitt vanlige nettverk, nettopp for å prøve ut agenten trygt. Prisen varierer mye med hvilken modell man 'velger': enkle oppgaver som e-postsortering går fint med billigere modeller, mens tyngre research-oppgaver med skjermbilder og nettlesing (en annen oppgave i samme test kostet rundt 22 dollar) blir dyrere, fordi hvert skjermbilde agenten tar utløser et eget API-kall til en synsmodell.",
+  "promptTemplate": "Koble [KI-agent-plattform] til en test-e-postkonto og be 'den': «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte."
+},
+  {
+  "id": "ki-agent-gammel-nokia-telefon",
+  "title": "Utvikler bygde en KI-agent inn i en gammel Nokia-knappetelefon",
+  "description": "En utvikler reverse-engineerte fastvaren i en Nokia 110 4G-knappetelefon og bygde om kalkulator-appen til en KI-chat som styres fra talltastaturet — og som kan svare på SIM-spørsmål, sjekke batteriet, slå på lommelykten og mer.",
+  "agents": [
+    "codex",
+    "egen-agent"
+  ],
+  "category": "sikkerhet-vitenskap",
+  "source": "Hacker News",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "'https'://news.ycombinator.com/item?id=50006114",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-21",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Utvikleren tok en enkel Nokia 110 4G-knappetelefon og reverse-engineerte fastvaren for å få inn egen programvare. Den innebygde kalkulator-appen ble bygget om til en chat-app som styres fra talltastaturet. Appen sender meldingene videre til DeepSeeks chat-API, som kan kalle verktøy på selve 'telefonen': svare på spørsmål basert på informasjon lagret på SIM-kortet, vise batteriprosent, slå lommelykten av og på, starte et telefonanrop og sette en alarm. Deler av koden ble skrevet med hjelp fra kodeassistenten Codex, og alt ble testet direkte på selve telefonen.",
+  "howItWent": "Den største utfordringen var at telefonen bare har 48 MB minne, langt mindre enn det en vanlig KI-agent krever. Løsningen ble en forenklet, skreddersydd agent med mindre kodestørrelse, komprimerte data og gjenbrukte minnebuffere for å få alt til å passe. I dag er det en fungerende 'prototype': koden lastes inn i telefonens minne fra en datamaskin, og etter det kan telefonen kjøre fritt på mobildata uten kabel. Prosjektet ble lagt ut som et «Show HN»-innlegg på Hacker News og fikk positive tilbakemeldinger, blant annet på videodemonstrasjonen.",
+  "worthKnowing": "Dette er fortsatt et prototype-prosjekt, ikke et ferdig 'produkt': koden må lastes inn på nytt fra datamaskinen hver gang telefonen starter på nytt eller mister strøm, siden det ikke finnes noen permanent installasjon ennå. Utvikleren har heller ikke publisert all kildekoden offentlig, siden deler av prosjektet inneholder informasjon vedkommende ikke vil dele."
+},
+  {
+  "id": "sjekk-motorlampe-obd2",
+  "title": "La en agent bestille en OBD2-skanner og diagnostisere motorlampen",
+  "description": "Da motorlampen i bilen lyste, ba en bruker sin OpenClaw-agent om å løse det. Agenten bestilte en OBD2-skanner fra Amazon, leste av feilkoden og fant ut at det var en sensorfeil.",
+  "agents": [
+    "openclaw"
+  ],
+  "category": "hus-hverdag",
+  "source": "X",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-20",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker kjørte og la merke til at motorlampen i bilen tente. I stedet for å kjøre rett til et verksted, ba vedkommende sin OpenClaw-agent («claw») om å ta seg av problemet. Agenten bestilte en OBD2-skanner (et lite apparat som kobles til bilens diagnoseport og leser ut feilkoder) fra Amazon.",
+  "howItWent": "Da skanneren kom, leste agenten av resultatene og fant at det var en sensorfeil — ikke noe alvorlig. Lampen ble undefinedstilt, og brukeren beskrev det selv som et problem løst uten verkstedbesøk, som sparte både tid og penger.",
+  "worthKnowing": "En OBD2-skanner kan bare lese av koden, ikke fysisk fikse en feil — hvis sensoren faktisk er defekt og ikke bare løst kontakt, kommer lampen gjerne tilbake. Dette er likevel en god første sjekk før man bruker tid og penger på et verkstedbesøk for noe som kan være en enkel undefinedstilling.",
+  "promptTemplate": "Motorlampen i bilen min lyser. Hjelp meg å bestille en OBD2-skanner som er kompatibel med [bilmerke/modell/årsmodell] fra en nettbutikk. Når den kommer, forklar meg hvordan jeg kobler den til og leser av feilkoden, og si hva koden faktisk betyr og om jeg bør kjøre til verksted eller om det er trygt å undefinedstille selv."
+},
+  {
+  "id": "padel-booking-agent",
+  "title": "La en KI-agent snakke med kundene, men ikke bestemme bookingen",
+  "description": "En padelklubb tok bookinger manuelt over WhatsApp. Klubben bygde i stedet en n8n-basert KI-agent som fører selve samtalen med kunden, mens en egen, fast arbeidsflyt tar seg av den faktiske bestillingslogikken og konfliktkontrollen mellom to baner.",
+  "agents": [
+    "n8n"
+  ],
+  "category": "reise-bestilling",
+  "source": "Reddit",
+  "sourceDate": "juli 2026",
+  "sourceUrl": "",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-20",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker som driver en padelklubb med to baner, bygde først en n8n-arbeidsflyt som håndterte selve bestillingene og sjekket for dobbeltbookinger mellom banekalenderne. I neste runde la de til en KI-agent som 'samtalepartner': i stedet for at kunden fylte ut et bookingskjema, kunne kunden nå chatte naturlig med agenten, som samlet inn navn, ønsket bane og tidspunkt gjennom en vanlig samtale.",
+  "howItWent": "Det avgjørende skillet brukeren selv trakk opp var å holde «samtalen» og «logikken» 'separate': KI-agenten har bare ansvar for å forstå kunden og samle inn riktige detaljer, mens den ferdige, deterministiske n8n-arbeidsflyten (som allerede fungerte før agenten kom inn) fortsatt gjør selve bookingen og konfliktsjekken. Innlegget om dette fikk 34 poeng og 15 kommentarer på r/n8n.",
+  "worthKnowing": "Forfatteren påpeker selv at dette var vanskeligere enn det hørtes ut 'som': å få en KI-agent til å samle inn strukturerte data presist gjennom fri samtale krever mer finjustering enn et vanlig skjema. Ifølge forfatteren ble en tidlig, mer KI-tung versjon droppet fordi den hallusinerte, og den endelige løsningen brukte GPT-4o mini og kostet rundt 1 dollar for omtrent 150 vellykkede testsamtaler. Rådet til andre som bygger lignende ting er å ikke la agenten ta beslutninger den ikke trenger å ta — la den faste logikken (kalender, konflikter, bekreftelser) forbli en vanlig, forutsigbar arbeidsflyt.",
+  "promptTemplate": "Bygg en n8n-arbeidsflyt der en KI-agent fører en naturlig samtale med kunden for å samle inn [hva som skal bestilles, f.eks. bane/bord/time], og sender de innsamlede detaljene videre til en egen, fast arbeidsflyt som gjør selve bookingen og sjekker om [kalenderressurs] allerede er tatt. Agenten skal aldri bekrefte en bestilling selv — det skal kun den faste logikken gjøre."
+},
+  {
+  "id": "fjern-telefonnummer-spam",
+  "title": "Få en agent til å fjerne telefonnummeret ditt fra spam-lister",
+  "description": "Etter at en bruker bygde en gratis Grok Bot-ferdighet som fjerner telefonnummer fra datameglere, anbefalte Elon Musk selv metoden offentlig på X.",
+  "agents": [
+    "grok-bot"
+  ],
+  "category": "hus-hverdag",
+  "source": "X",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-20",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En X-bruker lot en Grok Bot-ferdighet søke gjennom nettsteder som samler og selger telefonnumre (\"people search\"-sider og datameglere), fylle ut skjemaene for å be om at nummeret fjernes, og bekrefte fjerningen når selskapene svarte med e-post. Ferdigheten, kalt Spam-Call Scrubber, ble delt fritt slik at andre kunne bruke samme oppskrift, og kan settes til å sjekke på nytt med jevne mellomrom.",
+  "howItWent": "Elon Musk svarte brukeren direkte på X og oppfordret alle som er slitne av spam-telefoner og -meldinger til å be sin egen Grok Bot gjøre det samme. Musk sa samtidig at Grok Bot nå gir hver bot sin egen e-postadresse og kan oppdage forsøk på svindel-e-post — men selve oppryddingsferdigheten er laget av brukeren, ikke av xAI.",
+  "worthKnowing": "Dette krever Grok Bot-appen, og at du er komfortabel med at en agent fyller ut skjemaer med navn/adresse på vegne av deg hos en rekke ukjente nettsteder. Skjemaene varierer fra selskap til selskap, så det er verdt å sjekke manuelt et par av dem etterpå for å se at fjerningen faktisk er gjennomført.",
+  "promptTemplate": "Søk opp telefonnummeret mitt [ditt nummer] på de vanligste \"people search\"-sidene og datameglerne du finner. For hver side du finner nummeret 'på': fyll ut opt-out/fjern-meg-skjemaet med [navn/e-post], bekreft eventuelle e-poster som kommer tilbake, og før en liste over hvilke sider du har sendt krav til. Vis meg listen før du bekrefter noe permanent, og sjekk på nytt om [antall] uker om nummeret har dukket opp igjen."
+},
+  {
+  "id": "ai-nyhetsbrev-podkast",
+  "title": "Bygg en daglig podkast av egne AI-nyhetsbrev til morgenturen",
+  "description": "En bruker var sliten av å lese over 30 AI-nyhetsbrev hver dag, og fikk Claude Cowork til å lage et nattlig opplegg som sammenfatter alt til en kort, lyttbar podkast-episode klar før morgenturen.",
+  "agents": [
+    "claude-cowork"
+  ],
+  "category": "innhold-kreativt",
+  "source": "Substack",
+  "sourceDate": "april 2026",
+  "sourceUrl": "",
+  "sourceChecked": true,
+  "isNew": true,
+  "dateAdded": "2026-10-20",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Brukeren abonnerte på over 30 AI-nyhetsbrev og brukte mer tid på å sortere e-postene enn å faktisk lære noe av dem. Han satte opp Claude Cowork til å hente nyhetsbrevene fra en egen Gmail-merkelapp hver natt, filtrere bort rene reklame-/støy-brev, og sette sammen det som var igjen til én sammenhengende lydbrief i stedet for en tekstoppsummering.",
+  "howItWent": "Etter å ha testet flere tale-løsninger landet oppsettet på en lokal, gratis talemodell som kjører på egen Mac uten nettavhengighet. Lydbriefen blir rundt 8–10 minutter, legges ut som en podkast-episode klokken 05 hver morgen, og brukeren lytter til den på morgenturen. Selve byggingen tok rundt to timer i én arbeidssesjon.",
+  "worthKnowing": "Oppsettet krever en datamaskin som faktisk er på 24/7 for å kjøre den nattlige jobben, og en del prøving og feiling med valg av taleløsning før resultatet ble naturlig å høre på — brukeren beskriver det første forsøket med macOS' innebygde opplesning som \"helt robotaktig og ulyttbart\". Verdt å vite før man forventer et perfekt resultat på første forsøk.",
+  "promptTemplate": "Hver natt klokken [tidspunkt]: hent nye e-poster merket [navn på merkelapp/mappe for nyhetsbrev] fra innboksen min siden forrige kjøring. Filtrer bort rene reklame-/kampanjebrev. Lag en sammenhengende, samtaleaktig lydoppsummering (ikke en punktliste) av det som faktisk er nytt eller endret siden i går, maks [lengde] minutter. Spill den inn med en norsk tale-stemme, og legg den et sted jeg kan høre på uten å måtte åpne en app for å lese.",
+  "trending": false
+},
+  {
+  "id": "handel-fire-modeller",
+  "title": "La fire KI-modeller handle aksjer autonomt for 1000 kr hver",
+  "description": "En bruker lot fire ulike KI-modeller kjøre egne porteføljer på 1000 kroner hver i ni uker, med en fast morgenrutine før markedet åpnet. ChatGPT endte best av de fire.",
+  "agents": [
+    "gemini",
+    "chatgpt"
+  ],
+  "category": "penger-regninger",
+  "source": "Reddit",
+  "sourceDate": "mars 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 215,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Brukeren satte opp fire separate papirhandel-porteføljer — altså simulert handel uten ekte penger — på handelsplattformen Alpaca. Hver morgen før børsåpning fikk ChatGPT, Gemini, Claude og Perplexity (med Deep Research aktivert) nøyaktig samme prompt om markedet, og kunne bare svare BUY, SELL, HOLD eller CANCEL. Hele løpet kjørte automatisert i Python, og loggen over beslutninger ble delt offentlig uten at brukeren overstyrte noen avgjørelser.",
+  "howItWent": "Etter ni uker lå ChatGPT klart best an med +21,1 %, hjulpet av noen heldige helsesektor-valg der én aksje doblet seg og en annen steg 52 %. Perplexity endte nesten i undefined med +1,1 %, mens Gemini (-6,6 %) og Claude (-11,5 %) gikk med tap. Brukeren presiserte at dette er papirpenger, og at ni uker er for kort tid til å konkludere med at én modell er best til aksjehandel.",
+  "worthKnowing": "Det mest interessante funnet er kanskje ikke avkastningen, men 'adferden': ChatGPT satt helt stille i kontanter i nesten tre uker før den gjorde sin første handel. Et oppsett som dette kan altså ligge i ro lenge før det gjør noe — verdt å vite før man forventer daglig aktivitet.",
+  "promptTemplate": "Hver børsdag før markedet 'åpner': gå gjennom en papirhandel-portefølje på [beløp] og foreslå kjøp/salg basert på [din strategi eller risikonivå], kun med simulerte penger. Loggfør hver beslutning med én setning som begrunnelse, pluss porteføljens verdi, i en løpende logg. Etter [antall] 'uker': oppsummer resultatet mot [en referanseindeks]. Ikke legg inn ekte ordre — vis meg alle foreslåtte handler for godkjenning først."
+},
+  {
+  "id": "elleve-agenter-trading",
+  "title": "Kjør et 11-agent-team som forbereder handler",
+  "description": "En trader satte opp 11 agenter med hver sin oppgave og eget mandat-dokument, der et eget «rødt lag» må godkjenne en handel før den utføres.",
+  "agents": [
+    "grok-bot",
+    "claude",
+    "codex"
+  ],
+  "category": "penger-regninger",
+  "source": "Reddit",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 58,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En trader satte opp et team av 11 agenter, hver med sitt eget ansvarsområde og et eget mandatdokument som beskriver nøyaktig hva den har lov til å gjøre.",
+  "howItWent": "Et eget «rødt lag» av agenter må vurdere og godkjenne forslaget før en reell handel utføres — et ekstra kontrollpunkt mot impulsive beslutninger, lagt inn som en fast del av arbeidsflyten.",
+  "worthKnowing": "Oppsettet er bygget som forberedelse og kvalitetssikring før handel, ikke som en fullautomatisk handelsrobot — mennesket har fortsatt siste ord på hver handel."
+},
+  {
+  "id": "ukrevde-penger",
+  "title": "Finn ukrevde penger og start kravet",
+  "description": "En agent fant over 1500 dollar i ukrevd tilgode på rundt fem minutter og hjalp til med papirarbeidet. Kravet ble sendt inn, men ikke utbetalt ennå.",
+  "agents": [
+    "meta-muse"
+  ],
+  "category": "penger-regninger",
+  "source": "Nettsted",
+  "sourceDate": "september 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 56,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En agent fikk i oppgave å søke gjennom offentlige registre for ukrevde midler knyttet til brukerens navn og tidligere adresser.",
+  "howItWent": "På rundt fem minutter fant agenten over 1500 dollar i ukrevd tilgode, og fylte ut det nødvendige papirarbeidet for å starte kravet.",
+  "worthKnowing": "Kravet var sendt inn, men ikke utbetalt da saken ble delt — denne typen prosess kan ta tid hos myndighetene selv etter at kravet er korrekt registrert.",
+  "promptTemplate": "Søk i offentlige registre for ukrevde midler, forsikringsutbetalinger eller tilgodehavender knyttet til [navn] og tidligere 'adresser': [liste adresser]. Oppsummer hva du finner med kilde og beløp, og foreslå neste skritt for å kreve pengene — vis meg forslaget for godkjenning før noe sendes inn.",
+  "trending": false
+},
+  {
+  "id": "investeringsanalyse",
+  "title": "Lag investeringsanalyse fra sanntids markedsdata",
+  "description": "En personlig formuesrådgiver bygget i et kode-agent-verktøy, som mater inn sanntids markedsdata, makroindikatorer og nyheter til en løpende investeringsanalyse.",
+  "agents": [
+    "claude-code"
+  ],
+  "category": "penger-regninger",
+  "source": "Reddit",
+  "sourceDate": "april 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 39,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker bygget en personlig formuesrådgiver i et kode-agent-verktøy, som automatisk henter inn sanntids markedsdata, makroøkonomiske indikatorer og nyhetsstrømmer.",
+  "howItWent": "Agenten holder en løpende investeringsanalyse oppdatert basert på de innhentede dataene, i stedet for at brukeren må samle informasjonen manuelt fra flere kilder selv.",
+  "worthKnowing": "Dette er et analyseverktøy, ikke en automatisk handelsbot — det er fortsatt brukeren som tar de faktiske investeringsbeslutningene basert på analysen."
+},
+  {
+  "id": "memecoin-kontroll",
+  "title": "Kjør natt-til-natt kryptosjekker og varsler",
+  "description": "En agent kjørte en firemiomimnutters krypto-sjekk over 3000 ganger over natten på tvers av flere sider, skrev rapporter og sendte varsler ved treff.",
+  "agents": [
+    "grok-bot"
+  ],
+  "category": "penger-regninger",
+  "source": "X",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 24,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En agent ble satt til å kjøre en kryptosjekk hvert fjerde minutt gjennom natten, på tvers av flere nettsider samtidig.",
+  "howItWent": "Sjekken ble gjennomført over 3000 ganger i løpet av natten, og agenten skrev rapporter og sendte varsler når den fant noe relevant.",
+  "worthKnowing": "Høyfrekvent overvåking som dette krever stabil tilgang over lang tid — verdt å dobbeltsjekke at varslene faktisk når frem før man stoler fullt på oppsettet."
+},
+  {
+  "id": "billigere-forsikring",
+  "title": "Finn billigere bilforsikring",
+  "description": "En gründer fikk en agent til å finne bilforsikring som var flere tusen kroner billigere per år enn den opprinnelige avtalen.",
+  "agents": [
+    "meta-muse"
+  ],
+  "category": "penger-regninger",
+  "source": "Nettsted",
+  "sourceDate": "2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 16,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En gründer ba en agent om å sammenligne bilforsikringstilbud og finne et billigere alternativ enn den eksisterende avtalen.",
+  "howItWent": "Agenten fant en forsikring som var flere tusen kroner billigere per år, med dekning som ble vurdert som tilstrekkelig.",
+  "worthKnowing": "Det er verdt å dobbeltsjekke at dekningsvilkårene faktisk er sammenlignbare før man bytter — lavere pris kan noen ganger bety lavere dekning."
+},
+  {
+  "id": "avbestill-abonnement",
+  "title": "Si opp og få refundert abonnement ved å lese e-post og ringe",
+  "description": "En agent leste e-post på tvers av to kontoer, logget inn i systemer, ringte leverandører og sendte e-poster — og fikk sagt opp og refundert to abonnement på rundt ti minutter.",
+  "agents": [
+    "grok-bot"
+  ],
+  "category": "penger-regninger",
+  "source": "Substack",
+  "sourceDate": "2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 12,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En agent fikk tilgang til e-post på tvers av to kontoer, logget seg inn i de aktuelle systemene, ringte leverandørene direkte og sendte oppfølgings-e-poster.",
+  "howItWent": "På rundt ti minutter fikk agenten sagt opp og refundert to abonnement, uten at brukeren måtte gjøre noe av arbeidet selv.",
+  "worthKnowing": "Å gi en agent tilgang til å ringe leverandører og håndtere kontoer krever en viss grad av tillit og tilgangsstyring — vurder nøye hvilke kontoer du faktisk gir fra deg kontrollen over."
+},
+  {
+  "id": "refusjon-fly",
+  "title": "Krev refusjon for forsinket eller kansellert fly",
+  "description": "En agent samler fakta om flyturen, undersøker reglene og skriver utkast til refusjonskravet etter en forsinkelse eller kansellering.",
+  "agents": [
+    "claude"
+  ],
+  "category": "reise-bestilling",
+  "source": "Reddit",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 6,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En agent samlet inn fakta om flyturen — forsinkelse, årsak, billettype — og undersøkte hvilke refusjonsregler som faktisk gjaldt.",
+  "howItWent": "Agenten skrev et utkast til refusjonskrav basert på det den fant, klart til gjennomgang og innsending.",
+  "worthKnowing": "Reglene for flyrefusjon varierer mye mellom selskap og land — det er verdt å lese gjennom utkastet selv før det sendes, siden regelverket er komplekst.",
+  "promptTemplate": "Flyturen min med [flyselskap] fra [sted] til [sted] den [dato] ble [forsinket/kansellert]. Finn gjeldende refusjons- og kompensasjonsregler for dette selskapet og denne ruten, og skriv et utkast til klage/refusjonskrav basert på fakta jeg gir deg. Vis meg utkastet for gjennomlesning før noe sendes."
+},
+  {
+  "id": "overvak-restaurantbord",
+  "title": "Overvåk og bestill et vanskelig restaurantbord",
+  "description": "En bruker lot en reiseagent passe på en ledig plass hos en populær restaurant og bestille bord til to, og fikk så tekstmelding med bekreftelse på tidspunktet.",
+  "agents": [
+    "egen-agent"
+  ],
+  "category": "reise-bestilling",
+  "source": "X",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 1,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker satte en reiseagent til å overvåke en populær restaurant for en ledig bordplass til to personer.",
+  "howItWent": "Så snart en plass ble ledig, bestilte agenten bordet automatisk og sendte en tekstmelding til brukeren med bekreftelse på tidspunktet.",
+  "worthKnowing": "Denne typen automatisk overvåking fungerer best for populære steder med høy etterspørsel, der manuell sjekking ville krevd stadig tilbakevending til samme side."
+},
+  {
+  "id": "overvak-bord-priser",
+  "title": "Bestill bord og overvåk åpninger eller prisfall",
+  "description": "En reiseagent bestiller bord og fortsetter å overvåke utsolgte åpninger eller prisfall på reisebestillinger, i stedet for bare å liste opp alternativer.",
+  "agents": [
+    "egen-agent"
+  ],
+  "category": "reise-bestilling",
+  "source": "X",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En reiseagent ble satt opp til ikke bare å bestille et bord, men også å fortsette å overvåke om det dukket opp ledige åpninger eller prisfall på reisebestillinger etterpå.",
+  "howItWent": "Agenten fortsatte overvåkingen i bakgrunnen etter at den første bestillingen var gjort, uten videre instruks fra brukeren.",
+  "worthKnowing": "Forskjellen fra en vanlig bestillingstjeneste er at agenten ikke stopper etter første treff — den blir ved oppgaven over tid."
+},
+  {
+  "id": "flytt-ferdigheter",
+  "title": "Flytt ferdigheter fra én agentplattform til en annen",
+  "description": "En bruker flyttet egne lagrede ferdigheter til en annen agentplattform, som så sa den overtok ansvaret ved å kombinere sky- og lokal-maskin-arbeid.",
+  "agents": [
+    "grok-bot",
+    "openclaw"
+  ],
+  "category": "programvare-devops",
+  "source": "Reddit",
+  "sourceDate": "september 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker flyttet sine egne lagrede agent-ferdigheter fra én plattform til en annen.",
+  "howItWent": "Den nye plattformen tok over ansvaret for oppgavene ved å kombinere arbeid i skyen med arbeid på den lokale maskinen.",
+  "worthKnowing": "Å kunne flytte ferdigheter mellom plattformer reduserer avhengigheten av én enkelt leverandør — verdt å vurdere når man bygger opp egne agent-oppsett."
+},
+  {
+  "id": "selg-brukte-ting",
+  "title": "Selg ting du ikke bruker lenger med hjelp av en agent",
+  "description": "En bruker testet en agent-modus for å håndtere et nettsalg over cirka ti dager, inkludert meldingshåndtering og prisjustering, med lite manuelt arbeid.",
+  "agents": [
+    "chatgpt-agent"
+  ],
+  "category": "shopping-errend",
+  "source": "Reddit",
+  "sourceDate": "januar 2025",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker testet en agent-modus for å håndtere salg av egne, ubrukte eiendeler på nett over omtrent ti dager.",
+  "howItWent": "Agenten tok seg av meldingshåndtering med interesserte kjøpere og justerte prisen underveis, med lite behov for manuell oppfølging fra brukeren.",
+  "worthKnowing": "Selv med automatisert prisjustering er det verdt å sette tydelige grenser for hvor lavt agenten har lov til å gå i pris, før man slipper den løs på et salg."
+},
+  {
+  "id": "finn-salgsmuligheter",
+  "title": "Finn kunder for webdesign-tjenester med salgsagenter",
+  "description": "Flere agenter ble satt opp for å selge webtjenester, blant annet en som søker i kart-tjenester etter bedrifter, sjekker om de har nettside og rangerer dem etter prioritet.",
+  "agents": [
+    "chatgpt"
+  ],
+  "category": "salg-markedsforing",
+  "source": "Reddit",
+  "sourceDate": "mars 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "Flere agenter ble satt opp for å finne potensielle kunder for webdesign-tjenester, blant annet én som søker gjennom kart-tjenester etter lokale bedrifter.",
+  "howItWent": "Agenten sjekket om hver bedrift hadde en eksisterende nettside, og rangerte dem etter prioritet basert på det den fant.",
+  "worthKnowing": "Denne typen agent-drevet leadgenerering fungerer best som en første sortering — det er fortsatt verdt å gjøre en menneskelig kvalitetssjekk før man tar kontakt med listen."
+},
+  {
+  "id": "bygg-selskapsstruktur",
+  "title": "Bygg en selskapsstruktur med kode-agenter",
+  "description": "En bruker brukte kode-agenter til å sette opp et selskap, blant annet en markedsføringsagent som tar seg av merkeidentitet og fargepaletter.",
+  "agents": [
+    "claude-code"
+  ],
+  "category": "jobb-drift",
+  "source": "Reddit",
+  "sourceDate": "november 2025",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En bruker brukte kode-agenter til å sette opp strukturen for et nytt selskap, inkludert en egen markedsføringsagent.",
+  "howItWent": "Markedsføringsagenten tok seg av merkeidentitet og fargepaletter som en del av oppsettet.",
+  "worthKnowing": "Å la en agent definere merkeidentitet tidlig kan spare tid, men det er verdt å ha et menneske til å godkjenne det visuelle før det blir stående offentlig."
+},
+  {
+  "id": "datamaskin-bruk-repo",
+  "title": "Pek en datamaskin-styrt bot mot et hvilket som helst kodelager",
+  "description": "En kommentator peker på at en agent kan styre en datamaskin og nettleser og bli bedt om å jobbe med et hvilket som helst gitt kodelager, i motsetning til skyagenter bundet til ett bestemt repo.",
+  "agents": [
+    "grok-bot"
+  ],
+  "category": "programvare-devops",
+  "source": "Reddit",
+  "sourceDate": "september 2026",
+  "sourceUrl": "",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "agentusecases.ai",
+  "whatTheyDid": "En kommentator pekte på en praktisk forskjell mellom 'agenttyper': en agent som styrer en hel datamaskin og nettleser, kan rett og slett bli pekt mot et hvilket som helst kodelager.",
+  "howItWent": "Dette står i kontrast til skybaserte kode-agenter som ofte er bundet til ett bestemt, forhåndskonfigurert repo.",
+  "worthKnowing": "Fleksibiliteten til en datamaskin-styrt agent har en kostnad i hastighet og presisjon sammenlignet med en spesialisert kode-agent — valget bør styres av oppgaven, ikke av hva som er mest fleksibelt på papiret."
+},
+  {
+  "id": "cowork-hva-folk-bruker",
+  "title": "Slik bruker folk Claude 'Cowork': mest rutinearbeid rundt selve jobben",
+  "description": "Anthropic har gått gjennom 1,2 millioner økter fra mai 2026. Størst er forretningsprosesser og drift (33,4 %), for eksempel å samle spredte oppdateringer i én rapport, lage sjekklister og avstemme regneark. Deretter kommer innholdsproduksjon (16,4 %), som utkast til presentasjoner og tilbud, og research (6,4 %).",
+  "agents": [
+    "claude-cowork"
+  ],
+  "category": "jobb-drift",
+  "source": "Anthropic (offisiell blogg)",
+  "sourceDate": "juli 2026",
+  "sourceUrl": "'https'://claude.com/blog/how-people-are-using-claude-cowork",
+  "sourceChecked": true,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": "",
+  "trending": false
+},
+  {
+  "id": "claude-code-visualisering",
+  "title": "Lag grafer og visualiseringer uten å kunne programmere",
+  "description": "Dataforskere hos Anthropic bygde interaktive visualiseringer av resultater fra en KI-modell ved å beskrive det de ville ha i én enkelt instruks. De hadde ikke selv kunnskap om TypeScript, som verktøyet skrev koden i.",
+  "agents": [
+    "claude-code"
+  ],
+  "category": "programvare-devops",
+  "source": "Anthropic (offisiell blogg)",
+  "sourceDate": "juli 2025",
+  "sourceUrl": "'https'://claude.com/blog/how-anthropic-teams-use-claude-code",
+  "sourceChecked": true,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "claude-code-annonsevarianter",
+  "title": "La to hjelpeagenter lage hundrevis av annonsevarianter",
+  "description": "Markedsteamet hos Anthropic satte opp en arbeidsflyt med to hjelpeagenter. Den leser en fil med hundrevis av annonser, peker ut de som presterer dårlig og skriver nye varianter som holder seg innenfor tegngrensene.",
+  "agents": [
+    "claude-code"
+  ],
+  "category": "salg-markedsforing",
+  "source": "Anthropic (offisiell blogg)",
+  "sourceDate": "juli 2025",
+  "sourceUrl": "'https'://claude.com/blog/how-anthropic-teams-use-claude-code",
+  "sourceChecked": true,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "chatgpt-restaurantbord",
+  "title": "Finn ledige restaurantbord direkte i ChatGPT",
+  "description": "ChatGPT kan finne restauranter og ledige tider ut fra sted, dato, klokkeslett, antall gjester og ønsker. Tilgjengelighet kan hentes fra OpenTable, Resy eller Yelp. Tjenesten kan ikke lagre, endre eller avbestille bestillinger du allerede har, og er ikke tilgjengelig på alle abonnementstyper.",
+  "agents": [
+    "chatgpt"
+  ],
+  "category": "reise-bestilling",
+  "source": "OpenAI (hjelpesenter)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "chatgpt-hverdagsbruk",
+  "title": "Hva folk faktisk bruker ChatGPT 'til': praktiske råd, informasjon og skriving",
+  "description": "OpenAI har analysert 1,5 millioner samtaler. Omtrent tre av fire dreier seg om praktisk veiledning, informasjonssøk eller skriving. Rundt halvparten av meldingene er spørsmål der folk ber om råd, og rundt 40 % er oppgaver der ChatGPT skal gjøre noe, som å skrive en tekst eller lage en plan.",
+  "agents": [
+    "chatgpt"
+  ],
+  "category": "forskning-kunnskap",
+  "source": "OpenAI (forskning)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://openai.com/index/how-people-are-using-chatgpt/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "chatgpt-agent-reise",
+  "title": "La ChatGPT agent planlegge og booke en reise",
+  "description": "Ved lanseringen viste OpenAI at agenten kan planlegge og booke reiser og middagsselskap. Den åpner nettsider, filtrerer resultater og ber deg logge inn selv når det trengs. Lanseringsinnlegget er merket som utdatert, så sjekk hva som gjelder nå.",
+  "agents": [
+    "chatgpt-agent"
+  ],
+  "category": "reise-bestilling",
+  "trending": false,
+  "source": "OpenAI (lanseringsinnlegg)",
+  "sourceDate": "2025",
+  "sourceUrl": "'https'://openai.com/index/introducing-chatgpt-agent/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "codex-nettleserspill",
+  "title": "Gjør en spillidé om til et ferdig nettleserspill",
+  "description": "Codex kan ta et kort spillkonsept, lage en plan og bygge et nettleserspill, og deretter teste det i en ekte nettleser. OpenAI beskriver dette som et eksempel på bruk utenfor vanlig programvareutvikling.",
+  "agents": [
+    "codex"
+  ],
+  "category": "spill-simulering",
+  "source": "OpenAI (Codex-dokumentasjon)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://developers.openai.com/codex/use-cases/browser-games/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "gemini-husarbeid",
+  "title": "Fire husholdningstips med 'Gemini': kjøleskap, bilder, kvitteringer og kjøp",
+  "description": "Google viser hvordan Gemini kan foreslå ukemeny ut fra det du har i kjøleskapet, hjelpe deg å feilsøke små reparasjoner ut fra bilder, hente ut opplysninger fra månedens kvitteringer og sammenligne store kjøp.",
+  "agents": [
+    "gemini"
+  ],
+  "category": "hus-hverdag",
+  "trending": false,
+  "source": "Google (offisiell blogg)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "gemini-agent-hverdag",
+  "title": "La Gemini sortere e-post, sende morgenoppsummering og bestille bord",
+  "description": "Gemini Agent og Gemini Spark kan sortere e-post og skrive svarutkast, sende en oppsummering av dagen foran deg og reservere restaurantbord. Handlinger som sender meldinger, kjøper noe eller sender inn skjemaer krever at du bekrefter først. Spark krever abonnement og aldersgrense 18 år.",
+  "agents": [
+    "gemini"
+  ],
+  "category": "hus-hverdag",
+  "source": "Google (hjelpesenter)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://support.google.com/gemini/answer/16596215",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "manus-japan-reise",
+  "title": "Få reiseplan og egen reisehåndbok til Japan",
+  "description": "Manus viser selv et eksempel der agenten samler reiseinformasjon og lager en personlig reiseplan og en skreddersydd reisehåndbok for en tur til Japan.",
+  "agents": [
+    "manus"
+  ],
+  "category": "reise-bestilling",
+  "source": "Manus (egen nettside)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://manus.im/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "manus-cv-nettside",
+  "title": "Gjør CV-en om til en personlig nettside",
+  "description": "Et eksempel som brukere har delt på Manus sin 'nettside': en bruker lot agenten gjøre CV-en om til en responsiv, personlig nettside.",
+  "agents": [
+    "manus"
+  ],
+  "category": "innhold-kreativt",
+  "source": "Manus (brukereksempel)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://manus.im/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "meta-ai-dagsbrief",
+  "title": "Meta AI planlegger, kobler seg til e-post og kalender og lager presentasjoner",
+  "description": "Med Muse Spark 1.1 kan Meta AI legge planer, koble seg til e-post- og kalenderapper, lage presentasjoner og ta seg av oppgaver for deg. Meta nevner blant annet en daglig oppsummering som eksempel.",
+  "agents": [
+    "meta-muse"
+  ],
+  "category": "hus-hverdag",
+  "source": "Meta (nyhetssak)",
+  "sourceDate": "juli 2026",
+  "sourceUrl": "'https'://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "grok-bot-booking",
+  "title": "Grok Bot for større 'oppgaver': bestille kaffe eller booke middag",
+  "description": "xAI beskriver Grok Bot som løsningen for oppgaver som består av flere steg, som å bestille kaffe eller booke middag, mens enklere koblinger tar seg av ting som å sjekke kalenderen. Eksempelet gjelder Tesla-førere som styrer det med stemmen.",
+  "agents": [
+    "grok-bot"
+  ],
+  "category": "reise-bestilling",
+  "source": "xAI (nyhetssak)",
+  "sourceDate": "oktober 2026",
+  "sourceUrl": "'https'://x.ai/news/grok-voice-3",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "n8n-epost-godkjenning",
+  "title": "Svar på e-post med KI, men godkjenn hvert svar på Telegram først",
+  "description": "En mal for n8n sjekker innboksen, avgjør hvilke e-poster som trenger svar og skriver utkast. Du får en forhåndsvisning på Telegram, og ingenting sendes før du godkjenner. Ubehandlede godkjenninger utløper automatisk etter fem minutter.",
+  "agents": [
+    "n8n"
+  ],
+  "category": "jobb-drift",
+  "source": "n8n (fellesskapsmal)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://n8n.io/workflows/6026-automate-email-responses-with-openai-and-telegram-approval-for-gmail/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "n8n-personlig-assistent",
+  "title": "Personlig assistent på Telegram med 'tale': e-post, kalender og oppgaver",
+  "description": "En n8n-mal lar deg sende tekst eller talemeldinger til en Telegram-bot. En KI-agent kan oppsummere uleste e-poster, sjekke kalenderavtaler og styre oppgavelisten din i Google Tasks.",
+  "agents": [
+    "n8n"
+  ],
+  "category": "hus-hverdag",
+  "source": "n8n (fellesskapsmal)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://n8n.io/workflows/8237-personal-life-manager-with-telegram-google-services-and-voice-enabled-ai/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "openclaw-hverdag",
+  "title": "'OpenClaw': daglige oppsummeringer, research, påminnelser og nettleserstyring",
+  "description": "I OpenClaws egen dokumentasjon nevnes personlige oppsummeringer, research og utkast, påminnelser og automatisering av nettleseren. En oppgave du sender fra mobilen kjører på en server, og svaret kommer tilbake i chatten.",
+  "agents": [
+    "openclaw"
+  ],
+  "category": "hus-hverdag",
+  "source": "OpenClaw (dokumentasjon)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://docs.openclaw.ai/help/faq/what-is-openclaw",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+  "id": "egen-agent-telegram",
+  "title": "Bygg din egen personlige agent på Telegram",
+  "description": "En utvidbar n8n-mal gir deg en personlig agent på Telegram med tilgang til Gmail, kalender, Drive og nettsøk. Den har samtalehukommelse i en database, kan svare med talemelding og kan sende saker videre til et menneske.",
+  "agents": [
+    "egen-agent",
+    "n8n"
+  ],
+  "category": "jobb-drift",
+  "source": "n8n (fellesskapsmal)",
+  "sourceDate": "",
+  "sourceUrl": "'https'://n8n.io/workflows/14008-openclaw-clone-expandable-personal-telegram-ai-agent-template/",
+  "sourceChecked": false,
+  "isNew": false,
+  "dateAdded": "2026-10-15",
+  "votes": 0,
+  "curatedFrom": "",
+  "whatTheyDid": "",
+  "howItWent": "",
+  "worthKnowing": ""
+},
+  {
+    id: "extract-rfq-boq-requirements-into-excel",
+    title: "Extract RFQ og BOQ-krav til Excel",
+    description: "En bruker bruker Cowork for å lese RFQ-er og BOQ-er med vedlegg og trekker ut kravene til en Excel-fil; en annen brukte det til å rydde i mapper.",
+    agents: ["claude-cowork"],
+    category: "automatisering",
+    source: "agentusecases.ai",
+    sourceDate: "oktober 2026",
+    isNew: true,
+    dateAdded: "2026-10-27",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "Brukeren brukte Cowork til å lese gjennom komplekse RFQ- og BOQ-dokumenter og automatisk trekke ut viktige krav til et Excel-ark.",
+    howItWent: "Prosessen sparte brukeren for mye manuelt arbeid med å lete gjennom PDF-vedlegg.",
+    worthKnowing: "Cowork er svært effektiv for dokument-analyse med mange vedlegg.",
+    trending: false,
+  },
+  {
+    id: "build-nes-harness-agent-play-games",
+    title: "Bygg en NES-harness slik at en agent kan spille spill",
+    description: "En kommentator bygger en NES-harness der en agent leser emulators tilstand; det var vanskelig å oppdage dialogbokser og menyer, så de planlegger en per-frame state recorder.",
+    agents: ["egen-agent"],
+    category: "programvare-devops",
+    source: "Reddit",
+    sourceDate: "oktober 2026",
+    isNew: true,
+    dateAdded: "2026-10-27",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "En utvikler bygger et rammeverk (harness) som lar en agent se hva som skjer i en NES-emulator i sanntid.",
+    howItWent: "Det viste seg å være utfordrende å få agenten til å forstå GUI-elementer som menyer, så de må implementere en mer detaljert tilstandsopptaker.",
+    worthKnowing: "Dette åpner for å trene agenter i visuelle miljøer som krever rask respons og forståelse av UI.",
+    trending: false,
+  },
+  {
+    id: "run-scheduled-competitor-briefs-meeting-indexing",
+    title: "Kjør planlagte konkurrent-briefs og indeksering av møter",
+    description: "Brukere kjører OpenClaw cron-jobber som surfer konkurrent-sider for en morgenbrief, skanner GitHub Trends, oppdaterer minnefiler nattlig og indekserer opptak av møter og forelesninger.",
+    agents: ["openclaw"],
+    category: "jobb-drift",
+    source: "OpenClaw",
+    sourceDate: "oktober 2026",
+    isNew: true,
+    dateAdded: "2026-10-27",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "En bruker har automatisert hele informasjonsflyten ved å bruke cron-jobber som kjører OpenClaw-agenter nattlig.",
+    howItWent: "Dette gir brukeren en ferdig oppsummert brief hver morgen, inkludert innsikt fra konkurrenter og GitHub Trends.",
+    worthKnowing: "Kombinasjonen av nettlesing og lokal minne-oppdatering gjør dette til en kraftig personlig assistent.",
+    trending: false,
+  },
+  {
+    id: "monitor-weather-overseas-events-email-family",
+    title: "Overvåk vær og hendelser i utlandet og send e-post til familien",
+    description: "En bruker kjører en OpenClaw-bot som overvåker hendelser i utlandet og varsler om ekstremvær og sender e-post til familiemedlemmer når det trengs, inkludert påminnelser om gaver til partneren.",
+    agents: ["openclaw"],
+    category: "personlig-assistans",
+    source: "OpenClaw",
+    sourceDate: "oktober 2026",
+    isNew: true,
+    trending: false,
+    dateAdded: "2026-10-25",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "En OpenClaw-agent overvåker eksterne hendelser (som vær og globale nyheter) og varsler familien via e-post.",
+    howItWent: "Systemet fungerer som en ekstra 'sikkerhetsvakt' som holder familien oppdatert på ting som betyr noe.",
+    worthKnowing: "Dette viser hvordan agenter kan kobles til både sanntidsdata og personlig kommunikasjon."
+  },
+  {
+    id: "organize-gmail-inbox-messages",
+    title: "Organiser meldinger i Gmail-innboksen",
+    description: "Brukeren prøvde å bruke Cowork for å organisere Gmail; det fungerte delvis på ca. 100 e-poster før det oppstod tilkoblingsproblemer, og jobben ble dårlig utført.",
+    agents: ["claude-cowork"],
+    category: "automatisering",
+    source: "Reddit",
+    sourceDate: "oktober 2026",
+    isNew: true,
+    dateAdded: "2026-10-27",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "En bruker forsøkte å automatisere rydding i en stor Gmail-innboks ved hjelp av Cowork.",
+    howItWent: "Jobben ble avbrutt midtveis på grunn av nettverksproblemer, noe som minner oss på at store batch-jobber krever stabil tilkobling.",
+    worthKnowing: "Ved organisering av e-post er det viktig med kontrollmekanismer slik at agenten ikke flytter ting feil ved feil.",
+    trending: false,
+  },
+  {
+    id: "turn-a-website-into-a-mobile-app",
+    title: "Gjør nettsiden din om til en mobilapp",
+    description: "Bruk Replit Agent 4 til å forvandle en eksisterende nettside til en mobilapp med design, forhåndsvisning og klargjøring for App Store.",
+    agents: ["egen-agent"],
+    category: "programvare-devops",
+    source: "Reddit",
+    sourceDate: "mars 2026",
+    sourceUrl: "https://www.reddit.com/r/replit/comments/1s5wf1u/replit_agent",
+    sourceChecked: true,
+    isNew: true,
+    dateAdded: "2026-10-27",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "Brukeren startet på Replit ved å velge oppgaven med å lage en app fra en eksisterende nettside. Replit Agent genererte et første utkast til både kode og app. Gjennom to dager med samtaler på naturlig språk, ble koden revidert, designet ferdigstilt, og appen klargjort for innsending til App Store.",
+    howItWent: "Det første forsøket ble overraskende bra, kostet rundt 40 dollar og ble sendt inn til App Store for moderering. Appen er nå live.",
+    worthKnowing: "Prosessen tok omtrent to dager og kostet totalt rundt 40 dollar.",
+    promptTemplate: "Gjør nettsiden min på [URL] om til en mobilapp for [iOS/Android/both]. Match merkevaren til siden, med disse hovedskjermene: [liste, f.eks. hjem, produkter, kontakt], og vis meg en forhåndsvisning jeg kan teste. Stopp når appen kjører i forhåndsvisning og du har en sjekkliste for innsending til butikken, og spør meg før du bruker kreditter på store redesign eller innsending.",
+  },
+  {
+    id: "investigate-and-unblock-stuck-task-cards",
+    title: "Undersøk og løs opp fastlåste oppgaver",
+    description: "Hermes overvåker blokkerte oppgaver, undersøker årsakene, prøver å løse dem og rapporterer i Discord. Den har også hjulpet med å fikse feilede Home Assistant-innlogginger.",
+    agents: ["egen-agent"],
+    category: "jobb-drift",
+    source: "Reddit",
+    sourceDate: "oktober 2026",
+    sourceUrl: "https://www.reddit.com/r/hermesagent/comments/1w0mblq/what_have_you_done_with_hermes_agent_this_week",
+    sourceChecked: true,
+    isNew: true,
+    dateAdded: "2026-10-27",
+    votes: 0,
+    curatedFrom: "agentusecases.ai",
+    whatTheyDid: "Hermes overvåker kanban-tavler for oppgaver som har blitt stående i 'blocked' status. Den undersøker årsaken til blokkeringen, forsøker å utføre tiltak for å løse den, og sender varsler til Discord. Den kan også håndtere mer spesifikke feil, som problemer med innlogging i Home Assistant etter en flytteprosess.",
+    howItWent: "Brukerne rapporterer at det hjelper med å holde prosesser i gang og fanger opp feil som ellers ville blitt liggende stille.",
+    worthKnowing: "Kan også brukes til å fikse systemfeil som krever automatisk rekonfigurering.",
+  },
+  {
     id: "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
     title: "La en agent bygge og drive sin egen nettbedrift",
     description: "Nat Eliason ga OpenClaw-agenten Felix $1,000 for å starte en bedrift. På tre uker hadde agenten lansert en nettside, et digitalt produkt og en X-konto, og generert over $14,000 i salg.",
@@ -36,6 +1104,7 @@ export const useCases: UseCase[] = [
     sourceChecked: true,
     isNew: true,
     dateAdded: "2026-10-29",
+    trending: true,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid: "Nat Eliason ga OpenClaw-agenten Felix et budsjett på $1,000 for å starte en bedrift. Agenten tok seg av alt fra å foreslå ideer til å lansere en nettside, et infoprodukt og en profil på X.",
@@ -43,7 +1112,7 @@ export const useCases: UseCase[] = [
     worthKnowing: "Nøkkelen var et lagdelt minnesystem: 1) En kunnskapsgraf (PARA), 2) Daglige notater for loggføring, og 3) Tause kunnskapsdata for å lære av feil og forstå brukerens preferanser.",
     promptTemplate: "Her er et budsjett på $1,000. Bruk OpenClaw til å undersøke markeder, foreslå et digitalt produkt og bygg en nettside for å selge det. Lag en plan først og vent på min godkjenning før du bruker penger.",
   },
-{
+  {
     id: "rangering-av-hundrevis-av-cv-er-med-claude",
     title: "Rangering av hundrevis av CV-er med Claude",
     description: "En rekrutterer brukte Claude til å rangere over 200 søknader til en stilling for å spare tid, men oppdaget at toppkandidaten ikke kunne svare på spørsmel om egen CV.",
@@ -55,26 +1124,40 @@ export const useCases: UseCase[] = [
     sourceChecked: true,
     isNew: true,
     dateAdded: "2026-10-29",
+    trending: true,
     votes: 0,
     curatedFrom: "agentusecases.ai",
     whatTheyDid: "En rekrutterer lastet opp over 200 CV-er i Claude og ba modellen om å lage en rangert liste over de mest kvalifiserte kandidatene for å effektivisere prosessen.",
     howItWent: "Modellen rangerte en kandidat som nummer én basert på en ekstremt polert og nøkkelord-optimalisert CV. Ved intervju viste det seg imidlertid at kandidaten ikke hadde den kompetansen som CV-en lovet.",
     worthKnowing: "Generelle språkmodeller er ofte bedre på å vurdere skriveferdigheter enn faktisk faglig dyktighet. Det er viktig å bruke AI som et beslutningsstøtteverktøy, ikke som en endelig beslutningstaker, spesielt i rekruttering.",
     promptTemplate: "Jeg har 200 CV-er for en [stillingstittel]-rolle. Analyser alle dokumentene og lag en rangert liste basert på [spesifikke krav]. Gi en kort begrunnelse for hvorfor hver kandidat er rangert slik.",
-  }
+  },
 ];
 
-export const hasPage = (idOrItem: any): boolean => {
-  const id = typeof idOrItem === 'string' ? idOrItem : idOrItem?.id;
-  return useCases.some(u => u.id === id);
-};
+// Oppføringer med egen side under /bruk: enten en artikkel i articles.ts,
+// eller utvidet innhold (whatTheyDid m.fl.) direkte i oppføringen.
+export function hasPage(u: UseCase): boolean {
+  return Boolean(articles[u.id] || u.whatTheyDid);
+}
 
-export const isReviewed = (idOrItem: any): boolean => {
-  const item = typeof idOrItem === 'string' ? useCases.find(u => u.id === idOrItem) : idOrItem;
-  return item?.isReviewed || false;
-};
+// Oppføringer uten verifisert kilde (de opprinnelige 15) skal ikke indekseres
+// før eier har gjennomgått dem (regel 9 i CLAUDE.md).
+export function isReviewed(u: UseCase): boolean {
+  return Boolean(articles[u.id]);
+}
 
-export const riskNotice = (idOrItem: any): string | undefined => {
-  const item = typeof idOrItem === 'string' ? useCases.find(u => u.id === idOrItem) : idOrItem;
-  return item?.riskNotice;
-};
+
+// Saker om penger, investering, forsikring, skatt, juss og helse skal ha en
+// tydelig merknad om at de ikke er rådgivning (regel 9 i CLAUDE.md). Gjelder
+// automatisk også for nye oppføringer.
+const RISK_WORDS =
+  /aksje|krypto|coin|invest|trading|handel|børs|forsikring|skatt|avgift|lege|helse|medisin|juridisk|advokat|ukrevd/i;
+
+export function riskNotice(u: UseCase): string | null {
+  const risky =
+    u.category === "penger-regninger" ||
+    RISK_WORDS.test(`${u.title} ${u.description}`);
+  return risky
+    ? "Dette er ikke investeringsråd, økonomisk, juridisk, skattemessig eller medisinsk rådgivning. Det beskriver hva en annen person har gjort, og kan gå galt. Snakk med en kvalifisert fagperson før du handler, og ikke gi en AI-agent tilgang til bankkonto eller betalingsmidler."
+    : null;
+}
