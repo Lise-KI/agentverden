@@ -726,6 +726,501 @@
       ],
       "gitCommit": "pending",
       "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "build-nes-harness-agent-play-games",
+        "avbestill-abonnement"
+      ],
+      "trendingReplaced": [
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+        "rangering-av-hundrevis-av-cv-er-med-claude",
+        "turn-a-website-into-a-mobile-app",
+        "investigate-and-unblock-stuck-task-cards",
+        "elleve-agenter-trading",
+        "investeringsanalyse",
+        "memecoin-kontroll"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "investigate-and-unblock-stuck-task-cards",
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift"
+      ],
+      "trendingReplaced": [
+        "avbestill-abonnement",
+        "build-nes-harness-agent-play-games"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "elleve-agenter-trading",
+        "rangering-av-hundrevis-av-cv-er-med-claude"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "extract-rfq-boq-requirements-into-excel",
+        "memecoin-kontroll"
+      ],
+      "trendingReplaced": [
+        "rangering-av-hundrevis-av-cv-er-med-claude",
+        "rangering-av-hundrevis-av-cv-er-med-claude",
+        "elleve-agenter-trading"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "organize-gmail-inbox-messages",
+        "billigere-forsikring"
+      ],
+      "trendingReplaced": [
+        "memecoin-kontroll",
+        "extract-rfq-boq-requirements-into-excel"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "refusjon-fly",
+        "turn-a-website-into-a-mobile-app"
+      ],
+      "trendingReplaced": [
+        "billigere-forsikring",
+        "organize-gmail-inbox-messages"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "bygg-selskapsstruktur",
+        "overvak-restaurantbord"
+      ],
+      "trendingReplaced": [
+        "turn-a-website-into-a-mobile-app",
+        "refusjon-fly"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "overvak-bord-priser",
+        "run-scheduled-competitor-briefs-meeting-indexing"
+      ],
+      "trendingReplaced": [
+        "overvak-restaurantbord",
+        "bygg-selskapsstruktur"
+      ],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+        "rangering-av-hundrevis-av-cv-er-med-claude"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+        "rangering-av-hundrevis-av-cv-er-med-claude"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+        "rangering-av-hundrevis-av-cv-er-med-claude"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
+    },
+    {
+      "date": "2026-10-29",
+      "addedUseCases": [
+        {
+          "id": "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+          "title": "La en agent bygge og drive sin egen nettbedrift",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/let-an-agent-build-and-run-its-own-online-business"
+        },
+        {
+          "id": "rangering-av-hundrevis-av-cv-er-med-claude",
+          "title": "Rangering av hundrevis av CV-er med Claude",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/rank-200-resumes-with-claude"
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 items updated. Trending rotert.",
+      "trendingSelected": [
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift",
+        "rangering-av-hundrevis-av-cv-er-med-claude"
+      ],
+      "trendingReplaced": [],
+      "selfApprovalChecks": {
+        "la-en-agent-bygge-og-drive-sin-egen-nettbedrift": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass",
+        "rangering-av-hundrevis-av-cv-er-med-claude": "duplicateCheck/spellingCheck/norwegianCheck/sourceUrlCheck = pass"
+      },
+      "emailedReportTo": "andreassf1@gmail.com"
     }
   ],
   "newsletterRuns": [
