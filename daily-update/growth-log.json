@@ -98,6 +98,15 @@
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
       "seoTaskResult": "Sendte 2 nye URLer til IndexNow (Status 200)",
       "notes": "Brukt uniqueSubscribers fra Brevo da totalSubscribers var 0"
+    },
+    {
+      "date": "2026-10-30",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "SITEMAP-KONSISTENS",
+      "seoTaskResult": "Sjekket 17 reviewed/indekserte sider mot sitemap. Alle 17 er tilstede. Sjekket 5 tilfeldige /bruk/ sider for noindex: ingen funnet. Sitemap og indeksering er konsistent.",
+      "notes": ""
     }
   ]
 }
