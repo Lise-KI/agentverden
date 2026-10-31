@@ -107,6 +107,15 @@
       "seoTaskToday": "SITEMAP-KONSISTENS",
       "seoTaskResult": "Sjekket 17 reviewed/indekserte sider mot sitemap. Alle 17 er tilstede. Sjekket 5 tilfeldige /bruk/ sider for noindex: ingen funnet. Sitemap og indeksering er konsistent.",
       "notes": ""
+    },
+    {
+      "date": "2026-10-31",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "INTERNLENKE-DEKNING",
+      "seoTaskResult": "Sjekket 3 tilfeldige /bruk/ sider. Alle hadde Flere lignende use cases-seksjonen med minst \u00e9n lenke.",
+      "notes": ""
     }
   ]
 }
