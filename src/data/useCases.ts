@@ -39,10 +39,10 @@ export const useCases: UseCase[] = [
     "dateAdded": "2026-11-01",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
-    "whatTheyDid": "Ga Claude skrivebeskyttet tilgang til AWS-miljøet for å undersøke komplekse problemer i steden for å manuelt lese logger og sjekke databaser.",
+    "whatTheyDid": "Ga Claude skrivebeskyttet tilgang til AWS-miljøet for å undersøke komplekse problemer i stedet for å manuelt lese logger og sjekke databaser.",
     "howItWent": "Det løste problemer omtrent 10 ganger raskere, selv om man må være på vakt for at den av og til kan 'hallusinere' eller gi litt usikre svar.",
     "worthKnowing": "Claude er ekstremt effektiv til å navigere i sky-infrastruktur når den får se dataene direkte, noe som sparer enormt med tid for SRE-er og utviklere.",
-    "promptTemplate": "Jeg gir deg skrivebeskyttet tilgang til [min AWS-konto/profil], [loggkilde], og [database]. Undersøk dette problemet: [beskriv symptomet og når det startet]. Kjør kun skrivebeskyttede kommandoer, og ikke endre eller slett noe. Skriv en rapport med hva du fant, bevis for hvert påstand (logglinjer, spørringer, ressurs-IDer), og alt du er usikker på, tydelig merket som et gjett."
+    "promptTemplate": "Jeg gir deg skrivebeskyttet tilgang til [min AWS-konto/profil], [loggkilde], og [database]. Undersøk dette problemet: [beskriv symptomet og når det startet]. Kjør kun skrivebeskyttede kommandoer, og ikke endre eller slett noe. Skriv en rapport med hva du fant, bevis for hver påstand (logglinjer, spørringer, ressurs-IDer), og alt du er usikker på, tydelig merket som et gjett."
   },
   {
     "id": "personlig-assistent-via-telegram-med-n8n",
