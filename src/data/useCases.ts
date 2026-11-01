@@ -24,6 +24,91 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "diagnose-aws-problemer-med-claude",
+    "title": "Diagnoser AWS-problemer med Claude med skrivebeskyttet tilgang",
+    "description": "En utvikler bruker Claude med skrivebeskyttet tilgang til AWS-logger og databaser for å løse problemer 10 ganger raskere enn manuelt arbeid.",
+    "agents": [
+      "claude"
+    ],
+    "category": "programvare-devops",
+    "source": "Hacker News",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50306875",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-01",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Ga Claude skrivebeskyttet tilgang til AWS-miljøet for å undersøke komplekse problemer i steden for å manuelt lese logger og sjekke databaser.",
+    "howItWent": "Det løste problemer omtrent 10 ganger raskere, selv om man må være på vakt for at den av og til kan 'hallusinere' eller gi litt usikre svar.",
+    "worthKnowing": "Claude er ekstremt effektiv til å navigere i sky-infrastruktur når den får se dataene direkte, noe som sparer enormt med tid for SRE-er og utviklere.",
+    "promptTemplate": "Jeg gir deg skrivebeskyttet tilgang til [min AWS-konto/profil], [loggkilde], og [database]. Undersøk dette problemet: [beskriv symptomet og når det startet]. Kjør kun skrivebeskyttede kommandoer, og ikke endre eller slett noe. Skriv en rapport med hva du fant, bevis for hvert påstand (logglinjer, spørringer, ressurs-IDer), og alt du er usikker på, tydelig merket som et gjett."
+  },
+  {
+    "id": "personlig-assistent-via-telegram-med-n8n",
+    "title": "Bygg en personlig assistent i Telegram med åtte spesialiserte agenter",
+    "description": "Et system bygget i n8n bruker åtte spesialiserte agenter for å håndtere alt fra e-post og kalender til reiseplanlegging via Telegram.",
+    "agents": [
+      "n8n",
+      "chatgpt-agent"
+    ],
+    "category": "jobb-drift",
+    "source": "Reddit",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://www.reddit.com/r/n8n/comments/1mugdof/i_built_an_ai_agent_army_in_n8n_that_completely",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-01",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Brukte n8n til å orkestrere et team av åtte spesialiserte AI-agenter som kommuniserer med brukeren via en enkelt Telegram-chat ved hjelp av tekst og stemme.",
+    "howItWent": "Systemet sparer brukeren for over 20 timer i uken ved å automatisere kjedelige oppgaver som e-post, kalender og research.",
+    "worthKnowing": "Ved å kombinere verktøy som n8n, GPT-4, Claude, Airtable og Google Workspace, kan man skape et kraftfullt og billig alternativ til en menneskelig assistent.",
+    "promptTemplate": "Hjelp meg med å bygge en personlig assistent i n8n som jeg kan sende meldinger til på Telegram med tekst eller stemmenotater. Lag en hoved-router-agent som sender forespørsler til spesialist-agenter for [f.eks. kalender, e-post, oppgaver, notater, research, kontakter, påminnelser, utgifter], og som transkriberer stemmemeldinger først. Systemet er ferdig når jeg kan sende en testforespørsel til hver spesialist og få et fornuftig svar, og enhver handling som sender e-post, booker noe eller sletter data må først vise meg hva den planlegger å gjøre og vente på min bekreftelse."
+  },
+  {
+    "id": "automatiser-eiendomsforvaltning-med-chatgpt-dot",
+    "title": "Bruk ChatGPT Dot for å automatisere eiendomsforvaltning og e-post",
+    "description": "En eiendomsforvalter bruker ChatGPTs nye verktøy, Dot, til å håndtere HubSpot-artikler, Outlook-utkast og nettstedrevisjoner.",
+    "agents": [
+      "chatgpt"
+    ],
+    "category": "salg-markedsforing",
+    "source": "Reddit",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://www.reddit.com/r/AI_Agents/comments/1wuni7i/i_built_ai_agents_to_save_time_now_im_chasing",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-01",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Brukte ChatGPT Dot til å oppdatere live artikler, rydde i gamle e-postutkast og utføre SEO-revisjoner og søkeordssporing.",
+    "howItWent": "Det sparer mye tid, men krever fortsatt at man følger med ('chasing') for å sikre at agenten ikke har mistet oversikten eller gjort feil.",
+    "worthKnowing": "Selv med avanserte agenter er 'durable execution' og verifisering av status avgjørende for å sikre at man ikke må bruke tiden sin på å rette opp feil i stedet for å spare tid.",
+    "promptTemplate": "Hjelp meg med administrasjon og markedsføring for min [type virksomhet]. Først, oppdater [den aktive artikkelen eller siden på URL] med [beskriv endringene], og vis meg endringene før du publiserer. Gå deretter gjennom mine [e-postkonto] utkast som er eldre enn [antall] dager, sjekk om det allerede er svart på dem, og list opp de du vil slette slik at jeg kan godkjenne før noe fjernes. Til slutt, sett opp [nettstedrevisjon eller søkeordssporing for domene/søkeord] og send meg et kort sammendrag av hva du har endret og hva som eventuelt står uavklart."
+  },
+  {
+    "id": "bygg-ios-app-uten-mac-med-cursor",
+    "title": "Bygg og kjør en iOS-app på en iPhone uten Mac",
+    "description": "Ved hjelp av Cursor sin skyagent kan en utvikler bygge, installere og styre en iOS-app direkte fra en iPhone.",
+    "agents": [
+      "claude"
+    ],
+    "category": "programvare-devops",
+    "source": "Reddit",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://www.reddit.com/r/cursor/comments/1vc2y8u/cursor_cloud_agent_can_build_install_and_drive",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-01",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Brukte en skybasert Cursor-agent for å utvikle en app, installere den på en simulator/enhet, og teste funksjonalitet uten behov for Mac eller kabel.",
+    "howItWent": "Dette gjorde det mulig å utvikle og teste iOS-apper direkte fra en mobil enhet ved å flytte de tunge prosessene til skyen.",
+    "worthKnowing": "Dette er et kraftig eksempel på hvordan AI-agenter kan fjerne hardware-begrensninger for utviklere.",
+    "promptTemplate": "Start en Cursor-skyagent på mitt repo [repo URL] for å bygge min iOS-app [kort beskrivelse] uten at jeg trenger en Mac på min side. Den skal bygge appen, installere den på en simulator eller enhet ved hjelp av [byggverktøy eller tjeneste], og rapportere hva den ser på skjermen. Fullfør når appen har startet og du har bekreftet at [nøkkel-skjerm eller funksjon] fungerer, og spør meg før du endrer signering, kontoer eller noe som koster penger."
+  },
+  {
     "id": "auto-handle-dealership-customer-sms-support",
     "title": "Auto-håndtering av SMS-support for bilforhandlere",
     "description": "En bilforhandler i Storbritannia brukte Make for å analysere følelser (sentiment) i kunde-SMS, automatisk lukke over 18 000 meldinger som ikke krevde handling, og varsle Aftersales-teamet ved misnøye.",
@@ -147,7 +232,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Comet klarte å løse Wordle på fire forsøk og kunne skrive algebra-oppgaver i Canvas. Den slet imidlertid med mer komplekse oppgaver som Connections og produserte visuelt rotete lysbilder i Canva.",
     "worthKnowing": "Comet representerer et skifte fra chatbot-basert AI til en 'agentisk nettleser' som kan operere i det faktiske brukergrensesnittet til nettsider.",
     "promptTemplate": "Åpne [Wordle eller en annen puslespill-URL] og løs dagens oppgave. Fortell meg hvert forsøk og hvorfor du valgte det. Stopp når oppgaven er løst eller du går tom for forsøk, og oppsummer hvordan det gikk. Ikke logg inn, send inn noe eller endre noen kontoinnstillinger uten å vise meg det først og vente på min tillatelse.",
-    "trending": false
+    "trending": true
   },
   {
     "id": "slack-support-agent-doozy",
@@ -210,7 +295,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "En utvikler testet agent-plattformen OpenClaw i en uke, med egne penger, og delte resultatene åpent i en artikkel. Én av testene gikk ut på å koble OpenClaw til en engangs-Gmail-konto med rundt 2000 e-poster samlet opp over et halvt år, og be agenten om å melde seg av alle nyhetsbrev og reklame-e-poster, men la transaksjonsmeldinger og personlig korrespondanse være urørt.",
     "howItWent": "Agenten gikk gjennom hele innboksen i løpet av rundt 20 minutter. Av 847 nyhetsbrev-e-poster meldte den seg av 203 lister og sorterte resten i riktige kategorier. Utvikleren tok en stikkprøve av rundt 50 av e-postene etterpå og fant en treffsikkerhet på omtrent 90 prosent. Noen få legitime e-poster fra en kunde som bruker et markedsføringsverktøy, ble feilaktig behandlet som reklame, men utvikleren beskrev resultatet samlet som imponerende. Selve jobben kostet rundt 8 dollar i API-bruk, med Claude Sonnet 3.5 som underliggende modell.",
     "worthKnowing": "Testen ble kjørt med en engangs-Gmail-konto, ikke en ekte, personlig konto — utvikleren brukte et eget, isolert testoppsett uten tilgang til ekte kontoer eller sitt vanlige nettverk, nettopp for å prøve ut agenten trygt. Prisen varierer mye med hvilken modell man 'velger': enkle oppgaver som e-postsortering går fint med billigere modeller, mens tyngre research-oppgaver med skjermbilder og nettlesing (en annen oppgave i samme test kostet rundt 22 dollar) blir dyrere, fordi hvert skjermbilde agenten tar utløser et eget API-kall til en synsmodell.",
-    "promptTemplate": "Koble [KI-agent-plattform] til en test-e-postkonto og be 'den': «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte."
+    "promptTemplate": "Koble [KI-agent-plattform] til en test-e-postkonto og be 'den': «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte.",
+    "trending": true
   },
   {
     "id": "ki-agent-gammel-nokia-telefon",
@@ -666,7 +752,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "",
     "howItWent": "",
     "worthKnowing": "",
-    "trending": true
+    "trending": false
   },
   {
     "id": "claude-code-annonsevarianter",
@@ -736,7 +822,7 @@ export const useCases: UseCase[] = [
       "chatgpt-agent"
     ],
     "category": "reise-bestilling",
-    "trending": true,
+    "trending": false,
     "source": "OpenAI (lanseringsinnlegg)",
     "sourceDate": "2025",
     "sourceUrl": "https://openai.com/index/introducing-chatgpt-agent/",

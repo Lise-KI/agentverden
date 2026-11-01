@@ -1240,6 +1240,75 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-01",
+      "addedUseCases": [
+        {
+          "id": "diagnose-aws-problemer-med-claude",
+          "title": "Diagnoser AWS-problemer med Claude med skrivebeskyttet tilgang",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50306875",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/diagnose-aws-issues-with-read-only-claude-access"
+        },
+        {
+          "id": "personlig-assistent-via-telegram-med-n8n",
+          "title": "Bygg en personlig assistent i Telegram med åtte spesialiserte agenter",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/n8n/comments/1mugdof/i_built_an_ai_agent_army_in_n8n_that_completely",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-a-personal-assistant-through-telegram-with-eight-agents"
+        },
+        {
+          "id": "automatiser-eiendomsforvaltning-med-chatgpt-dot",
+          "title": "Bruk ChatGPT Dot for å automatisere eiendomsforvaltning og e-post",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AI_Agents/comments/1wuni7i/i_built_ai_agents_to_save_time_now_im_chasing",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-property-management-marketing-and-inbox-cleanup"
+        },
+        {
+          "id": "bygg-ios-app-uten-mac-med-cursor",
+          "title": "Bygg og kjør en iOS-app på en iPhone uten Mac",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/cursor/comments/1vc2y8u/cursor_cloud_agent_can_build_install_and_drive",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/build-and-run-an-ios-app-on-an-iphone-without-a-mac"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [],
+      "changesOther": "isNew-opprydding: 0 saker. Trending rotert.",
+      "trendingSelected": [
+        "perplexity-comet-browser-agent",
+        "epostrydding-med-openclaw"
+      ],
+      "trendingReplaced": [
+        "claude-code-visualisering",
+        "chatgpt-agent-reise"
+      ],
+      "selfApprovalChecks": {
+        "diagnose-aws-problemer-med-claude": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "personlig-assistent-via-telegram-med-n8n": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "automatiser-eiendomsforvaltning-med-chatgpt-dot": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "bygg-ios-app-uten-mac-med-cursor": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [
