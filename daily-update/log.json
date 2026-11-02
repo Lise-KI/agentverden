@@ -1309,6 +1309,66 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-02",
+      "addedUseCases": [
+        {
+          "id": "daglig-konkurrent-oppsummering-i-slack-med-n8n",
+          "title": "Få en daglig oppsummering av konkurrenter og omtaler direkte i Slack",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/automation/comments/1stbu1c/heres_the_actual_agent_setup_im_running_for_my",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/send-a-daily-competitor-and-mentions-digest-to-slack"
+        },
+        {
+          "id": "automatiser-anki-flashcards-med-claude-code",
+          "title": "Automatiser opprettelsen av Anki-flashcards med Claude Code",
+          "category": "innhold-kreativt",
+          "sourcePrimaryUrl": "https://actuallymaybe.com/blog/agentic-ai-anki-flashcard-creation/",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/create-and-manage-anki-flashcards-for-language-learning"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [
+        {
+          "id": "claude-løste-to-aar-med-utestående-nederlandsk-skatt",
+          "title": "Claude løste to år med utestående nederlandsk skatt på en ettermiddag",
+          "why": [
+            "id må være kebab-case"
+          ]
+        },
+        {
+          "id": "overvåk-hotellpriser-automatisk-med-claude",
+          "title": "Spar penger på hotellbestilling ved å la Claude overvåke prisene",
+          "why": [
+            "id må være kebab-case"
+          ]
+        }
+      ],
+      "changesOther": "isNew-opprydding: 6 saker. Trending rotert.",
+      "trendingSelected": [
+        "datamaskin-bruk-repo",
+        "codex-nettleserspill"
+      ],
+      "trendingReplaced": [
+        "perplexity-comet-browser-agent",
+        "epostrydding-med-openclaw"
+      ],
+      "selfApprovalChecks": {
+        "daglig-konkurrent-oppsummering-i-slack-med-n8n": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "automatiser-anki-flashcards-med-claude-code": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [

@@ -24,6 +24,46 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "daglig-konkurrent-oppsummering-i-slack-med-n8n",
+    "title": "Få en daglig oppsummering av konkurrenter og omtaler direkte i Slack",
+    "description": "En bedriftseier bruker n8n for å få en daglig rapport i Slack om konkurrenter, Reddit-omtale og nye anmeldelser, noe som sparer flere timer med manuelt arbeid hver dag.",
+    "agents": [
+      "n8n"
+    ],
+    "category": "salg-markedsforing",
+    "source": "Reddit",
+    "sourceDate": "April 2026",
+    "sourceUrl": "https://www.reddit.com/r/automation/comments/1stbu1c/heres_the_actual_agent_setup_im_running_for_my",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-02",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Bygget en workflow i n8n som hver morgen kl. 07:00 henter nyheter om spesifikke konkurrenter, relevante Twitter-poster, Reddit-omtale og nye G2-anmeldelser, og poster en oppsummert digest i Slack.",
+    "howItWent": "Automatiseringen sparer brukeren for omtrent to timer med manuell informasjonsinnhenting hver eneste dag.",
+    "worthKnowing": "Dette er et klassisk eksempel på 'informasjonsarbitrasje' – å bruke agenter til å filtrere støy og levere presis innsikt når du trenger den."
+  },
+  {
+    "id": "automatiser-anki-flashcards-med-claude-code",
+    "title": "Automatiser opprettelsen av Anki-flashcards med Claude Code",
+    "description": "Ved å bruke Claude Code og AnkiConnect kan man transformere komplekse konsepter til ferdigformaterte flashcards for effektiv læring.",
+    "agents": [
+      "claude-code"
+    ],
+    "category": "innhold-kreativt",
+    "source": "ActuallyMaybe",
+    "sourceDate": "Oktober 2026",
+    "sourceUrl": "https://actuallymaybe.com/blog/agentic-ai-anki-flashcard-creation/",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-02",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Brukte Claude Code til å ekspandere et enkelt konsept til flere ulike typer flashcards, for eksempel ved å lage 'cloze deletions' og derivasjonskort for matematiske formler.",
+    "howItWent": "Verktøyet håndterer den kjedelige jobben med å formatere kortene og sørger for at de følger 'best practices' for spaced repetition.",
+    "worthKnowing": "Dette er spesielt kraftfullt for språkstudier, hvor man kan be agenten generere kontekstuelle eksempler på grammatiske bøyninger i stedet for å lage dem manuelt."
+  },
+  {
     "id": "diagnose-aws-problemer-med-claude",
     "title": "Diagnoser AWS-problemer med Claude med skrivebeskyttet tilgang",
     "description": "En utvikler bruker Claude med skrivebeskyttet tilgang til AWS-logger og databaser for å løse problemer 10 ganger raskere enn manuelt arbeid.",
@@ -232,7 +272,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Comet klarte å løse Wordle på fire forsøk og kunne skrive algebra-oppgaver i Canvas. Den slet imidlertid med mer komplekse oppgaver som Connections og produserte visuelt rotete lysbilder i Canva.",
     "worthKnowing": "Comet representerer et skifte fra chatbot-basert AI til en 'agentisk nettleser' som kan operere i det faktiske brukergrensesnittet til nettsider.",
     "promptTemplate": "Åpne [Wordle eller en annen puslespill-URL] og løs dagens oppgave. Fortell meg hvert forsøk og hvorfor du valgte det. Stopp når oppgaven er løst eller du går tom for forsøk, og oppsummer hvordan det gikk. Ikke logg inn, send inn noe eller endre noen kontoinnstillinger uten å vise meg det først og vente på min tillatelse.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "slack-support-agent-doozy",
@@ -296,7 +336,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Agenten gikk gjennom hele innboksen i løpet av rundt 20 minutter. Av 847 nyhetsbrev-e-poster meldte den seg av 203 lister og sorterte resten i riktige kategorier. Utvikleren tok en stikkprøve av rundt 50 av e-postene etterpå og fant en treffsikkerhet på omtrent 90 prosent. Noen få legitime e-poster fra en kunde som bruker et markedsføringsverktøy, ble feilaktig behandlet som reklame, men utvikleren beskrev resultatet samlet som imponerende. Selve jobben kostet rundt 8 dollar i API-bruk, med Claude Sonnet 3.5 som underliggende modell.",
     "worthKnowing": "Testen ble kjørt med en engangs-Gmail-konto, ikke en ekte, personlig konto — utvikleren brukte et eget, isolert testoppsett uten tilgang til ekte kontoer eller sitt vanlige nettverk, nettopp for å prøve ut agenten trygt. Prisen varierer mye med hvilken modell man 'velger': enkle oppgaver som e-postsortering går fint med billigere modeller, mens tyngre research-oppgaver med skjermbilder og nettlesing (en annen oppgave i samme test kostet rundt 22 dollar) blir dyrere, fordi hvert skjermbilde agenten tar utløser et eget API-kall til en synsmodell.",
     "promptTemplate": "Koble [KI-agent-plattform] til en test-e-postkonto og be 'den': «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "ki-agent-gammel-nokia-telefon",
@@ -710,7 +750,8 @@ export const useCases: UseCase[] = [
     "curatedFrom": "agentusecases.ai",
     "whatTheyDid": "En kommentator pekte på en praktisk forskjell mellom 'agenttyper': en agent som styrer en hel datamaskin og nettleser, kan rett og slett bli pekt mot et hvilket som helst kodelager.",
     "howItWent": "Dette står i kontrast til skybaserte kode-agenter som ofte er bundet til ett bestemt, forhåndskonfigurert repo.",
-    "worthKnowing": "Fleksibiliteten til en datamaskin-styrt agent har en kostnad i hastighet og presisjon sammenlignet med en spesialisert kode-agent — valget bør styres av oppgaven, ikke av hva som er mest fleksibelt på papiret."
+    "worthKnowing": "Fleksibiliteten til en datamaskin-styrt agent har en kostnad i hastighet og presisjon sammenlignet med en spesialisert kode-agent — valget bør styres av oppgaven, ikke av hva som er mest fleksibelt på papiret.",
+    "trending": true
   },
   {
     "id": "cowork-hva-folk-bruker",
@@ -853,7 +894,8 @@ export const useCases: UseCase[] = [
     "curatedFrom": "",
     "whatTheyDid": "",
     "howItWent": "",
-    "worthKnowing": ""
+    "worthKnowing": "",
+    "trending": true
   },
   {
     "id": "gemini-husarbeid",
@@ -1067,7 +1109,7 @@ export const useCases: UseCase[] = [
     "category": "automatisering",
     "source": "agentusecases.ai",
     "sourceDate": "oktober 2026",
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-27",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -1086,7 +1128,7 @@ export const useCases: UseCase[] = [
     "category": "programvare-devops",
     "source": "Reddit",
     "sourceDate": "oktober 2026",
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-27",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -1105,7 +1147,7 @@ export const useCases: UseCase[] = [
     "category": "jobb-drift",
     "source": "OpenClaw",
     "sourceDate": "oktober 2026",
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-27",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -1143,7 +1185,7 @@ export const useCases: UseCase[] = [
     "category": "automatisering",
     "source": "Reddit",
     "sourceDate": "oktober 2026",
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-27",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -1164,7 +1206,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "mars 2026",
     "sourceUrl": "https://www.reddit.com/r/replit/comments/1s5wf1u/replit_agent",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-27",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -1185,7 +1227,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "oktober 2026",
     "sourceUrl": "https://www.reddit.com/r/hermesagent/comments/1w0mblq/what_have_you_done_with_hermes_agent_this_week",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-27",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
