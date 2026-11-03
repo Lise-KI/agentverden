@@ -27,16 +27,16 @@ SITE = "https://agentverden.no"
 
 
 def parse_use_cases(content: str):
-    chunks = re.split(r'(?=\n\s*\{\s*\n\s*id: ")', content)
+    chunks = re.split(r'(?=\n\s*\{\s*\n\s*"?id"?: ")', content)
     items = []
     for ch in chunks:
-        m_id = re.search(r'id: "([a-z0-9-]+)"', ch)
+        m_id = re.search(r'"?id"?: "([a-z0-9-]+)"', ch)
         if not m_id:
             continue
-        m_title = re.search(r'title:\s*"((?:[^"\\]|\\.)*)"', ch)
-        m_desc = re.search(r'description:\s*"((?:[^"\\]|\\.)*)"', ch)
-        m_date = re.search(r'dateAdded:\s*"([0-9-]+)"', ch)
-        m_cat = re.search(r'category:\s*"([a-z0-9-]+)"', ch)
+        m_title = re.search(r'"?title"?:\s*"((?:[^"\\]|\\.)*)"', ch)
+        m_desc = re.search(r'"?description"?:\s*"((?:[^"\\]|\\.)*)"', ch)
+        m_date = re.search(r'"?dateAdded"?:\s*"([0-9-]+)"', ch)
+        m_cat = re.search(r'"?category"?:\s*"([a-z0-9-]+)"', ch)
         if not (m_title and m_date):
             continue
         items.append({
