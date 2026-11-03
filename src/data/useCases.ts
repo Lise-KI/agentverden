@@ -24,6 +24,47 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "bulk-refactor-codebase-stricter-compiler",
+    "title": "Massiv refaktorering av kodebase med Claude",
+    "description": "Hvordan et team brukte Claude til å fikse over 200 000 linjer med kode etter å ha aktivert strengere kompilatorinnstillinger.",
+    "agents": [
+      "claude"
+    ],
+    "category": "programvare-devops",
+    "source": "Hacker News",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50334784",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-03",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Et utviklerteam slo på strengere kompilatorinnstillinger i en massiv kodebase på over 1 million linjer. Dette førte til over 30 000 feilmeldinger som måtte utbedres.",
+    "howItWent": "I stedet for å prøve å fikse alt manuelt, brukte de Claude til å ta én feiltype om gangen. Dette gjorde det mulig å refaktorere over 200 000 linjer med kode på en trygg og kontrollert måte.",
+    "worthKnowing": "Når man står overfor enorme mengder teknisk gjeld eller refaktorering, kan det være mer effektivt å la en agent fikse én klasse med feil av gangen fremfor å prøve å løse alt samtidig.",
+    "trending": true
+  },
+  {
+    "id": "muse-video-dm-sales",
+    "title": "Bruk Meta Muse til å selge kurs via Instagram DMs",
+    "description": "En fotograf brukte Meta Muse for å klippe videoer, svare på meldinger og håndtere refusjoner, noe som førte til tusenvis av dollar i salg.",
+    "agents": [
+      "meta-muse"
+    ],
+    "category": "salg-markedsforing",
+    "source": "Hacker News",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50331488",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-03",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En fotograf som selger kurs, brukte Meta Muse til å automatisere innholdsproduksjon og kundestøtte. Verktøyet klipper lange videoer til korte Reels med teksting, svarer på spørsmål i Instagram DMs, og håndterer refusjoner.",
+    "howItWent": "Automatiseringen førte til at flere Reels fikk over 1 million visninger, og samtalene i DMs genererte titusenvis av dollar i salg.",
+    "worthKnowing": "Meta Muse kan fungere som en kraftig assistent for innholdsskapere som trenger å skalere både produksjon og interaksjon med følgere uten å øke arbeidsmengden drastisk."
+  },
+  {
     "id": "daglig-konkurrent-oppsummering-i-slack-med-n8n",
     "title": "Få en daglig oppsummering av konkurrenter og omtaler direkte i Slack",
     "description": "En bedriftseier bruker n8n for å få en daglig rapport i Slack om konkurrenter, Reddit-omtale og nye anmeldelser, noe som sparer flere timer med manuelt arbeid hver dag.",
@@ -125,7 +166,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "Brukte ChatGPT Dot til å oppdatere live artikler, rydde i gamle e-postutkast og utføre SEO-revisjoner og søkeordssporing.",
     "howItWent": "Det sparer mye tid, men krever fortsatt at man følger med ('chasing') for å sikre at agenten ikke har mistet oversikten eller gjort feil.",
     "worthKnowing": "Selv med avanserte agenter er 'durable execution' og verifisering av status avgjørende for å sikre at man ikke må bruke tiden sin på å rette opp feil i stedet for å spare tid.",
-    "promptTemplate": "Hjelp meg med administrasjon og markedsføring for min [type virksomhet]. Først, oppdater [den aktive artikkelen eller siden på URL] med [beskriv endringene], og vis meg endringene før du publiserer. Gå deretter gjennom mine [e-postkonto] utkast som er eldre enn [antall] dager, sjekk om det allerede er svart på dem, og list opp de du vil slette slik at jeg kan godkjenne før noe fjernes. Til slutt, sett opp [nettstedrevisjon eller søkeordssporing for domene/søkeord] og send meg et kort sammendrag av hva du har endret og hva som eventuelt står uavklart."
+    "promptTemplate": "Hjelp meg med administrasjon og markedsføring for min [type virksomhet]. Først, oppdater [den aktive artikkelen eller siden på URL] med [beskriv endringene], og vis meg endringene før du publiserer. Gå deretter gjennom mine [e-postkonto] utkast som er eldre enn [antall] dager, sjekk om det allerede er svart på dem, og list opp de du vil slette slik at jeg kan godkjenne før noe fjernes. Til slutt, sett opp [nettstedrevisjon eller søkeordssporing for domene/søkeord] og send meg et kort sammendrag av hva du har endret og hva som eventuelt står uavklart.",
+    "trending": true
   },
   {
     "id": "bygg-ios-app-uten-mac-med-cursor",
@@ -751,7 +793,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "En kommentator pekte på en praktisk forskjell mellom 'agenttyper': en agent som styrer en hel datamaskin og nettleser, kan rett og slett bli pekt mot et hvilket som helst kodelager.",
     "howItWent": "Dette står i kontrast til skybaserte kode-agenter som ofte er bundet til ett bestemt, forhåndskonfigurert repo.",
     "worthKnowing": "Fleksibiliteten til en datamaskin-styrt agent har en kostnad i hastighet og presisjon sammenlignet med en spesialisert kode-agent — valget bør styres av oppgaven, ikke av hva som er mest fleksibelt på papiret.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "cowork-hva-folk-bruker",
@@ -895,7 +937,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "",
     "howItWent": "",
     "worthKnowing": "",
-    "trending": true
+    "trending": false
   },
   {
     "id": "gemini-husarbeid",

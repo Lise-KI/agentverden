@@ -1369,6 +1369,51 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-03",
+      "addedUseCases": [
+        {
+          "id": "bulk-refactor-codebase-stricter-compiler",
+          "title": "Massiv refaktorering av kodebase med Claude",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50334784",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/bulk-refactor-a-1m-line-codebase-for-stricter-compiler-setti"
+        },
+        {
+          "id": "muse-video-dm-sales",
+          "title": "Bruk Meta Muse til å selge kurs via Instagram DMs",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50331488",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-a-photographer-s-video-clips-dm-sales-and-support-with-m"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [],
+      "changesOther": "isNew-opprydding: 0 saker. Trending rotert.",
+      "trendingSelected": [
+        "automatiser-eiendomsforvaltning-med-chatgpt-dot",
+        "bulk-refactor-codebase-stricter-compiler"
+      ],
+      "trendingReplaced": [
+        "datamaskin-bruk-repo",
+        "codex-nettleserspill"
+      ],
+      "selfApprovalChecks": {
+        "bulk-refactor-codebase-stricter-compiler": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "muse-video-dm-sales": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [
