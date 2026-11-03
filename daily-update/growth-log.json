@@ -134,6 +134,15 @@
       "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
       "seoTaskResult": "OK: 5/5 sider sjekket. Alle hadde korrekt canonical, title og meta-beskrivelse.",
       "notes": ""
+    },
+    {
+      "date": "2026-11-03",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
+      "seoTaskResult": "Ingen nye sider \u00e5 sende",
+      "notes": ""
     }
   ]
 }
