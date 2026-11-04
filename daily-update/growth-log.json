@@ -143,6 +143,15 @@
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
       "seoTaskResult": "Ingen nye sider \u00e5 sende",
       "notes": ""
+    },
+    {
+      "date": "2026-11-04",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "SITEMAP-KONSISTENS",
+      "seoTaskResult": "Sjekket 5 tilfeldige sider. Ingen noindex-sider i sitemap funnet. Alle sjekkede sider var enten korrekt indekserte eller korrekt noindex utenfor sitemap.",
+      "notes": ""
     }
   ]
 }
