@@ -24,6 +24,28 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "paralell-claude-testing-med-adb",
+    "title": "Kjør parallelle Claude-sesjoner for å bygge og teste apper med ADB",
+    "description": "Se hvordan en utvikler bruker mange parallelle Claude-sesjoner og ADB for å drive mobil-apper og feilsøke i sanntid.",
+    "agents": [
+      "claude-code",
+      "claude"
+    ],
+    "category": "programvare-devops",
+    "source": "Hacker News",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50334362",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-04",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Utvikleren kjører omtrent 10 kopier av kodebasen sin i parallelle Claude-sesjoner. Ved å koble flere fysiske telefoner (eller emulatorer) til laptopen, bruker de ADB (Android Debug Bridge) slik at Claude kan styre brukergrensesnittet, ta skjermbilder og lese logger for å feilsøke og fikse problemer direkte på enheten.",
+    "howItWent": "Dette gjør at de kan \"fly gjennom\" oppgaver. Ved å kombinere grundig planlegging og spesifisering med direkte tilgang til maskinvare og logger, kan agenten håndtere komplekse feilsøkingskjeder mye mer effektivt enn ved bare tekstbasert koding.",
+    "worthKnowing": "For å maksimere nytten av AI-agenter i app-utvikling, bør man kombinere dyp planlegging med verktøy som gir agenten tilgang til sanntidsdata, som logger og fysisk maskinvare via ADB.",
+    "promptTemplate": "Jeg er i ferd med å bygge en [funksjon] i [prosjekt]. Her er spesifikasjonen: [spesifikasjon]. Vennligst planlegg implementeringen steg-for-steg. Når planen er godkjent, bruk ADB for å koble til min tilkoblede enhet, kjør appen, og utfør følgende test-scenario: [scenario]. Les loggene for å bekrefte at alt fungerer som forventet, og foreslå rettelser hvis noe feiler."
+  },
+  {
     "id": "bulk-refactor-codebase-stricter-compiler",
     "title": "Massiv refaktorering av kodebase med Claude",
     "description": "Hvordan et team brukte Claude til å fikse over 200 000 linjer med kode etter å ha aktivert strengere kompilatorinnstillinger.",
@@ -42,7 +64,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "Et utviklerteam slo på strengere kompilatorinnstillinger i en massiv kodebase på over 1 million linjer. Dette førte til over 30 000 feilmeldinger som måtte utbedres.",
     "howItWent": "I stedet for å prøve å fikse alt manuelt, brukte de Claude til å ta én feiltype om gangen. Dette gjorde det mulig å refaktorere over 200 000 linjer med kode på en trygg og kontrollert måte.",
     "worthKnowing": "Når man står overfor enorme mengder teknisk gjeld eller refaktorering, kan det være mer effektivt å la en agent fikse én klasse med feil av gangen fremfor å prøve å løse alt samtidig.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "muse-video-dm-sales",
@@ -145,7 +167,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "Brukte n8n til å orkestrere et team av åtte spesialiserte AI-agenter som kommuniserer med brukeren via en enkelt Telegram-chat ved hjelp av tekst og stemme.",
     "howItWent": "Systemet sparer brukeren for over 20 timer i uken ved å automatisere kjedelige oppgaver som e-post, kalender og research.",
     "worthKnowing": "Ved å kombinere verktøy som n8n, GPT-4, Claude, Airtable og Google Workspace, kan man skape et kraftfullt og billig alternativ til en menneskelig assistent.",
-    "promptTemplate": "Hjelp meg med å bygge en personlig assistent i n8n som jeg kan sende meldinger til på Telegram med tekst eller stemmenotater. Lag en hoved-router-agent som sender forespørsler til spesialist-agenter for [f.eks. kalender, e-post, oppgaver, notater, research, kontakter, påminnelser, utgifter], og som transkriberer stemmemeldinger først. Systemet er ferdig når jeg kan sende en testforespørsel til hver spesialist og få et fornuftig svar, og enhver handling som sender e-post, booker noe eller sletter data må først vise meg hva den planlegger å gjøre og vente på min bekreftelse."
+    "promptTemplate": "Hjelp meg med å bygge en personlig assistent i n8n som jeg kan sende meldinger til på Telegram med tekst eller stemmenotater. Lag en hoved-router-agent som sender forespørsler til spesialist-agenter for [f.eks. kalender, e-post, oppgaver, notater, research, kontakter, påminnelser, utgifter], og som transkriberer stemmemeldinger først. Systemet er ferdig når jeg kan sende en testforespørsel til hver spesialist og få et fornuftig svar, og enhver handling som sender e-post, booker noe eller sletter data må først vise meg hva den planlegger å gjøre og vente på min bekreftelse.",
+    "trending": true
   },
   {
     "id": "automatiser-eiendomsforvaltning-med-chatgpt-dot",
@@ -167,7 +190,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Det sparer mye tid, men krever fortsatt at man følger med ('chasing') for å sikre at agenten ikke har mistet oversikten eller gjort feil.",
     "worthKnowing": "Selv med avanserte agenter er 'durable execution' og verifisering av status avgjørende for å sikre at man ikke må bruke tiden sin på å rette opp feil i stedet for å spare tid.",
     "promptTemplate": "Hjelp meg med administrasjon og markedsføring for min [type virksomhet]. Først, oppdater [den aktive artikkelen eller siden på URL] med [beskriv endringene], og vis meg endringene før du publiserer. Gå deretter gjennom mine [e-postkonto] utkast som er eldre enn [antall] dager, sjekk om det allerede er svart på dem, og list opp de du vil slette slik at jeg kan godkjenne før noe fjernes. Til slutt, sett opp [nettstedrevisjon eller søkeordssporing for domene/søkeord] og send meg et kort sammendrag av hva du har endret og hva som eventuelt står uavklart.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "bygg-ios-app-uten-mac-med-cursor",
@@ -188,7 +211,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "Brukte en skybasert Cursor-agent for å utvikle en app, installere den på en simulator/enhet, og teste funksjonalitet uten behov for Mac eller kabel.",
     "howItWent": "Dette gjorde det mulig å utvikle og teste iOS-apper direkte fra en mobil enhet ved å flytte de tunge prosessene til skyen.",
     "worthKnowing": "Dette er et kraftig eksempel på hvordan AI-agenter kan fjerne hardware-begrensninger for utviklere.",
-    "promptTemplate": "Start en Cursor-skyagent på mitt repo [repo URL] for å bygge min iOS-app [kort beskrivelse] uten at jeg trenger en Mac på min side. Den skal bygge appen, installere den på en simulator eller enhet ved hjelp av [byggverktøy eller tjeneste], og rapportere hva den ser på skjermen. Fullfør når appen har startet og du har bekreftet at [nøkkel-skjerm eller funksjon] fungerer, og spør meg før du endrer signering, kontoer eller noe som koster penger."
+    "promptTemplate": "Start en Cursor-skyagent på mitt repo [repo URL] for å bygge min iOS-app [kort beskrivelse] uten at jeg trenger en Mac på min side. Den skal bygge appen, installere den på en simulator eller enhet ved hjelp av [byggverktøy eller tjeneste], og rapportere hva den ser på skjermen. Fullfør når appen har startet og du har bekreftet at [nøkkel-skjerm eller funksjon] fungerer, og spør meg før du endrer signering, kontoer eller noe som koster penger.",
+    "trending": true
   },
   {
     "id": "auto-handle-dealership-customer-sms-support",
@@ -1289,7 +1313,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "februar 2026",
     "sourceUrl": "https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-29",
     "trending": false,
     "votes": 0,
@@ -1311,7 +1335,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "juni 2026",
     "sourceUrl": "https://www.reddit.com/r/AIQuality/comments/1tyfkep/my_friend_used_claude_to_rank_200_resumes_the_top",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-10-29",
     "trending": false,
     "votes": 0,
