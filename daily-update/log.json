@@ -1455,6 +1455,51 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-05",
+      "addedUseCases": [
+        {
+          "id": "forhandle-bilpriser-via-epost",
+          "title": "Forhandle bilpriser direkte med forhandlere via e-post",
+          "category": "shopping-errend",
+          "sourcePrimaryUrl": "https://caredge.com/",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/negotiate-out-the-door-car-prices-with-dealers-by-email"
+        },
+        {
+          "id": "sett-opp-ny-laptop-med-claude-og-arch-linux",
+          "title": "Bruk Claude til å speile et Arch Linux-oppsett på en ny laptop",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/technology/comments/1s3cbn3/anthropic_says_claude_can_now_use_your_computer",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/set-up-a-new-laptop-to-match-an-existing-arch-linux-machine"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [],
+      "changesOther": "isNew-opprydding: 0 saker. Trending rotert.",
+      "trendingSelected": [
+        "n8n-personlig-assistent",
+        "diagnose-aws-problemer-med-claude"
+      ],
+      "trendingReplaced": [
+        "personlig-assistent-via-telegram-med-n8n",
+        "bygg-ios-app-uten-mac-med-cursor"
+      ],
+      "selfApprovalChecks": {
+        "forhandle-bilpriser-via-epost": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "sett-opp-ny-laptop-med-claude-og-arch-linux": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [

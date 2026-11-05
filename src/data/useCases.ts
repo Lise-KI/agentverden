@@ -24,6 +24,48 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "forhandle-bilpriser-via-epost",
+    "title": "Forhandle bilpriser direkte med forhandlere via e-post",
+    "description": "Lær hvordan en AI-kjøpsagent automatiserer forhandlinger om bilpriser ved å sende detaljerte forespørsler og sikre at tilbudene stemmer med annonsene.",
+    "agents": [
+      "chatgpt-agent"
+    ],
+    "category": "shopping-errend",
+    "source": "Caredge",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://caredge.com/",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-05",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En AI-kjøpsagent sender e-post til bilforhandlere for å be om en skriftlig pris på en spesifikk bil. Den sjekker at prisen som blir oppgitt stemmer med den opprinnelige annonsen, og sender høflige svar hvis det er avvik i prisen, inkludert skatter, avgifter og tilleggsutstyr.",
+    "howItWent": "Dette gjør det mulig for kjøpere å få en sammenligning av 'out-the-door'-priser fra flere forhandlere uten å bruke timer på telefon eller e-post selv, og sikrer at man ikke blir lurt av skjulte gebyrer.",
+    "worthKnowing": "Bruk av AI til prisforhandling fungerer best når man instruerer agenten til å be om en spesifisert og skriftlig oversikt over alle kostnader, slik at man har et sammenligningsgrunnlag.",
+    "promptTemplate": "Jeg ønsker å kjøpe en [år, merke, modell, utstyrsnivå] i nærheten av [by eller postnummer]. Finn [3-5] forhandlere som har denne bilen på lager, og skriv en e-post til hver av dem der du ber om en skriftlig 'out-the-door'-pris som spesifiserer skatter, avgifter og alle tilleggsutstyr. Hvis et tilbud ikke stemmer med annonseprisen, skriv et høflig svar der du ber dem forklare forskjellen og matche annonseprisen skriftlig. Vent på min godkjenning før du sender noen e-poster."
+  },
+  {
+    "id": "sett-opp-ny-laptop-med-claude-og-arch-linux",
+    "title": "Bruk Claude til å speile et Arch Linux-oppsett på en ny laptop",
+    "description": "Se hvordan man bruker Claude til å automatisere oppsettet av en ny maskin slik at den blir en eksakt kopi av et eksisterende arbeidsmiljø.",
+    "agents": [
+      "claude"
+    ],
+    "category": "programvare-devops",
+    "source": "Reddit",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://www.reddit.com/r/technology/comments/1s3cbn3/anthropic_says_claude_can_now_use_your_computer",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-05",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker brukte Claude til å lage en Arch Linux live USB og konfigurere en ny laptop slik at den speilet en eksisterende maskin. Dette inkluderte installasjon av pakker, konfigurasjon av dotfiles og oppsett av skrivebordsmiljøet.",
+    "howItWent": "Ved å la agenten håndtere de tekniske detaljene og kommandoene, kunne brukeren raskt få et ferdig oppsatt arbeidsmiljø uten å måtte huske alle spesifikke konfigurasjonssteg manuelt.",
+    "worthKnowing": "Når man bruker agenter til systemkonfigurasjon, er det kritisk å be dem vise alle kommandoer som skriver til disk eller endrer systeminnstillinger før de utføres.",
+    "promptTemplate": "Jeg har en ny laptop [modell] som jeg vil at skal matche min eksisterende Arch Linux-maskin. Inspiser denne maskinens installerte pakker, dotfiles og skrivebordsmiljø, og skriv deretter et script og notater for å gjenskape dette på den nye maskinen. Inkluder også steg for å bygge en Arch live USB på [enhetsbane]. Vis meg alle kommandoer som skriver til disk før de kjøres, og avslutt med en sjekkliste for å verifisere det nye oppsettet."
+  },
+  {
     "id": "paralell-claude-testing-med-adb",
     "title": "Kjør parallelle Claude-sesjoner for å bygge og teste apper med ADB",
     "description": "Se hvordan en utvikler bruker mange parallelle Claude-sesjoner og ADB for å drive mobil-apper og feilsøke i sanntid.",
@@ -145,7 +187,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "Ga Claude skrivebeskyttet tilgang til AWS-miljøet for å undersøke komplekse problemer i stedet for å manuelt lese logger og sjekke databaser.",
     "howItWent": "Det løste problemer omtrent 10 ganger raskere, selv om man må være på vakt for at den av og til kan 'hallusinere' eller gi litt usikre svar.",
     "worthKnowing": "Claude er ekstremt effektiv til å navigere i sky-infrastruktur når den får se dataene direkte, noe som sparer enormt med tid for SRE-er og utviklere.",
-    "promptTemplate": "Jeg gir deg skrivebeskyttet tilgang til [min AWS-konto/profil], [loggkilde], og [database]. Undersøk dette problemet: [beskriv symptomet og når det startet]. Kjør kun skrivebeskyttede kommandoer, og ikke endre eller slett noe. Skriv en rapport med hva du fant, bevis for hver påstand (logglinjer, spørringer, ressurs-IDer), og alt du er usikker på, tydelig merket som et gjett."
+    "promptTemplate": "Jeg gir deg skrivebeskyttet tilgang til [min AWS-konto/profil], [loggkilde], og [database]. Undersøk dette problemet: [beskriv symptomet og når det startet]. Kjør kun skrivebeskyttede kommandoer, og ikke endre eller slett noe. Skriv en rapport med hva du fant, bevis for hver påstand (logglinjer, spørringer, ressurs-IDer), og alt du er usikker på, tydelig merket som et gjett.",
+    "trending": true
   },
   {
     "id": "personlig-assistent-via-telegram-med-n8n",
@@ -168,7 +211,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Systemet sparer brukeren for over 20 timer i uken ved å automatisere kjedelige oppgaver som e-post, kalender og research.",
     "worthKnowing": "Ved å kombinere verktøy som n8n, GPT-4, Claude, Airtable og Google Workspace, kan man skape et kraftfullt og billig alternativ til en menneskelig assistent.",
     "promptTemplate": "Hjelp meg med å bygge en personlig assistent i n8n som jeg kan sende meldinger til på Telegram med tekst eller stemmenotater. Lag en hoved-router-agent som sender forespørsler til spesialist-agenter for [f.eks. kalender, e-post, oppgaver, notater, research, kontakter, påminnelser, utgifter], og som transkriberer stemmemeldinger først. Systemet er ferdig når jeg kan sende en testforespørsel til hver spesialist og få et fornuftig svar, og enhver handling som sender e-post, booker noe eller sletter data må først vise meg hva den planlegger å gjøre og vente på min bekreftelse.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "automatiser-eiendomsforvaltning-med-chatgpt-dot",
@@ -212,7 +255,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Dette gjorde det mulig å utvikle og teste iOS-apper direkte fra en mobil enhet ved å flytte de tunge prosessene til skyen.",
     "worthKnowing": "Dette er et kraftig eksempel på hvordan AI-agenter kan fjerne hardware-begrensninger for utviklere.",
     "promptTemplate": "Start en Cursor-skyagent på mitt repo [repo URL] for å bygge min iOS-app [kort beskrivelse] uten at jeg trenger en Mac på min side. Den skal bygge appen, installere den på en simulator eller enhet ved hjelp av [byggverktøy eller tjeneste], og rapportere hva den ser på skjermen. Fullfør når appen har startet og du har bekreftet at [nøkkel-skjerm eller funksjon] fungerer, og spør meg før du endrer signering, kontoer eller noe som koster penger.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "auto-handle-dealership-customer-sms-support",
@@ -1122,7 +1165,8 @@ export const useCases: UseCase[] = [
     "curatedFrom": "",
     "whatTheyDid": "",
     "howItWent": "",
-    "worthKnowing": ""
+    "worthKnowing": "",
+    "trending": true
   },
   {
     "id": "openclaw-hverdag",
