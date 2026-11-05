@@ -152,6 +152,15 @@
       "seoTaskToday": "SITEMAP-KONSISTENS",
       "seoTaskResult": "Sjekket 5 tilfeldige sider. Ingen noindex-sider i sitemap funnet. Alle sjekkede sider var enten korrekt indekserte eller korrekt noindex utenfor sitemap.",
       "notes": ""
+    },
+    {
+      "date": "2026-11-05",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "INTERNLENKE-DEKNING",
+      "seoTaskResult": "Sjekket 3 tilfeldige /bruk/ sider. Alle hadde 'Flere lignende use cases'-seksjonen.",
+      "notes": ""
     }
   ]
 }
