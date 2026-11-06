@@ -24,6 +24,26 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "oversettelse-av-japanske-parabler-med-agent-flate",
+    "title": "Bruk en flåte av agenter til å oversette japanske parabler",
+    "description": "Lær hvordan man kan bruke en gruppe agenter til å finne, oversette og organisere middelalderske japanske buddhistiske parabler for språklæring.",
+    "agents": [
+      "claude-code"
+    ],
+    "category": "innhold-kreativt",
+    "source": "Hacker News",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50375427",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-06",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker kjørte en flåte på ca. 10 agenter som lette etter middelalderske japanske buddhistiske parabler på nettet, oversatte dem, og matet dem inn i et skreddersydd grensesnitt for språklæring.",
+    "howItWent": "Agentene håndterte både kildesøk, oversettelse og organisering av tekst og ordlister, noe som gjorde det mulig å utføre omfattende språkarbeid automatisk.",
+    "worthKnowing": "Ved å delegere mange små, spesialiserte oppgaver til flere agenter samtidig, kan man utføre forsknings- og oversettelsesprosjekter i en skala som er umulig manuelt."
+  },
+  {
     "id": "finn-restaurant-til-store-grupper",
     "title": "Bruk AI for å finne restaurantbord til store grupper",
     "description": "Lær hvordan man bruker ChatGPT til å finne ledige bord, sammenligne menyer, lokasjoner og priser for store selskaper, og generere en oversiktlig HTML-sammenligning.",
@@ -421,7 +441,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Comet klarte å løse Wordle på fire forsøk og kunne skrive algebra-oppgaver i Canvas. Den slet imidlertid med mer komplekse oppgaver som Connections og produserte visuelt rotete lysbilder i Canva.",
     "worthKnowing": "Comet representerer et skifte fra chatbot-basert AI til en 'agentisk nettleser' som kan operere i det faktiske brukergrensesnittet til nettsider.",
     "promptTemplate": "Åpne [Wordle eller en annen puslespill-URL] og løs dagens oppgave. Fortell meg hvert forsøk og hvorfor du valgte det. Stopp når oppgaven er løst eller du går tom for forsøk, og oppsummer hvordan det gikk. Ikke logg inn, send inn noe eller endre noen kontoinnstillinger uten å vise meg det først og vente på min tillatelse.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "slack-support-agent-doozy",
@@ -758,7 +778,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "En agent samlet inn fakta om flyturen — forsinkelse, årsak, billettype — og undersøkte hvilke refusjonsregler som faktisk gjaldt.",
     "howItWent": "Agenten skrev et utkast til refusjonskrav basert på det den fant, klart til gjennomgang og innsending.",
     "worthKnowing": "Reglene for flyrefusjon varierer mye mellom selskap og land — det er verdt å lese gjennom utkastet selv før det sendes, siden regelverket er komplekst.",
-    "promptTemplate": "Flyturen min med [flyselskap] fra [sted] til [sted] den [dato] ble [forsinket/kansellert]. Finn gjeldende refusjons- og kompensasjonsregler for dette selskapet og denne ruten, og skriv et utkast til klage/refusjonskrav basert på fakta jeg gir deg. Vis meg utkastet for gjennomlesning før noe sendes."
+    "promptTemplate": "Flyturen min med [flyselskap] fra [sted] til [sted] den [dato] ble [forsinket/kansellert]. Finn gjeldende refusjons- og kompensasjonsregler for dette selskapet og denne ruten, og skriv et utkast til klage/refusjonskrav basert på fakta jeg gir deg. Vis meg utkastet for gjennomlesning før noe sendes.",
+    "trending": true
   },
   {
     "id": "overvak-restaurantbord",
@@ -921,7 +942,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "",
     "howItWent": "",
     "worthKnowing": "",
-    "trending": true
+    "trending": false
   },
   {
     "id": "claude-code-visualisering",
@@ -1165,7 +1186,8 @@ export const useCases: UseCase[] = [
     "curatedFrom": "",
     "whatTheyDid": "",
     "howItWent": "",
-    "worthKnowing": ""
+    "worthKnowing": "",
+    "trending": true
   },
   {
     "id": "n8n-epost-godkjenning",

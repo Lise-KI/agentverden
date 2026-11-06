@@ -1568,6 +1568,74 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-06",
+      "addedUseCases": [
+        {
+          "id": "oversettelse-av-japanske-parabler-med-agent-flate",
+          "title": "Bruk en flåte av agenter til å oversette japanske parabler",
+          "category": "innhold-kreativt",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50375427",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-agent-fleet-to-translate-medieval-japanese-parables"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [
+        {
+          "id": "finn-restaurant-til-store-grupper",
+          "title": "Bruk AI for å finne restaurantbord til store grupper",
+          "why": [
+            "id finnes fra før",
+            "tittel finnes fra før",
+            "kilden er brukt fra før"
+          ]
+        },
+        {
+          "id": "automatiser-onboarding-av-b2b-klienter",
+          "title": "Automatiser onboarding av nye B2B-klienter med n8n",
+          "why": [
+            "id finnes fra før",
+            "tittel finnes fra før",
+            "kilden er brukt fra før"
+          ]
+        },
+        {
+          "id": "personlig-helse-og-trening-agent-med-openclaw",
+          "title": "Følg med på vekt, trening og restitusjon med en personlig agent",
+          "why": [
+            "id finnes fra før",
+            "kilden er brukt fra før"
+          ]
+        },
+        {
+          "id": "kategorisering-av-bankutskrifter-for-skatteforberedelse",
+          "title": "Automatiser kategorisering av bankutskrifter for skatteoppgjøret",
+          "why": [
+            "id finnes fra før",
+            "kilden er brukt fra før"
+          ]
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 saker. Trending rotert.",
+      "trendingSelected": [
+        "refusjon-fly",
+        "grok-bot-booking"
+      ],
+      "trendingReplaced": [
+        "perplexity-comet-browser-agent",
+        "cowork-hva-folk-bruker"
+      ],
+      "selfApprovalChecks": {
+        "oversettelse-av-japanske-parabler-med-agent-flate": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [
