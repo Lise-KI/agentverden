@@ -1500,6 +1500,74 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-06",
+      "addedUseCases": [
+        {
+          "id": "finn-restaurant-til-store-grupper",
+          "title": "Bruk AI for å finne restaurantbord til store grupper",
+          "category": "reise-bestilling",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50373701",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/find-restaurants-that-fit-a-party-of-16"
+        },
+        {
+          "id": "automatiser-onboarding-av-b2b-klienter",
+          "title": "Automatiser onboarding av nye B2B-klienter med n8n",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/n8n/comments/1tpkr2m/have_you_solved_any_real_world_business_problems",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/automate-b2b-client-onboarding-from-a-signed-contract"
+        }
+      ],
+      "pendingReview": [
+        {
+          "id": "personlig-helse-og-trening-agent-med-openclaw",
+          "title": "Følg med på vekt, trening og restitusjon med en personlig agent",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://notesbylex.com/6-months-of-openclaw",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/track-weight-stretching-and-recovery-with-a-personal-agent"
+        },
+        {
+          "id": "kategorisering-av-bankutskrifter-for-skatteforberedelse",
+          "title": "Automatiser kategorisering av bankutskrifter for skatteoppgjøret",
+          "category": "penger-regninger",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/hermesagent/comments/1vbmn56/what_have_you_done_with_hermes_agent_this_week",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/categorize-bank-statements-by-payee-for-taxes"
+        }
+      ],
+      "rejected": [
+        {
+          "id": "oversettelse-av-japanske-parabler-med-agent-flåte",
+          "title": "Bruk en flåte av agenter til å oversette japanske parabler",
+          "why": [
+            "id må være kebab-case"
+          ]
+        }
+      ],
+      "changesOther": "isNew-opprydding: 0 saker. Trending rotert.",
+      "trendingSelected": [
+        "cowork-hva-folk-bruker",
+        "perplexity-comet-browser-agent"
+      ],
+      "trendingReplaced": [
+        "diagnose-aws-problemer-med-claude",
+        "n8n-personlig-assistent"
+      ],
+      "selfApprovalChecks": {
+        "finn-restaurant-til-store-grupper": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "automatiser-onboarding-av-b2b-klienter": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [

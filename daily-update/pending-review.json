@@ -1,0 +1,44 @@
+[
+  {
+    "id": "personlig-helse-og-trening-agent-med-openclaw",
+    "title": "Følg med på vekt, trening og restitusjon med en personlig agent",
+    "description": "Se hvordan OpenClaw kan brukes som en personlig helse-tracker som logger mat, vekt og treningsøkter via WhatsApp.",
+    "agents": [
+      "openclaw"
+    ],
+    "category": "hus-hverdag",
+    "source": "Notes by Lex",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://notesbylex.com/6-months-of-openclaw",
+    "sourceChecked": true,
+    "dateAdded": "2026-11-06",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Ved å bruke OpenClaw som et grensesnitt via WhatsApp, logget en bruker vekt, matinntak, stretching og restitusjon over seks måneder.",
+    "howItWent": "Brukeren gikk ned fra 94 kg til 80 kg ved å bruke agenten til å holde oversikt over kaloriunderskudd og generere fremdriftsgrafer automatisk.",
+    "worthKnowing": "Dette viser hvordan AI-agenter kan fungere som et \"andreplass\" for personlig administrasjon og helseoppfølging i en uformell chat-kontekst.",
+    "queuedAt": "2026-11-06",
+    "curatedFromListingUrl": "https://agentusecases.ai/use-case/track-weight-stretching-and-recovery-with-a-personal-agent"
+  },
+  {
+    "id": "kategorisering-av-bankutskrifter-for-skatteforberedelse",
+    "title": "Automatiser kategorisering av bankutskrifter for skatteoppgjøret",
+    "description": "Lær hvordan Hermes Agent kan brukes til å organisere månedlige kontoutskrifter i regneark sortert etter mottaker for enklere skattehåndtering.",
+    "agents": [
+      "egen-agent"
+    ],
+    "category": "penger-regninger",
+    "source": "Reddit",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://www.reddit.com/r/hermesagent/comments/1vbmn56/what_have_you_done_with_hermes_agent_this_week",
+    "sourceChecked": true,
+    "dateAdded": "2026-11-06",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker brukte Hermes Agent til å lese nedlastede månedlige kontoutskrifter, konvertere dem til regneark og kategorisere transaksjoner etter mottaker for å forenkle skattearbeidet.",
+    "howItWent": "Agenten klarte å strukturere uorganiserte finansielle data til et oversiktlig format som er klart til bruk i skattemeldingen.",
+    "worthKnowing": "Automatisering av finansielle data er et av de mest kraftfulle bruksområdene for agenter, men krever nøye kontroll på datakvalitet og kategorisering.",
+    "queuedAt": "2026-11-06",
+    "curatedFromListingUrl": "https://agentusecases.ai/use-case/categorize-bank-statements-by-payee-for-taxes"
+  }
+]

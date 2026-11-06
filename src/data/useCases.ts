@@ -24,6 +24,46 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "finn-restaurant-til-store-grupper",
+    "title": "Bruk AI for å finne restaurantbord til store grupper",
+    "description": "Lær hvordan man bruker ChatGPT til å finne ledige bord, sammenligne menyer, lokasjoner og priser for store selskaper, og generere en oversiktlig HTML-sammenligning.",
+    "agents": [
+      "chatgpt"
+    ],
+    "category": "reise-bestilling",
+    "source": "Hacker News",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50373701",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-06",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker trengte å bestille bord til 16 personer for en feiring. Vedkommende brukte ChatGPT til å finne ledige bord, sammenligne menyer, bilder, lokasjoner og priser for passende restauranter.",
+    "howItWent": "ChatGPT laget et ferdig HTML-dokument med alle de beste alternativene. Dette sparte brukeren for timevis med manuelt researcharbeid på Google og Yelp.",
+    "worthKnowing": "Verktøyet erstattet behovet for å lete gjennom utallige nettsider og gjorde prosessen med å planlegge store middager langt mer effektiv."
+  },
+  {
+    "id": "automatiser-onboarding-av-b2b-klienter",
+    "title": "Automatiser onboarding av nye B2B-klienter med n8n",
+    "description": "Se hvordan en n8n-workflow kan automatisere prosessen fra signert kontrakt til CRM-oppdatering, Slack-varsling og oppsett av sandbox.",
+    "agents": [
+      "n8n"
+    ],
+    "category": "jobb-drift",
+    "source": "Reddit",
+    "sourceDate": "november 2026",
+    "sourceUrl": "https://www.reddit.com/r/n8n/comments/1tpkr2m/have_you_solved_any_real_world_business_problems",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-06",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker satte opp en arbeidsflyt i n8n som automatisk tar imot en signert kontrakt, oppdaterer CRM-systemet, sender et varsel til Slack, klargjør en sandbox-miljø og starter en velkomst-epost-sekvens.",
+    "howItWent": "Prosessen som tidligere tok 45 minutter manuelt, ble redusert til bare 2 minutter med den automatiserte arbeidsflyten.",
+    "worthKnowing": "Dette er et kroneksempel på hvordan lavkode-verktøy som n8n kan fjerne repeterende administrative oppgaver i en bedrift."
+  },
+  {
     "id": "forhandle-bilpriser-via-epost",
     "title": "Forhandle bilpriser direkte med forhandlere via e-post",
     "description": "Lær hvordan en AI-kjøpsagent automatiserer forhandlinger om bilpriser ved å sende detaljerte forespørsler og sikre at tilbudene stemmer med annonsene.",
@@ -188,7 +228,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Det løste problemer omtrent 10 ganger raskere, selv om man må være på vakt for at den av og til kan 'hallusinere' eller gi litt usikre svar.",
     "worthKnowing": "Claude er ekstremt effektiv til å navigere i sky-infrastruktur når den får se dataene direkte, noe som sparer enormt med tid for SRE-er og utviklere.",
     "promptTemplate": "Jeg gir deg skrivebeskyttet tilgang til [min AWS-konto/profil], [loggkilde], og [database]. Undersøk dette problemet: [beskriv symptomet og når det startet]. Kjør kun skrivebeskyttede kommandoer, og ikke endre eller slett noe. Skriv en rapport med hva du fant, bevis for hver påstand (logglinjer, spørringer, ressurs-IDer), og alt du er usikker på, tydelig merket som et gjett.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "personlig-assistent-via-telegram-med-n8n",
@@ -381,7 +421,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Comet klarte å løse Wordle på fire forsøk og kunne skrive algebra-oppgaver i Canvas. Den slet imidlertid med mer komplekse oppgaver som Connections og produserte visuelt rotete lysbilder i Canva.",
     "worthKnowing": "Comet representerer et skifte fra chatbot-basert AI til en 'agentisk nettleser' som kan operere i det faktiske brukergrensesnittet til nettsider.",
     "promptTemplate": "Åpne [Wordle eller en annen puslespill-URL] og løs dagens oppgave. Fortell meg hvert forsøk og hvorfor du valgte det. Stopp når oppgaven er løst eller du går tom for forsøk, og oppsummer hvordan det gikk. Ikke logg inn, send inn noe eller endre noen kontoinnstillinger uten å vise meg det først og vente på min tillatelse.",
-    "trending": false
+    "trending": true
   },
   {
     "id": "slack-support-agent-doozy",
@@ -881,7 +921,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "",
     "howItWent": "",
     "worthKnowing": "",
-    "trending": false
+    "trending": true
   },
   {
     "id": "claude-code-visualisering",
@@ -1166,7 +1206,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "",
     "howItWent": "",
     "worthKnowing": "",
-    "trending": true
+    "trending": false
   },
   {
     "id": "openclaw-hverdag",
