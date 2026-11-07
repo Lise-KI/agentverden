@@ -7,7 +7,7 @@
       "deltaSinceStart": 0,
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
       "seoTaskResult": "Sendte 50 nye URLer (Status 200)",
-      "notes": "F\u00f8rste kj\u00f8ring"
+      "notes": "Første kjøring"
     },
     {
       "date": "2026-10-22",
@@ -24,8 +24,8 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 0,
       "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
-      "seoTaskResult": "5/5 sider feilet p\u00e5 canonical (peker til URL med skr\u00e5strek til slutt)",
-      "notes": "Canonical-lenker i metadata har skr\u00e5strek (trailing slash), mens sitemap/URL-er ikke har det."
+      "seoTaskResult": "5/5 sider feilet på canonical (peker til URL med skråstrek til slutt)",
+      "notes": "Canonical-lenker i metadata har skråstrek (trailing slash), mens sitemap/URL-er ikke har det."
     },
     {
       "date": "2026-10-23",
@@ -60,7 +60,7 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 0,
       "seoTaskToday": "GOOGLE SEARCH CONSOLE",
-      "seoTaskResult": "Search Console ikke satt opp enn\u00e5 (krever at brukeren lukker Chrome lokalt \u00e9n gang slik at nettleserautomatisering kan logge inn) \u2014 hopp over",
+      "seoTaskResult": "Search Console ikke satt opp ennå (krever at brukeren lukker Chrome lokalt én gang slik at nettleserautomatisering kan logge inn) — hopp over",
       "notes": ""
     },
     {
@@ -69,7 +69,7 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 0,
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
-      "seoTaskResult": "Ingen nye sider \u00e5 sende",
+      "seoTaskResult": "Ingen nye sider å sende",
       "notes": ""
     },
     {
@@ -114,7 +114,7 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 3,
       "seoTaskToday": "INTERNLENKE-DEKNING",
-      "seoTaskResult": "Sjekket 3 tilfeldige /bruk/ sider. Alle hadde Flere lignende use cases-seksjonen med minst \u00e9n lenke.",
+      "seoTaskResult": "Sjekket 3 tilfeldige /bruk/ sider. Alle hadde Flere lignende use cases-seksjonen med minst én lenke.",
       "notes": ""
     },
     {
@@ -141,7 +141,7 @@
       "deltaSinceYesterday": 0,
       "deltaSinceStart": 3,
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
-      "seoTaskResult": "Ingen nye sider \u00e5 sende",
+      "seoTaskResult": "Ingen nye sider å sende",
       "notes": ""
     },
     {
@@ -170,6 +170,15 @@
       "seoTaskToday": "ROBOTS/STRUKTURERT DATA",
       "seoTaskResult": "robots.txt og JSON-LD sjekket for 2 sider. Begge var korrekte (inneholdt headline, description, inLanguage, mainEntityOfPage).",
       "notes": "Fant to use cases i useCases.ts som mangler i sitemap.xml (finn-restaurant-til-store-grupper, automatiser-onboarding-av-b2b-klienter), sannsynligvis fordi de mangler artikler."
+    },
+    {
+      "date": "2026-11-07",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "CANONICAL/META-SPOTSJEKK",
+      "seoTaskResult": "OK: 5/5 sider sjekket. Alle hadde korrekt canonical, title og meta description.",
+      "notes": ""
     }
   ]
 }
