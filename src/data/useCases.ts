@@ -40,7 +40,7 @@ export const useCases: UseCase[] = [
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
     "whatTheyDid": "Bruker en agent til å styre en Xianyu-sidebusiness. Agenten overvåker meldinger, svarer på spørsmål fra kjøpere, og forhandler om prisen på varer som er lagt ut for salg.",
-    "howItWent": "Gjennom en 15-dagers test resulterte det i 27 salg, noe som var nesten en dobling av tidligere salg uten AI. Agenten svarer på under 40 sekunder, noe som er kritisk for suksess på plattformen.",
+    "howItWent": "I løpet av en test på 15 dager ble det 27 salg. Det er nesten halvparten flere enn måneden før, da selgeren fulgte med selv. Svartiden gikk ned fra flere timer til under 40 sekunder, og på Xianyu er det ofte den som svarer først, som får salget.",
     "worthKnowing": "Siden Xianyu ikke har et åpent API, bruker løsningen nettleserautomatisering. Man må sette strenge regler for pris (gulvpris og maks rabatt) for å unngå feil, og simulere menneskelig oppførsel for å unngå sanksjoner fra plattformen."
   },
   {
