@@ -24,6 +24,46 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "xianyu-resale-ai-agent",
+    "title": "Selg brukte ting på Xianyu med en AI-agent",
+    "description": "En AI-agent som automatiserer salg av brukte varer på den kinesiske markedsplassen Xianyu ved å håndtere meldinger, pruting og prisendringer.",
+    "agents": [
+      "openclaw"
+    ],
+    "category": "shopping-errend",
+    "source": "Zyentor",
+    "sourceDate": "juli 2026",
+    "sourceUrl": "https://www.zyentor.com/news/6562",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-07",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Bruker en agent til å styre en Xianyu-sidebusiness. Agenten overvåker meldinger, svarer på spørsmål fra kjøpere, og forhandler om prisen på varer som er lagt ut for salg.",
+    "howItWent": "Gjennom en 15-dagers test resulterte det i 27 salg, noe som var nesten en dobling av tidligere salg uten AI. Agenten svarer på under 40 sekunder, noe som er kritisk for suksess på plattformen.",
+    "worthKnowing": "Siden Xianyu ikke har et åpent API, bruker løsningen nettleserautomatisering. Man må sette strenge regler for pris (gulvpris og maks rabatt) for å unngå feil, og simulere menneskelig oppførsel for å unngå sanksjoner fra plattformen."
+  },
+  {
+    "id": "chase-invoices-squad",
+    "title": "Automatiser purring av utestående fakturaer med et agent-team",
+    "description": "Et system som bruker spesialiserte AI-agenter til å analysere fakturaer, generere personlige purringer og håndtere svar fra kunder.",
+    "agents": [
+      "claude-code"
+    ],
+    "category": "jobb-drift",
+    "source": "DEV Community",
+    "sourceDate": "desember 2025",
+    "sourceUrl": "https://dev.to/fracabu/i-built-a-squad-of-ai-agents-to-chase-invoices-for-me-ojm",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-07",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "Bygget \"PayMind\", et system der tre spesialiserte agenter (orchestrert av Claude Code) samarbeider om å håndtere hele betalingssyklusen: fra analyse av ubetalte fakturaer til å skrive skreddersydde e-poster og håndtere tilbakemeldinger.",
+    "howItWent": "Systemet bruker ulike modeller (f.eks. Gemini for billig arbeid og Claude Sonnet for vanskelige forhandlinger) for å gjøre jobben effektivt og billig, noe som fjerner den mentale belastningen ved manuell purring.",
+    "worthKnowing": "Systemet kan sende meldinger via e-post, SMS og WhatsApp, og bruker NLP for å forstå kundens svar (f.eks. om de lover å betale snart) slik at purringene kan pauses automatisk."
+  },
+  {
     "id": "oversettelse-av-japanske-parabler-med-agent-flate",
     "title": "Bruk en flåte av agenter til å oversette japanske parabler",
     "description": "Lær hvordan man kan bruke en gruppe agenter til å finne, oversette og organisere middelalderske japanske buddhistiske parabler for språklæring.",
@@ -240,7 +280,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "november 2026",
     "sourceUrl": "https://news.ycombinator.com/item?id=50306875",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-01",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -263,7 +303,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "november 2026",
     "sourceUrl": "https://www.reddit.com/r/n8n/comments/1mugdof/i_built_an_ai_agent_army_in_n8n_that_completely",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-01",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -285,7 +325,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "november 2026",
     "sourceUrl": "https://www.reddit.com/r/AI_Agents/comments/1wuni7i/i_built_ai_agents_to_save_time_now_im_chasing",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-01",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -307,7 +347,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "november 2026",
     "sourceUrl": "https://www.reddit.com/r/cursor/comments/1vc2y8u/cursor_cloud_agent_can_build_install_and_drive",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-01",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -611,7 +651,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Etter å ha testet flere tale-løsninger landet oppsettet på en lokal, gratis talemodell som kjører på egen Mac uten nettavhengighet. Lydbriefen blir rundt 8–10 minutter, legges ut som en podkast-episode klokken 05 hver morgen, og brukeren lytter til den på morgenturen. Selve byggingen tok rundt to timer i én arbeidssesjon.",
     "worthKnowing": "Oppsettet krever en datamaskin som faktisk er på 24/7 for å kjøre den nattlige jobben, og en del prøving og feiling med valg av taleløsning før resultatet ble naturlig å høre på — brukeren beskriver det første forsøket med macOS' innebygde opplesning som \"helt robotaktig og ulyttbart\". Verdt å vite før man forventer et perfekt resultat på første forsøk.",
     "promptTemplate": "Hver natt klokken [tidspunkt]: hent nye e-poster merket [navn på merkelapp/mappe for nyhetsbrev] fra innboksen min siden forrige kjøring. Filtrer bort rene reklame-/kampanjebrev. Lag en sammenhengende, samtaleaktig lydoppsummering (ikke en punktliste) av det som faktisk er nytt eller endret siden i går, maks [lengde] minutter. Spill den inn med en norsk tale-stemme, og legg den et sted jeg kan høre på uten å måtte åpne en app for å lese.",
-    "trending": false
+    "trending": true
   },
   {
     "id": "handel-fire-modeller",
@@ -779,7 +819,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Agenten skrev et utkast til refusjonskrav basert på det den fant, klart til gjennomgang og innsending.",
     "worthKnowing": "Reglene for flyrefusjon varierer mye mellom selskap og land — det er verdt å lese gjennom utkastet selv før det sendes, siden regelverket er komplekst.",
     "promptTemplate": "Flyturen min med [flyselskap] fra [sted] til [sted] den [dato] ble [forsinket/kansellert]. Finn gjeldende refusjons- og kompensasjonsregler for dette selskapet og denne ruten, og skriv et utkast til klage/refusjonskrav basert på fakta jeg gir deg. Vis meg utkastet for gjennomlesning før noe sendes.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "overvak-restaurantbord",
@@ -799,7 +839,8 @@ export const useCases: UseCase[] = [
     "curatedFrom": "agentusecases.ai",
     "whatTheyDid": "En bruker satte en reiseagent til å overvåke en populær restaurant for en ledig bordplass til to personer.",
     "howItWent": "Så snart en plass ble ledig, bestilte agenten bordet automatisk og sendte en tekstmelding til brukeren med bekreftelse på tidspunktet.",
-    "worthKnowing": "Denne typen automatisk overvåking fungerer best for populære steder med høy etterspørsel, der manuell sjekking ville krevd stadig tilbakevending til samme side."
+    "worthKnowing": "Denne typen automatisk overvåking fungerer best for populære steder med høy etterspørsel, der manuell sjekking ville krevd stadig tilbakevending til samme side.",
+    "trending": true
   },
   {
     "id": "overvak-bord-priser",
@@ -1187,7 +1228,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "",
     "howItWent": "",
     "worthKnowing": "",
-    "trending": true
+    "trending": false
   },
   {
     "id": "n8n-epost-godkjenning",

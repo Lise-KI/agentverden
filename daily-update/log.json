@@ -1636,6 +1636,51 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-07",
+      "addedUseCases": [
+        {
+          "id": "xianyu-resale-ai-agent",
+          "title": "Selg brukte ting på Xianyu med en AI-agent",
+          "category": "shopping-errend",
+          "sourcePrimaryUrl": "https://www.zyentor.com/news/6562",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/run-a-xianyu-resale-side-business-with-an-ai-agent"
+        },
+        {
+          "id": "chase-invoices-squad",
+          "title": "Automatiser purring av utestående fakturaer med et agent-team",
+          "category": "jobb-drift",
+          "sourcePrimaryUrl": "https://dev.to/fracabu/i-built-a-squad-of-ai-agents-to-chase-invoices-for-me-ojm",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/chase-overdue-invoices-with-a-squad-of-agents"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [],
+      "changesOther": "isNew-opprydding: 4 saker. Trending rotert.",
+      "trendingSelected": [
+        "ai-nyhetsbrev-podkast",
+        "overvak-restaurantbord"
+      ],
+      "trendingReplaced": [
+        "refusjon-fly",
+        "grok-bot-booking"
+      ],
+      "selfApprovalChecks": {
+        "xianyu-resale-ai-agent": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "chase-invoices-squad": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [
