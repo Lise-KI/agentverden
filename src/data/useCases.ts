@@ -60,8 +60,8 @@ export const useCases: UseCase[] = [
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
     "whatTheyDid": "En bruker sendte fire ulike AI-shoppingagenter gjennom en nettbutikk fylt med \"dark patterns\", som skjulte gebyrer, forhåndsavkryssede tilleggstjenester og falsk hastverk, for å se om de klarte å fullføre et kjøp på en ryddig måte.",
-    "howItWent": "Resultatene viste at de mest avanserte modellene klarte utfordringene nesten perfekt, mens mindre modeller som Haiku fortsatt kunne bli lurt til å la varemerker stå avkrysset.",
-    "worthKnowing": "Dette understreker viktigheten av å bruke modeller med \"computer use\"-kapasitet når man skal delegere oppgaver som krever navigering i komplekse og potensielt manipulerende brukergrensesnitt."
+    "howItWent": "ChatGPT, Claude Opus 5.5 og Claude Sonnet 5.5 fikk alle 100 av 100 poeng og unngikk samtlige feller. Haiku 5.5 fikk 95 poeng, fordi den lot boksen for markedsførings-e-post stå avkrysset. Siden de enkle fellene ikke lurte de største modellene, planlegger brukeren en vanskeligere runde med feller som prøver å overtale agenten til et dårligere valg.",
+    "worthKnowing": "Testbutikken hadde åtte produkter og sju vanlige feller, blant annet en dyrere kopi av samme vare, forhåndsavkryssede tillegg, dyrere frakt og falsk hastverk. Selv om de store modellene klarte seg godt, lønner det seg å se over handlekurven før du betaler, særlig avkryssede bokser."
   },
   {
     "id": "parent-helper-logistikk-for-familien",
@@ -81,7 +81,7 @@ export const useCases: UseCase[] = [
     "curatedFrom": "agentusecases.ai",
     "whatTheyDid": "En forelder bygde \"Parent Helper\", en open-source Claude Code-skill som bruker familie-data for å koordinere hvem som gjør hva i uken.",
     "howItWent": "Systemet kan planlegge måltider basert på hvem som faktisk har tid til å lage mat den kvelden, optimalisere matinnkjøp på tvers av flere butikker for å spare penger, og gi varsler om logistikk-konflikter.",
-    "worthKnowing": "Det geniale er at alt kjører lokalt som en \"skill\" i Claude Code, uten behov for en separat app eller database. Dette gjør det ekstremt fleksibelt og privat."
+    "worthKnowing": "Alt ligger i én SKILL.md-fil i Claude Code, så det trengs ingen egen app eller database. Husk at familieopplysningene, som timeplaner og samværskalender, likevel sendes til Claude når skillen brukes. Tenk derfor over hva du legger inn."
   },
   {
     "id": "xianyu-resale-ai-agent",
