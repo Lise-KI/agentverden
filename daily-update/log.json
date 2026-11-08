@@ -1681,6 +1681,63 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-08",
+      "addedUseCases": [
+        {
+          "id": "claude-cowork-salgsassistent",
+          "title": "Bygg en fullverdig salgsassistent med Claude Cowork",
+          "category": "salg-markedsforing",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/ClaudeCowork/comments/1rr54i6/i_turned_claude_cowork_into_a_full_sales",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/flag-warm-leads-in-email-with-a-sales-assistant"
+        },
+        {
+          "id": "test-ai-shopping-agenter-dark-patterns",
+          "title": "Kan AI-shoppingagenter gjennomskue lureri i nettbutikker?",
+          "category": "shopping-errend",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/AI_Agents/comments/1xbuwag/i_ran_4_ai_shopping_agents_through_a_store_full",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/test-ai-shopping-agents-against-dark-pattern-checkouts"
+        },
+        {
+          "id": "parent-helper-logistikk-for-familien",
+          "title": "Automatiser familie-logistikk med en personlig AI-assistent",
+          "category": "hus-hverdag",
+          "sourcePrimaryUrl": "https://www.reddit.com/r/ClaudeAI/comments/1rs75si/i_built_an_opensource_claude_code_skill_to_run",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/plan-weekly-family-logistics-around-schedules-and-custody"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [],
+      "changesOther": "isNew-opprydding: 2 saker. Trending rotert.",
+      "trendingSelected": [
+        "sett-opp-nattlig-github-sikkerhetskopiering",
+        "epostrydding-med-openclaw"
+      ],
+      "trendingReplaced": [
+        "ai-nyhetsbrev-podkast",
+        "overvak-restaurantbord"
+      ],
+      "selfApprovalChecks": {
+        "claude-cowork-salgsassistent": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "test-ai-shopping-agenter-dark-patterns": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "parent-helper-logistikk-for-familien": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [

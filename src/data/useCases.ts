@@ -24,6 +24,66 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "claude-cowork-salgsassistent",
+    "title": "Bygg en fullverdig salgsassistent med Claude Cowork",
+    "description": "Lær hvordan du kan bruke Claude Cowork til å automatisere salgsarbeidet, fra innboks-overvåking til personliggjort utsendelse og kunderesearch.",
+    "agents": [
+      "claude-cowork"
+    ],
+    "category": "salg-markedsforing",
+    "source": "Reddit",
+    "sourceDate": "November 2026",
+    "sourceUrl": "https://www.reddit.com/r/ClaudeCowork/comments/1rr54i6/i_turned_claude_cowork_into_a_full_sales",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-08",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker transformerte Claude Cowork til en omfattende salgsassistent som håndterer alt fra innboks-overvåking og \"warm lead\"-identifisering til dyp kunderesearch og utforming av personlige e-poster.",
+    "howItWent": "Ved å kombinere innboks-overvåking med automatisert research via Google Maps og LinkedIn, kunne brukeren redusere tiden brukt på manuelle oppgaver drastisk. Systemet fungerer ved å bruke spesialiserte \"skills\" i stedet for bare lange prompter.",
+    "worthKnowing": "Nøkkelen til suksess er å bygge solide, spesifikke arbeidsflyter (skills) i stedet for å prøve å styre alt med én stor prompt. Kvaliteten på utsendelser avhenger også sterkt av hvor godt man definerer sin \"Ideal Customer Profile\" (ICP) på forhånd."
+  },
+  {
+    "id": "test-ai-shopping-agenter-dark-patterns",
+    "title": "Kan AI-shoppingagenter gjennomskue lureri i nettbutikker?",
+    "description": "En test av hvordan ulike AI-modeller håndterer \"dark patterns\" og lureri i digitale kasseprosesser.",
+    "agents": [
+      "chatgpt-agent"
+    ],
+    "category": "shopping-errend",
+    "source": "Reddit",
+    "sourceDate": "November 2026",
+    "sourceUrl": "https://www.reddit.com/r/AI_Agents/comments/1xbuwag/i_ran_4_ai_shopping_agents_through_a_store_full",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-08",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker sendte fire ulike AI-shoppingagenter gjennom en nettbutikk fylt med \"dark patterns\", som skjulte gebyrer, forhåndsavkryssede tilleggstjenester og falsk hastverk, for å se om de klarte å fullføre et kjøp på en ryddig måte.",
+    "howItWent": "Resultatene viste at de mest avanserte modellene klarte utfordringene nesten perfekt, mens mindre modeller som Haiku fortsatt kunne bli lurt til å la varemerker stå avkrysset.",
+    "worthKnowing": "Dette understreker viktigheten av å bruke modeller med \"computer use\"-kapasitet når man skal delegere oppgaver som krever navigering i komplekse og potensielt manipulerende brukergrensesnitt."
+  },
+  {
+    "id": "parent-helper-logistikk-for-familien",
+    "title": "Automatiser familie-logistikk med en personlig AI-assistent",
+    "description": "Bruk Claude Code til å håndtere uforutsigbare ukesplaner, måltider og henting i barnehage/skole.",
+    "agents": [
+      "claude-code"
+    ],
+    "category": "hus-hverdag",
+    "source": "Reddit",
+    "sourceDate": "November 2026",
+    "sourceUrl": "https://www.reddit.com/r/ClaudeAI/comments/1rs75si/i_built_an_opensource_claude_code_skill_to_run",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-08",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En forelder bygde \"Parent Helper\", en open-source Claude Code-skill som bruker familie-data for å koordinere hvem som gjør hva i uken.",
+    "howItWent": "Systemet kan planlegge måltider basert på hvem som faktisk har tid til å lage mat den kvelden, optimalisere matinnkjøp på tvers av flere butikker for å spare penger, og gi varsler om logistikk-konflikter.",
+    "worthKnowing": "Det geniale er at alt kjører lokalt som en \"skill\" i Claude Code, uten behov for en separat app eller database. Dette gjør det ekstremt fleksibelt og privat."
+  },
+  {
     "id": "xianyu-resale-ai-agent",
     "title": "Selg brukte ting på Xianyu med en AI-agent",
     "description": "En AI-agent som automatiserer salg av brukte varer på den kinesiske markedsplassen Xianyu ved å håndtere meldinger, pruting og prisendringer.",
@@ -240,7 +300,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "April 2026",
     "sourceUrl": "https://www.reddit.com/r/automation/comments/1stbu1c/heres_the_actual_agent_setup_im_running_for_my",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-02",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -260,7 +320,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "Oktober 2026",
     "sourceUrl": "https://actuallymaybe.com/blog/agentic-ai-anki-flashcard-creation/",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-02",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -438,7 +498,8 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "Brukeren ga en enkel instruksjon til Hermes via Telegram om å utføre nattlige oppdateringer til GitHub.",
     "howItWent": "Hermes identifiserte de nødvendige ferdighetene (skills), opprettet en planlagt jobb (cron job) og utførte sikkerhetskopieringen hver natt uten ytterligere inngripen.",
     "worthKnowing": "Dette er en enkel måte å sikre at alt arbeid (minne, ferdigheter og konfigurasjon) blir tatt vare på, selv om man skulle miste tilgangen til den opprinnelige serveren.",
-    "promptTemplate": "Hver natt klokken '00':00 sentral tid, push endringer til dette GitHub-'repositoriet': [repo URL]."
+    "promptTemplate": "Hver natt klokken '00':00 sentral tid, push endringer til dette GitHub-'repositoriet': [repo URL].",
+    "trending": true
   },
   {
     "id": "claude-code-chrome-extension-ceo",
@@ -545,7 +606,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Agenten gikk gjennom hele innboksen i løpet av rundt 20 minutter. Av 847 nyhetsbrev-e-poster meldte den seg av 203 lister og sorterte resten i riktige kategorier. Utvikleren tok en stikkprøve av rundt 50 av e-postene etterpå og fant en treffsikkerhet på omtrent 90 prosent. Noen få legitime e-poster fra en kunde som bruker et markedsføringsverktøy, ble feilaktig behandlet som reklame, men utvikleren beskrev resultatet samlet som imponerende. Selve jobben kostet rundt 8 dollar i API-bruk, med Claude Sonnet 3.5 som underliggende modell.",
     "worthKnowing": "Testen ble kjørt med en engangs-Gmail-konto, ikke en ekte, personlig konto — utvikleren brukte et eget, isolert testoppsett uten tilgang til ekte kontoer eller sitt vanlige nettverk, nettopp for å prøve ut agenten trygt. Prisen varierer mye med hvilken modell man 'velger': enkle oppgaver som e-postsortering går fint med billigere modeller, mens tyngre research-oppgaver med skjermbilder og nettlesing (en annen oppgave i samme test kostet rundt 22 dollar) blir dyrere, fordi hvert skjermbilde agenten tar utløser et eget API-kall til en synsmodell.",
     "promptTemplate": "Koble [KI-agent-plattform] til en test-e-postkonto og be 'den': «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte.",
-    "trending": false
+    "trending": true
   },
   {
     "id": "ki-agent-gammel-nokia-telefon",
@@ -651,7 +712,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Etter å ha testet flere tale-løsninger landet oppsettet på en lokal, gratis talemodell som kjører på egen Mac uten nettavhengighet. Lydbriefen blir rundt 8–10 minutter, legges ut som en podkast-episode klokken 05 hver morgen, og brukeren lytter til den på morgenturen. Selve byggingen tok rundt to timer i én arbeidssesjon.",
     "worthKnowing": "Oppsettet krever en datamaskin som faktisk er på 24/7 for å kjøre den nattlige jobben, og en del prøving og feiling med valg av taleløsning før resultatet ble naturlig å høre på — brukeren beskriver det første forsøket med macOS' innebygde opplesning som \"helt robotaktig og ulyttbart\". Verdt å vite før man forventer et perfekt resultat på første forsøk.",
     "promptTemplate": "Hver natt klokken [tidspunkt]: hent nye e-poster merket [navn på merkelapp/mappe for nyhetsbrev] fra innboksen min siden forrige kjøring. Filtrer bort rene reklame-/kampanjebrev. Lag en sammenhengende, samtaleaktig lydoppsummering (ikke en punktliste) av det som faktisk er nytt eller endret siden i går, maks [lengde] minutter. Spill den inn med en norsk tale-stemme, og legg den et sted jeg kan høre på uten å måtte åpne en app for å lese.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "handel-fire-modeller",
@@ -840,7 +901,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "En bruker satte en reiseagent til å overvåke en populær restaurant for en ledig bordplass til to personer.",
     "howItWent": "Så snart en plass ble ledig, bestilte agenten bordet automatisk og sendte en tekstmelding til brukeren med bekreftelse på tidspunktet.",
     "worthKnowing": "Denne typen automatisk overvåking fungerer best for populære steder med høy etterspørsel, der manuell sjekking ville krevd stadig tilbakevending til samme side.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "overvak-bord-priser",
