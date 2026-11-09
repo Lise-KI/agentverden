@@ -188,6 +188,15 @@
       "seoTaskToday": "INDEXNOW-PING AV NYTT INNHOLD",
       "seoTaskResult": "Ingen nye sider å sende",
       "notes": "Sjekket sitemap mot indexnow-submitted.json. Alle 50 URL-er var allerede registrert."
+    },
+    {
+      "date": "2026-11-09",
+      "subscriberCount": 3,
+      "deltaSinceYesterday": 0,
+      "deltaSinceStart": 3,
+      "seoTaskToday": "SITEMAP-KONSISTENS",
+      "seoTaskResult": "Sjekket 5 tilfeldige sider. Ingen noindex funnet, men 4 av 5 sider mangler i sitemap.xml.",
+      "notes": ""
     }
   ]
 }
