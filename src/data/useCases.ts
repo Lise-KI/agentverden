@@ -26,7 +26,7 @@ export const useCases: UseCase[] = [
   {
     "id": "stemme-styrt-email-og-reiseplanlegging",
     "title": "Styr reiseprogram og e-post med stemmekommandoer",
-    "description": "Lær hvordan en bruker bruker Grok Bot via stemme for å håndtere e-post, kalender, forespørsler og reisebestillinger i én sammenhengende samtale.",
+    "description": "En bruker fikk Grok Bot til å ta seg av e-post, kalender, lunsj, hotell og taxi i én telefonsamtale.",
     "agents": [
       "grok-bot"
     ],
@@ -39,14 +39,14 @@ export const useCases: UseCase[] = [
     "dateAdded": "2026-11-09",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
-    "whatTheyDid": "En bruker gjennomførte en 30-minutters samtale med en bot som svarte på 20 e-poster, planla kalenderen, skrev et tilbud, bestilte lunsj, booket hotell og ordnet taxi.",
-    "howItWent": "Systemet fungerte sømløst ved å bruke stemme for å navigere gjennom en liste med oppgaver. Brukeren kunne gi instruksjoner for flere komplekse oppgaver i rekkefølge, og boten utførte dem med bekreftelser underveis.",
-    "worthKnowing": "Nøkkelen er å bruke en bot som tillater kontroll over rekkefølgen av oppgaver, og som krever bekreftelse før den utfører handlinger som involverer penger eller innsending av e-post."
+    "whatTheyDid": "En bruker ringte Grok Bot og ga den oppgaver muntlig, én etter én, i en samtale som varte i en halvtime.",
+    "howItWent": "Ifølge brukeren svarte boten på omtrent 20 e-poster, planla ukas kalender, skrev et tilbud, bestilte lunsj, booket og betalte et hotell og ordnet taxi til flyplassen. Det er brukerens egen beskrivelse på X, gjengitt av Paralect, og ikke en test.",
+    "worthKnowing": "Her betalte boten hotellet selv. Gir du en agent tilgang til e-post og betaling, bør du kreve at den spør deg før den sender eller betaler noe."
   },
   {
     "id": "overvak-github-pull-requests-med-self-healing",
     "title": "Bruk en selv-reparerende agent til å overvåke GitHub Pull Requests",
-    "description": "Se hvordan en OpenClaw-agent automatisk overvåker Pull Requests, oppdager feil i CI/CD og varsler utviklere i sanntid.",
+    "description": "Se hvordan en OpenClaw-agent passer på at et overvåkingsskript for pull requests faktisk kjører, og varsler om endringer.",
     "agents": [
       "openclaw"
     ],
@@ -59,14 +59,14 @@ export const useCases: UseCase[] = [
     "dateAdded": "2026-11-09",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
-    "whatTheyDid": "En OpenClaw-agent overvåker over 26 Pull Requests på tvers av flere repositorier. Den sjekker hvert 5. minutt for nye kommentarer, feil i CI-sjekker, merge-konflikter eller merges.",
-    "howItWent": "Agenten klarte faktisk å fange opp en av sine egne kritiske bugs ved å oppdage en feil i en CI-sjekk som den selv hadde utløst. Den varsler utviklere direkte via Telegram/chat når noe krever oppmerksomhet.",
-    "worthKnowing": "Dette reduserer den kognitive belastningen for utviklere ved å filtrere bort støy og kun varsle når det faktisk er en handling som kreves. Det viser også styrken i å ha en \"self-healing\" loop hvor agenten kan foreslå rettelser."
+    "whatTheyDid": "Et skript sjekker over 26 pull requests i 13 repoer hvert 5. minutt og fanger opp kommentarer, vurderinger, statusendringer og merges. Hver halvtime sjekker OpenClaw-agenten at skriptet virker, og sender nye varsler videre via Feishu.",
+    "howItWent": "Den forrige versjonen av skriptet brukte .ends(), som ikke finnes i Python, i stedet for .endswith(). Skriptet skulle ha kjørt i 18 dager, men krasjet allerede første gang. Feilen ble først oppdaget da utvikleren la til en egen kontrolljobb (watchdog), som meldte at loggfilen manglet.",
+    "worthKnowing": "Utviklerens poeng er at et enkelt skript bør gjøre rutinejobben, mens agenten tar avgjørelsene. Sjekk også at selve overvåkingen virker: en overvåking som står stille, gir falsk trygghet. I dag ville han brukt GitHub-webhooks i stedet for å spørre hvert 5. minutt."
   },
   {
     "id": "bygg-tysk-laeringsapp-med-claude",
     "title": "Lag en app for å lære tysk ved hjelp av Claude",
-    "description": "Se hvordan en bruker bruker Claude daglig for å utvikle apper, inkludert en språk-læringsapp for sin partner.",
+    "description": "En utvikler bruker Claude hver dag til å lage apper. Den siste er en app som skal hjelpe kjæresten å lære tysk.",
     "agents": [
       "claude"
     ],
@@ -79,9 +79,9 @@ export const useCases: UseCase[] = [
     "dateAdded": "2026-11-09",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
-    "whatTheyDid": "En bruker benyttet Claude til å utvikle en enkel app for språklæring (tysk), med funksjoner som ordforråds-flashcards, korte quizer og dagligdagse fraser.",
-    "howItWent": "Prosessen involverte å be Claude om å foreslå filstruktur og en grunnleggende fungerende versjon som kan kjøres lokalt, noe som gjorde utviklingshastigheten betydelig høyere.",
-    "worthKnowing": "For best resultat bør man be AI-en om å starte med en plan (filstruktur) før den genererer selve koden, slik at man har kontroll på arkitekturen fra start."
+    "whatTheyDid": "En bruker på Hacker News skriver at han bruker Claude Pro hver dag til å lage apper og nettsider. Det siste han laget, var en app for kjæresten, som nettopp hadde flyttet til Tyskland og ville lære tysk på en morsom måte.",
+    "howItWent": "Han kaller Claude Pro «det beste valget i livet mitt» og bruker Claude til nesten alt. Han sier ingenting om hva appen kan, hvor lang tid den tok, eller hvordan han gikk fram.",
+    "worthKnowing": "Kilden er én kort kommentar, så dette er et eksempel på bruk og ikke en oppskrift. Til enkle spørsmål og research bruker han Gemini, og til bilder ChatGPT eller AI-en i Canva."
   },
   {
     "id": "claude-cowork-salgsassistent",
