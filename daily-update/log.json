@@ -1738,6 +1738,63 @@
       "gitCommit": null,
       "emailedReportTo": "andreassf1@gmail.com",
       "by": "scripts/daily_update.mjs"
+    },
+    {
+      "date": "2026-11-09",
+      "addedUseCases": [
+        {
+          "id": "stemme-styrt-email-og-reiseplanlegging",
+          "title": "Styr reiseprogram og e-post med stemmekommandoer",
+          "category": "reise-bestilling",
+          "sourcePrimaryUrl": "https://www.paralect.com/stack/grok-bot",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/handle-email-calendar-proposals-and-travel-by-voice-call"
+        },
+        {
+          "id": "overvak-github-pull-requests-med-self-healing",
+          "title": "Bruk en selv-reparerende agent til å overvåke GitHub Pull Requests",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://dev.to/armorbreak/i-built-a-self-healing-pr-monitor-with-openclaw-and-it-caught-its-own-bugs-41e8",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/monitor-open-github-pull-requests-with-a-self-healing-agent"
+        },
+        {
+          "id": "bygg-tysk-laeringsapp-med-claude",
+          "title": "Lag en app for å lære tysk ved hjelp av Claude",
+          "category": "programvare-devops",
+          "sourcePrimaryUrl": "https://news.ycombinator.com/item?id=50411184",
+          "curatedFromListingUrl": "https://agentusecases.ai/use-case/build-a-german-learning-app-with-claude"
+        }
+      ],
+      "pendingReview": [],
+      "rejected": [],
+      "changesOther": "isNew-opprydding: 2 saker. Trending rotert.",
+      "trendingSelected": [
+        "personlig-assistent-via-telegram-med-n8n",
+        "datamaskin-bruk-repo"
+      ],
+      "trendingReplaced": [
+        "sett-opp-nattlig-github-sikkerhetskopiering",
+        "epostrydding-med-openclaw"
+      ],
+      "selfApprovalChecks": {
+        "stemme-styrt-email-og-reiseplanlegging": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "overvak-github-pull-requests-med-self-healing": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        },
+        "bygg-tysk-laeringsapp-med-claude": {
+          "duplicateCheck": "pass",
+          "sourceUrlCheck": "pass",
+          "fieldsCheck": "pass"
+        }
+      },
+      "gitCommit": null,
+      "emailedReportTo": "andreassf1@gmail.com",
+      "by": "scripts/daily_update.mjs"
     }
   ],
   "newsletterRuns": [

@@ -24,6 +24,66 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
+    "id": "stemme-styrt-email-og-reiseplanlegging",
+    "title": "Styr reiseprogram og e-post med stemmekommandoer",
+    "description": "Lær hvordan en bruker bruker Grok Bot via stemme for å håndtere e-post, kalender, forespørsler og reisebestillinger i én sammenhengende samtale.",
+    "agents": [
+      "grok-bot"
+    ],
+    "category": "reise-bestilling",
+    "source": "Paralect",
+    "sourceDate": "November 2026",
+    "sourceUrl": "https://www.paralect.com/stack/grok-bot",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-09",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker gjennomførte en 30-minutters samtale med en bot som svarte på 20 e-poster, planla kalenderen, skrev et tilbud, bestilte lunsj, booket hotell og ordnet taxi.",
+    "howItWent": "Systemet fungerte sømløst ved å bruke stemme for å navigere gjennom en liste med oppgaver. Brukeren kunne gi instruksjoner for flere komplekse oppgaver i rekkefølge, og boten utførte dem med bekreftelser underveis.",
+    "worthKnowing": "Nøkkelen er å bruke en bot som tillater kontroll over rekkefølgen av oppgaver, og som krever bekreftelse før den utfører handlinger som involverer penger eller innsending av e-post."
+  },
+  {
+    "id": "overvak-github-pull-requests-med-self-healing",
+    "title": "Bruk en selv-reparerende agent til å overvåke GitHub Pull Requests",
+    "description": "Se hvordan en OpenClaw-agent automatisk overvåker Pull Requests, oppdager feil i CI/CD og varsler utviklere i sanntid.",
+    "agents": [
+      "openclaw"
+    ],
+    "category": "programvare-devops",
+    "source": "Dev.to",
+    "sourceDate": "November 2026",
+    "sourceUrl": "https://dev.to/armorbreak/i-built-a-self-healing-pr-monitor-with-openclaw-and-it-caught-its-own-bugs-41e8",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-09",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En OpenClaw-agent overvåker over 26 Pull Requests på tvers av flere repositorier. Den sjekker hvert 5. minutt for nye kommentarer, feil i CI-sjekker, merge-konflikter eller merges.",
+    "howItWent": "Agenten klarte faktisk å fange opp en av sine egne kritiske bugs ved å oppdage en feil i en CI-sjekk som den selv hadde utløst. Den varsler utviklere direkte via Telegram/chat når noe krever oppmerksomhet.",
+    "worthKnowing": "Dette reduserer den kognitive belastningen for utviklere ved å filtrere bort støy og kun varsle når det faktisk er en handling som kreves. Det viser også styrken i å ha en \"self-healing\" loop hvor agenten kan foreslå rettelser."
+  },
+  {
+    "id": "bygg-tysk-laeringsapp-med-claude",
+    "title": "Lag en app for å lære tysk ved hjelp av Claude",
+    "description": "Se hvordan en bruker bruker Claude daglig for å utvikle apper, inkludert en språk-læringsapp for sin partner.",
+    "agents": [
+      "claude"
+    ],
+    "category": "programvare-devops",
+    "source": "Hacker News",
+    "sourceDate": "November 2026",
+    "sourceUrl": "https://news.ycombinator.com/item?id=50411184",
+    "sourceChecked": true,
+    "isNew": true,
+    "dateAdded": "2026-11-09",
+    "votes": 0,
+    "curatedFrom": "agentusecases.ai",
+    "whatTheyDid": "En bruker benyttet Claude til å utvikle en enkel app for språklæring (tysk), med funksjoner som ordforråds-flashcards, korte quizer og dagligdagse fraser.",
+    "howItWent": "Prosessen involverte å be Claude om å foreslå filstruktur og en grunnleggende fungerende versjon som kan kjøres lokalt, noe som gjorde utviklingshastigheten betydelig høyere.",
+    "worthKnowing": "For best resultat bør man be AI-en om å starte med en plan (filstruktur) før den genererer selve koden, slik at man har kontroll på arkitekturen fra start."
+  },
+  {
     "id": "claude-cowork-salgsassistent",
     "title": "Bygg en fullverdig salgsassistent med Claude Cowork",
     "description": "Lær hvordan du kan bruke Claude Cowork til å automatisere salgsarbeidet, fra innboks-overvåking til personliggjort utsendelse og kunderesearch.",
@@ -259,7 +319,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "november 2026",
     "sourceUrl": "https://news.ycombinator.com/item?id=50334784",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-03",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -280,7 +340,7 @@ export const useCases: UseCase[] = [
     "sourceDate": "november 2026",
     "sourceUrl": "https://news.ycombinator.com/item?id=50331488",
     "sourceChecked": true,
-    "isNew": true,
+    "isNew": false,
     "dateAdded": "2026-11-03",
     "votes": 0,
     "curatedFrom": "agentusecases.ai",
@@ -371,7 +431,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Systemet sparer brukeren for over 20 timer i uken ved å automatisere kjedelige oppgaver som e-post, kalender og research.",
     "worthKnowing": "Ved å kombinere verktøy som n8n, GPT-4, Claude, Airtable og Google Workspace, kan man skape et kraftfullt og billig alternativ til en menneskelig assistent.",
     "promptTemplate": "Hjelp meg med å bygge en personlig assistent i n8n som jeg kan sende meldinger til på Telegram med tekst eller stemmenotater. Lag en hoved-router-agent som sender forespørsler til spesialist-agenter for [f.eks. kalender, e-post, oppgaver, notater, research, kontakter, påminnelser, utgifter], og som transkriberer stemmemeldinger først. Systemet er ferdig når jeg kan sende en testforespørsel til hver spesialist og få et fornuftig svar, og enhver handling som sender e-post, booker noe eller sletter data må først vise meg hva den planlegger å gjøre og vente på min bekreftelse.",
-    "trending": false
+    "trending": true
   },
   {
     "id": "automatiser-eiendomsforvaltning-med-chatgpt-dot",
@@ -499,7 +559,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Hermes identifiserte de nødvendige ferdighetene (skills), opprettet en planlagt jobb (cron job) og utførte sikkerhetskopieringen hver natt uten ytterligere inngripen.",
     "worthKnowing": "Dette er en enkel måte å sikre at alt arbeid (minne, ferdigheter og konfigurasjon) blir tatt vare på, selv om man skulle miste tilgangen til den opprinnelige serveren.",
     "promptTemplate": "Hver natt klokken '00':00 sentral tid, push endringer til dette GitHub-'repositoriet': [repo URL].",
-    "trending": true
+    "trending": false
   },
   {
     "id": "claude-code-chrome-extension-ceo",
@@ -606,7 +666,7 @@ export const useCases: UseCase[] = [
     "howItWent": "Agenten gikk gjennom hele innboksen i løpet av rundt 20 minutter. Av 847 nyhetsbrev-e-poster meldte den seg av 203 lister og sorterte resten i riktige kategorier. Utvikleren tok en stikkprøve av rundt 50 av e-postene etterpå og fant en treffsikkerhet på omtrent 90 prosent. Noen få legitime e-poster fra en kunde som bruker et markedsføringsverktøy, ble feilaktig behandlet som reklame, men utvikleren beskrev resultatet samlet som imponerende. Selve jobben kostet rundt 8 dollar i API-bruk, med Claude Sonnet 3.5 som underliggende modell.",
     "worthKnowing": "Testen ble kjørt med en engangs-Gmail-konto, ikke en ekte, personlig konto — utvikleren brukte et eget, isolert testoppsett uten tilgang til ekte kontoer eller sitt vanlige nettverk, nettopp for å prøve ut agenten trygt. Prisen varierer mye med hvilken modell man 'velger': enkle oppgaver som e-postsortering går fint med billigere modeller, mens tyngre research-oppgaver med skjermbilder og nettlesing (en annen oppgave i samme test kostet rundt 22 dollar) blir dyrere, fordi hvert skjermbilde agenten tar utløser et eget API-kall til en synsmodell.",
     "promptTemplate": "Koble [KI-agent-plattform] til en test-e-postkonto og be 'den': «Meld meg av alle nyhetsbrev og reklame-e-poster, men behold transaksjonsmeldinger (ordrebekreftelser, fakturaer, kvitteringer) og personlig korrespondanse urørt.» Be den rapportere hvor mange e-poster den gikk gjennom og hvor mange den faktisk meldte seg av, og stikk-kontroller selv et utvalg i etterkant før du er sikker på at ingenting viktig ble borte.",
-    "trending": true
+    "trending": false
   },
   {
     "id": "ki-agent-gammel-nokia-telefon",
@@ -1023,7 +1083,7 @@ export const useCases: UseCase[] = [
     "whatTheyDid": "En kommentator pekte på en praktisk forskjell mellom 'agenttyper': en agent som styrer en hel datamaskin og nettleser, kan rett og slett bli pekt mot et hvilket som helst kodelager.",
     "howItWent": "Dette står i kontrast til skybaserte kode-agenter som ofte er bundet til ett bestemt, forhåndskonfigurert repo.",
     "worthKnowing": "Fleksibiliteten til en datamaskin-styrt agent har en kostnad i hastighet og presisjon sammenlignet med en spesialisert kode-agent — valget bør styres av oppgaven, ikke av hva som er mest fleksibelt på papiret.",
-    "trending": false
+    "trending": true
   },
   {
     "id": "cowork-hva-folk-bruker",
